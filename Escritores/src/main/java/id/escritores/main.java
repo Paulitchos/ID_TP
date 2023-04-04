@@ -13,13 +13,12 @@ import java.io.IOException;
 public class main {
     
     public static void main(String[] args) throws IOException {
-        String titulo = Wrappers.obtem_titulo("9789892348568");
-        String autor = Wrappers.obtem_autor("9789892348568");
-        String editora = Wrappers.obtem_editora("9789892348568");
-        double preco = Wrappers.obtem_preco("9789892348568");
-        System.out.println("Titulo: " + titulo);
-        System.out.println("Autor: " + autor);
-        System.out.println("Autor: " + editora);
-        System.out.println("Preço: " + preco);
+        Obra obra = Wrappers.criaObra("9789892348568");
+        System.out.println("ISBN: " + obra.getIsbn());
+        System.out.println("Titulo: " + obra.getTitulo());
+        System.out.println("Autor: " + obra.getAutor());
+        System.out.println("Editora: " + obra.getEditora());
+        System.out.println("Capa: " + obra.getCapa());
+        System.out.println("Preco: " + obra.getPreco());
     }
 }

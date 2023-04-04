@@ -9,16 +9,15 @@ package id.escritores;
  * @author paulo
  */
 public class Obra {
-    String isbn, codigo, autor,titulo, editora, pagina,capa;
+    String isbn, codigo, autor,titulo, editora,capa;
     double preco;
 
-    public Obra(String isbn, String codigo, String autor, String titulo, String editora, String pagina, String capa, double preco) {
+    public Obra(String isbn, String codigo, String autor, String titulo, String editora, String capa, double preco) {
         this.isbn = isbn;
         this.codigo = codigo;
         this.autor = autor;
         this.titulo = titulo;
         this.editora = editora;
-        this.pagina = pagina;
         this.capa = capa;
         this.preco = preco;
     }
@@ -61,14 +60,6 @@ public class Obra {
 
     public void setEditora(String editora) {
         this.editora = editora;
-    }
-
-    public String getPagina() {
-        return pagina;
-    }
-
-    public void setPagina(String pagina) {
-        this.pagina = pagina;
     }
 
     public String getCapa() {
