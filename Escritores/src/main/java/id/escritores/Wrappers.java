@@ -12,10 +12,8 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- *
- * @author paulo
- */
+import java.util.Date;
+
 public class Wrappers {
     
     public static Obra criaObra(String isbn) throws IOException {
@@ -28,6 +26,10 @@ public class Wrappers {
         Obra x = new Obra(isbn,codigo,autor,titulo,editora,capa,preco);
         return x;
     }
+    
+    //public static Obra criaAutor(String isbn) throws IOException {
+        
+    //}
     
     public static String obtem_link(String isbn) throws IOException{
         HttpRequestFunctions.httpRequest1("https://www.wook.pt/pesquisa/=", isbn, "wook.txt");
@@ -46,6 +48,12 @@ public class Wrappers {
         }
         ler.close();
         return null;
+    }
+    
+    public static String obtem_link_escritor(String autor) throws IOException{
+        autor = autor.replaceAll("\\s+", "_");
+        HttpRequestFunctions.httpRequest1("https://pt.wikipedia.org/wiki/", autor, "wikipedia.txt");
+        return "https://pt.wikipedia.org/wiki/" + autor;
     }
     
     public static String obtem_titulo(String isbn,String autor) throws IOException{
@@ -101,7 +109,7 @@ public class Wrappers {
     public static String obtem_editora(String isbn) throws IOException{
         String link = obtem_link(isbn);
         HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
-        String er = "editor:\\s*<span\\s*class=\\\"name font-medium\\\">\\s*([^,]+)";
+        String er = "editor:\\s*<span\\s*class=\"name font-medium\">\\s*([^,]+)";
         Pattern p = Pattern.compile(er);
         
         String fileContent = new String(Files.readAllBytes(Paths.get("wook.txt")));
@@ -160,5 +168,68 @@ public class Wrappers {
     }
     ler.close();
     return -1;
+    }
+    
+    public static String obtem_nome(String link) throws IOException{
+        HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
+   
+        String er = "<tr>\\s*<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Nome\\s*completo"
+        + "\\s*</td>\\s*<td\\s*style=\"[^\"]+\">([^<]+)</td></tr>";
+        Pattern p = Pattern.compile(er);
+               
+        String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
+        
+        Matcher matcher = p.matcher(fileContent);
+        
+        if (matcher.find()) {
+            String nome = matcher.group(1).replaceAll("\\s+$", "");;
+            return nome;
+        }
+        
+        return "";
+    }
+    
+    public static String obtem_data_nascimento(String link) throws IOException{
+        HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
+   
+        String er = "<a\\s*href=\"[^#]+#Nascimentos\"\\s*title=\"([^\"]+)\">[^<]+</a>([^<]+)<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">";
+        Pattern p = Pattern.compile(er);
+               
+        Matcher m;
+        
+        Scanner input = new Scanner(new FileInputStream("wikipedia.txt"));
+        
+        String linha;
+        
+        while((input.hasNextLine())){
+            linha = input.nextLine();
+            m = p.matcher(linha);
+            
+            if (m.find()){
+                input.close();
+                return(m.group(1)+m.group(2)+m.group(3));
+            }        
+        }
+        input.close();
+        return null;
+    }
+    
+    public static String obtem_data_falecimento(String link) throws IOException{
+        HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
+   
+        String er = "<tr>\\s*<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Morte\\s*</td>\\s*" +
+                    "<td\\s*style=\"[^\"]+\"><span\\s*style=\"[^\"]+\"><a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">[^<]+</a>" +
+                    "([^<]+)<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">";
+        Pattern p = Pattern.compile(er);
+               
+        String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
+        
+        Matcher matcher = p.matcher(fileContent);
+        
+        if (matcher.find()) {
+            return(matcher.group(1) + matcher.group(2) + matcher.group(3));
+        }
+        
+        return "";
     }
 }

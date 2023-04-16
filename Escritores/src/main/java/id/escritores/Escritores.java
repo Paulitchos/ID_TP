@@ -11,13 +11,13 @@ import java.util.Date;
  * @author paulo
  */
 public class Escritores {
-    
+    private static int idCounter = 0;
     int id;
-    String nome, nacionalidade, fotografia, genero, ocupacao, premios;
+    String nome, nacionalidade, fotografia, genero, ocupacao, premios,link;
     Date nascimento, morte;
 
-    public Escritores(int id, String nome, String nacionalidade, String fotografia, String genero, String ocupacao, String premios, Date nascimento, Date morte) {
-        this.id = id;
+    public Escritores(int id, String nome, String nacionalidade, String fotografia, String genero, String ocupacao, String premios, Date nascimento, Date morte, String link) {
+        this.id = ++idCounter;
         this.nome = nome;
         this.nacionalidade = nacionalidade;
         this.fotografia = fotografia;
@@ -26,6 +26,7 @@ public class Escritores {
         this.premios = premios;
         this.nascimento = nascimento;
         this.morte = morte;
+        this.link = link;
     }
 
     public int getId() {
@@ -99,6 +100,13 @@ public class Escritores {
     public void setMorte(Date morte) {
         this.morte = morte;
     }
-    
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
     
 }
