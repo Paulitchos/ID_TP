@@ -17,20 +17,29 @@ import java.util.Date;
 public class Wrappers {
     
     public static Obra criaObra(String isbn) throws IOException {
-        String autor = Wrappers.obtem_autor(isbn);
-        String titulo = Wrappers.obtem_titulo(isbn,autor);
-        double preco = Wrappers.obtem_preco(isbn);
-        String capa = Wrappers.obtem_capa(isbn);
-        String editora = Wrappers.obtem_editora(isbn);
+        String link = obtem_link(isbn);
+        String autor = obtem_autor(link);
+        String titulo = obtem_titulo(link,autor);
+        double preco = obtem_preco(link);
+        String capa = obtem_capa(link);
+        String editora = obtem_editora(link);
         String codigo = "1";
-        Obra x = new Obra(isbn,codigo,autor,titulo,editora,capa,preco);
+        Obra x = new Obra(isbn,codigo,autor,titulo,editora,capa,preco,link);
         return x;
     }
     
-    //public static Obra criaAutor(String isbn) throws IOException {
-        
-    //}
-    
+    public static Escritores criaEscritor(String autor) throws IOException {
+        String link = obtem_link_escritor(autor);
+        String nome = obtem_nome(link);
+        String nacionalidade = obtem_nacionalidade(link);
+        String foto = obtem_foto(link);
+        String genero = obtem_genero(link);
+        String nascimento = obtem_data_nascimento(link);
+        String falecimento = obtem_data_falecimento(link);
+        Escritores x = new Escritores(nome,nacionalidade,foto,genero,"","",nascimento,falecimento,link);
+        return x;
+    }
+ 
     public static String obtem_link(String isbn) throws IOException{
         HttpRequestFunctions.httpRequest1("https://www.wook.pt/pesquisa/=", isbn, "wook.txt");
         String er = "<link\\s*rel=\"canonical\"\\s*href=\"([^\"]+)\"";
@@ -56,8 +65,7 @@ public class Wrappers {
         return "https://pt.wikipedia.org/wiki/" + autor;
     }
     
-    public static String obtem_titulo(String isbn,String autor) throws IOException{
-        String link = obtem_link(isbn);
+    public static String obtem_titulo(String link,String autor) throws IOException{
         HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
         String er = "<title>([^<]+)\\s*de\\s*" + autor + "\\s*-\\s*Livro\\s*-\\s*WOOK</title>";
         Pattern p = Pattern.compile(er);
@@ -81,8 +89,7 @@ public class Wrappers {
         return null;
     }
     
-    public static String obtem_autor(String isbn) throws IOException{
-        String link = obtem_link(isbn);
+    public static String obtem_autor(String link) throws IOException{
         HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
         String er = "<a href=\'#author-\\d*\'>([^<]+)</a>";
         Pattern p = Pattern.compile(er);
@@ -106,8 +113,7 @@ public class Wrappers {
         return null;
     }
     
-    public static String obtem_editora(String isbn) throws IOException{
-        String link = obtem_link(isbn);
+    public static String obtem_editora(String link) throws IOException{
         HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
         String er = "editor:\\s*<span\\s*class=\"name font-medium\">\\s*([^,]+)";
         Pattern p = Pattern.compile(er);
@@ -123,9 +129,7 @@ public class Wrappers {
         return null;
     }
     
-    public static String obtem_capa(String isbn) throws IOException{
-        String link = obtem_link(isbn);
-        
+    public static String obtem_capa(String link) throws IOException{     
         HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
    
         String er = "<meta\\s*property=\"og:image\"\\s*content=\"([^\"]+)\"";
@@ -150,8 +154,7 @@ public class Wrappers {
         return null;
     }
     
-    public static double obtem_preco(String isbn) throws IOException{
-    String link = obtem_link(isbn);
+    public static double obtem_preco(String link) throws IOException{
     HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
     Scanner ler = new Scanner(new FileInputStream("wook.txt"));
     String er = "<span\\s*class=\"price-rpl\">([^€]+)€</span>";
@@ -228,6 +231,71 @@ public class Wrappers {
         
         if (matcher.find()) {
             return(matcher.group(1) + matcher.group(2) + matcher.group(3));
+        }
+        
+        return "";
+    }
+    
+    public static String obtem_nacionalidade(String link) throws IOException{
+        HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
+   
+        String er = "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Nacionalidade\\s*" +
+                    "</td>\\s*<td\\s*style=\"[^\"]+\"><a\\s*href=\"[^\"]+\"\\s*title=\"[^\"]+\">" + 
+                    "([^<]+)<";
+        Pattern p = Pattern.compile(er);
+               
+        String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
+        
+        Matcher matcher = p.matcher(fileContent);
+        
+        if (matcher.find()) {
+            String nacionalidade = matcher.group(1);
+            nacionalidade = nacionalidade.substring(0, 1).toUpperCase() + nacionalidade.substring(1);
+            return(nacionalidade);
+        }
+        
+        return "";
+    }
+    
+    public static String obtem_foto(String link) throws IOException{
+        HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
+        String autor = link.substring(link.lastIndexOf("/") + 1);
+        autor = autor.replaceAll("_", " ");
+        String er = "<a\\s*href=\"[^\"]+\"\\s*class=\"image\"\\s*title=\""+ autor +"\"><img\\s*alt=\"\"\\s*src=\"([^\"]+)\"";
+        Pattern p = Pattern.compile(er);
+        
+        Matcher m;
+        
+        Scanner input = new Scanner(new FileInputStream("wikipedia.txt"));
+        
+        String linha;
+        
+        while((input.hasNextLine())){
+            linha = input.nextLine();
+            m = p.matcher(linha);
+            
+            if (m.find()){
+                input.close();
+                return(m.group(1));
+            }        
+        }
+        input.close();
+        return "";
+    }
+    
+    public static String obtem_genero(String link) throws IOException{
+        HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
+        String er = "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\"><a\\s*href=\"[^\"]+\"\\s*title=\"Gênero literário\">Género literário</a>\\s*" +
+                    "</td>\\s*<td\\s*style=\"[^\"]+\"><a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">";
+        Pattern p = Pattern.compile(er);
+        
+        String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
+        
+        Matcher matcher = p.matcher(fileContent);
+        
+        if (matcher.find()) {
+           
+            return(matcher.group(1));
         }
         
         return "";

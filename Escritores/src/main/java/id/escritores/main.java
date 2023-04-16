@@ -14,15 +14,18 @@ public class main {
     
     public static void main(String[] args) throws IOException {
         Obra obra = Wrappers.criaObra("9789898857071");
-        String link = Wrappers.obtem_link_escritor("José Saramago");
-        String nome = Wrappers.obtem_nome(link);
-        String data_nascimento = Wrappers.obtem_data_nascimento(link);
-        String data_falecimento = Wrappers.obtem_data_falecimento(link);
-        System.out.println("Link: " + link);
-        System.out.println("Nome: " + nome);
-        System.out.println("Data Nascimento: " + data_nascimento);
-        System.out.println("Data Falecimento: " + data_falecimento);
-        System.out.println("ISBN: " + obra.getIsbn());
+        Escritores escritor = Wrappers.criaEscritor("Alice Vieira");
+        System.out.println("Autor:");
+        System.out.println("\nLink: " + escritor.getLink());
+        System.out.println("Nome: " + escritor.getNome());
+        System.out.println("Data Nascimento: " + escritor.getNascimento());
+        System.out.println("Data Falecimento: " + escritor.getMorte());
+        System.out.println("Nacionalidade: " + escritor.getNacionalidade());
+        System.out.println("Foto: " + escritor.getFotografia());
+        System.out.println("Genero Literario: " + escritor.getGenero());
+        
+        System.out.println("\nObra:");
+        System.out.println("\nISBN: " + obra.getIsbn());
         System.out.println("Titulo: " + obra.getTitulo());
         System.out.println("Autor: " + obra.getAutor());
         System.out.println("Editora: " + obra.getEditora());

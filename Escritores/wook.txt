@@ -35,7 +35,7 @@
 " />    
     
             <link rel="canonical" href="https://www.wook.pt/livro/de-que-cor-e-um-beijinho-rocio-bonilla/19081402" />    
-            <meta property="og:url" content="https://www.wook.pt/livro/de-que-cor-e-um-beijinho-rocio-bonilla/19081402" /><meta property="og:title" content="De Que Cor É um Beijinho? de Rocio Bonilla - Livro - WOOK" /><meta property="og:image" content="https://img.wook.pt/images/de-que-cor-e-um-beijinho-rocio-bonilla/MXwxOTA4MTQwMnwxNDg1MTk4NnwxNTE2MTk4Njc3MDAw/500x" /><meta property="og:description" content="Compre o livro De Que Cor É um Beijinho? de Rocio Bonilla em wook.pt. Livro com 10% de desconto." />    
+            <meta property="og:url" content="https://www.wook.pt/livro/de-que-cor-e-um-beijinho-rocio-bonilla/19081402" /><meta property="og:title" content="De Que Cor É um Beijinho? de Rocio Bonilla - Livro - WOOK" /><meta property="og:image" content="https://img.wook.pt/images/de-que-cor-e-um-beijinho-rocio-bonilla/MXwxOTA4MTQwMnwxNDg1MTk4NnwxNTE2MTk4Njc3MDAw/500x" /><meta property="og:description" content="Compre o livro De Que Cor É um Beijinho? de Rocio Bonilla em wook.pt. Livro com 20% de desconto." />    
     
     
     <meta name="mobile-web-app-capable" content="yes">
@@ -45,7 +45,7 @@
 
     
     
-            <script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@type":"Book","additionalType":"http:\/\/schema.org\/Product","inLanguage":"Portugu\u00eas","headline":"De Que Cor \u00c9 um Beijinho?","name":"De Que Cor \u00c9 um Beijinho?","image":"https:\/\/img.wook.pt\/images\/de-que-cor-e-um-beijinho-rocio-bonilla\/MXwxOTA4MTQwMnwxNDg1MTk4NnwxNTE2MTk4Njc3MDAw","description":"Um livro ternamente ilustrado que percorre um mundo de emo\u00e7\u00f5es \u00e0 procura da cor de um beijinho. \nDe que cor \u00e9 um beijinho, afinal? \nAo longo das p\u00e1ginas, M\u00f3nica vai tentar descobrir e fazer divertidas associa\u00e7\u00f5es nas quais todas as crian\u00e7as se poder\u00e3o rever. \nUm \u00e1lbum para ler e contemplar.","url":"https:\/\/www.wook.pt\/livro\/de-que-cor-e-um-beijinho-rocio-bonilla\/19081402","offers":{"@type":"Offer","priceCurrency":"EUR","price":"12.90","seller":{"@type":"Organization","name":"wook.pt"}},"bookFormat":"http:\/\/schema.org\/Paperback","author":{"@type":"Person","name":"Rocio Bonilla"},"publisher":{"@type":"Organization","name":"Jacarand\u00e1 Editora"},"isbn":"9789898857071","bookEdition":"02-2017","datePublished":"2017-02-02","numberOfPages":32,"potentialAction":{"@type":"ReadAction"},"aggregateRating":{"@type":"AggregateRating","ratingValue":5,"reviewCount":15},"type":"Book"}</script>    
+            <script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@type":"Book","additionalType":"http:\/\/schema.org\/Product","inLanguage":"Portugu\u00eas","headline":"De Que Cor \u00c9 um Beijinho?","name":"De Que Cor \u00c9 um Beijinho?","image":"https:\/\/img.wook.pt\/images\/de-que-cor-e-um-beijinho-rocio-bonilla\/MXwxOTA4MTQwMnwxNDg1MTk4NnwxNTE2MTk4Njc3MDAw","description":"Um livro ternamente ilustrado que percorre um mundo de emo\u00e7\u00f5es \u00e0 procura da cor de um beijinho. \nDe que cor \u00e9 um beijinho, afinal? \nAo longo das p\u00e1ginas, M\u00f3nica vai tentar descobrir e fazer divertidas associa\u00e7\u00f5es nas quais todas as crian\u00e7as se poder\u00e3o rever. \nUm \u00e1lbum para ler e contemplar.","url":"https:\/\/www.wook.pt\/livro\/de-que-cor-e-um-beijinho-rocio-bonilla\/19081402","offers":{"@type":"Offer","priceCurrency":"EUR","price":"10.32","seller":{"@type":"Organization","name":"wook.pt"}},"bookFormat":"http:\/\/schema.org\/Paperback","author":{"@type":"Person","name":"Rocio Bonilla"},"publisher":{"@type":"Organization","name":"Jacarand\u00e1 Editora"},"isbn":"9789898857071","bookEdition":"02-2017","datePublished":"2017-02-02","numberOfPages":32,"potentialAction":{"@type":"ReadAction"},"aggregateRating":{"@type":"AggregateRating","ratingValue":5,"reviewCount":15},"type":"Book"}</script>    
         
 
     <link rel="stylesheet" type="text/css" href="//cdn.wook.pt/build/307/typography.min.css" />
@@ -58,7 +58,7 @@
             
         <script>
             window.dataLayer = window.dataLayer || [];
-                            window.dataLayer.push({"ecommerce":{"detail":{"products":[{"name":"De Que Cor \u00c9 um Beijinho?","id":19081402,"price":"12.90","brand":"Jacarand\u00e1 Editora"}]}}});
+                            window.dataLayer.push({"ecommerce":{"detail":{"products":[{"name":"De Que Cor \u00c9 um Beijinho?","id":19081402,"price":"10.32","brand":"Jacarand\u00e1 Editora"}]}}});
                     </script>
         
     
@@ -279,7 +279,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 		<div class="right d-flex flex-column">
-			
+			    <div class="tags-container d-flex flex-row gap-10">
+                    <span class="tag font-bold">
+                20% de desconto            </span>
+            </div>
+
 			<div class="description-container">
     <h1 class="title font-medium">
         De Que Cor É um Beijinho?
@@ -342,6 +346,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
             <div class="wook-container d-flex flex-column gap-20">
                             
+                                    <div>
+                        <label
+                            class="d-flex flex-row justify-content-end align-items-center gap-10"
+                            for="info-coverPrice-toggle-modal">
+                            <s class="text-red text-align-right">12,90€</s>
+
+                            <span
+    class="icon-info  text-black font-bold d-flex justify-content-center align-items-center">
+    i
+</span>
+                        </label>
+
+                        <div class="modal-container">
+    
+
+    
+    <input
+                id="info-coverPrice-toggle-modal"
+        class="hidden"
+        name="toggle-modal"
+        type="checkbox"
+        hidden />
+
+    <div class="modal d-flex flex-column justify-content-start align-items-center">
+                    <label
+                class="close font-wook"
+                for="info-coverPrice-toggle-modal">
+                X
+            </label>
+        
+        <div class="content d-flex flex-column gap-20">
+            
+            <div class="title-h1">wook deve saber<br></div>
+
+<BR><BR>
+
+<div data-class="ec_h3">
+Este valor <span class="price-rpl">12,90€</span> corresponde ao preço fixado pelo editor ou importador<br><br> 
+Saiba mais sobre preços e promoções consultando as nossas <b><a href="/sobre-nos/condicoes-de-venda/">condições gerais de venda.</a></b><br><br>
+
+</div>    
+        </div>
+    </div>
+</div>                    </div>
                 
                 
                                     <div>
@@ -349,7 +397,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             class="d-flex flex-row justify-content-end align-items-center gap-10"
                             for="info-pvp-toggle-modal">
                             <span class="price text-black text-align-right">
-                                12,90€
+                                10,32€
                             </span>
 
                             <span
@@ -384,7 +432,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div data-class="ec_h3">
-Este valor <span class="price-rpl">12,90€</span> corresponde ao preço de venda em wook.pt, o qual já inclui qualquer promoção em vigor.<br><br> 
+Este valor <span class="price-rpl">10,32€</span> corresponde ao preço de venda em wook.pt, o qual já inclui qualquer promoção em vigor.<br><br> 
 Saiba mais sobre preços e promoções consultando as nossas <b><a href="/sobre-nos/condicoes-de-venda/">condições gerais de venda.</a></b><br><br>
 
 </div>    
@@ -399,9 +447,10 @@ Saiba mais sobre preços e promoções consultando as nossas <b><a href="/sobre-
                             for="info-discount-toggle-modal">
                             <span class="text-align-right">
                                                                     <span class="text-red font-medium">
-                                        10% DE DESCONTO
+                                        20% DESCONTO
                                     </span>
-                                    CARTÃO                                                            </span>
+                                    IMEDIATO
+                                                            </span>
 
                             <span
     class="icon-info  text-black font-bold d-flex justify-content-center align-items-center">
@@ -432,7 +481,7 @@ Saiba mais sobre preços e promoções consultando as nossas <b><a href="/sobre-
     <div class="title-h1">
         wook deve saber    </div>
     <div class="header3-h3">
-                    Promoção válida das 00:00 do dia 30-03-2023 às 24:00 do dia 31-12-2023                <br><br>
+                    Promoção válida das 00:00 do dia 17-04-2023 às 24:00 do dia 01-05-2023                <br><br>
         Saiba mais sobre preços e promoções consultando as nossas                    <a
                 class="link"
                 href="/Ajuda/cgv">
@@ -1709,6 +1758,9 @@ Nos tempos livres gosta de se dedicar à cozinha, à leitura e ao croché.      
                     </a>
     </div>
 
+            <div class="discount-percent">
+            <div class="value">20%</div>
+        </div>
     </div>
 
 
@@ -1730,7 +1782,7 @@ Nos tempos livres gosta de se dedicar à cozinha, à leitura e ao croché.      
             <div class="col-lg-12 col-xs-12 no-margin no-padding">
             <div class="price no-padding">
                 <span class="">
-                    11,61€                </span>
+                    10,32€                </span>
 
                                     <span class="price-undercut no-padding ">
                         12,90€                    </span>
@@ -1777,6 +1829,9 @@ Nos tempos livres gosta de se dedicar à cozinha, à leitura e ao croché.      
                     </a>
     </div>
 
+            <div class="discount-percent">
+            <div class="value">20%</div>
+        </div>
     </div>
 
 
@@ -1798,13 +1853,11 @@ Nos tempos livres gosta de se dedicar à cozinha, à leitura e ao croché.      
             <div class="col-lg-12 col-xs-12 no-margin no-padding">
             <div class="price no-padding">
                 <span class="">
-                    14,90€                </span>
+                    11,92€                </span>
 
+                                    <span class="price-undercut no-padding ">
+                        14,90€                    </span>
                                 <!-- //removida apresentação temporariamente ate ser implementadas alterações no cms   -->
-                                    <span class="shipping no-padding ">
-                                                    <span class="discount-card no-padding">
-                                10% CARTÃO                            </span>
-                                            </span>
                             </div>
         </div>
     
@@ -1917,6 +1970,9 @@ Nos tempos livres gosta de se dedicar à cozinha, à leitura e ao croché.      
                     </a>
     </div>
 
+            <div class="discount-percent">
+            <div class="value">20%</div>
+        </div>
     </div>
 
 
@@ -1938,13 +1994,11 @@ Nos tempos livres gosta de se dedicar à cozinha, à leitura e ao croché.      
             <div class="col-lg-12 col-xs-12 no-margin no-padding">
             <div class="price no-padding">
                 <span class="">
-                    14,95€                </span>
+                    11,96€                </span>
 
+                                    <span class="price-undercut no-padding ">
+                        14,95€                    </span>
                                 <!-- //removida apresentação temporariamente ate ser implementadas alterações no cms   -->
-                                    <span class="shipping no-padding ">
-                                                    <span class="discount-card no-padding">
-                                10% CARTÃO                            </span>
-                                            </span>
                             </div>
         </div>
     
@@ -2215,10 +2269,10 @@ Nos tempos livres gosta de se dedicar à cozinha, à leitura e ao croché.      
     <script>pt.wook.generic.mensagens = {"jsLoadingGenerico":"A carregar...","jsInvalidIsbnMsgGenerico":"O ISBN introduzido n\u00e3o foi encontrado.","jsInvalidEmailMsgGenerico":"E-mail inv\u00e1lido","jsRequiredEmailMsgGenerico":"Necess\u00e1rio pelo menos um e-mail","jsInvalidDateDayMsgGenerico":"Data inv\u00e1lida","jsInvalidDateMonthMsgGenerico":"Data inv\u00e1lida","jsInvalidDateYearMsgGenerico":"Data inv\u00e1lida","jsInvalidNifMsgGenerico":"NIF inv\u00e1lido","jsInvalidPtMobilePhone":"Introduza um n\u00famero de telem\u00f3vel v\u00e1lido","jsIslandsPCNotAllowed":"O Marketplace Wook est\u00e1 apenas dispon\u00edvel para Portugal Continental","jsRequiredField":"Campo de preenchimento obrigat\u00f3rio."};pt.wook.app = false;var pt = pt || {};
                 pt.wook = pt.wook || {};
                 pt.wook.product = pt.wook.product || {};
-                pt.wook.product.gtmProductData = {"name":"De Que Cor \u00c9 um Beijinho?","id":19081402,"price":"12.90","brand":"Jacarand\u00e1 Editora"};</script>
+                pt.wook.product.gtmProductData = {"name":"De Que Cor \u00c9 um Beijinho?","id":19081402,"price":"10.32","brand":"Jacarand\u00e1 Editora"};</script>
 
     
     
-                <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-51878d9935646189485","applicationID":"290948966","transactionName":"MhBSZQoZCERTAEZdVwtac0QLDAlaHTNAW1wQFkQeERYCUko=","queueTime":0,"applicationTime":209,"atts":"HldRE0IDG0o=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+                <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-51878d9935646189485","applicationID":"290948966","transactionName":"MhBSZQoZCERTAEZdVwtac0QLDAlaHTNAW1wQFkQeERYCUko=","queueTime":0,"applicationTime":85,"atts":"HldRE0IDG0o=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
 
 </html>

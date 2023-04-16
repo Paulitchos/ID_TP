@@ -4,19 +4,12 @@
 
 package id.escritores;
 
-import java.util.Date;
-
-/**
- *
- * @author paulo
- */
 public class Escritores {
     private static int idCounter = 0;
     int id;
-    String nome, nacionalidade, fotografia, genero, ocupacao, premios,link;
-    Date nascimento, morte;
+    String nome, nacionalidade, fotografia, genero, ocupacao, premios,link,nascimento, morte;
 
-    public Escritores(int id, String nome, String nacionalidade, String fotografia, String genero, String ocupacao, String premios, Date nascimento, Date morte, String link) {
+    public Escritores(String nome, String nacionalidade, String fotografia, String genero, String ocupacao, String premios, String nascimento, String morte, String link) {
         this.id = ++idCounter;
         this.nome = nome;
         this.nacionalidade = nacionalidade;
@@ -85,19 +78,19 @@ public class Escritores {
         this.premios = premios;
     }
 
-    public Date getNascimento() {
+    public String getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(Date nascimento) {
+    public void setNascimento(String nascimento) {
         this.nascimento = nascimento;
     }
 
-    public Date getMorte() {
+    public String getMorte() {
         return morte;
     }
 
-    public void setMorte(Date morte) {
+    public void setMorte(String morte) {
         this.morte = morte;
     }
 
