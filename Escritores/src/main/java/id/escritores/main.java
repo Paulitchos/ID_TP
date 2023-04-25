@@ -24,13 +24,14 @@ public class main {
         System.out.println("Foto: " + escritor.getFotografia());
         System.out.println("Genero Literario: " + escritor.getGenero());
         
-        /*Obra obra = Wrappers.criaObra("9789898857071");
+        Obra obra = Wrappers.criaObra("9789898857071");
         System.out.println("\nObra:");
         System.out.println("\nISBN: " + obra.getIsbn());
         System.out.println("Titulo: " + obra.getTitulo());
         System.out.println("Autor: " + obra.getAutor());
         System.out.println("Editora: " + obra.getEditora());
         System.out.println("Capa: " + obra.getCapa());
-        System.out.println("Preco: " + obra.getPreco());*/
+        System.out.println("Preco: " + obra.getPreco());
+        
     }
 }

@@ -41,9 +41,12 @@ public class Wrappers {
     }
  
     public static String obtem_link(String isbn) throws IOException{
-        HttpRequestFunctions.httpRequest1("https://www.wook.pt/pesquisa/=", isbn, "wook.txt");
-        String er = "<link\\s*rel=\"canonical\"\\s*href=\"([^\"]+)\"";
-        Scanner ler = new Scanner(new FileInputStream("wook.txt"));
+//        HttpRequestFunctions.httpRequest1("https://www.wook.pt/pesquisa/=", isbn, "wook.txt");
+//        String er = "<link\\s*rel=\"canonical\"\\s*href=\"([^\"]+)\"";
+//        Scanner ler = new Scanner(new FileInputStream("wook.txt"));
+        HttpRequestFunctions.httpRequest1("https://www.bertrand.pt/pesquisa/", isbn, "bertrand.txt");
+        String er = "<a\\s*class=\"title-lnk track\"\\s*href=\"([^\"]+)\">";
+        Scanner ler = new Scanner(new FileInputStream("bertrand.txt"));
         Pattern p = Pattern.compile(er);
         String linha;
         while (ler.hasNextLine()) {
@@ -51,7 +54,7 @@ public class Wrappers {
             Matcher m = p.matcher(linha);
             if (m.find()) {
                 ler.close();
-                return m.group(1);
+                return "https://www.bertrand.pt" + m.group(1);
             }
 
         }
@@ -66,12 +69,15 @@ public class Wrappers {
     }
     
     public static String obtem_titulo(String link,String autor) throws IOException{
-        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
-        String er = "<title>([^<]+)\\s*de\\s*" + autor + "\\s*-\\s*Livro\\s*-\\s*WOOK</title>";
+//        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
+//        String er = "<title>([^<]+)\\s*de\\s*" + autor + "\\s*-\\s*Livro\\s*-\\s*WOOK</title>";
+        HttpRequestFunctions.httpRequest1(link, "", "bertrand.txt");
+        
+        String er = "<h1\\s*id=\"productPageRightSectionTop-title-h1\"\\s*class=\"[^\"]+\">([^<]+)</h1>";
         Pattern p = Pattern.compile(er);
         Matcher m;
         
-        Scanner input = new Scanner(new FileInputStream("wook.txt"));
+        Scanner input = new Scanner(new FileInputStream("bertrand.txt"));
         
         String linha;
         
@@ -90,12 +96,16 @@ public class Wrappers {
     }
     
     public static String obtem_autor(String link) throws IOException{
-        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
-        String er = "<a href=\'#author-\\d*\'>([^<]+)</a>";
+//        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
+//        String er = "<a href=\'#author-\\d*\'>([^<]+)</a>";
+
+        HttpRequestFunctions.httpRequest1(link, "", "bertrand.txt");
+        
+        String er = "<a\\s*href=\"/autor/[\\w\\s/\\d-]*\">([^<]+)</a>";
         Pattern p = Pattern.compile(er);
         Matcher m;
         
-        Scanner input = new Scanner(new FileInputStream("wook.txt"));
+        Scanner input = new Scanner(new FileInputStream("bertrand.txt"));
         
         String linha;
         
@@ -114,29 +124,48 @@ public class Wrappers {
     }
     
     public static String obtem_editora(String link) throws IOException{
-        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
-        String er = "editor:\\s*<span\\s*class=\"name font-medium\">\\s*([^,]+)";
+//        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
+//        String er = "editor:\\s*<span\\s*class=\"name font-medium\">\\s*([^,]+)";
+        HttpRequestFunctions.httpRequest1(link, "", "bertrand.txt");
+        String er = "Editor:\\s*<span class=\"info\">([^<]+)</span>";
+        Scanner ler = new Scanner(new FileInputStream("bertrand.txt"));
         Pattern p = Pattern.compile(er);
-        
-        String fileContent = new String(Files.readAllBytes(Paths.get("wook.txt")));
+        String linha;
+        while (ler.hasNextLine()) {
+            linha = ler.nextLine();
+            Matcher m = p.matcher(linha);
+            if (m.find()) {
+                ler.close();
+                return m.group(1);
+            }
 
-        Matcher matcher = p.matcher(fileContent);
-        if (matcher.find()) {
-            return matcher.group(1);
         }
-        
-        
+        ler.close();
         return null;
+//        Pattern p = Pattern.compile(er);
+//        
+//        String fileContent = new String(Files.readAllBytes(Paths.get("wook.txt")));
+//
+//        Matcher matcher = p.matcher(fileContent);
+//        if (matcher.find()) {
+//            return matcher.group(1);
+//        }
+//        
+//        
+//        return null;
     }
     
     public static String obtem_capa(String link) throws IOException{     
-        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
-   
-        String er = "<meta\\s*property=\"og:image\"\\s*content=\"([^\"]+)\"";
+//        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
+//   
+//        String er = "<meta\\s*property=\"og:image\"\\s*content=\"([^\"]+)\"";
+
+        HttpRequestFunctions.httpRequest1(link, "", "bertrand.txt");
+        String er = "<meta property=\"og:image\" content=\"([^\"]+)\" /><";
         Pattern p = Pattern.compile(er);
         Matcher m;
         
-        Scanner input = new Scanner(new FileInputStream("wook.txt"));
+        Scanner input = new Scanner(new FileInputStream("bertrand.txt"));
         
         String linha;
         
@@ -155,9 +184,13 @@ public class Wrappers {
     }
     
     public static double obtem_preco(String link) throws IOException{
-    HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
-    Scanner ler = new Scanner(new FileInputStream("wook.txt"));
-    String er = "<span\\s*class=\"price-rpl\">([^€]+)€</span>";
+//    HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
+//    Scanner ler = new Scanner(new FileInputStream("wook.txt"));
+//    String er = "<span\\s*class=\"price-rpl\">([^€]+)€</span>";
+
+    HttpRequestFunctions.httpRequest1(link, "", "bertrand.txt");
+    String er = "<div\\s*class=\"current\"\\s*id=\"productPageRightSectionTop-saleAction-price-current\">\\s*([^€]+)€</div>";
+    Scanner ler = new Scanner(new FileInputStream("bertrand.txt"));
     Pattern p = Pattern.compile(er);
     String linha;
     while (ler.hasNextLine()) {
