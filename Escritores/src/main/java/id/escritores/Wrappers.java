@@ -8,11 +8,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import java.util.Date;
+import java.util.List;
 
 public class Wrappers {
     
@@ -36,7 +39,10 @@ public class Wrappers {
         String genero = obtem_genero(link);
         String nascimento = obtem_data_nascimento(link);
         String falecimento = obtem_data_falecimento(link);
-        Escritores x = new Escritores(nome,nacionalidade,foto,genero,"","",nascimento,falecimento,link);
+        List<String> premios = obtem_premios(link);
+        List<String> ocupacoes = obtem_ocupacoes(link);
+        String outra_info = obter_outra_info(link);
+        Escritores x = new Escritores(nome,nacionalidade,foto,genero,ocupacoes,premios,outra_info,nascimento,falecimento,link);
         return x;
     }
  
@@ -211,15 +217,22 @@ public class Wrappers {
    
         String er = "<tr>\\s*<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Nome\\s*completo"
         + "\\s*</td>\\s*<td\\s*style=\"[^\"]+\">([^<]+)</td></tr>";
-        Pattern p = Pattern.compile(er);
-               
+        
+        List<String> patterns = Arrays.asList(
+        "<tr>\\s*<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Nome\\s*completo\\s*</td>\\s*<td\\s*style=\"[^\"]+\">([^<]+)</td></tr>",
+        "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Nascimento\\s*</td>\\s*<td style=\"[^\"]+\">([^<]+)<br\\s*/>"
+        );
+                
         String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
         
-        Matcher matcher = p.matcher(fileContent);
         
-        if (matcher.find()) {
-            String nome = matcher.group(1).replaceAll("\\s+$", "");;
-            return nome;
+        for (String pattern : patterns) {
+            Pattern p = Pattern.compile(pattern);
+            Matcher matcher = p.matcher(fileContent);
+
+            if (matcher.find()) {
+                return matcher.group(1).replaceAll("\\s+$", "");
+            }
         }
         
         return "";
@@ -318,19 +331,103 @@ public class Wrappers {
     
     public static String obtem_genero(String link) throws IOException{
         HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
-        String er = "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\"><a\\s*href=\"[^\"]+\"\\s*title=\"Gênero literário\">Género literário</a>\\s*" +
-                    "</td>\\s*<td\\s*style=\"[^\"]+\"><a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">";
-        Pattern p = Pattern.compile(er);
+    
+        List<String> patterns = Arrays.asList(
+            "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">\\s*<a\\s*href=\"[^\"]+\"\\s*title=\"Gênero literário\">\\s*Género literário\\s*</a>\\s*" +
+            "</td>\\s*<td\\s*style=\"[^\"]+\">\\s*((?:<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>\\s*,?\\s*)+)",
+            "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Género literário\\s*</td>\\s*" +
+            "<td\\s*style=\"[^\"]+\">\\s*((?:<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>\\s*,?\\s*)+)"
+        );
         
         String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
-        
-        Matcher matcher = p.matcher(fileContent);
-        
-        if (matcher.find()) {
-           
-            return(matcher.group(1));
+
+        for (String pattern : patterns) {
+            Pattern p = Pattern.compile(pattern);
+            Matcher matcher = p.matcher(fileContent);
+
+            if (matcher.find()) {
+                String allGenres = matcher.group(1);
+                Pattern genrePattern = Pattern.compile("<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>");
+                Matcher genreMatcher = genrePattern.matcher(allGenres);
+                StringBuilder generos = new StringBuilder();
+                while (genreMatcher.find()) {
+                    if (generos.length() > 0) {
+                        generos.append(", ");
+                    }
+                    generos.append(genreMatcher.group(1));
+                }
+                return generos.toString();
+            }
         }
-        
+
+        return "Não tem";
+    }
+    
+    public static List<String> obtem_premios(String link) throws IOException {
+        HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
+        String er = "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Prêmios\\s*</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)</td>";
+        Pattern p = Pattern.compile(er, Pattern.DOTALL);
+
+        String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
+
+        Matcher matcher = p.matcher(fileContent);
+        List<String> premios = new ArrayList<>();
+
+        if (matcher.find()) {
+            String premiosTexto = matcher.group(1);
+            Pattern premiosPattern = Pattern.compile("<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">");
+            Matcher premiosMatcher = premiosPattern.matcher(premiosTexto);
+            while (premiosMatcher.find()) {
+                String premio = premiosMatcher.group(1);
+                premios.add(premio);
+            }
+            
+        }else {
+            premios.add("Não tem");
+        }
+
+        return premios;
+    }
+    
+    public static List<String> obtem_ocupacoes(String link) throws IOException {
+        HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
+        String er = "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Ocupação\\s*</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)</td>";
+        Pattern p = Pattern.compile(er, Pattern.DOTALL);
+
+        String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
+
+        Matcher matcher = p.matcher(fileContent);
+        List<String> ocupacoes = new ArrayList<>();
+
+        if (matcher.find()) {
+            String ocupacoesTexto = matcher.group(1);
+            Pattern ocupationPattern = Pattern.compile("<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">");
+            Matcher ocupationMatcher = ocupationPattern.matcher(ocupacoesTexto);
+            while (ocupationMatcher.find()) {
+                String ocupacao = ocupationMatcher.group(1);
+                ocupacoes.add(ocupacao);
+            }
+            
+        } else {
+            ocupacoes.add("Não tem");
+        }
+
+        return ocupacoes;
+    }
+    
+    public static String obter_outra_info(String link) throws IOException {
+        HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
+        String er = "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Outra\\s*informação\\s*</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)</td>";
+        Pattern p = Pattern.compile(er, Pattern.DOTALL);
+
+        String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
+
+        Matcher matcher = p.matcher(fileContent);
+
+        if (matcher.find()) {
+            return matcher.group(1).trim();
+        }
+
         return "";
     }
 }

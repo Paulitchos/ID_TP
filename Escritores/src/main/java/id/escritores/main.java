@@ -14,7 +14,7 @@ public class main {
     
     public static void main(String[] args) throws IOException {
         
-        Escritores escritor = Wrappers.criaEscritor("Alice Vieira");
+        Escritores escritor = Wrappers.criaEscritor("Oscar Wilde");
         System.out.println("Autor:");
         System.out.println("\nLink: " + escritor.getLink());
         System.out.println("Nome: " + escritor.getNome());
@@ -23,6 +23,9 @@ public class main {
         System.out.println("Nacionalidade: " + escritor.getNacionalidade());
         System.out.println("Foto: " + escritor.getFotografia());
         System.out.println("Genero Literario: " + escritor.getGenero());
+        System.out.println("Ocupacoes: " + escritor.getOcupacoes());
+        System.out.println("Premios: " + escritor.getPremios());
+        System.out.println("Outra Informacao: " + escritor.getOutraInfo());
         
         Obra obra = Wrappers.criaObra("9789898857071");
         System.out.println("\nObra:");

@@ -1,22 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package id.escritores;
+
+import java.util.List;
 
 public class Escritores {
     private static int idCounter = 0;
     int id;
-    String nome, nacionalidade, fotografia, genero, ocupacao, premios,link,nascimento, morte;
+    String nome, nacionalidade, fotografia, genero, outraInfo, link, nascimento, morte;
+    List<String> ocupacoes, premios;
 
-    public Escritores(String nome, String nacionalidade, String fotografia, String genero, String ocupacao, String premios, String nascimento, String morte, String link) {
+    public Escritores(String nome, String nacionalidade, String fotografia, String genero, List<String> ocupacoes, List<String> premios, String outraInfo, String nascimento, String morte, String link) {
         this.id = ++idCounter;
         this.nome = nome;
         this.nacionalidade = nacionalidade;
         this.fotografia = fotografia;
         this.genero = genero;
-        this.ocupacao = ocupacao;
+        this.ocupacoes = ocupacoes;
         this.premios = premios;
+        this.outraInfo = outraInfo;
         this.nascimento = nascimento;
         this.morte = morte;
         this.link = link;
@@ -62,19 +62,19 @@ public class Escritores {
         this.genero = genero;
     }
 
-    public String getOcupacao() {
-        return ocupacao;
+    public List<String> getOcupacoes() {
+        return ocupacoes;
     }
 
-    public void setOcupacao(String ocupacao) {
-        this.ocupacao = ocupacao;
+    public void setOcupacoes(List<String> ocupacoes) {
+        this.ocupacoes = ocupacoes;
     }
 
-    public String getPremios() {
+    public List<String> getPremios() {
         return premios;
     }
 
-    public void setPremios(String premios) {
+    public void setPremios(List<String> premios) {
         this.premios = premios;
     }
 
@@ -93,13 +93,20 @@ public class Escritores {
     public void setMorte(String morte) {
         this.morte = morte;
     }
-
-    public String getLink() {
+    
+    public String getOutraInfo() {
+        return outraInfo;
+    }
+    
+    public void setOutraInfo(String outraInfo) {
+        this.outraInfo = outraInfo;
+    }
+    
+        public String getLink() {
         return link;
     }
 
     public void setLink(String link) {
         this.link = link;
     }
-    
 }
