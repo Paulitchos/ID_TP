@@ -282,10 +282,9 @@ public class Wrappers {
     
     public static String obtem_nacionalidade(String link) throws IOException{
         HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
-   
+              
         String er = "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Nacionalidade\\s*" +
-                    "</td>\\s*<td\\s*style=\"[^\"]+\"><a\\s*href=\"[^\"]+\"\\s*title=\"[^\"]+\">" + 
-                    "([^<]+)<";
+                    "</td>\\s*<td\\s*style=\"[^\"]+\"><a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">";
         Pattern p = Pattern.compile(er);
                
         String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
@@ -348,7 +347,7 @@ public class Wrappers {
 
             if (matcher.find()) {
                 String allGenres = matcher.group(1);
-                System.out.println("Generos: " + allGenres);
+                //System.out.println("Generos: " + allGenres);
                 List<String> genrePatterns = Arrays.asList(
                         "<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>",
                         "<li><a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">[^<]+</a></li>"

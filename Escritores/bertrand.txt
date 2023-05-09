@@ -1180,7 +1180,7 @@ Ilustrações muito cativantes.   </p></div>
                 <div class="right-author" id="productPageSectionDetails-collapseDetalhes-content-author">de <a href="/autor/rocio-bonilla/3330012">Rocio Bonilla</a>&nbsp;</div>
 
                 <div class="data">
-                    <span id='322305004YXUHMOCHJGUDLFUJCMPY' class='col-xs-12'>ISBN: <span  class='info'>9789898857071</span></span>                                <span id="productPageSectionDetails-collapseDetalhes-content-year" class="col-xs-12">
+                    <span id='81483518BAWHWMNJOJYYQNMCADCH' class='col-xs-12'>ISBN: <span  class='info'>9789898857071</span></span>                                <span id="productPageSectionDetails-collapseDetalhes-content-year" class="col-xs-12">
                                     Ano de edição:                                    <span  class="info">02-2017 </span>
                                 </span>
                                                     <span itemscope itemtype="https://schema.org/Organization" class="col-xs-12">
@@ -2924,7 +2924,7 @@ Mais informação sobre preços e promoções nas nossas <b><a href="/sobre-nos/
     <div id="klaro"></div>
 
     <div id="data-simulador"></div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-51878d9935646189485","applicationID":"291087941","transactionName":"MhBSZQoZCERTAEZdVwtac0QLDAlaHSJAQFECGkMeERYCUko=","queueTime":0,"applicationTime":325,"atts":"HldRE0IDG0o=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-51878d9935646189485","applicationID":"291087941","transactionName":"MhBSZQoZCERTAEZdVwtac0QLDAlaHSJAQFECGkMeERYCUko=","queueTime":0,"applicationTime":123,"atts":"HldRE0IDG0o=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
 
 
 </html>

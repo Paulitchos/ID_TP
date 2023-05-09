@@ -14,7 +14,7 @@ public class main {
     
     public static void main(String[] args) throws IOException {
         
-        Escritores escritor = Wrappers.criaEscritor("Paulo Coelho");
+        Escritores escritor = Wrappers.criaEscritor("José Luís Peixoto");
         System.out.println("Autor:");
         System.out.println("\nLink: " + escritor.getLink());
         System.out.println("Nome: " + escritor.getNome());
