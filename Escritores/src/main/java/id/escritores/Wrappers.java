@@ -214,13 +214,11 @@ public class Wrappers {
     
     public static String obtem_nome(String link) throws IOException{
         HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
-   
-        String er = "<tr>\\s*<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Nome\\s*completo"
-        + "\\s*</td>\\s*<td\\s*style=\"[^\"]+\">([^<]+)</td></tr>";
-        
+          
         List<String> patterns = Arrays.asList(
         "<tr>\\s*<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Nome\\s*completo\\s*</td>\\s*<td\\s*style=\"[^\"]+\">([^<]+)</td></tr>",
-        "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Nascimento\\s*</td>\\s*<td style=\"[^\"]+\">([^<]+)<br\\s*/>"
+        "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Nascimento\\s*</td>\\s*<td style=\"[^\"]+\">([^<]+)<br\\s*/>",
+        "</tbody></table>\\s*<p><b>([^<]+)</b>"
         );
                 
         String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
@@ -279,7 +277,7 @@ public class Wrappers {
             return(matcher.group(1) + matcher.group(2) + matcher.group(3));
         }
         
-        return "";
+        return "Não faleceu";
     }
     
     public static String obtem_nacionalidade(String link) throws IOException{
@@ -331,14 +329,17 @@ public class Wrappers {
     
     public static String obtem_genero(String link) throws IOException{
         HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
-    
+
         List<String> patterns = Arrays.asList(
-            "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">\\s*<a\\s*href=\"[^\"]+\"\\s*title=\"Gênero literário\">\\s*Género literário\\s*</a>\\s*" +
-            "</td>\\s*<td\\s*style=\"[^\"]+\">\\s*((?:<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>\\s*,?\\s*)+)",
-            "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Género literário\\s*</td>\\s*" +
-            "<td\\s*style=\"[^\"]+\">\\s*((?:<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>\\s*,?\\s*)+)"
+                "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">\\s*<a\\s*href=\"[^\"]+\"\\s*title=\"Gênero literário\">\\s*Género literário\\s*</a>\\s*" +
+                        "</td>\\s*<td\\s*style=\"[^\"]+\">\\s*((?:<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>\\s*,?\\s*)+)",
+                "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Género literário\\s*</td>\\s*" +
+                        "<td\\s*style=\"[^\"]+\">\\s*((?:<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>\\s*,?\\s*)+)",
+                "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\"><a\\s*href=\"/[^\"]+\"\\s*title=\"Gênero literário\">Gênero literário</a>\\s*</td>\\s*" +
+                        "<td\\s*style=\"[^\"]+\"><div class=\"hlist\">\\s*<ul>" +
+                        "((?:<li><a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">[^<]+</a></li>\\s*?\\s*)+)"
         );
-        
+
         String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
 
         for (String pattern : patterns) {
@@ -347,16 +348,24 @@ public class Wrappers {
 
             if (matcher.find()) {
                 String allGenres = matcher.group(1);
-                Pattern genrePattern = Pattern.compile("<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>");
-                Matcher genreMatcher = genrePattern.matcher(allGenres);
-                StringBuilder generos = new StringBuilder();
-                while (genreMatcher.find()) {
-                    if (generos.length() > 0) {
-                        generos.append(", ");
+                System.out.println("Generos: " + allGenres);
+                List<String> genrePatterns = Arrays.asList(
+                        "<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>",
+                        "<li><a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">[^<]+</a></li>"
+                );
+                for (String genrePattern : genrePatterns) {
+                    Pattern genreP = Pattern.compile(genrePattern);
+                    Matcher genreMatcher = genreP.matcher(allGenres);
+                    StringBuilder generos = new StringBuilder();
+                    while (genreMatcher.find()) {
+                        if (generos.length() > 0) {
+                            generos.append(", ");
+                        }
+                        generos.append(genreMatcher.group(1));
                     }
-                    generos.append(genreMatcher.group(1));
+                    return generos.toString();
                 }
-                return generos.toString();
+
             }
         }
 
