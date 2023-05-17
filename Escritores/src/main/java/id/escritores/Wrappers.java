@@ -125,7 +125,6 @@ public class Wrappers {
             }
         }
         
-        System.out.println(isbn);
         return isbn;
 
     }
@@ -190,7 +189,7 @@ public class Wrappers {
 //        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
 //        String er = "editor:\\s*<span\\s*class=\"name font-medium\">\\s*([^,]+)";
         HttpRequestFunctions.httpRequest1(link, "", "bertrand.txt");
-        String er = "Editor:\\s*<span class=\"info\">([^<]+)</span>";
+        String er = "publisher\":\\{\"@type\":\"Organization\",\"name\":\"([^\"]+)\"\\}";
         Scanner ler = new Scanner(new FileInputStream("bertrand.txt"));
         Pattern p = Pattern.compile(er);
         String linha;

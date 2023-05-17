@@ -2618,7 +2618,7 @@ Mais informação sobre preços e promoções nas nossas <b><a href="/sobre-nos/
     <div id="klaro"></div>
 
     <div id="data-simulador"></div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-51878d9935646189485","applicationID":"291087941","transactionName":"MhBSZQoZCERTAEZdVwtac0QLDAlaHSJAQFECGkMeERYCUko=","queueTime":0,"applicationTime":111,"atts":"HldRE0IDG0o=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-51878d9935646189485","applicationID":"291087941","transactionName":"MhBSZQoZCERTAEZdVwtac0QLDAlaHSJAQFECGkMeERYCUko=","queueTime":0,"applicationTime":107,"atts":"HldRE0IDG0o=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
 
 
 </html>

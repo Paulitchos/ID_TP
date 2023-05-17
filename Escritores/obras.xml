@@ -480,4 +480,52 @@
                <pre>Universidade de Oxford</pre>
           </premios>
      </escritor>
+     <escritor id="1">
+          <nome>Oscar Fingal O'Flahertie Wills Wilde</nome>
+          <datanascimento>16 de outubro de 1854</datanascimento>
+          <datafalecimento>30 de novembro de 1900</datafalecimento>
+          <nacionalidade>Irlandeses</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg/250px-Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg</foto>
+          <generoliterario ngeneros="3">
+               <gen>Drama</gen>
+               <gen>Conto</gen>
+               <gen>Diálogo</gen>
+          </generoliterario>
+          <ocupacoes nocupacaos="5">
+               <oc>Poeta</oc>
+               <oc>Jornalista</oc>
+               <oc>Romancista</oc>
+               <oc>Escritor</oc>
+               <oc>Autor</oc>
+          </ocupacoes>
+          <premios npremios="3">
+               <pre>Ravenna</pre>
+               <pre>Poesia</pre>
+               <pre>Universidade de Oxford</pre>
+          </premios>
+     </escritor>
+     <escritor id="1">
+          <nome>Oscar Fingal O'Flahertie Wills Wilde</nome>
+          <datanascimento>16 de outubro de 1854</datanascimento>
+          <datafalecimento>30 de novembro de 1900</datafalecimento>
+          <nacionalidade>Irlandeses</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg/250px-Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg</foto>
+          <generoliterario ngeneros="3">
+               <gen>Drama</gen>
+               <gen>Conto</gen>
+               <gen>Diálogo</gen>
+          </generoliterario>
+          <ocupacoes nocupacaos="5">
+               <oc>Poeta</oc>
+               <oc>Jornalista</oc>
+               <oc>Romancista</oc>
+               <oc>Escritor</oc>
+               <oc>Autor</oc>
+          </ocupacoes>
+          <premios npremios="3">
+               <pre>Ravenna</pre>
+               <pre>Poesia</pre>
+               <pre>Universidade de Oxford</pre>
+          </premios>
+     </escritor>
 </escritores>
