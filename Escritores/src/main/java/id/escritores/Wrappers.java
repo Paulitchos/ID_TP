@@ -19,16 +19,22 @@ import java.util.List;
 
 public class Wrappers {
     
-    public static Obra criaObra(String isbn) throws IOException {
-        String link = obtem_link(isbn);
-        String autor = obtem_autor(link);
-        String titulo = obtem_titulo(link,autor);
-        double preco = obtem_preco(link);
-        String capa = obtem_capa(link);
-        String editora = obtem_editora(link);
-        String codigo = "1";
-        Obra x = new Obra(isbn,codigo,autor,titulo,editora,capa,preco,link);
-        return x;
+    public static List<Obra> criaObra(String nome,int codigo) throws IOException { 
+        List<String> isbn = obtem_isbn(nome);
+        List<Obra> obras = new ArrayList<>();
+        
+        for (String i : isbn){
+            String link = obtem_link(i);
+            String autor = obtem_autor(link);
+            String titulo = obtem_titulo(link,autor);
+            double preco = obtem_preco(link);
+            String capa = obtem_capa(link);
+            String editora = obtem_editora(link);
+            Obra x = new Obra(i,codigo,autor,titulo,editora,capa,preco,link);
+            obras.add(x);
+        }
+        
+        return obras;
     }
     
     public static Escritores criaEscritor(String autor) throws IOException {
@@ -61,8 +67,8 @@ public class Wrappers {
             if (m.find()) {
                 ler.close();
                 return "https://www.bertrand.pt" + m.group(1);
+                
             }
-
         }
         ler.close();
         return null;
@@ -73,6 +79,57 @@ public class Wrappers {
         HttpRequestFunctions.httpRequest1("https://pt.wikipedia.org/wiki/", autor, "wikipedia.txt");
         return "https://pt.wikipedia.org/wiki/" + autor;
     }
+    
+    public static List<String> obtem_isbn(String nome) throws IOException {
+        nome = nome.replaceAll("\\s+", "+");
+
+        HttpRequestFunctions.httpRequest1("https://www.bertrand.pt/pesquisatab/autores/", nome, "bertrand.txt");
+        String link = null;
+        int linksCount = 0;
+        List<String> links = new ArrayList<>();
+        List<String> isbn = new ArrayList<>();
+
+        String er = "<div\\s*class=\"name\">\\s*<a\\s*href=\"([^\"]+)\">[^<]+</a>\\s*</div>";
+
+        Pattern p = Pattern.compile(er);
+
+        String fileContent = new String(Files.readAllBytes(Paths.get("bertrand.txt")));
+
+        Matcher matcher = p.matcher(fileContent);
+        
+        if (matcher.find()) {
+            link = matcher.group(1);
+            HttpRequestFunctions.httpRequest1("https://www.bertrand.pt/" + link, "", "bertrand.txt");
+            er = "<a\\s*class=\"track\"\\s*href=\"([^\"]+)\">";
+            p = Pattern.compile(er);
+            fileContent = new String(Files.readAllBytes(Paths.get("bertrand.txt")));
+            matcher = p.matcher(fileContent);
+            while (linksCount < 5) {
+                if (matcher.find()) {
+                    linksCount++;
+                    links.add(matcher.group(1));
+                }
+            }
+        }
+        int index = 0;
+        
+        for (String i : links){
+            HttpRequestFunctions.httpRequest1("https://www.bertrand.pt/" + i, "", "bertrand.txt");
+            fileContent = new String(Files.readAllBytes(Paths.get("bertrand.txt")));
+            String isbnEr = "<div\\s*id='[^']+'\\s*class='[^']+'>ISBN:\\s*<div\\s*class='info'>([^<]+)</div>";
+            p = Pattern.compile(isbnEr);
+            Matcher isbnMatcher = p.matcher(fileContent);
+            if (isbnMatcher.find()) {
+                isbn.add(isbnMatcher.group(1));
+                index++;
+            }
+        }
+        
+        System.out.println(isbn);
+        return isbn;
+
+    }
+
     
     public static String obtem_titulo(String link,String autor) throws IOException{
 //        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
@@ -107,7 +164,7 @@ public class Wrappers {
 
         HttpRequestFunctions.httpRequest1(link, "", "bertrand.txt");
         
-        String er = "<a\\s*href=\"/autor/[\\w\\s/\\d-]*\">([^<]+)</a>";
+        String er = "\"@type\":\"Person\",\"name\":\"([^\"]+)\"";
         Pattern p = Pattern.compile(er);
         Matcher m;
         

@@ -5,6 +5,7 @@
 package id.escritores;
 
 import java.io.IOException;
+import java.util.List;
 import org.jdom2.Document;
 
 /**
@@ -28,21 +29,31 @@ public class main {
         System.out.println("Premios: " + escritor.getPremios());
         System.out.println("Outra Informacao: " + escritor.getOutraInfo());
         
-        Obra obra = Wrappers.criaObra("9789898857071");
-        System.out.println("\nObra:");
-        System.out.println("\nISBN: " + obra.getIsbn());
-        System.out.println("Titulo: " + obra.getTitulo());
-        System.out.println("Autor: " + obra.getAutor());
-        System.out.println("Editora: " + obra.getEditora());
-        System.out.println("Capa: " + obra.getCapa());
-        System.out.println("Preco: " + obra.getPreco());
+        List<Obra> obras = Wrappers.criaObra("Oscar Wilde", escritor.getId());
+        if (obras != null && !obras.isEmpty()) {
+            System.out.println("Obras:");
+            for (Obra obra : obras) {
+                System.out.println("\nISBN: " + obra.getIsbn());
+                System.out.println("Titulo: " + obra.getTitulo());
+                System.out.println("Autor: " + obra.getAutor());
+                System.out.println("Editora: " + obra.getEditora());
+                System.out.println("Capa: " + obra.getCapa());
+                System.out.println("Preco: " + obra.getPreco());
+            }
+        } else {
+            System.out.println("Nenhuma obra encontrada.");
+        }
         
-        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        Document docEscritor = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
         
-        doc = EscritoresXML.adicionaEscritor(escritor, doc);
+        docEscritor = EscritoresXML.adicionaEscritor(escritor, docEscritor);
         
-        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "escritores.xml");
+        XMLJDomFunctions.escreverDocumentoParaFicheiro(docEscritor, "escritores.xml");
         
+        Document docObras = XMLJDomFunctions.lerDocumentoXML("obras.xml");
         
+        docObras = EscritoresXML.adicionaEscritor(escritor, docObras);
+        
+        XMLJDomFunctions.escreverDocumentoParaFicheiro(docObras, "obras.xml");
     }
 }
