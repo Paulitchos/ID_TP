@@ -5,6 +5,7 @@
 package id.escritores;
 
 import java.io.IOException;
+import org.jdom2.Document;
 
 /**
  *
@@ -14,7 +15,7 @@ public class main {
     
     public static void main(String[] args) throws IOException {
         
-        Escritores escritor = Wrappers.criaEscritor("José Luís Peixoto");
+        Escritores escritor = Wrappers.criaEscritor("Oscar Wilde");
         System.out.println("Autor:");
         System.out.println("\nLink: " + escritor.getLink());
         System.out.println("Nome: " + escritor.getNome());
@@ -35,6 +36,13 @@ public class main {
         System.out.println("Editora: " + obra.getEditora());
         System.out.println("Capa: " + obra.getCapa());
         System.out.println("Preco: " + obra.getPreco());
+        
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        
+        doc = EscritoresXML.adicionaEscritor(escritor, doc);
+        
+        XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "escritores.xml");
+        
         
     }
 }

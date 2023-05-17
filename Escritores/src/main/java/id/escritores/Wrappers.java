@@ -373,6 +373,10 @@ public class Wrappers {
     
     public static List<String> obtem_premios(String link) throws IOException {
         HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
+        
+        List<String> patterns = Arrays.asList(
+            "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Prêmios\\s*</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)</td>"
+        );
         String er = "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Prêmios\\s*</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)</td>";
         Pattern p = Pattern.compile(er, Pattern.DOTALL);
 
@@ -383,16 +387,22 @@ public class Wrappers {
 
         if (matcher.find()) {
             String premiosTexto = matcher.group(1);
-            Pattern premiosPattern = Pattern.compile("<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">");
-            Matcher premiosMatcher = premiosPattern.matcher(premiosTexto);
-            while (premiosMatcher.find()) {
-                String premio = premiosMatcher.group(1);
-                premios.add(premio);
+            List<String> premiosPatterns = Arrays.asList(
+                "<a\\s*href=\"[^\"]+\"\\s*class=\"[^\"]+\"\\s*title=\"([^\"]+)\">",
+                "<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">"
+            );
+            for (String premioPattern : premiosPatterns) {
+                    Pattern genreP = Pattern.compile(premioPattern);
+                    Matcher premioMatcher = genreP.matcher(premiosTexto);
+                    while (premioMatcher.find()) {
+                        String premio = premioMatcher.group(1);
+                        premios.add(premio);
+                    }
             }
             
-        }else {
-            premios.add("Não tem");
-        }
+            }else {
+                premios.add("Não tem");
+            }
 
         return premios;
     }
