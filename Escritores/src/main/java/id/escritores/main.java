@@ -29,7 +29,15 @@ public class main {
         System.out.println("Premios: " + escritor.getPremios());
         System.out.println("Outra Informacao: " + escritor.getOutraInfo());
         
+        Document docEscritor = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        
+        docEscritor = EscritoresXML.adicionaEscritor(escritor, docEscritor);
+        
+        XMLJDomFunctions.escreverDocumentoParaFicheiro(docEscritor, "escritores.xml");
+        
         List<Obra> obras = Wrappers.criaObra("Oscar Wilde", escritor.getId());
+        
+        Document docObras = XMLJDomFunctions.lerDocumentoXML("obras.xml");
         if (obras != null && !obras.isEmpty()) {
             System.out.println("Obras:");
             for (Obra obra : obras) {
@@ -39,21 +47,13 @@ public class main {
                 System.out.println("Editora: " + obra.getEditora());
                 System.out.println("Capa: " + obra.getCapa());
                 System.out.println("Preco: " + obra.getPreco());
+                
+                docObras = ObrasXML.adicionaObras(obra, docObras);
+                XMLJDomFunctions.escreverDocumentoParaFicheiro(docObras, "obras.xml");
             }
         } else {
             System.out.println("Nenhuma obra encontrada.");
         }
-        
-        Document docEscritor = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
-        
-        docEscritor = EscritoresXML.adicionaEscritor(escritor, docEscritor);
-        
-        XMLJDomFunctions.escreverDocumentoParaFicheiro(docEscritor, "escritores.xml");
-        
-        Document docObras = XMLJDomFunctions.lerDocumentoXML("obras.xml");
-        
-        docObras = EscritoresXML.adicionaEscritor(escritor, docObras);
-        
-        XMLJDomFunctions.escreverDocumentoParaFicheiro(docObras, "obras.xml");
+   
     }
 }

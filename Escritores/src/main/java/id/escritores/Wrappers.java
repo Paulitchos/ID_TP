@@ -14,6 +14,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 import java.util.Date;
 import java.util.List;
 
@@ -198,7 +199,8 @@ public class Wrappers {
             Matcher m = p.matcher(linha);
             if (m.find()) {
                 ler.close();
-                return m.group(1);
+                System.out.println();
+                return unescapeUnicode(m.group(1));
             }
 
         }
@@ -216,6 +218,8 @@ public class Wrappers {
 //        
 //        return null;
     }
+    
+    
     
     public static String obtem_capa(String link) throws IOException{     
 //        HttpRequestFunctions.httpRequest1(link, "", "wook.txt");
@@ -503,5 +507,22 @@ public class Wrappers {
         }
 
         return "";
+    }
+    
+    public static String unescapeUnicode(String input) {
+        StringBuilder builder = new StringBuilder();
+        int length = input.length();
+        for (int i = 0; i < length; i++) {
+            char ch = input.charAt(i);
+            if (ch == '\\' && i + 1 < length && input.charAt(i + 1) == 'u') {
+                String unicodeStr = input.substring(i + 2, i + 6);
+                char unicodeChar = (char) Integer.parseInt(unicodeStr, 16);
+                builder.append(unicodeChar);
+                i += 5;
+            } else {
+                builder.append(ch);
+            }
+        }
+        return builder.toString();
     }
 }

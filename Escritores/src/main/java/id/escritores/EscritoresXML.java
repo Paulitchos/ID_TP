@@ -14,7 +14,7 @@ public class EscritoresXML {
     public static Document adicionaEscritor(Escritores esc, Document doc) {
         Element raiz;
         if (doc == null) {
-            raiz = new Element("escritores"); // cria <catalogo>...</catalogo>
+            raiz = new Element("escritores");
             doc = new Document(raiz);
         } else {
             raiz = doc.getRootElement();
