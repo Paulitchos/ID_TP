@@ -50,6 +50,11 @@ public class Frame extends javax.swing.JFrame {
         jLabel1.setText("Output:");
 
         principalMenu.setText("Principal");
+        principalMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                principalMenuActionPerformed(evt);
+            }
+        });
 
         abrirMenuItem.setText("Abrir");
         abrirMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -60,6 +65,11 @@ public class Frame extends javax.swing.JFrame {
         principalMenu.add(abrirMenuItem);
 
         sairMenuItem.setText("Sair");
+        sairMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairMenuItemActionPerformed(evt);
+            }
+        });
         principalMenu.add(sairMenuItem);
 
         jMenuBar1.add(principalMenu);
@@ -114,6 +124,15 @@ public class Frame extends javax.swing.JFrame {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_abrirMenuItemActionPerformed
+
+    private void principalMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_principalMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_principalMenuActionPerformed
+
+    private void sairMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairMenuItemActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_sairMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
