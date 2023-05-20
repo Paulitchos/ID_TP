@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Oscar Wilde – Wikipédia, a enciclopédia livre</title>
-<script>document.documentElement.className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled vector-feature-zebra-design-disabled";(function(){var cookie=document.cookie.match(/(?:^|; )ptwikimwclientprefs=([^;]+)/);if(cookie){var featureName=cookie[1];document.documentElement.className=document.documentElement.className.replace(featureName+'-enabled',featureName+'-disabled');}}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgRequestId":"d76571d0-f6c1-45ac-83e9-c9e345ff5e8d",
+<script>document.documentElement.className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled vector-feature-zebra-design-disabled";(function(){var cookie=document.cookie.match(/(?:^|; )ptwikimwclientprefs=([^;]+)/);if(cookie){var featureName=cookie[1];document.documentElement.className=document.documentElement.className.replace(featureName+'-enabled',featureName+'-disabled');}}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgRequestId":"70f46284-696a-4a7d-8f71-4e10b566ca29",
 "wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Oscar_Wilde","wgTitle":"Oscar Wilde","wgCurRevisionId":65637132,"wgRevisionId":65637132,"wgArticleId":1393,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["!CS1 inglês-fontes em língua (en)","!Artigos destacados na Wikipédia em macedônio","!Artigos bons na Wikipédia em espanhol","!Artigos bons na Wikipédia em inglês","!Mais Teoria da História na Wiki (Wikiconcurso de edição)","!Mais Teoria da História na Wiki (LGBTQIA+)","!Páginas que usam hiperligações mágicas ISBN","Nascidos em 1854","Mortos em 1900","Homens","Oscar Wilde","Dramaturgos da Irlanda","Contistas da Irlanda","Romancistas da Irlanda","Socialistas da Irlanda","Escritores LGBT da Irlanda","Anglicanos convertidos ao catolicismo romano","Alunos do Magdalen College","Alunos do Trinity College (Dublin)","História LGBT",
 "Sepultados no Cemitério Père-Lachaise","Naturais de Dublin","Mortes por meningite","Pessoas processadas por homossexualidade","História LGBT do Reino Unido","Pessoas LGBT do século XIX"],"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgRelevantPageName":"Oscar_Wilde","wgRelevantArticleId":1393,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","pageVariantFallbacks":"pt"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":true,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":100000,"wgNoticeProject":"wikipedia","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":10,"wgULSCurrentAutonym":"português","wgEditSubmitButtonLabelPublish":true,"wgCentralAuthMobileDomain":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":true,
 "wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q30875","GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":true,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false,"wgSiteNoticeId":"2.30"};RLSTATE={"skins.vector.user.styles":"ready","ext.gadget.FeedbackHighlight-base":"ready","ext.gadget.keepPDU":"ready","ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","mediawiki.ui.button":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","mediawiki.ui.icon":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.wikimediaBadges":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.dismissableSiteNotice.styles":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.scribunto.logs","site","mediawiki.page.ready",
@@ -2751,7 +2751,7 @@
 <li><span style="white-space:nowrap;"><a href="https://fi.wikipedia.org/wiki/KANTO" class="extiw" title="fi:KANTO">KANTO</a>: <span class="uid"><span class="plainlinks"><a rel="nofollow" class="external text" href="https://urn.fi/URN:NBN:fi:au:finaf:000063464">000063464</a></span></span></span></li>
 <li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Deutsches_Literaturarchiv_Marbach" class="extiw" title="de:Deutsches Literaturarchiv Marbach">Kallías</a>: <span class="uid"><span class="plainlinks"><a rel="nofollow" class="external text" href="https://www.dla-marbach.de/find/opac/id/PE00002128">PE00002128</a></span></span></span></li>
 <li><span style="white-space:nowrap;"><a href="/wiki/Biblioteca_Nacional_da_Austr%C3%A1lia" title="Biblioteca Nacional da Austrália">NLA</a>: <span class="uid"><span class="plainlinks"><a rel="nofollow" class="external text" href="https://trove.nla.gov.au/people/1013129">1013129</a></span></span></span></li>
-<li><span style="white-space:nowrap;"><a href="/wiki/Biblioteca_Nacional_da_Pol%C3%B3nia" title="Biblioteca Nacional da Polónia">NLP</a>: <span class="uid"><span class="plainlinks"><a class="external text" href="https://wikidata-externalid-url.toolforge.org/?p=1695&amp;id=A11794550">A11794550</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Biblioteca_Nacional_da_Pol%C3%B3nia" title="Biblioteca Nacional da Polónia">NLP</a>: <span class="uid"><span class="plainlinks"><a rel="nofollow" class="external text" href="https://dbn.bn.org.pl/descriptor-details/A11794550">A11794550</a></span></span></span></li>
 <li><span style="white-space:nowrap;"><a href="/wiki/Biblioteca_Nacional_do_Pa%C3%ADs_de_Gales" title="Biblioteca Nacional do País de Gales">NLW</a>: <span class="uid"><span class="plainlinks"><a rel="nofollow" class="external text" href="https://archives.library.wales/index.php/wilde-oscar-1854-1900">wilde-oscar-1854-1900</a></span></span></span></li>
 <li><span style="white-space:nowrap;"><a href="https://www.wikidata.org/wiki/Q56557486" class="extiw" title="d:Q56557486">Catálogo SHARE</a>: <span class="uid"><span class="plainlinks"><a rel="nofollow" class="external text" href="https://catalogo.share-cat.unina.it/sharecat/searchNames?n_cluster_id=118841">118841</a></span></span></span></li>
 <li><span style="white-space:nowrap;"><a href="/wiki/Biblioteca_Nacional_da_Eslov%C3%A1quia" title="Biblioteca Nacional da Eslováquia">SNK</a>: <span class="uid"><span class="plainlinks"><a rel="nofollow" class="external text" href="https://autority.snk.sk/cgi-bin/koha/opac-authoritiesdetail.pl?marc=1&amp;authid=169607">169607</a></span></span></span></li>
@@ -2762,51 +2762,48 @@
 </div></td></tr></tbody></table></div>
 <!-- 
 NewPP limit report
-Parsed by mw1411
-Cached time: 20230515214224
+Parsed by mw1488
+Cached time: 20230519113327
 Cache expiry: 1814400
 Reduced expiry: false
 Complications: [show‐toc]
-CPU time usage: 1.750 seconds
-Real time usage: 2.140 seconds
-Preprocessor visited node count: 13517/1000000
-Post‐expand include size: 222043/2097152 bytes
+CPU time usage: 1.653 seconds
+Real time usage: 2.136 seconds
+Preprocessor visited node count: 13550/1000000
+Post‐expand include size: 221947/2097152 bytes
 Template argument size: 21079/2097152 bytes
 Highest expansion depth: 28/100
 Expensive parser function count: 167/500
 Unstrip recursion depth: 1/20
 Unstrip post‐expand size: 84205/5000000 bytes
-Lua time usage: 1.114/10.000 seconds
-Lua memory usage: 20141457/52428800 bytes
+Lua time usage: 1.073/10.000 seconds
+Lua memory usage: 20180877/52428800 bytes
 Lua Profile:
-    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::getEntity      660 ms       57.9%
-    recursiveClone <mwInit.lua:41>                                   140 ms       12.3%
-    ?                                                                 80 ms        7.0%
-    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::addStatementUsage       80 ms        7.0%
-    (for generator)                                                   40 ms        3.5%
-    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::getEntityStatements       20 ms        1.8%
-    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::getExpandedArgument       20 ms        1.8%
-    tratarArgumentos <Módulo:Citação/CS1:2703>                     20 ms        1.8%
-    type                                                              20 ms        1.8%
-    chunk <Módulo:Controle_de_autoridade:127>                        20 ms        1.8%
-    [others]                                                          40 ms        3.5%
+    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::getEntity      640 ms       59.3%
+    recursiveClone <mwInit.lua:41>                                   180 ms       16.7%
+    ?                                                                100 ms        9.3%
+    (for generator)                                                   60 ms        5.6%
+    pairs                                                             40 ms        3.7%
+    MediaWiki\Extension\Scribunto\Engines\LuaSandbox\LuaSandboxCallback::getLabel       20 ms        1.9%
+    type                                                              20 ms        1.9%
+    init <Módulo:Citação/CS1/Configuração>                       20 ms        1.9%
 Number of Wikibase entities loaded: 0/400
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00% 1854.102      1 -total
- 60.67% 1124.963      1 Predefinição:NF
- 60.26% 1117.241      1 Predefinição:Controle_de_autoridade
- 19.07%  353.622      1 Predefinição:Info/Biografia/Wikidata
- 18.79%  348.341      1 Predefinição:Info
-  6.62%  122.748      3 Predefinição:Referências
-  3.31%   61.457      2 Predefinição:Categorização_AD_e_AB_de_outras_wikis
-  2.76%   51.218      6 Predefinição:Citar_web
-  2.58%   47.893      2 Predefinição:Br_separated_entries
-  2.55%   47.334      1 Predefinição:Socialismo_libertário
+100.00% 1863.692      1 -total
+ 61.22% 1140.918      1 Predefinição:NF
+ 60.72% 1131.696      1 Predefinição:Controle_de_autoridade
+ 22.17%  413.209      1 Predefinição:Info/Biografia/Wikidata
+ 21.79%  406.165      1 Predefinição:Info
+  6.19%  115.287      3 Predefinição:Referências
+  3.46%   64.399      2 Predefinição:Categorização_AD_e_AB_de_outras_wikis
+  3.04%   56.582      2 Predefinição:Br_separated_entries
+  2.54%   47.295      6 Predefinição:Citar_web
+  2.46%   45.902      1 Predefinição:Socialismo_libertário
 -->
 
-<!-- Saved in parser cache with key ptwiki:pcache:idhash:1393-0!canonical and timestamp 20230515214222 and revision id 65637132. Rendering was triggered because: page-view
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:1393-0!canonical and timestamp 20230519113325 and revision id 65637132. Rendering was triggered because: page-view
  -->
 </div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
 <div class="printfooter" data-nosnippet="">Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Oscar_Wilde&amp;oldid=65637132">https://pt.wikipedia.org/w/index.php?title=Oscar_Wilde&amp;oldid=65637132</a>"</div></div>
@@ -2857,7 +2854,7 @@ Para mais detalhes, consulte as <a href="https://foundation.wikimedia.org/wiki/S
 </button>
 
 </div>
-<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw1434","wgBackendResponseTime":123,"wgPageParseReport":{"limitreport":{"cputime":"1.750","walltime":"2.140","ppvisitednodes":{"value":13517,"limit":1000000},"postexpandincludesize":{"value":222043,"limit":2097152},"templateargumentsize":{"value":21079,"limit":2097152},"expansiondepth":{"value":28,"limit":100},"expensivefunctioncount":{"value":167,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":84205,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 1854.102      1 -total"," 60.67% 1124.963      1 Predefinição:NF"," 60.26% 1117.241      1 Predefinição:Controle_de_autoridade"," 19.07%  353.622      1 Predefinição:Info/Biografia/Wikidata"," 18.79%  348.341      1 Predefinição:Info","  6.62%  122.748      3 Predefinição:Referências","  3.31%   61.457      2 Predefinição:Categorização_AD_e_AB_de_outras_wikis","  2.76%   51.218      6 Predefinição:Citar_web","  2.58%   47.893      2 Predefinição:Br_separated_entries","  2.55%   47.334      1 Predefinição:Socialismo_libertário"]},"scribunto":{"limitreport-timeusage":{"value":"1.114","limit":"10.000"},"limitreport-memusage":{"value":20141457,"limit":52428800},"limitreport-logs":"table#1 {\n    [\"size\"] = \"tiny\",\n}\ntable#1 {\n    [\"size\"] = \"tiny\",\n}\ntable#1 {\n    [\"size\"] = \"tiny\",\n}\n","limitreport-profile":[["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::getEntity","660","57.9"],["recursiveClone \u003CmwInit.lua:41\u003E","140","12.3"],["?","80","7.0"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::addStatementUsage","80","7.0"],["(for generator)","40","3.5"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::getEntityStatements","20","1.8"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::getExpandedArgument","20","1.8"],["tratarArgumentos \u003CMódulo:Citação/CS1:2703\u003E","20","1.8"],["type","20","1.8"],["chunk \u003CMódulo:Controle_de_autoridade:127\u003E","20","1.8"],["[others]","40","3.5"]]},"cachereport":{"origin":"mw1411","timestamp":"20230515214224","ttl":1814400,"transientcontent":false}}});});</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw1415","wgBackendResponseTime":124,"wgPageParseReport":{"limitreport":{"cputime":"1.653","walltime":"2.136","ppvisitednodes":{"value":13550,"limit":1000000},"postexpandincludesize":{"value":221947,"limit":2097152},"templateargumentsize":{"value":21079,"limit":2097152},"expansiondepth":{"value":28,"limit":100},"expensivefunctioncount":{"value":167,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":84205,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 1863.692      1 -total"," 61.22% 1140.918      1 Predefinição:NF"," 60.72% 1131.696      1 Predefinição:Controle_de_autoridade"," 22.17%  413.209      1 Predefinição:Info/Biografia/Wikidata"," 21.79%  406.165      1 Predefinição:Info","  6.19%  115.287      3 Predefinição:Referências","  3.46%   64.399      2 Predefinição:Categorização_AD_e_AB_de_outras_wikis","  3.04%   56.582      2 Predefinição:Br_separated_entries","  2.54%   47.295      6 Predefinição:Citar_web","  2.46%   45.902      1 Predefinição:Socialismo_libertário"]},"scribunto":{"limitreport-timeusage":{"value":"1.073","limit":"10.000"},"limitreport-memusage":{"value":20180877,"limit":52428800},"limitreport-logs":"table#1 {\n    [\"size\"] = \"tiny\",\n}\ntable#1 {\n    [\"size\"] = \"tiny\",\n}\ntable#1 {\n    [\"size\"] = \"tiny\",\n}\n","limitreport-profile":[["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::getEntity","640","59.3"],["recursiveClone \u003CmwInit.lua:41\u003E","180","16.7"],["?","100","9.3"],["(for generator)","60","5.6"],["pairs","40","3.7"],["MediaWiki\\Extension\\Scribunto\\Engines\\LuaSandbox\\LuaSandboxCallback::getLabel","20","1.9"],["type","20","1.9"],["init \u003CMódulo:Citação/CS1/Configuração\u003E","20","1.9"]]},"cachereport":{"origin":"mw1488","timestamp":"20230519113327","ttl":1814400,"transientcontent":false}}});});</script>
 <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Oscar Wilde","url":"https:\/\/pt.wikipedia.org\/wiki\/Oscar_Wilde","sameAs":"http:\/\/www.wikidata.org\/entity\/Q30875","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q30875","author":{"@type":"Organization","name":"Contribuidores dos projetos da Wikimedia"},"publisher":{"@type":"Organization","name":"Funda\u00e7\u00e3o Wikimedia, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-08-03T01:41:52Z","dateModified":"2023-04-04T20:56:57Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/e\/e6\/Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg","headline":"escritor, poeta e dramaturgo irland\u00eas (1854-1900)"}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Oscar Wilde","url":"https:\/\/pt.wikipedia.org\/wiki\/Oscar_Wilde","sameAs":"http:\/\/www.wikidata.org\/entity\/Q30875","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q30875","author":{"@type":"Organization","name":"Contribuidores dos projetos da Wikimedia"},"publisher":{"@type":"Organization","name":"Funda\u00e7\u00e3o Wikimedia, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-08-03T01:41:52Z","dateModified":"2023-04-04T20:56:57Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/e\/e6\/Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg","headline":"escritor, poeta e dramaturgo irland\u00eas (1854-1900)"}</script>
 </body>
 </html>

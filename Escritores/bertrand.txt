@@ -36,9 +36,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Bertrand">
 
-    <link rel="stylesheet" type="text/css" href="//cdn.bertrand.pt/build/192/typography.min.css" />
-<link rel="stylesheet" type="text/css" href="//cdn.bertrand.pt/build/192/vendor.min.css" />
-<link rel="stylesheet" type="text/css" href="//cdn.bertrand.pt/build/192/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.bertrand.pt/build/194/typography.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.bertrand.pt/build/194/vendor.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.bertrand.pt/build/194/main.min.css" />
         <script>
             window.dataLayer = window.dataLayer || [];
                             window.dataLayer.push({"ecommerce":{"detail":{"products":[{"name":"O Retrato de Dorian Gray","id":26732009,"price":"10.76","brand":"Penguin Cl\u00e1ssicos"}]}}});
@@ -1015,181 +1015,12 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
                                                 <h3 class="description">Outros Livros Do Autor</h3>
                                                 <a href="/autor/oscar-wilde/19398">ver +</a>                                            </div>
                                                                                 <div class="col-xs-12 products products-list ">
-                                                                                        <div class=" col-xs-6 col-sm-3 col-md-3 col-lg-3  product-portlet" id="productPageSectionAboutAuthor-bestsellers-product-14845258"
-                                                     data-product-id="14845258"
-                                                     data-product-name="O Gigante Egoísta e O Príncipe Feliz"
-                                                     data-product-position="1">
-                                                             <div class="product-img ">
-        <div class="cover">
-            <a class="track" href="/livro/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/14845258">
-                                    <picture>
-                        <source media="not all and (min-resolution:.001dpcm)" alt="O Gigante Egoísta e O Príncipe Feliz" srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/175x&ctx=0" type="image/jpeg">
-                        <source alt="O Gigante Egoísta e O Príncipe Feliz" srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMHx3ZWJw/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMHx3ZWJw/175x&ctx=0" type="image/webp">
-                        <source alt="O Gigante Egoísta e O Príncipe Feliz" srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/175x&ctx=0" type="image/jpeg">
-                        <!-- Fallback for incompatible browsers -->
-                        <img alt="O Gigante Egoísta e O Príncipe Feliz" srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/25x&ctx=0" src="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/175x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/175x&ctx=0" class="img-responsive lazyload ">
-                    </picture>
-                            </a>
-            
-                                    <div class="buttons-actions">
-                        <button
-                             
-                            data-tipoArtigo="Livro" 
-                            data-title="O Gigante Egoísta e O Príncipe Feliz" 
-                            data-product-id="14845258" 
-                            data-price="7.08" 
-                            data-brand="Porto Editora" 
-                            data-epub="" 
-                            data-ewook="" 
-                            type="button" 
-                            data-kpicesto="4" 
-                            data-subart="24290843"  
-                            class="icon-before montra btn add-cart " 
-                            title="adicionar ao cesto"
-                        >
-                            <span>Cesto</span>
-                        </button>
-                        <button 
-                            type="button" 
-                            data-kpilista="11" 
-                            data-subart="24290843"                          
-                            data-ficha="S" 
-                            data-mesart="14845258" 
-                            class="icon-before btn add-list" 
-                            title="adicionar à lista de desejos"
-                        >
-                            <span>Lista</span>
-                        </button>
-                    </div>
-                
-                            <div class="icons">
-                                            <div class="discount-percent  big-discount ">
-                            <div class="round-sticker"></div>
-                            <div class="value">20%</div>
-                        </div>
-                                    </div>
-                    </div>
-    </div>
-
-    
-
-    <div class="product-info ">
-                    <div class="shipping-discount-info">
-                                    <div class="shipping">portes grátis</div>
-                            </div>
-                <div class="price">
-                                    <span class="old-price">8,85€</span>
-                                        <span class="active-price">7,08€</span>
-                        </div>
-
-        <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
-    <div class="title-product portlet-product-title--14845258 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
-        <p>
-            <a class="title-lnk track" href="/livro/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/14845258">O Gigante Egoísta e O Príncipe Feliz</a>
-        </p>
-    </div> 
-</div>                 <div class="authors portlet-product-author-14845258">
-                    <p>de <a href="/autor/oscar-wilde/19398">Oscar Wilde</a>&nbsp;</p>
-                </div>
-                            <div class="publisher portlet-product-publisher-14845258">Porto Editora</div>
-                            <div class="rating">
-                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/14845258">
-                        <div class="stars pull-left">
-                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star"></span>                        </div>
-                        <div class="comments-nr pull-left">(1)</div>
-                    </a>
-                </div>
-                </div>                                                </div>
-                                                                                                <div class=" col-xs-6 col-sm-3 col-md-3 col-lg-3  product-portlet" id="productPageSectionAboutAuthor-bestsellers-product-15429129"
-                                                     data-product-id="15429129"
-                                                     data-product-name="O Fantasma de Canterville"
-                                                     data-product-position="2">
-                                                             <div class="product-img ">
-        <div class="cover">
-            <a class="track" href="/livro/o-fantasma-de-canterville-oscar-wilde/15429129">
-                                    <picture>
-                        <source media="not all and (min-resolution:.001dpcm)" alt="O Fantasma de Canterville" srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/175x&ctx=0" type="image/jpeg">
-                        <source alt="O Fantasma de Canterville" srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMHx3ZWJw/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMHx3ZWJw/175x&ctx=0" type="image/webp">
-                        <source alt="O Fantasma de Canterville" srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/175x&ctx=0" type="image/jpeg">
-                        <!-- Fallback for incompatible browsers -->
-                        <img alt="O Fantasma de Canterville" srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/25x&ctx=0" src="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/175x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/175x&ctx=0" class="img-responsive lazyload ">
-                    </picture>
-                            </a>
-            
-                                    <div class="buttons-actions">
-                        <button
-                             
-                            data-tipoArtigo="Livro" 
-                            data-title="O Fantasma de Canterville" 
-                            data-product-id="15429129" 
-                            data-price="7.08" 
-                            data-brand="Porto Editora" 
-                            data-epub="" 
-                            data-ewook="" 
-                            type="button" 
-                            data-kpicesto="4" 
-                            data-subart="21901256"  
-                            class="icon-before montra btn add-cart " 
-                            title="adicionar ao cesto"
-                        >
-                            <span>Cesto</span>
-                        </button>
-                        <button 
-                            type="button" 
-                            data-kpilista="11" 
-                            data-subart="21901256"                          
-                            data-ficha="S" 
-                            data-mesart="15429129" 
-                            class="icon-before btn add-list" 
-                            title="adicionar à lista de desejos"
-                        >
-                            <span>Lista</span>
-                        </button>
-                    </div>
-                
-                            <div class="icons">
-                                            <div class="discount-percent  big-discount ">
-                            <div class="round-sticker"></div>
-                            <div class="value">20%</div>
-                        </div>
-                                    </div>
-                    </div>
-    </div>
-
-    
-
-    <div class="product-info ">
-                    <div class="shipping-discount-info">
-                                    <div class="shipping">portes grátis</div>
-                            </div>
-                <div class="price">
-                                    <span class="old-price">8,85€</span>
-                                        <span class="active-price">7,08€</span>
-                        </div>
-
-        <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
-    <div class="title-product portlet-product-title--15429129 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
-        <p>
-            <a class="title-lnk track" href="/livro/o-fantasma-de-canterville-oscar-wilde/15429129">O Fantasma de Canterville</a>
-        </p>
-    </div> 
-</div>                 <div class="authors portlet-product-author-15429129">
-                    <p>de <a href="/autor/oscar-wilde/19398">Oscar Wilde</a>&nbsp;</p>
-                </div>
-                            <div class="publisher portlet-product-publisher-15429129">Porto Editora</div>
-                            <div class="rating">
-                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/o-fantasma-de-canterville-oscar-wilde/15429129">
-                        <div class="stars pull-left">
-                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
-                        <div class="comments-nr pull-left">(3)</div>
-                    </a>
-                </div>
-                </div>                                                </div>
-                                                                                                <div class="hidden-xs col-sm-3 col-md-3 col-lg-3  product-portlet" id="productPageSectionAboutAuthor-bestsellers-product-15840287"
+                                                                                        <div class=" col-xs-6 col-sm-3 col-md-3 col-lg-3  product-portlet" id="productPageSectionAboutAuthor-bestsellers-product-15840287"
                                                      data-product-id="15840287"
                                                      data-product-name="O Menino-Estrela"
-                                                     data-product-position="3">
-                                                             <div class="product-img ">
+                                                     data-product-position="1">
+                                                         
+    <div class="product-img ">
         <div class="cover">
             <a class="track" href="/livro/o-menino-estrela-oscar-wilde/15840287">
                                     <picture>
@@ -1200,14 +1031,13 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
                         <img alt="O Menino-Estrela" srcset="https://img.bertrand.pt/images/o-menino-estrela-oscar-wilde/NDV8MTU4NDAyODd8MjQ4OTcwNjJ8MTY4NDIzMDU5NjAwMA==/25x&ctx=0" src="https://img.bertrand.pt/images/o-menino-estrela-oscar-wilde/NDV8MTU4NDAyODd8MjQ4OTcwNjJ8MTY4NDIzMDU5NjAwMA==/175x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-menino-estrela-oscar-wilde/NDV8MTU4NDAyODd8MjQ4OTcwNjJ8MTY4NDIzMDU5NjAwMA==/175x&ctx=0" class="img-responsive lazyload ">
                     </picture>
                             </a>
-            
-                                    <div class="buttons-actions">
+                                                <div class="buttons-actions">
                         <button
                              
                             data-tipoArtigo="Livro" 
                             data-title="O Menino-Estrela" 
                             data-product-id="15840287" 
-                            data-price="6.20" 
+                            data-price="7.75" 
                             data-brand="Porto Editora" 
                             data-epub="" 
                             data-ewook="" 
@@ -1233,41 +1063,236 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
                     </div>
                 
                             <div class="icons">
-                                            <div class="discount-percent  big-discount ">
+                                            <div class="discount-percent ">
                             <div class="round-sticker"></div>
-                            <div class="value">20%</div>
+                            <div class="value">10%</div>
                         </div>
                                     </div>
                     </div>
     </div>
 
     
-
     <div class="product-info ">
                     <div class="shipping-discount-info">
                                     <div class="shipping">portes grátis</div>
+                
+                                    <div class="discount-card">
+                        10% Cartão Leitor Bertrand                    </div>
+                
                             </div>
                 <div class="price">
-                                    <span class="old-price">7,75€</span>
-                                        <span class="active-price">6,20€</span>
+                                <span class="active-price">7,75€</span>
                         </div>
 
-        <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
+                    <div>
+                <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
     <div class="title-product portlet-product-title--15840287 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
         <p>
             <a class="title-lnk track" href="/livro/o-menino-estrela-oscar-wilde/15840287">O Menino-Estrela</a>
         </p>
     </div> 
-</div>                 <div class="authors portlet-product-author-15840287">
-                    <p>de <a href="/autor/oscar-wilde/19398">Oscar Wilde</a>&nbsp;</p>
-                </div>
+</div>                     <div class="authors portlet-product-author-15840287">
+                        <p>de <a href="/autor/oscar-wilde/19398">Oscar Wilde</a>&nbsp;</p>
+                    </div>
+                            </div>
+
                             <div class="publisher portlet-product-publisher-15840287">Porto Editora</div>
-                </div>                                                </div>
+            
+                        
+                                
+            </div>                                                </div>
+                                                                                                <div class=" col-xs-6 col-sm-3 col-md-3 col-lg-3  product-portlet" id="productPageSectionAboutAuthor-bestsellers-product-14845258"
+                                                     data-product-id="14845258"
+                                                     data-product-name="O Gigante Egoísta e O Príncipe Feliz"
+                                                     data-product-position="2">
+                                                         
+    <div class="product-img ">
+        <div class="cover">
+            <a class="track" href="/livro/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/14845258">
+                                    <picture>
+                        <source media="not all and (min-resolution:.001dpcm)" alt="O Gigante Egoísta e O Príncipe Feliz" srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/175x&ctx=0" type="image/jpeg">
+                        <source alt="O Gigante Egoísta e O Príncipe Feliz" srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMHx3ZWJw/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMHx3ZWJw/175x&ctx=0" type="image/webp">
+                        <source alt="O Gigante Egoísta e O Príncipe Feliz" srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/175x&ctx=0" type="image/jpeg">
+                        <!-- Fallback for incompatible browsers -->
+                        <img alt="O Gigante Egoísta e O Príncipe Feliz" srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/25x&ctx=0" src="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/175x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/NDV8MTQ4NDUyNTh8MjQyOTA4NDN8MTY3MjIxNzk2MjAwMA==/175x&ctx=0" class="img-responsive lazyload ">
+                    </picture>
+                            </a>
+                                                <div class="buttons-actions">
+                        <button
+                             
+                            data-tipoArtigo="Livro" 
+                            data-title="O Gigante Egoísta e O Príncipe Feliz" 
+                            data-product-id="14845258" 
+                            data-price="8.85" 
+                            data-brand="Porto Editora" 
+                            data-epub="" 
+                            data-ewook="" 
+                            type="button" 
+                            data-kpicesto="4" 
+                            data-subart="24290843"  
+                            class="icon-before montra btn add-cart " 
+                            title="adicionar ao cesto"
+                        >
+                            <span>Cesto</span>
+                        </button>
+                        <button 
+                            type="button" 
+                            data-kpilista="11" 
+                            data-subart="24290843"                          
+                            data-ficha="S" 
+                            data-mesart="14845258" 
+                            class="icon-before btn add-list" 
+                            title="adicionar à lista de desejos"
+                        >
+                            <span>Lista</span>
+                        </button>
+                    </div>
+                
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+    <div class="product-info ">
+                    <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                
+                                    <div class="discount-card">
+                        10% Cartão Leitor Bertrand                    </div>
+                
+                            </div>
+                <div class="price">
+                                <span class="active-price">8,85€</span>
+                        </div>
+
+                    <div>
+                <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
+    <div class="title-product portlet-product-title--14845258 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
+        <p>
+            <a class="title-lnk track" href="/livro/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/14845258">O Gigante Egoísta e O Príncipe Feliz</a>
+        </p>
+    </div> 
+</div>                     <div class="authors portlet-product-author-14845258">
+                        <p>de <a href="/autor/oscar-wilde/19398">Oscar Wilde</a>&nbsp;</p>
+                    </div>
+                            </div>
+
+                            <div class="publisher portlet-product-publisher-14845258">Porto Editora</div>
+            
+                        
+                                        <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/o-gigante-egoista-e-o-principe-feliz-oscar-wilde/14845258">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star"></span>                        </div>
+                        <div class="comments-nr pull-left">(1)</div>
+                    </a>
+                </div>
+                    
+            </div>                                                </div>
+                                                                                                <div class="hidden-xs col-sm-3 col-md-3 col-lg-3  product-portlet" id="productPageSectionAboutAuthor-bestsellers-product-15429129"
+                                                     data-product-id="15429129"
+                                                     data-product-name="O Fantasma de Canterville"
+                                                     data-product-position="3">
+                                                         
+    <div class="product-img ">
+        <div class="cover">
+            <a class="track" href="/livro/o-fantasma-de-canterville-oscar-wilde/15429129">
+                                    <picture>
+                        <source media="not all and (min-resolution:.001dpcm)" alt="O Fantasma de Canterville" srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/175x&ctx=0" type="image/jpeg">
+                        <source alt="O Fantasma de Canterville" srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMHx3ZWJw/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMHx3ZWJw/175x&ctx=0" type="image/webp">
+                        <source alt="O Fantasma de Canterville" srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/25x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/175x&ctx=0" type="image/jpeg">
+                        <!-- Fallback for incompatible browsers -->
+                        <img alt="O Fantasma de Canterville" srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/25x&ctx=0" src="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/175x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8MTU0MjkxMjl8MjE5MDEyNTZ8MTY0MDc5NzY3NjAwMA==/175x&ctx=0" class="img-responsive lazyload ">
+                    </picture>
+                            </a>
+                                                <div class="buttons-actions">
+                        <button
+                             
+                            data-tipoArtigo="Livro" 
+                            data-title="O Fantasma de Canterville" 
+                            data-product-id="15429129" 
+                            data-price="8.85" 
+                            data-brand="Porto Editora" 
+                            data-epub="" 
+                            data-ewook="" 
+                            type="button" 
+                            data-kpicesto="4" 
+                            data-subart="21901256"  
+                            class="icon-before montra btn add-cart " 
+                            title="adicionar ao cesto"
+                        >
+                            <span>Cesto</span>
+                        </button>
+                        <button 
+                            type="button" 
+                            data-kpilista="11" 
+                            data-subart="21901256"                          
+                            data-ficha="S" 
+                            data-mesart="15429129" 
+                            class="icon-before btn add-list" 
+                            title="adicionar à lista de desejos"
+                        >
+                            <span>Lista</span>
+                        </button>
+                    </div>
+                
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+    <div class="product-info ">
+                    <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                
+                                    <div class="discount-card">
+                        10% Cartão Leitor Bertrand                    </div>
+                
+                            </div>
+                <div class="price">
+                                <span class="active-price">8,85€</span>
+                        </div>
+
+                    <div>
+                <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
+    <div class="title-product portlet-product-title--15429129 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
+        <p>
+            <a class="title-lnk track" href="/livro/o-fantasma-de-canterville-oscar-wilde/15429129">O Fantasma de Canterville</a>
+        </p>
+    </div> 
+</div>                     <div class="authors portlet-product-author-15429129">
+                        <p>de <a href="/autor/oscar-wilde/19398">Oscar Wilde</a>&nbsp;</p>
+                    </div>
+                            </div>
+
+                            <div class="publisher portlet-product-publisher-15429129">Porto Editora</div>
+            
+                        
+                                        <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/o-fantasma-de-canterville-oscar-wilde/15429129">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
+                        <div class="comments-nr pull-left">(3)</div>
+                    </a>
+                </div>
+                    
+            </div>                                                </div>
                                                                                                 <div class="hidden-xs col-sm-3 col-md-3 col-lg-3  product-portlet" id="productPageSectionAboutAuthor-bestsellers-product-16017264"
                                                      data-product-id="16017264"
                                                      data-product-name="O Aniversário da Infanta"
                                                      data-product-position="4">
-                                                             <div class="product-img ">
+                                                         
+    <div class="product-img ">
         <div class="cover">
             <a class="track" href="/livro/o-aniversario-da-infanta-oscar-wilde/16017264">
                                     <picture>
@@ -1278,14 +1303,13 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
                         <img alt="O Aniversário da Infanta" srcset="https://img.bertrand.pt/images/o-aniversario-da-infanta-oscar-wilde/NDV8MTYwMTcyNjR8MjQ0NDIxMDR8MTY3NDU3MTI4MzAwMA==/25x&ctx=0" src="https://img.bertrand.pt/images/o-aniversario-da-infanta-oscar-wilde/NDV8MTYwMTcyNjR8MjQ0NDIxMDR8MTY3NDU3MTI4MzAwMA==/175x&ctx=0" data-srcset="https://img.bertrand.pt/images/o-aniversario-da-infanta-oscar-wilde/NDV8MTYwMTcyNjR8MjQ0NDIxMDR8MTY3NDU3MTI4MzAwMA==/175x&ctx=0" class="img-responsive lazyload ">
                     </picture>
                             </a>
-            
-                                    <div class="buttons-actions">
+                                                <div class="buttons-actions">
                         <button
                              
                             data-tipoArtigo="Livro" 
                             data-title="O Aniversário da Infanta" 
                             data-product-id="16017264" 
-                            data-price="6.20" 
+                            data-price="7.75" 
                             data-brand="Porto Editora" 
                             data-epub="" 
                             data-ewook="" 
@@ -1311,36 +1335,44 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
                     </div>
                 
                             <div class="icons">
-                                            <div class="discount-percent  big-discount ">
+                                            <div class="discount-percent ">
                             <div class="round-sticker"></div>
-                            <div class="value">20%</div>
+                            <div class="value">10%</div>
                         </div>
                                     </div>
                     </div>
     </div>
 
     
-
     <div class="product-info ">
                     <div class="shipping-discount-info">
                                     <div class="shipping">portes grátis</div>
+                
+                                    <div class="discount-card">
+                        10% Cartão Leitor Bertrand                    </div>
+                
                             </div>
                 <div class="price">
-                                    <span class="old-price">7,75€</span>
-                                        <span class="active-price">6,20€</span>
+                                <span class="active-price">7,75€</span>
                         </div>
 
-        <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
+                    <div>
+                <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
     <div class="title-product portlet-product-title--16017264 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
         <p>
             <a class="title-lnk track" href="/livro/o-aniversario-da-infanta-oscar-wilde/16017264">O Aniversário da Infanta</a>
         </p>
     </div> 
-</div>                 <div class="authors portlet-product-author-16017264">
-                    <p>de <a href="/autor/oscar-wilde/19398">Oscar Wilde</a>&nbsp;</p>
-                </div>
+</div>                     <div class="authors portlet-product-author-16017264">
+                        <p>de <a href="/autor/oscar-wilde/19398">Oscar Wilde</a>&nbsp;</p>
+                    </div>
+                            </div>
+
                             <div class="publisher portlet-product-publisher-16017264">Porto Editora</div>
-                </div>                                                </div>
+            
+                        
+                                
+            </div>                                                </div>
                                                                                     </div>
                                                                                                                                                   
                                 </div>
@@ -1367,7 +1399,8 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
                         data-product-id="25842636"
                         data-product-name="Amor de Perdição"
                         data-product-position="1">
-                            <div class="product-img ">
+                        
+    <div class="product-img ">
         <div class="cover">
             <a class="track" href="/livro/amor-de-perdicao-camilo-castelo-branco/25842636">
                                     <picture>
@@ -1378,8 +1411,7 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
                         <img alt="Amor de Perdição" srcset="https://img.bertrand.pt/images/amor-de-perdicao-camilo-castelo-branco/NDV8MjU4NDI2MzZ8MjIxMDY2NzF8MTY0MTk5ODE0MTAwMA==/25x&ctx=0" src="https://img.bertrand.pt/images/amor-de-perdicao-camilo-castelo-branco/NDV8MjU4NDI2MzZ8MjIxMDY2NzF8MTY0MTk5ODE0MTAwMA==/175x&ctx=0" data-srcset="https://img.bertrand.pt/images/amor-de-perdicao-camilo-castelo-branco/NDV8MjU4NDI2MzZ8MjIxMDY2NzF8MTY0MTk5ODE0MTAwMA==/175x&ctx=0" class="img-responsive lazyload ">
                     </picture>
                             </a>
-            
-                                    <div class="buttons-actions">
+                                                <div class="buttons-actions">
                         <button
                              
                             data-tipoArtigo="Livro" 
@@ -1420,32 +1452,40 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
     </div>
 
     
-
     <div class="product-info ">
                     <div class="shipping-discount-info">
                                     <div class="shipping">portes grátis</div>
+                
+                
                             </div>
                 <div class="price">
                                     <span class="old-price">8,45€</span>
                                         <span class="active-price">7,61€</span>
                         </div>
 
-        <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
+                    <div>
+                <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
     <div class="title-product portlet-product-title--25842636 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
         <p>
             <a class="title-lnk track" href="/livro/amor-de-perdicao-camilo-castelo-branco/25842636">Amor de Perdição</a>
         </p>
     </div> 
-</div>                 <div class="authors portlet-product-author-25842636">
-                    <p>de <a href="/autor/camilo-castelo-branco/39147">Camilo Castelo Branco</a>&nbsp;</p>
-                </div>
+</div>                     <div class="authors portlet-product-author-25842636">
+                        <p>de <a href="/autor/camilo-castelo-branco/39147">Camilo Castelo Branco</a>&nbsp;</p>
+                    </div>
+                            </div>
+
                             <div class="publisher portlet-product-publisher-25842636">Penguin Clássicos</div>
-                </div>                    </div>
+            
+                        
+                                
+            </div>                    </div>
                                         <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3  product-portlet" id="productPageSectionWhoBuy-content-product-25208162"
                         data-product-id="25208162"
                         data-product-name="A Metamorfose"
                         data-product-position="2">
-                            <div class="product-img ">
+                        
+    <div class="product-img ">
         <div class="cover">
             <a class="track" href="/livro/a-metamorfose-franz-kafka/25208162">
                                     <picture>
@@ -1456,8 +1496,7 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
                         <img alt="A Metamorfose" srcset="https://img.bertrand.pt/images/a-metamorfose-franz-kafka/NDV8MjUyMDgxNjJ8MjE0MTYxNTh8MTY0NTYwNzY4ODAwMA==/25x&ctx=0" src="https://img.bertrand.pt/images/a-metamorfose-franz-kafka/NDV8MjUyMDgxNjJ8MjE0MTYxNTh8MTY0NTYwNzY4ODAwMA==/175x&ctx=0" data-srcset="https://img.bertrand.pt/images/a-metamorfose-franz-kafka/NDV8MjUyMDgxNjJ8MjE0MTYxNTh8MTY0NTYwNzY4ODAwMA==/175x&ctx=0" class="img-responsive lazyload ">
                     </picture>
                             </a>
-            
-                                    <div class="buttons-actions">
+                                                <div class="buttons-actions">
                         <button
                              
                             data-tipoArtigo="Livro" 
@@ -1498,32 +1537,40 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
     </div>
 
     
-
     <div class="product-info ">
                     <div class="shipping-discount-info">
                                     <div class="shipping">portes grátis</div>
+                
+                
                             </div>
                 <div class="price">
                                     <span class="old-price">12,20€</span>
                                         <span class="active-price">10,98€</span>
                         </div>
 
-        <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
+                    <div>
+                <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
     <div class="title-product portlet-product-title--25208162 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
         <p>
             <a class="title-lnk track" href="/livro/a-metamorfose-franz-kafka/25208162">A Metamorfose</a>
         </p>
     </div> 
-</div>                 <div class="authors portlet-product-author-25208162">
-                    <p>de <a href="/autor/franz-kafka/3457">Franz Kafka</a>&nbsp;</p>
-                </div>
+</div>                     <div class="authors portlet-product-author-25208162">
+                        <p>de <a href="/autor/franz-kafka/3457">Franz Kafka</a>&nbsp;</p>
+                    </div>
+                            </div>
+
                             <div class="publisher portlet-product-publisher-25208162">Porto Editora</div>
-                </div>                    </div>
+            
+                        
+                                
+            </div>                    </div>
                                         <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3  hidden-xs  product-portlet" id="productPageSectionWhoBuy-content-product-25233042"
                         data-product-id="25233042"
                         data-product-name="Triste Fim de Policarpo Quaresma"
                         data-product-position="3">
-                            <div class="product-img ">
+                        
+    <div class="product-img ">
         <div class="cover">
             <a class="track" href="/livro/triste-fim-de-policarpo-quaresma-lima-barreto/25233042">
                                     <picture>
@@ -1534,8 +1581,7 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
                         <img alt="Triste Fim de Policarpo Quaresma" srcset="https://img.bertrand.pt/images/triste-fim-de-policarpo-quaresma-lima-barreto/NDV8MjUyMzMwNDJ8MjE0NDIxMzd8MTYyNzI5MTE1NDAwMA==/25x&ctx=0" src="https://img.bertrand.pt/images/triste-fim-de-policarpo-quaresma-lima-barreto/NDV8MjUyMzMwNDJ8MjE0NDIxMzd8MTYyNzI5MTE1NDAwMA==/175x&ctx=0" data-srcset="https://img.bertrand.pt/images/triste-fim-de-policarpo-quaresma-lima-barreto/NDV8MjUyMzMwNDJ8MjE0NDIxMzd8MTYyNzI5MTE1NDAwMA==/175x&ctx=0" class="img-responsive lazyload ">
                     </picture>
                             </a>
-            
-                                    <div class="buttons-actions">
+                                                <div class="buttons-actions">
                         <button
                              
                             data-tipoArtigo="Livro" 
@@ -1576,32 +1622,40 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
     </div>
 
     
-
     <div class="product-info ">
                     <div class="shipping-discount-info">
                                     <div class="shipping">portes grátis</div>
+                
+                
                             </div>
                 <div class="price">
                                     <span class="old-price">11,95€</span>
                                         <span class="active-price">10,76€</span>
                         </div>
 
-        <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
+                    <div>
+                <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
     <div class="title-product portlet-product-title--25233042 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
         <p>
             <a class="title-lnk track" href="/livro/triste-fim-de-policarpo-quaresma-lima-barreto/25233042">Triste Fim de Policarpo Quaresma</a>
         </p>
     </div> 
-</div>                 <div class="authors portlet-product-author-25233042">
-                    <p>de <a href="/autor/lima-barreto/34145">Lima Barreto</a>&nbsp;</p>
-                </div>
+</div>                     <div class="authors portlet-product-author-25233042">
+                        <p>de <a href="/autor/lima-barreto/34145">Lima Barreto</a>&nbsp;</p>
+                    </div>
+                            </div>
+
                             <div class="publisher portlet-product-publisher-25233042">Penguin Clássicos</div>
-                </div>                    </div>
+            
+                        
+                                
+            </div>                    </div>
                                         <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3  hidden-xs  product-portlet" id="productPageSectionWhoBuy-content-product-25233039"
                         data-product-id="25233039"
                         data-product-name="Os Maias - Episódios da Vida Romântica"
                         data-product-position="4">
-                            <div class="product-img ">
+                        
+    <div class="product-img ">
         <div class="cover">
             <a class="track" href="/livro/os-maias-episodios-da-vida-romantica-eca-de-queiroz/25233039">
                                     <picture>
@@ -1612,8 +1666,7 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
                         <img alt="Os Maias - Episódios da Vida Romântica" srcset="https://img.bertrand.pt/images/os-maias-episodios-da-vida-romantica-eca-de-queiroz/NDV8MjUyMzMwMzl8MjE0NDIxMzR8MTYyNzI5MTE0OTAwMA==/25x&ctx=0" src="https://img.bertrand.pt/images/os-maias-episodios-da-vida-romantica-eca-de-queiroz/NDV8MjUyMzMwMzl8MjE0NDIxMzR8MTYyNzI5MTE0OTAwMA==/175x&ctx=0" data-srcset="https://img.bertrand.pt/images/os-maias-episodios-da-vida-romantica-eca-de-queiroz/NDV8MjUyMzMwMzl8MjE0NDIxMzR8MTYyNzI5MTE0OTAwMA==/175x&ctx=0" class="img-responsive lazyload ">
                     </picture>
                             </a>
-            
-                                    <div class="buttons-actions">
+                                                <div class="buttons-actions">
                         <button
                              
                             data-tipoArtigo="Livro" 
@@ -1654,27 +1707,34 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
     </div>
 
     
-
     <div class="product-info ">
                     <div class="shipping-discount-info">
                                     <div class="shipping">portes grátis</div>
+                
+                
                             </div>
                 <div class="price">
                                     <span class="old-price">10,95€</span>
                                         <span class="active-price">9,86€</span>
                         </div>
 
-        <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
+                    <div>
+                <div class="title col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
     <div class="title-product portlet-product-title--25233039 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding pull-left">
         <p>
             <a class="title-lnk track" href="/livro/os-maias-episodios-da-vida-romantica-eca-de-queiroz/25233039">Os Maias - Episódios da Vida Romântica</a>
         </p>
     </div> 
-</div>                 <div class="authors portlet-product-author-25233039">
-                    <p>de <a href="/autor/eca-de-queiroz/3880247">Eça de Queiroz</a>&nbsp;</p>
-                </div>
+</div>                     <div class="authors portlet-product-author-25233039">
+                        <p>de <a href="/autor/eca-de-queiroz/3880247">Eça de Queiroz</a>&nbsp;</p>
+                    </div>
+                            </div>
+
                             <div class="publisher portlet-product-publisher-25233039">Penguin Clássicos</div>
-                </div>                    </div>
+            
+                        
+                                
+            </div>                    </div>
                     <!--            </div>-->
         </div>
     </div>
@@ -1904,7 +1964,7 @@ Introdução de João R. Figueiredo, professor de Teoria da Literatura e de Cult
 
 
 <div class="bottom-footer copyRight-footer">
-            <span>Salvo onde se indique um período de vigência mais alargado, os preços, promoções e ofertas são válidos <br>das 00:00:00 de 17-05-2023 às 23:59:59 de 17-05-2023 e só para a livraria Bertrand online.</span> <br>
+            <span>Salvo onde se indique um período de vigência mais alargado, os preços, promoções e ofertas são válidos <br>das 00:00:00 de 20-05-2023 às 23:59:59 de 20-05-2023 e só para a livraria Bertrand online.</span> <br>
         
             <span>©2023 Grupo Bertrand Círculo. Todos os direitos reservados, Lisboa, Portugal</span>
     </div>        </footer>
@@ -2052,7 +2112,7 @@ Em qualquer altura, pode atualizar estes dados na sua ‘Área de Cliente’.
 <div class="form info-pop" id="productPage-overlay-infoDiscountArea-content-form">
     <div class="title-h1">o que deve saber</div>
 <br>
-<div class="header3-h3">Válido das 00:00:00 de 17-05-2023 às 23:59:59 de 17-05-2023 e só para a livraria Bertrand online.</div>
+<div class="header3-h3">Válido das 00:00:00 de 27-01-2023 às 23:59:59 de 02-07-2024 e só para a livraria Bertrand online.</div>
 
     <div class="header3-h3">
         <br>
@@ -2582,7 +2642,7 @@ Preço fixado pelo editor ou importador. Sempre que se anuncie um desconto imedi
 <br>
 <div class="title-h1">o que deve saber</div>
 <br>
-<div class="header3-h3">Válido das 00:00:00 de 17-05-2023 às 23:59:59 de 17-05-2023 e só para a livraria Bertrand online.</div>
+<div class="header3-h3">Válido das 00:00:00 de 27-01-2023 às 23:59:59 de 02-07-2024 e só para a livraria Bertrand online.</div>
 
 
 <br>
@@ -2611,14 +2671,14 @@ Mais informação sobre preços e promoções nas nossas <b><a href="/sobre-nos/
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="//cdn.bertrand.pt/build/192/vendor.min.js"></script>
-<script type="text/javascript" src="//cdn.bertrand.pt/build/192/main.min.js"></script>
+    <script type="text/javascript" src="//cdn.bertrand.pt/build/194/vendor.min.js"></script>
+<script type="text/javascript" src="//cdn.bertrand.pt/build/194/main.min.js"></script>
 <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=pt-PT"></script>
 <script>pt.ecommerce.generic.mensagens = {"jsLoadingGenerico":"A carregar...","jsInvalidIsbnMsgGenerico":"ISBN inv\u00e1lido","jsInvalidEmailMsgGenerico":"Verifique, por favor, o endere\u00e7o  de email introduzido.","jsRequiredEmailMsgGenerico":"\u00c9 necess\u00e1rio indicar um endere\u00e7o de email.","jsInvalidDateDayMsgGenerico":"Data inv\u00e1lida","jsInvalidDateMonthMsgGenerico":"Data inv\u00e1lida","jsInvalidDateYearMsgGenerico":"Data inv\u00e1lida","jserrormessagesrequiredfield":"Campo de preenchimento obrigat\u00f3rio.","jsInvalidNifMsgGenerico":"NIF inv\u00e1lido"};pt.ecommerce.escolares.verificar = false;pt.ecommerce.escolares.verificar_anos = [1,2];pt.ecommerce.productpage.mensagens = {"notAvailableError":"Lamentamos mas ocorreu um erro a obter a informa\u00e7\u00e3o. Por favor, tente mais tarde."};pt.ecommerce.productpage.gtmProductData = {"name":"O Retrato de Dorian Gray","id":26732009,"price":"10.76","brand":"Penguin Cl\u00e1ssicos"};pt.ecommerce.productpage.generic.trackCS(23013911);pt.ecommerce.homepage.params = {"restricts":"8066x5839x18017x18261","blacklistRestricts":"8068#8069#8070#14208x14210#14208x14209#","escolaresRestricts":"8070x5493","blacklistMontras":"8066#11708#14208x14210#25188"};</script>
     <div id="klaro"></div>
 
     <div id="data-simulador"></div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-51878d9935646189485","applicationID":"291087941","transactionName":"MhBSZQoZCERTAEZdVwtac0QLDAlaHSJAQFECGkMeERYCUko=","queueTime":0,"applicationTime":91,"atts":"HldRE0IDG0o=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-51878d9935646189485","applicationID":"291087941","transactionName":"MhBSZQoZCERTAEZdVwtac0QLDAlaHSJAQFECGkMeERYCUko=","queueTime":0,"applicationTime":88,"atts":"HldRE0IDG0o=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
 
 
 </html>
