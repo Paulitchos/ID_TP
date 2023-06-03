@@ -3,19 +3,12 @@
      <escritor id="1">
           <nome>Nicholas Charles Sparks</nome>
           <datanascimento>31 de dezembro de 1965</datanascimento>
-          <datafalecimento>Não faleceu</datafalecimento>
           <nacionalidade>Povo dos Estados Unidos</nacionalidade>
           <foto>//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nicholas-Sparks-Autograph-1-4-06.jpg/250px-Nicholas-Sparks-Autograph-1-4-06.jpg</foto>
-          <generoliterario ngeneros="1">
-               <gen>Não tem</gen>
-          </generoliterario>
           <ocupacoes nocupacaos="3">
                <oc>Escritor</oc>
                <oc>Roteirista</oc>
                <oc>Produtor cinematográfico</oc>
           </ocupacoes>
-          <premios npremios="1">
-               <pre>Não tem</pre>
-          </premios>
      </escritor>
 </escritores>

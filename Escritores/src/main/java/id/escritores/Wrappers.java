@@ -304,7 +304,7 @@ public class Wrappers {
             }
         }
         
-        return "";
+        return null;
     }
     
     public static String obtem_data_nascimento(String link) throws IOException{
@@ -348,7 +348,7 @@ public class Wrappers {
             return(matcher.group(1) + matcher.group(2) + matcher.group(3));
         }
         
-        return "Não faleceu";
+        return null;
     }
     
     public static String obtem_nacionalidade(String link) throws IOException{
@@ -368,7 +368,7 @@ public class Wrappers {
             return(nacionalidade);
         }
         
-        return "";
+        return null;
     }
     
     public static String obtem_foto(String link) throws IOException{
@@ -394,7 +394,7 @@ public class Wrappers {
             }        
         }
         input.close();
-        return "";
+        return null;
     }
     
     public static String obtem_genero(String link) throws IOException{
@@ -439,7 +439,7 @@ public class Wrappers {
             }
         }
 
-        return "Não tem";
+        return null;
     }
     
     public static List<String> obtem_premios(String link) throws IOException {
@@ -472,7 +472,7 @@ public class Wrappers {
             }
             
             }else {
-                premios.add("Não tem");
+                return null;
             }
 
         return premios;
@@ -498,7 +498,7 @@ public class Wrappers {
             }
             
         } else {
-            ocupacoes.add("Não tem");
+            return null;
         }
 
         return ocupacoes;
