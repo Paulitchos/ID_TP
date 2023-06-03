@@ -22,7 +22,8 @@ public class EscritoresXML {
 
         Element escritor = new Element("escritor");
         escritor.setAttribute("id", String.valueOf(esc.getId()));
-
+        escritor.setAttribute("nomePesquisado", String.valueOf(esc.getNomePesquisa()));
+        
         if (esc.getNome() != null) {
             Element nome = new Element("nome");
             nome.addContent(esc.getNome());
@@ -101,6 +102,42 @@ public class EscritoresXML {
         }
                
         raiz.addContent(escritor);
+        return doc;
+    }
+    
+    public static Document removeEscritor(String autor, Document doc){
+        Element raiz;
+        String idAutor = "";
+        if (doc == null) {
+            System.out.println("O ficheiro XML não existe.");
+            return null;
+        } else {
+            raiz = doc.getRootElement();
+        }
+
+        List<Element> todosEscritores = raiz.getChildren("escritor");
+        boolean found = false;
+        for (int i = 0; i < todosEscritores .size(); i++) {
+            Element escritor = todosEscritores .get(i);
+            if (escritor.getAttributeValue("nomePesquisado").equals(autor)) {
+                escritor.getParent().removeContent(escritor);
+                System.out.println("Escritor removido com sucesso!");
+                found = true;
+                idAutor = escritor.getAttributeValue("id");
+                Document docObras = XMLJDomFunctions.lerDocumentoXML("obras.xml");
+                docObras = ObrasXML.removeObras(idAutor, docObras);
+                
+                if(docObras != null){
+                    XMLJDomFunctions.escreverDocumentoParaFicheiro(docObras, "obras.xml");
+                }
+            }
+        }
+
+        if (!found) {
+            System.out.println("Escritor " + autor + " não foi encontrado.");
+            return null;
+        }
+
         return doc;
     }
 }

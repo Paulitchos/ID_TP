@@ -6,12 +6,13 @@ package id.escritores;
 
 import java.io.IOException;
 import java.util.List;
+import net.sf.saxon.s9api.SaxonApiException;
 import org.jdom2.Document;
 
 
 public class main {
     
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SaxonApiException {
         
         Escritores escritor = Wrappers.criaEscritor("Daniel Silva");
         System.out.println("Autor:");

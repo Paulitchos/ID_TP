@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Nicholas Sparks – Wikipédia, a enciclopédia livre</title>
-<script>document.documentElement.className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled vector-feature-zebra-design-disabled";(function(){var cookie=document.cookie.match(/(?:^|; )ptwikimwclientprefs=([^;]+)/);if(cookie){var featureName=cookie[1];document.documentElement.className=document.documentElement.className.replace(featureName+'-enabled',featureName+'-disabled');}}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgRequestId":"a4bc4332-a8df-4e3c-8d7f-646f2809d20f",
+<script>document.documentElement.className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-enabled vector-feature-main-menu-pinned-disabled vector-feature-limited-width-enabled vector-feature-limited-width-content-enabled vector-feature-zebra-design-disabled";(function(){var cookie=document.cookie.match(/(?:^|; )ptwikimwclientprefs=([^;]+)/);if(cookie){var featureName=cookie[1];document.documentElement.className=document.documentElement.className.replace(featureName+'-enabled',featureName+'-disabled');}}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgRequestId":"21432aad-0366-40a3-b8ce-a58eb813011e",
 "wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Nicholas_Sparks","wgTitle":"Nicholas Sparks","wgCurRevisionId":65114674,"wgRevisionId":65114674,"wgArticleId":124331,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["!CS1 inglês-fontes em língua (en)","Pessoas vivas","!Imagem local idêntica à do Wikidata","Nascidos em 1965","Nicholas Sparks","Naturais de Omaha (Nebraska)","Romancistas dos Estados Unidos","Produtores dos Estados Unidos","Roteiristas dos Estados Unidos"],"wgPageViewLanguage":"pt","wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgRelevantPageName":"Nicholas_Sparks","wgRelevantArticleId":124331,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","pageVariantFallbacks":"pt"},
 "wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":true,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":10000,"wgNoticeProject":"wikipedia","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":10,"wgULSCurrentAutonym":"português","wgEditSubmitButtonLabelPublish":true,"wgCentralAuthMobileDomain":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q219377","GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":true,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false,"wgSiteNoticeId":"2.30"};RLSTATE={"skins.vector.user.styles":"ready","ext.gadget.FeedbackHighlight-base":"ready","ext.gadget.keepPDU":"ready","ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","ext.globalCssJs.user":"ready","user":"ready",
 "user.options":"loading","ext.cite.styles":"ready","mediawiki.ui.button":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","mediawiki.ui.icon":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.wikimediaBadges":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.dismissableSiteNotice.styles":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.ready","mediawiki.toc","skins.vector.js","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.cx.eventlogging.campaigns","oojs-ui.styles.icons-media","oojs-ui-core.icons","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs",
@@ -1978,13 +1978,13 @@
 </div></td></tr></tbody></table></div>
 <!-- 
 NewPP limit report
-Parsed by mw1419
-Cached time: 20230602001143
-Cache expiry: 85699
+Parsed by mw1352
+Cached time: 20230603014116
+Cache expiry: 80326
 Reduced expiry: true
 Complications: [show‐toc]
-CPU time usage: 0.779 seconds
-Real time usage: 0.993 seconds
+CPU time usage: 0.829 seconds
+Real time usage: 0.971 seconds
 Preprocessor visited node count: 4634/1000000
 Post‐expand include size: 83629/2097152 bytes
 Template argument size: 3964/2097152 bytes
@@ -1992,25 +1992,25 @@ Highest expansion depth: 23/100
 Expensive parser function count: 68/500
 Unstrip recursion depth: 0/20
 Unstrip post‐expand size: 13767/5000000 bytes
-Lua time usage: 0.549/10.000 seconds
-Lua memory usage: 13645274/52428800 bytes
+Lua time usage: 0.556/10.000 seconds
+Lua memory usage: 13938246/52428800 bytes
 Number of Wikibase entities loaded: 34/400
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  902.969      1 -total
- 64.34%  580.937      1 Predefinição:Controle_de_autoridade
- 17.52%  158.224      1 Predefinição:Info/Biografia
- 16.51%  149.093      1 Predefinição:Info
- 10.28%   92.862      1 Predefinição:Referências
-  7.40%   66.857     10 Predefinição:Citar_web
-  4.31%   38.961      2 Predefinição:Categorização_AD_e_AB_de_outras_wikis
-  2.99%   27.008      1 Predefinição:IMDb_name
-  2.67%   24.135      1 Predefinição:Dni
-  2.12%   19.181      3 Predefinição:Info/lang
+100.00%  854.274      1 -total
+ 63.97%  546.503      1 Predefinição:Controle_de_autoridade
+ 20.27%  173.125      1 Predefinição:Info/Biografia
+ 19.34%  165.243      1 Predefinição:Info
+  9.05%   77.315      1 Predefinição:Referências
+  6.34%   54.130     10 Predefinição:Citar_web
+  4.02%   34.352      2 Predefinição:Categorização_AD_e_AB_de_outras_wikis
+  2.94%   25.148      1 Predefinição:Dni
+  2.66%   22.752      3 Predefinição:Info/lang
+  2.38%   20.314      1 Predefinição:IMDb_name
 -->
 
-<!-- Saved in parser cache with key ptwiki:pcache:idhash:124331-0!canonical and timestamp 20230602001142 and revision id 65114674. Rendering was triggered because: page-view
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:124331-0!canonical and timestamp 20230603014115 and revision id 65114674. Rendering was triggered because: page-view
  -->
 </div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
 <div class="printfooter" data-nosnippet="">Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Nicholas_Sparks&amp;oldid=65114674">https://pt.wikipedia.org/w/index.php?title=Nicholas_Sparks&amp;oldid=65114674</a>"</div></div>
@@ -2061,7 +2061,7 @@ Para mais detalhes, consulte as <a href="https://foundation.wikimedia.org/wiki/S
 </button>
 
 </div>
-<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw1436","wgBackendResponseTime":112,"wgPageParseReport":{"limitreport":{"cputime":"0.779","walltime":"0.993","ppvisitednodes":{"value":4634,"limit":1000000},"postexpandincludesize":{"value":83629,"limit":2097152},"templateargumentsize":{"value":3964,"limit":2097152},"expansiondepth":{"value":23,"limit":100},"expensivefunctioncount":{"value":68,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":13767,"limit":5000000},"entityaccesscount":{"value":34,"limit":400},"timingprofile":["100.00%  902.969      1 -total"," 64.34%  580.937      1 Predefinição:Controle_de_autoridade"," 17.52%  158.224      1 Predefinição:Info/Biografia"," 16.51%  149.093      1 Predefinição:Info"," 10.28%   92.862      1 Predefinição:Referências","  7.40%   66.857     10 Predefinição:Citar_web","  4.31%   38.961      2 Predefinição:Categorização_AD_e_AB_de_outras_wikis","  2.99%   27.008      1 Predefinição:IMDb_name","  2.67%   24.135      1 Predefinição:Dni","  2.12%   19.181      3 Predefinição:Info/lang"]},"scribunto":{"limitreport-timeusage":{"value":"0.549","limit":"10.000"},"limitreport-memusage":{"value":13645274,"limit":52428800}},"cachereport":{"origin":"mw1419","timestamp":"20230602001143","ttl":85699,"transientcontent":true}}});});</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw1352","wgBackendResponseTime":1098,"wgPageParseReport":{"limitreport":{"cputime":"0.829","walltime":"0.971","ppvisitednodes":{"value":4634,"limit":1000000},"postexpandincludesize":{"value":83629,"limit":2097152},"templateargumentsize":{"value":3964,"limit":2097152},"expansiondepth":{"value":23,"limit":100},"expensivefunctioncount":{"value":68,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":13767,"limit":5000000},"entityaccesscount":{"value":34,"limit":400},"timingprofile":["100.00%  854.274      1 -total"," 63.97%  546.503      1 Predefinição:Controle_de_autoridade"," 20.27%  173.125      1 Predefinição:Info/Biografia"," 19.34%  165.243      1 Predefinição:Info","  9.05%   77.315      1 Predefinição:Referências","  6.34%   54.130     10 Predefinição:Citar_web","  4.02%   34.352      2 Predefinição:Categorização_AD_e_AB_de_outras_wikis","  2.94%   25.148      1 Predefinição:Dni","  2.66%   22.752      3 Predefinição:Info/lang","  2.38%   20.314      1 Predefinição:IMDb_name"]},"scribunto":{"limitreport-timeusage":{"value":"0.556","limit":"10.000"},"limitreport-memusage":{"value":13938246,"limit":52428800}},"cachereport":{"origin":"mw1352","timestamp":"20230603014116","ttl":80326,"transientcontent":true}}});});</script>
 <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Nicholas Sparks","url":"https:\/\/pt.wikipedia.org\/wiki\/Nicholas_Sparks","sameAs":"http:\/\/www.wikidata.org\/entity\/Q219377","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q219377","author":{"@type":"Organization","name":"Contribuidores dos projetos da Wikimedia"},"publisher":{"@type":"Organization","name":"Funda\u00e7\u00e3o Wikimedia, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2005-07-30T13:28:45Z","dateModified":"2023-01-16T16:38:07Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/a\/af\/Nicholas-Sparks-Autograph-1-4-06.jpg"}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Nicholas Sparks","url":"https:\/\/pt.wikipedia.org\/wiki\/Nicholas_Sparks","sameAs":"http:\/\/www.wikidata.org\/entity\/Q219377","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q219377","author":{"@type":"Organization","name":"Contribuidores dos projetos da Wikimedia"},"publisher":{"@type":"Organization","name":"Funda\u00e7\u00e3o Wikimedia, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2005-07-30T13:28:45Z","dateModified":"2023-01-16T16:38:07Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/a\/af\/Nicholas-Sparks-Autograph-1-4-06.jpg"}</script>
 </body>
 </html>

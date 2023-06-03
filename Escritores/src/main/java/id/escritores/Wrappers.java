@@ -57,7 +57,7 @@ public class Wrappers {
             List<String> premios = obtem_premios(link);
             List<String> ocupacoes = obtem_ocupacoes(link);
             String outra_info = obter_outra_info(link);
-            Escritores x = new Escritores(nome,nacionalidade,foto,genero,ocupacoes,premios,outra_info,nascimento,falecimento,link);
+            Escritores x = new Escritores(nome,nacionalidade,foto,genero,ocupacoes,premios,outra_info,nascimento,falecimento,link,autor);
             return x;
         }
         

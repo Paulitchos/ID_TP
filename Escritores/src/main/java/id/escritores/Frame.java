@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import net.sf.saxon.s9api.SaxonApiException;
 import org.jdom2.Document;
 
 /**
@@ -35,10 +36,14 @@ public class Frame extends javax.swing.JFrame {
     private void initComponents() {
 
         jFileChooser1 = new javax.swing.JFileChooser();
-        adicionarAutorDialog = new javax.swing.JDialog();
-        nomeAutorTextField = new javax.swing.JTextField();
+        adicionarEscritorDialog = new javax.swing.JDialog();
+        nomeEscritorTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        adicionarAutorButton = new javax.swing.JButton();
+        adicionarEscritorButton = new javax.swing.JButton();
+        removerEscritorDialog = new javax.swing.JDialog();
+        nomeEscritorTextField1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        removerEscritorButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         outputTextArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
@@ -47,47 +52,90 @@ public class Frame extends javax.swing.JFrame {
         abrirMenuItem = new javax.swing.JMenuItem();
         sairMenuItem = new javax.swing.JMenuItem();
         xmlMenu = new javax.swing.JMenu();
-        adicionarAutorMenuItem = new javax.swing.JMenuItem();
+        adicionarEscritorMenuItem = new javax.swing.JMenuItem();
+        removerEscritorMenuItem = new javax.swing.JMenuItem();
 
-        nomeAutorTextField.addActionListener(new java.awt.event.ActionListener() {
+        nomeEscritorTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeAutorTextFieldActionPerformed(evt);
+                nomeEscritorTextFieldActionPerformed(evt);
             }
         });
 
         jLabel2.setText("Nome do Autor:");
 
-        adicionarAutorButton.setText("Adicionar Autor");
-        adicionarAutorButton.addActionListener(new java.awt.event.ActionListener() {
+        adicionarEscritorButton.setText("Adicionar Autor");
+        adicionarEscritorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adicionarAutorButtonActionPerformed(evt);
+                adicionarEscritorButtonActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout adicionarAutorDialogLayout = new javax.swing.GroupLayout(adicionarAutorDialog.getContentPane());
-        adicionarAutorDialog.getContentPane().setLayout(adicionarAutorDialogLayout);
-        adicionarAutorDialogLayout.setHorizontalGroup(
-            adicionarAutorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adicionarAutorDialogLayout.createSequentialGroup()
+        javax.swing.GroupLayout adicionarEscritorDialogLayout = new javax.swing.GroupLayout(adicionarEscritorDialog.getContentPane());
+        adicionarEscritorDialog.getContentPane().setLayout(adicionarEscritorDialogLayout);
+        adicionarEscritorDialogLayout.setHorizontalGroup(
+            adicionarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adicionarEscritorDialogLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(nomeAutorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nomeEscritorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(adicionarAutorDialogLayout.createSequentialGroup()
+            .addGroup(adicionarEscritorDialogLayout.createSequentialGroup()
                 .addGap(150, 150, 150)
-                .addComponent(adicionarAutorButton)
+                .addComponent(adicionarEscritorButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        adicionarAutorDialogLayout.setVerticalGroup(
-            adicionarAutorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adicionarAutorDialogLayout.createSequentialGroup()
+        adicionarEscritorDialogLayout.setVerticalGroup(
+            adicionarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adicionarEscritorDialogLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(adicionarAutorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeAutorTextField)
+                .addGroup(adicionarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeEscritorTextField)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
-                .addComponent(adicionarAutorButton)
+                .addComponent(adicionarEscritorButton)
+                .addGap(16, 16, 16))
+        );
+
+        nomeEscritorTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeEscritorTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Nome do Autor:");
+
+        removerEscritorButton.setText("Remover Autor");
+        removerEscritorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removerEscritorButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout removerEscritorDialogLayout = new javax.swing.GroupLayout(removerEscritorDialog.getContentPane());
+        removerEscritorDialog.getContentPane().setLayout(removerEscritorDialogLayout);
+        removerEscritorDialogLayout.setHorizontalGroup(
+            removerEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, removerEscritorDialogLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nomeEscritorTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(removerEscritorDialogLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(removerEscritorButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        removerEscritorDialogLayout.setVerticalGroup(
+            removerEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, removerEscritorDialogLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(removerEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeEscritorTextField1)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addComponent(removerEscritorButton)
                 .addGap(16, 16, 16))
         );
 
@@ -126,13 +174,21 @@ public class Frame extends javax.swing.JFrame {
 
         xmlMenu.setText("XML");
 
-        adicionarAutorMenuItem.setText("Adicionar Autor");
-        adicionarAutorMenuItem.addActionListener(new java.awt.event.ActionListener() {
+        adicionarEscritorMenuItem.setText("Adicionar Autor");
+        adicionarEscritorMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adicionarAutorMenuItemActionPerformed(evt);
+                adicionarEscritorMenuItemActionPerformed(evt);
             }
         });
-        xmlMenu.add(adicionarAutorMenuItem);
+        xmlMenu.add(adicionarEscritorMenuItem);
+
+        removerEscritorMenuItem.setText("Remover Autor");
+        removerEscritorMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removerEscritorMenuItemActionPerformed(evt);
+            }
+        });
+        xmlMenu.add(removerEscritorMenuItem);
 
         jMenuBar1.add(xmlMenu);
 
@@ -193,25 +249,25 @@ public class Frame extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_sairMenuItemActionPerformed
 
-    private void adicionarAutorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarAutorMenuItemActionPerformed
-        adicionarAutorDialog.setSize(500, 200);
-        adicionarAutorDialog.setLocation(200, 200);
-        adicionarAutorDialog.setVisible(true);
-    }//GEN-LAST:event_adicionarAutorMenuItemActionPerformed
+    private void adicionarEscritorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarEscritorMenuItemActionPerformed
+        adicionarEscritorDialog.setSize(500, 200);
+        adicionarEscritorDialog.setLocation(200, 200);
+        adicionarEscritorDialog.setVisible(true);
+    }//GEN-LAST:event_adicionarEscritorMenuItemActionPerformed
 
-    private void nomeAutorTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeAutorTextFieldActionPerformed
+    private void nomeEscritorTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscritorTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeAutorTextFieldActionPerformed
+    }//GEN-LAST:event_nomeEscritorTextFieldActionPerformed
 
-    private void adicionarAutorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarAutorButtonActionPerformed
+    private void adicionarEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarEscritorButtonActionPerformed
         try {
-            Escritores escritor = Wrappers.criaEscritor(nomeAutorTextField.getText());
+            Escritores escritor = Wrappers.criaEscritor(nomeEscritorTextField.getText());
             
             if(escritor != null){
                 
                 Document docEscritor = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
                 
-                List<Obra> obras = Wrappers.criaObra(nomeAutorTextField.getText(), escritor.getId());
+                List<Obra> obras = Wrappers.criaObra(nomeEscritorTextField.getText(), escritor.getId());
                 
                 Document docObras = XMLJDomFunctions.lerDocumentoXML("obras.xml");
                 
@@ -240,16 +296,52 @@ public class Frame extends javax.swing.JFrame {
                 }
             } else {
                 JOptionPane.showMessageDialog(this,
-                        "Autor já existe no ficheiro",
+                        "Escritor já existe no ficheiro",
                         "Informação",
                         JOptionPane.INFORMATION_MESSAGE);
             }
-            adicionarAutorDialog.setVisible(false);
-            nomeAutorTextField.setText("");
+            adicionarEscritorDialog.setVisible(false);
+            nomeEscritorTextField.setText("");
         } catch (IOException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_adicionarAutorButtonActionPerformed
+    }//GEN-LAST:event_adicionarEscritorButtonActionPerformed
+
+    private void nomeEscritorTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscritorTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeEscritorTextField1ActionPerformed
+
+    private void removerEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerEscritorButtonActionPerformed
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        
+        //Chama a função para remover  livros ao XML
+        doc = EscritoresXML.removeEscritor(nomeEscritorTextField1.getText(), doc);
+        //grava o ficheiro XML em disco
+        if (doc != null) {
+            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "escritores.xml");
+            removerEscritorDialog.setVisible(false);
+            JOptionPane.showMessageDialog(this,
+                    "Escritor e Obras removidos com sucesso",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+            nomeEscritorTextField1.setText("");
+        } else {
+            removerEscritorDialog.setVisible(false);
+            JOptionPane.showMessageDialog(this,
+                    "Escritor não encontrado",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+            nomeEscritorTextField1.setText("");
+        }
+    }//GEN-LAST:event_removerEscritorButtonActionPerformed
+
+    private void removerEscritorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerEscritorMenuItemActionPerformed
+        removerEscritorDialog.setSize(500, 200);
+        removerEscritorDialog.setLocation(200, 200);
+        removerEscritorDialog.setVisible(true);
+    }//GEN-LAST:event_removerEscritorMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -288,17 +380,22 @@ public class Frame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem abrirMenuItem;
-    private javax.swing.JButton adicionarAutorButton;
-    private javax.swing.JDialog adicionarAutorDialog;
-    private javax.swing.JMenuItem adicionarAutorMenuItem;
+    private javax.swing.JButton adicionarEscritorButton;
+    private javax.swing.JDialog adicionarEscritorDialog;
+    private javax.swing.JMenuItem adicionarEscritorMenuItem;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nomeAutorTextField;
+    private javax.swing.JTextField nomeEscritorTextField;
+    private javax.swing.JTextField nomeEscritorTextField1;
     private javax.swing.JTextArea outputTextArea;
     private javax.swing.JMenu principalMenu;
+    private javax.swing.JButton removerEscritorButton;
+    private javax.swing.JDialog removerEscritorDialog;
+    private javax.swing.JMenuItem removerEscritorMenuItem;
     private javax.swing.JMenuItem sairMenuItem;
     private javax.swing.JMenu xmlMenu;
     // End of variables declaration//GEN-END:variables

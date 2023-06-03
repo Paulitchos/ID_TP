@@ -4,6 +4,7 @@
  */
 package id.escritores;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -49,6 +50,34 @@ public class ObrasXML {
         obra.addContent(preco);
         
         raiz.addContent(obra);
+        return doc;
+    }
+    
+    public static Document removeObras(String idAutor, Document doc) {
+        Element raiz;
+        if (doc == null) {
+            System.out.println("O ficheiro XML não existe.");
+            return null;
+        } else {
+            raiz = doc.getRootElement();
+        }
+
+        List<Element> todasObras = new ArrayList<>(raiz.getChildren("obra"));
+        System.out.println(todasObras.size());
+        boolean found = false;
+        for (Element obra : todasObras) {
+            if (obra.getAttributeValue("codigoautor").equals(idAutor)) {
+                obra.getParent().removeContent(obra);
+                System.out.println("Obra removida com sucesso!");
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Escritor " + idAutor + " não foi encontrado.");
+            return null;
+        }
+
         return doc;
     }
 }

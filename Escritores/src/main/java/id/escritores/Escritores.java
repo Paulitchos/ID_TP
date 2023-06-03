@@ -5,10 +5,10 @@ import java.util.List;
 public class Escritores {
     private static int idCounter = 0;
     int id;
-    String nome, nacionalidade, fotografia, genero, outraInfo, link, nascimento, morte;
+    String nome, nacionalidade, fotografia, genero, outraInfo, link, nascimento, morte, nomePesquisa;
     List<String> ocupacoes, premios;
 
-    public Escritores(String nome, String nacionalidade, String fotografia, String genero, List<String> ocupacoes, List<String> premios, String outraInfo, String nascimento, String morte, String link) {
+    public Escritores(String nome, String nacionalidade, String fotografia, String genero, List<String> ocupacoes, List<String> premios, String outraInfo, String nascimento, String morte, String link, String nomePesquisa) {
         this.id = ++idCounter;
         this.nome = nome;
         this.nacionalidade = nacionalidade;
@@ -20,6 +20,7 @@ public class Escritores {
         this.nascimento = nascimento;
         this.morte = morte;
         this.link = link;
+        this.nomePesquisa = nomePesquisa;
     }
 
     public int getId() {
@@ -109,4 +110,14 @@ public class Escritores {
     public void setLink(String link) {
         this.link = link;
     }
+
+    public String getNomePesquisa() {
+        return nomePesquisa;
+    }
+
+    public void setNomePesquisa(String nomePesquisa) {
+        this.nomePesquisa = nomePesquisa;
+    }
+    
+    
 }
