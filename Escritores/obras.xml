@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <obras>
      <obra codigoautor="1">
-          <isbn>9789899126053</isbn>
-          <titulo>O Fantasma de Canterville</titulo>
-          <autor>Oscar Wilde</autor>
-          <editora>Book Cover Editora</editora>
-          <capa>https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8Mjc3OTcyODF8MjQxNzQxNTd8MTY2NjI4MTU0MTAwMA==/500x</capa>
-          <preco>4.46</preco>
+          <isbn>9789892355214</isbn>
+          <titulo>Um Sonho Só Nosso</titulo>
+          <autor>Nicholas Sparks</autor>
+          <editora>Edições Asa</editora>
+          <capa>https://img.bertrand.pt/images/um-sonho-so-nosso-nicholas-sparks/NDV8MjczNDgzODN8MjM3MDA1NjV8MTY2MTQ0MjI0MDAwMA==/500x</capa>
+          <preco>17.01</preco>
      </obra>
      <obra codigoautor="1">
-          <isbn>9789897028380</isbn>
-          <titulo>De Profundis</titulo>
-          <autor>Oscar Wilde</autor>
-          <editora>Editora Guerra &amp; Paz</editora>
-          <capa>https://img.bertrand.pt/images/de-profundis-oscar-wilde/NDV8MjcyMTY1OTR8MjM1NDUzNTZ8MTY1NzczMDMwNTAwMA==/500x</capa>
-          <preco>12.6</preco>
+          <isbn>9789892352008</isbn>
+          <titulo>O Sonho</titulo>
+          <autor>Nicholas Sparks</autor>
+          <editora>Edições Asa</editora>
+          <capa>https://img.bertrand.pt/images/o-sonho-nicholas-sparks/NDV8MjUzODE4OTB8MjE2MTExNDB8MTYzMDQyMjA1MTAwMA==/500x</capa>
+          <preco>16.65</preco>
      </obra>
      <obra codigoautor="1">
-          <isbn>9789895423057</isbn>
-          <titulo>O Príncipe Feliz e Outros Contos | The Happy Prince and Other Tales</titulo>
-          <autor>Oscar Wilde</autor>
-          <editora>Compasso dos Ventos</editora>
-          <capa>https://img.bertrand.pt/images/o-principe-feliz-e-outros-contos-the-happy-prince-and-other-tales-oscar-wilde/NDV8MjcyMjIwOTh8MjM1NTI2ODB8MTY1ODIzNDEwMjAwMA==/500x</capa>
-          <preco>15.08</preco>
+          <isbn>9789892350790</isbn>
+          <titulo>Dei-te o Melhor de Mim</titulo>
+          <autor>Nicholas Sparks</autor>
+          <editora>Edições Asa</editora>
+          <capa>https://img.bertrand.pt/images/dei-te-o-melhor-de-mim-nicholas-sparks/NDV8MjQ3MTAwNzN8MjA4NjM5MTJ8MTYxNzcyMjg2NDAwMA==/500x</capa>
+          <preco>16.65</preco>
      </obra>
      <obra codigoautor="1">
-          <isbn>9789897028045</isbn>
-          <titulo>A Decadência da Arte de Mentir | A Decadência da Mentira: Uma Reflexão</titulo>
-          <autor>Mark Twain e Oscar Wilde</autor>
-          <editora>Editora Guerra &amp; Paz</editora>
-          <capa>https://img.bertrand.pt/images/a-decadencia-da-arte-de-mentir-a-decadencia-da-mentira-uma-reflexao-mark-twain/NDV8MjY4NzU1NjN8MjMxNjg3NTh8MTY1MDUzMTc0MzAwMA==/500x</capa>
-          <preco>12.6</preco>
+          <isbn>9789892349206</isbn>
+          <titulo>O Regresso</titulo>
+          <autor>Nicholas Sparks</autor>
+          <editora>Edições Asa</editora>
+          <capa>https://img.bertrand.pt/images/o-regresso-nicholas-sparks/NDV8MjQzMDI4NDF8MjAzODcwOTR8MTU5ODQzNjM1MzAwMA==/500x</capa>
+          <preco>18.9</preco>
      </obra>
      <obra codigoautor="1">
-          <isbn>9789897845116</isbn>
-          <titulo>O Retrato de Dorian Gray</titulo>
-          <autor>Oscar Wilde</autor>
-          <editora>Penguin Clássicos</editora>
-          <capa>https://img.bertrand.pt/images/o-retrato-de-dorian-gray-oscar-wilde/NDV8MjY3MzIwMDl8MjMwMTM5MTF8MTY0NzUyNTQxMDAwMA==/500x</capa>
-          <preco>10.76</preco>
+          <isbn>9789892347707</isbn>
+          <titulo>A Melodia do Adeus</titulo>
+          <autor>Nicholas Sparks</autor>
+          <editora>Edições Asa</editora>
+          <capa>https://img.bertrand.pt/images/a-melodia-do-adeus-nicholas-sparks/NDV8MjM4MzE3NTR8MTk4NDk4MjV8MTU4MDM3OTA0NjAwMA==/500x</capa>
+          <preco>18.5</preco>
      </obra>
 </obras>

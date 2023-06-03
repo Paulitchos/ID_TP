@@ -8,15 +8,12 @@ import java.io.IOException;
 import java.util.List;
 import org.jdom2.Document;
 
-/**
- *
- * @author paulo
- */
+
 public class main {
     
     public static void main(String[] args) throws IOException {
         
-        Escritores escritor = Wrappers.criaEscritor("Oscar Wilde");
+        Escritores escritor = Wrappers.criaEscritor("Daniel Silva");
         System.out.println("Autor:");
         System.out.println("\nLink: " + escritor.getLink());
         System.out.println("Nome: " + escritor.getNome());

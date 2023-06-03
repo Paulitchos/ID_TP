@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <escritores>
      <escritor id="1">
-          <nome>Oscar Fingal O'Flahertie Wills Wilde</nome>
-          <datanascimento>16 de outubro de 1854</datanascimento>
-          <datafalecimento>30 de novembro de 1900</datafalecimento>
-          <nacionalidade>Irlandeses</nacionalidade>
-          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg/250px-Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg</foto>
-          <generoliterario ngeneros="3">
-               <gen>Drama</gen>
-               <gen>Conto</gen>
-               <gen>Diálogo</gen>
+          <nome>Nicholas Charles Sparks</nome>
+          <datanascimento>31 de dezembro de 1965</datanascimento>
+          <datafalecimento>Não faleceu</datafalecimento>
+          <nacionalidade>Povo dos Estados Unidos</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nicholas-Sparks-Autograph-1-4-06.jpg/250px-Nicholas-Sparks-Autograph-1-4-06.jpg</foto>
+          <generoliterario ngeneros="1">
+               <gen>Não tem</gen>
           </generoliterario>
-          <ocupacoes nocupacaos="5">
-               <oc>Poeta</oc>
-               <oc>Jornalista</oc>
-               <oc>Romancista</oc>
+          <ocupacoes nocupacaos="3">
                <oc>Escritor</oc>
-               <oc>Autor</oc>
+               <oc>Roteirista</oc>
+               <oc>Produtor cinematográfico</oc>
           </ocupacoes>
-          <premios npremios="3">
-               <pre>Ravenna</pre>
-               <pre>Poesia</pre>
-               <pre>Universidade de Oxford</pre>
+          <premios npremios="1">
+               <pre>Não tem</pre>
           </premios>
      </escritor>
 </escritores>

@@ -4,6 +4,7 @@
  */
 package id.escritores;
 
+import id.escritores.XPathFunctions;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -17,6 +18,8 @@ import java.util.regex.Pattern;
 
 import java.util.Date;
 import java.util.List;
+import net.sf.saxon.s9api.SaxonApiException;
+import net.sf.saxon.s9api.XdmValue;
 
 public class Wrappers {
     
@@ -38,19 +41,27 @@ public class Wrappers {
         return obras;
     }
     
-    public static Escritores criaEscritor(String autor) throws IOException {
+    public static Escritores criaEscritor(String autor) throws IOException, SaxonApiException {
+        
         String link = obtem_link_escritor(autor);
         String nome = obtem_nome(link);
-        String nacionalidade = obtem_nacionalidade(link);
-        String foto = obtem_foto(link);
-        String genero = obtem_genero(link);
-        String nascimento = obtem_data_nascimento(link);
-        String falecimento = obtem_data_falecimento(link);
-        List<String> premios = obtem_premios(link);
-        List<String> ocupacoes = obtem_ocupacoes(link);
-        String outra_info = obter_outra_info(link);
-        Escritores x = new Escritores(nome,nacionalidade,foto,genero,ocupacoes,premios,outra_info,nascimento,falecimento,link);
-        return x;
+        String xp = "//escritor[nome='" + nome + "']/nome/text()";
+        XdmValue res = null;
+        res = XPathFunctions.executaXpath(xp, "escritores.xml");
+        if (res == null || res.size() == 0) {
+            String nacionalidade = obtem_nacionalidade(link);
+            String foto = obtem_foto(link);
+            String genero = obtem_genero(link);
+            String nascimento = obtem_data_nascimento(link);
+            String falecimento = obtem_data_falecimento(link);
+            List<String> premios = obtem_premios(link);
+            List<String> ocupacoes = obtem_ocupacoes(link);
+            String outra_info = obter_outra_info(link);
+            Escritores x = new Escritores(nome,nacionalidade,foto,genero,ocupacoes,premios,outra_info,nascimento,falecimento,link);
+            return x;
+        }
+        
+        return null;
     }
  
     public static String obtem_link(String isbn) throws IOException{
