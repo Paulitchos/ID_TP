@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:element name="Nome" type="xsd:string"/>
+	<xsd:element name="Nacionalidade" type="xsd:string"/>
+	<xsd:element name="Fotografia" type="xsd:string"/>
+	<xsd:element name="Genero" type="xsd:string"/>
+	<xsd:element name="Ocupacao" type="xsd:string"/>
+	<xsd:element name="Premio" type="xsd:string"/>
+	<xsd:element name="OutraInfo" type="xsd:string"/>
+	<xsd:element name="Nascimento" type="xsd:string"/>
+	<xsd:element name="Morte" type="xsd:string"/>
+	<xsd:element name="Link" type="xsd:string"/>
+
+	<xsd:element name="Escritor">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Nome"/>
+				<xsd:element ref="Nacionalidade"/>
+				<xsd:element ref="Fotografia"/>
+				<xsd:element ref="Genero"/>
+				<xsd:element ref="Ocupacao" maxOccurs="unbounded"/>
+				<xsd:element ref="Premio" maxOccurs="unbounded"/>
+				<xsd:element ref="OutraInfo"/>
+				<xsd:element ref="Nascimento"/>
+				<xsd:element ref="Morte"/>
+				<xsd:element ref="Link"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Escritores">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Escritor" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

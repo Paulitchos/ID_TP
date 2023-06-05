@@ -1,0 +1,11 @@
+<!ELEMENT Obra (Titulo, Imagem, Autor, Genero, Idioma, Pais, Duracao, AnoLancamento, Critica)>
+<!ELEMENT Titulo (#PCDATA)>
+<!ELEMENT Imagem (#PCDATA)>
+<!ELEMENT Autor (#PCDATA)>
+<!ELEMENT Genero (#PCDATA)>
+<!ELEMENT Idioma (#PCDATA)>
+<!ELEMENT Pais (#PCDATA)>
+<!ELEMENT Duracao (#PCDATA)>
+<!ELEMENT AnoLancamento (#PCDATA)>
+<!ELEMENT Critica (#PCDATA)>
+<!ELEMENT Obra (Obra+)>

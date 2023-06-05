@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:element name="Titulo" type="xsd:string"/>
+	<xsd:element name="Imagem" type="xsd:string"/>
+	<xsd:element name="Autor" type="xsd:string"/>
+	<xsd:element name="Genero" type="xsd:string"/>
+	<xsd:element name="Idioma" type="xsd:string"/>
+	<xsd:element name="Pais" type="xsd:string"/>
+	<xsd:element name="Duracao" type="xsd:int"/>
+	<xsd:element name="AnoLancamento" type="xsd:int"/>
+	<xsd:element name="Critica" type="xsd:double"/>
+
+	<xsd:element name="Obra">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Titulo"/>
+				<xsd:element ref="Imagem"/>
+				<xsd:element ref="Autor"/>
+				 <xsd:element ref="Genero"/>
+				 <xsd:element ref="Idioma"/>
+				<xsd:element ref="Pais"/>
+				<xsd:element ref="Duracao"/>
+				<xsd:element ref="AnoLancamento"/>
+				<xsd:element ref="Critica"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="Obra">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Obra" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
