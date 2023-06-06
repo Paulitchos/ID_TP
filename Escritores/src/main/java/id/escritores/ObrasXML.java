@@ -63,7 +63,6 @@ public class ObrasXML {
         }
 
         List<Element> todasObras = new ArrayList<>(raiz.getChildren("obra"));
-        System.out.println(todasObras.size());
         boolean found = false;
         for (Element obra : todasObras) {
             if (obra.getAttributeValue("codigoautor").equals(idAutor)) {

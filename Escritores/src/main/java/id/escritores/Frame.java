@@ -44,6 +44,18 @@ public class Frame extends javax.swing.JFrame {
         nomeEscritorTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         removerEscritorButton = new javax.swing.JButton();
+        pesquisarEscritorDialog = new javax.swing.JDialog();
+        nomeEscritorTextField2 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        pesquisarEscritorButton = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        informacaoTextArea = new javax.swing.JTextArea();
+        pesquisarNacionalidadeDialog = new javax.swing.JDialog();
+        jLabel5 = new javax.swing.JLabel();
+        pesquisarNacionalidadeButton = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        autoresTextArea = new javax.swing.JTextArea();
+        nomeNacionalidadeTextField = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         outputTextArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
@@ -54,6 +66,12 @@ public class Frame extends javax.swing.JFrame {
         xmlMenu = new javax.swing.JMenu();
         adicionarEscritorMenuItem = new javax.swing.JMenuItem();
         removerEscritorMenuItem = new javax.swing.JMenuItem();
+        xPathMenu = new javax.swing.JMenu();
+        pesquisarEscritorMenuItem = new javax.swing.JMenuItem();
+        pesquisarNacionalidadeMenuItem = new javax.swing.JMenuItem();
+        validarMenu = new javax.swing.JMenu();
+        DTDMenuItem = new javax.swing.JMenuItem();
+        XSDMenuItem = new javax.swing.JMenuItem();
 
         nomeEscritorTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,6 +157,113 @@ public class Frame extends javax.swing.JFrame {
                 .addGap(16, 16, 16))
         );
 
+        nomeEscritorTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeEscritorTextField2ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Nome do Autor:");
+
+        pesquisarEscritorButton.setText("Pesquisar Autor");
+        pesquisarEscritorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pesquisarEscritorButtonActionPerformed(evt);
+            }
+        });
+
+        informacaoTextArea.setColumns(20);
+        informacaoTextArea.setRows(5);
+        jScrollPane2.setViewportView(informacaoTextArea);
+
+        javax.swing.GroupLayout pesquisarEscritorDialogLayout = new javax.swing.GroupLayout(pesquisarEscritorDialog.getContentPane());
+        pesquisarEscritorDialog.getContentPane().setLayout(pesquisarEscritorDialogLayout);
+        pesquisarEscritorDialogLayout.setHorizontalGroup(
+            pesquisarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pesquisarEscritorDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pesquisarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pesquisarEscritorDialogLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(pesquisarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarEscritorDialogLayout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nomeEscritorTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarEscritorDialogLayout.createSequentialGroup()
+                                .addComponent(pesquisarEscritorButton)
+                                .addGap(153, 153, 153))))
+                    .addGroup(pesquisarEscritorDialogLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())))
+        );
+        pesquisarEscritorDialogLayout.setVerticalGroup(
+            pesquisarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarEscritorDialogLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(pesquisarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeEscritorTextField2)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pesquisarEscritorButton)
+                .addContainerGap())
+        );
+
+        jLabel5.setText("Nacionalidade:");
+
+        pesquisarNacionalidadeButton.setText("Pesquisar Nacionalidade");
+        pesquisarNacionalidadeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pesquisarNacionalidadeButtonActionPerformed(evt);
+            }
+        });
+
+        autoresTextArea.setColumns(20);
+        autoresTextArea.setRows(5);
+        jScrollPane3.setViewportView(autoresTextArea);
+
+        nomeNacionalidadeTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeNacionalidadeTextFieldActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pesquisarNacionalidadeDialogLayout = new javax.swing.GroupLayout(pesquisarNacionalidadeDialog.getContentPane());
+        pesquisarNacionalidadeDialog.getContentPane().setLayout(pesquisarNacionalidadeDialogLayout);
+        pesquisarNacionalidadeDialogLayout.setHorizontalGroup(
+            pesquisarNacionalidadeDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pesquisarNacionalidadeDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pesquisarNacionalidadeDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pesquisarNacionalidadeDialogLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nomeNacionalidadeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane3))
+                .addContainerGap())
+            .addGroup(pesquisarNacionalidadeDialogLayout.createSequentialGroup()
+                .addGap(123, 123, 123)
+                .addComponent(pesquisarNacionalidadeButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pesquisarNacionalidadeDialogLayout.setVerticalGroup(
+            pesquisarNacionalidadeDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarNacionalidadeDialogLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(pesquisarNacionalidadeDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeNacionalidadeTextField)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pesquisarNacionalidadeButton)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         outputTextArea.setColumns(20);
@@ -191,6 +316,36 @@ public class Frame extends javax.swing.JFrame {
         xmlMenu.add(removerEscritorMenuItem);
 
         jMenuBar1.add(xmlMenu);
+
+        xPathMenu.setText("XPath");
+
+        pesquisarEscritorMenuItem.setText("Pesquisar por escritor");
+        pesquisarEscritorMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pesquisarEscritorMenuItemActionPerformed(evt);
+            }
+        });
+        xPathMenu.add(pesquisarEscritorMenuItem);
+
+        pesquisarNacionalidadeMenuItem.setText("Pesquisar por nacionalidade");
+        pesquisarNacionalidadeMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pesquisarNacionalidadeMenuItemActionPerformed(evt);
+            }
+        });
+        xPathMenu.add(pesquisarNacionalidadeMenuItem);
+
+        jMenuBar1.add(xPathMenu);
+
+        validarMenu.setText("Validar");
+
+        DTDMenuItem.setText("DTD");
+        validarMenu.add(DTDMenuItem);
+
+        XSDMenuItem.setText("XSD");
+        validarMenu.add(XSDMenuItem);
+
+        jMenuBar1.add(validarMenu);
 
         setJMenuBar(jMenuBar1);
 
@@ -343,6 +498,72 @@ public class Frame extends javax.swing.JFrame {
         removerEscritorDialog.setVisible(true);
     }//GEN-LAST:event_removerEscritorMenuItemActionPerformed
 
+    private void pesquisarEscritorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarEscritorMenuItemActionPerformed
+        pesquisarEscritorDialog.setSize(500, 500);
+        pesquisarEscritorDialog.setLocation(200, 200);
+        pesquisarEscritorDialog.setVisible(true);
+    }//GEN-LAST:event_pesquisarEscritorMenuItemActionPerformed
+
+    private void nomeEscritorTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscritorTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeEscritorTextField2ActionPerformed
+
+    private void pesquisarEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarEscritorButtonActionPerformed
+
+        try {
+           List<String> result = XPathFunctions.pesquisa_nome_autor(nomeEscritorTextField2.getText());
+           
+           if(result != null){
+                informacaoTextArea.setText("Informação do autor " + nomeEscritorTextField2.getText() + ":\n\n");
+                for (String results : result) {
+                    informacaoTextArea.append(results + "\n");
+                }
+                
+                nomeEscritorTextField2.setText("");
+            } else {
+                JOptionPane.showMessageDialog(this,
+                    "Escritor não encontrado",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+                nomeEscritorTextField2.setText("");
+            }
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_pesquisarEscritorButtonActionPerformed
+
+    private void pesquisarNacionalidadeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarNacionalidadeButtonActionPerformed
+        try {
+            List<String> result = XPathFunctions.pesquisa_nacionalidade_autor(nomeNacionalidadeTextField.getText());
+            if(result != null){
+                autoresTextArea.setText("Autores " + nomeNacionalidadeTextField.getText() + ":\n\n");
+                for (String results : result) {
+                    autoresTextArea.append(results);
+                }
+                
+                nomeNacionalidadeTextField.setText("");
+            } else {
+                JOptionPane.showMessageDialog(this,
+                    "Nacionalidade não encontrada",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+                nomeNacionalidadeTextField.setText("");
+            }
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_pesquisarNacionalidadeButtonActionPerformed
+
+    private void nomeNacionalidadeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeNacionalidadeTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeNacionalidadeTextFieldActionPerformed
+
+    private void pesquisarNacionalidadeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarNacionalidadeMenuItemActionPerformed
+        pesquisarNacionalidadeDialog.setSize(500, 500);
+        pesquisarNacionalidadeDialog.setLocation(200, 200);
+        pesquisarNacionalidadeDialog.setVisible(true);
+    }//GEN-LAST:event_pesquisarNacionalidadeMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -379,24 +600,42 @@ public class Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem DTDMenuItem;
+    private javax.swing.JMenuItem XSDMenuItem;
     private javax.swing.JMenuItem abrirMenuItem;
     private javax.swing.JButton adicionarEscritorButton;
     private javax.swing.JDialog adicionarEscritorDialog;
     private javax.swing.JMenuItem adicionarEscritorMenuItem;
+    private javax.swing.JTextArea autoresTextArea;
+    private javax.swing.JTextArea informacaoTextArea;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField nomeEscritorTextField;
     private javax.swing.JTextField nomeEscritorTextField1;
+    private javax.swing.JTextField nomeEscritorTextField2;
+    private javax.swing.JTextField nomeNacionalidadeTextField;
     private javax.swing.JTextArea outputTextArea;
+    private javax.swing.JButton pesquisarEscritorButton;
+    private javax.swing.JDialog pesquisarEscritorDialog;
+    private javax.swing.JMenuItem pesquisarEscritorMenuItem;
+    private javax.swing.JButton pesquisarNacionalidadeButton;
+    private javax.swing.JDialog pesquisarNacionalidadeDialog;
+    private javax.swing.JMenuItem pesquisarNacionalidadeMenuItem;
     private javax.swing.JMenu principalMenu;
     private javax.swing.JButton removerEscritorButton;
     private javax.swing.JDialog removerEscritorDialog;
     private javax.swing.JMenuItem removerEscritorMenuItem;
     private javax.swing.JMenuItem sairMenuItem;
+    private javax.swing.JMenu validarMenu;
+    private javax.swing.JMenu xPathMenu;
     private javax.swing.JMenu xmlMenu;
     // End of variables declaration//GEN-END:variables
 }
