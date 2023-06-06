@@ -15,7 +15,7 @@ import org.jdom2.Document;
 public class main {
     
     public static void main(String[] args) throws IOException, SaxonApiException {
-        
+    /*    
         Escritores escritor = Wrappers.criaEscritor("Oscar Wilde");
         System.out.println("Autor:");
         System.out.println("\nLink: " + escritor.getLink());
@@ -54,7 +54,12 @@ public class main {
         } else {
             System.out.println("Nenhuma obra encontrada.");
         }
-   
+    */
+    int lastId = XPathFunctions.getLastIdFromXML("escritores.xml");
+    if(lastId != -1)
+        Escritores.setIdCounter(lastId);    
+    Frame app = new Frame();
+    app.setVisible(true);
     }
     
 }

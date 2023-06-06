@@ -22,7 +22,11 @@ public class Escritores {
         this.link = link;
         this.nomePesquisa = nomePesquisa;
     }
-
+    
+    public static void setIdCounter(int value) {
+        idCounter = value;
+    }
+    
     public int getId() {
         return id;
     }

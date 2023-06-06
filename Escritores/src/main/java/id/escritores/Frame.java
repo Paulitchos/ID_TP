@@ -4,9 +4,12 @@
  */
 package id.escritores;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -56,6 +59,22 @@ public class Frame extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         autoresTextArea = new javax.swing.JTextArea();
         nomeNacionalidadeTextField = new javax.swing.JTextField();
+        pesquisarObrasEscritorDialog = new javax.swing.JDialog();
+        editarEscritorDialog = new javax.swing.JDialog();
+        jLabel6 = new javax.swing.JLabel();
+        removerEscritorButton1 = new javax.swing.JButton();
+        nomeEscritorTextField3 = new javax.swing.JTextField();
+        nomeRadioButton = new javax.swing.JRadioButton();
+        dNascimentoRadioButton = new javax.swing.JRadioButton();
+        nacionalidadeRadioButton = new javax.swing.JRadioButton();
+        ocupacaoRadioButton = new javax.swing.JRadioButton();
+        dFalecimentoRadioButton = new javax.swing.JRadioButton();
+        premiosRadioButton = new javax.swing.JRadioButton();
+        gLiterarioRadioButton = new javax.swing.JRadioButton();
+        alterarTextField = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        enviarEscritorButton = new javax.swing.JButton();
+        buttonGroup = new javax.swing.ButtonGroup();
         jScrollPane1 = new javax.swing.JScrollPane();
         outputTextArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
@@ -66,9 +85,11 @@ public class Frame extends javax.swing.JFrame {
         xmlMenu = new javax.swing.JMenu();
         adicionarEscritorMenuItem = new javax.swing.JMenuItem();
         removerEscritorMenuItem = new javax.swing.JMenuItem();
+        editarEscritorMenuItem = new javax.swing.JMenuItem();
         xPathMenu = new javax.swing.JMenu();
         pesquisarEscritorMenuItem = new javax.swing.JMenuItem();
         pesquisarNacionalidadeMenuItem = new javax.swing.JMenuItem();
+        pesquisarObrasEscritorMenuItem = new javax.swing.JMenuItem();
         validarMenu = new javax.swing.JMenu();
         DTDMenuItem = new javax.swing.JMenuItem();
         XSDMenuItem = new javax.swing.JMenuItem();
@@ -264,6 +285,130 @@ public class Frame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        javax.swing.GroupLayout pesquisarObrasEscritorDialogLayout = new javax.swing.GroupLayout(pesquisarObrasEscritorDialog.getContentPane());
+        pesquisarObrasEscritorDialog.getContentPane().setLayout(pesquisarObrasEscritorDialogLayout);
+        pesquisarObrasEscritorDialogLayout.setHorizontalGroup(
+            pesquisarObrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        pesquisarObrasEscritorDialogLayout.setVerticalGroup(
+            pesquisarObrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        jLabel6.setText("Nome do Autor:");
+
+        removerEscritorButton1.setText("Alterar Informação");
+        removerEscritorButton1.setEnabled(false);
+        removerEscritorButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removerEscritorButton1ActionPerformed(evt);
+            }
+        });
+
+        nomeEscritorTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeEscritorTextField3ActionPerformed(evt);
+            }
+        });
+
+        nomeRadioButton.setText("Nome");
+        nomeRadioButton.setEnabled(false);
+
+        dNascimentoRadioButton.setText("Data de Nascimento");
+        dNascimentoRadioButton.setEnabled(false);
+
+        nacionalidadeRadioButton.setText("Nacionalidade");
+        nacionalidadeRadioButton.setEnabled(false);
+
+        ocupacaoRadioButton.setText("Ocupações");
+        ocupacaoRadioButton.setEnabled(false);
+
+        dFalecimentoRadioButton.setText("Data de Falecimento");
+        dFalecimentoRadioButton.setEnabled(false);
+
+        premiosRadioButton.setText("Prémios");
+        premiosRadioButton.setEnabled(false);
+
+        gLiterarioRadioButton.setText("Género Literário");
+        gLiterarioRadioButton.setEnabled(false);
+
+        alterarTextField.setEnabled(false);
+
+        jLabel7.setText("Alterar:");
+
+        enviarEscritorButton.setText("Enviar Nome");
+        enviarEscritorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enviarEscritorButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout editarEscritorDialogLayout = new javax.swing.GroupLayout(editarEscritorDialog.getContentPane());
+        editarEscritorDialog.getContentPane().setLayout(editarEscritorDialogLayout);
+        editarEscritorDialogLayout.setHorizontalGroup(
+            editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(editarEscritorDialogLayout.createSequentialGroup()
+                .addContainerGap(10, Short.MAX_VALUE)
+                .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(dFalecimentoRadioButton)
+                        .addGroup(editarEscritorDialogLayout.createSequentialGroup()
+                            .addComponent(jLabel6)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(nomeEscritorTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(editarEscritorDialogLayout.createSequentialGroup()
+                            .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(nacionalidadeRadioButton)
+                                .addComponent(dNascimentoRadioButton)
+                                .addComponent(nomeRadioButton))
+                            .addGap(66, 66, 66)
+                            .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(premiosRadioButton)
+                                .addComponent(ocupacaoRadioButton)
+                                .addComponent(gLiterarioRadioButton)))
+                        .addComponent(alterarTextField)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editarEscritorDialogLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(enviarEscritorButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(removerEscritorButton1)
+                .addGap(38, 38, 38))
+        );
+        editarEscritorDialogLayout.setVerticalGroup(
+            editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editarEscritorDialogLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeEscritorTextField3)
+                    .addComponent(jLabel6))
+                .addGap(43, 43, 43)
+                .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeRadioButton)
+                    .addComponent(ocupacaoRadioButton))
+                .addGap(18, 18, 18)
+                .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nacionalidadeRadioButton)
+                    .addComponent(gLiterarioRadioButton))
+                .addGap(18, 18, 18)
+                .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dNascimentoRadioButton)
+                    .addComponent(premiosRadioButton))
+                .addGap(18, 18, 18)
+                .addComponent(dFalecimentoRadioButton)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(alterarTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enviarEscritorButton)
+                    .addComponent(removerEscritorButton1))
+                .addGap(24, 24, 24))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         outputTextArea.setColumns(20);
@@ -315,6 +460,14 @@ public class Frame extends javax.swing.JFrame {
         });
         xmlMenu.add(removerEscritorMenuItem);
 
+        editarEscritorMenuItem.setText("Editar escritor");
+        editarEscritorMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarEscritorMenuItemActionPerformed(evt);
+            }
+        });
+        xmlMenu.add(editarEscritorMenuItem);
+
         jMenuBar1.add(xmlMenu);
 
         xPathMenu.setText("XPath");
@@ -334,6 +487,9 @@ public class Frame extends javax.swing.JFrame {
             }
         });
         xPathMenu.add(pesquisarNacionalidadeMenuItem);
+
+        pesquisarObrasEscritorMenuItem.setText("Pesquisar obras por escritor");
+        xPathMenu.add(pesquisarObrasEscritorMenuItem);
 
         jMenuBar1.add(xPathMenu);
 
@@ -564,6 +720,73 @@ public class Frame extends javax.swing.JFrame {
         pesquisarNacionalidadeDialog.setVisible(true);
     }//GEN-LAST:event_pesquisarNacionalidadeMenuItemActionPerformed
 
+    private void removerEscritorButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerEscritorButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removerEscritorButton1ActionPerformed
+
+    private void nomeEscritorTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscritorTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeEscritorTextField3ActionPerformed
+
+    private void enviarEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarEscritorButtonActionPerformed
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        Map<String, String> data = EscritoresXML.verificaEscritor(nomeEscritorTextField3.getText(), doc);
+        nomeEscritorTextField3.setEditable(false);
+        alterarTextField.setEnabled(true);
+        if (data.containsKey("nome")) {
+            nomeRadioButton.setEnabled(true);
+            buttonGroup.add(nomeRadioButton);
+        }
+        if (data.containsKey("nacionalidade")) {
+            nacionalidadeRadioButton.setEnabled(true);
+            buttonGroup.add(nacionalidadeRadioButton);
+        }
+        if (data.containsKey("datanascimento")) {
+            dNascimentoRadioButton.setEnabled(true);
+            buttonGroup.add(dNascimentoRadioButton);
+        }
+        if (data.containsKey("datafalecimento")) {
+            dFalecimentoRadioButton.setEnabled(true);
+            buttonGroup.add(dFalecimentoRadioButton);
+        }
+        if (data.containsKey("generoliterario")) {
+            gLiterarioRadioButton.setEnabled(true);
+            buttonGroup.add(gLiterarioRadioButton);
+        }
+        if (data.containsKey("ocupacoes")) {
+            ocupacaoRadioButton.setEnabled(true);
+            buttonGroup.add(ocupacaoRadioButton);
+        }
+        if (data.containsKey("premios")) {
+            premiosRadioButton.setEnabled(true);
+            buttonGroup.add(premiosRadioButton);
+        }
+
+        nomeRadioButton.addActionListener((ActionEvent e) -> {
+            alterarTextField.setToolTipText(data.get("nome"));
+        });
+
+        nacionalidadeRadioButton.addActionListener((ActionEvent e) -> {
+            alterarTextField.setText(data.get("nacionalidade"));
+        });
+
+        dNascimentoRadioButton.addActionListener((ActionEvent e) -> {
+            alterarTextField.setText(data.get("datanascimento"));
+        });
+
+        dFalecimentoRadioButton.addActionListener((ActionEvent e) -> {
+            alterarTextField.setText(data.get("datafalecimento"));
+        });
+        
+        
+    }//GEN-LAST:event_enviarEscritorButtonActionPerformed
+
+    private void editarEscritorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarEscritorMenuItemActionPerformed
+        editarEscritorDialog.setSize(500, 500);
+        editarEscritorDialog.setLocation(200, 200);
+        editarEscritorDialog.setVisible(true);
+    }//GEN-LAST:event_editarEscritorMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -606,7 +829,15 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton adicionarEscritorButton;
     private javax.swing.JDialog adicionarEscritorDialog;
     private javax.swing.JMenuItem adicionarEscritorMenuItem;
+    private javax.swing.JTextField alterarTextField;
     private javax.swing.JTextArea autoresTextArea;
+    private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.JRadioButton dFalecimentoRadioButton;
+    private javax.swing.JRadioButton dNascimentoRadioButton;
+    private javax.swing.JDialog editarEscritorDialog;
+    private javax.swing.JMenuItem editarEscritorMenuItem;
+    private javax.swing.JButton enviarEscritorButton;
+    private javax.swing.JRadioButton gLiterarioRadioButton;
     private javax.swing.JTextArea informacaoTextArea;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
@@ -614,14 +845,20 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JRadioButton nacionalidadeRadioButton;
     private javax.swing.JTextField nomeEscritorTextField;
     private javax.swing.JTextField nomeEscritorTextField1;
     private javax.swing.JTextField nomeEscritorTextField2;
+    private javax.swing.JTextField nomeEscritorTextField3;
     private javax.swing.JTextField nomeNacionalidadeTextField;
+    private javax.swing.JRadioButton nomeRadioButton;
+    private javax.swing.JRadioButton ocupacaoRadioButton;
     private javax.swing.JTextArea outputTextArea;
     private javax.swing.JButton pesquisarEscritorButton;
     private javax.swing.JDialog pesquisarEscritorDialog;
@@ -629,8 +866,12 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton pesquisarNacionalidadeButton;
     private javax.swing.JDialog pesquisarNacionalidadeDialog;
     private javax.swing.JMenuItem pesquisarNacionalidadeMenuItem;
+    private javax.swing.JDialog pesquisarObrasEscritorDialog;
+    private javax.swing.JMenuItem pesquisarObrasEscritorMenuItem;
+    private javax.swing.JRadioButton premiosRadioButton;
     private javax.swing.JMenu principalMenu;
     private javax.swing.JButton removerEscritorButton;
+    private javax.swing.JButton removerEscritorButton1;
     private javax.swing.JDialog removerEscritorDialog;
     private javax.swing.JMenuItem removerEscritorMenuItem;
     private javax.swing.JMenuItem sairMenuItem;

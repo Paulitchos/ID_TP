@@ -45,7 +45,7 @@ public class Wrappers {
         
         String link = obtem_link_escritor(autor);
         String nome = obtem_nome(link);
-        String xp = "//escritor[nome='" + nome + "']/nome/text()";
+        String xp = "//escritor[@nomePesquisado='" + autor + "']/@nomePesquisado";
         XdmValue res = null;
         res = XPathFunctions.executaXpath(xp, "escritores.xml");
         if (res == null || res.size() == 0) {

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <escritores>
-     <escritor id="1" nomePesquisado="Oscar Wilde">
+     <escritor id="1" nomePesquisado="Nicholas Sparks">
+          <nome>Nicholas Charles Sparks</nome>
+          <datanascimento>31 de dezembro de 1965</datanascimento>
+          <nacionalidade>Povo dos Estados Unidos</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nicholas-Sparks-Autograph-1-4-06.jpg/250px-Nicholas-Sparks-Autograph-1-4-06.jpg</foto>
+          <ocupacoes nocupacaos="3">
+               <oc>Escritor</oc>
+               <oc>Roteirista</oc>
+               <oc>Produtor cinematográfico</oc>
+          </ocupacoes>
+     </escritor>
+     <escritor id="2" nomePesquisado="Oscar Wilde">
           <nome>Oscar Fingal O'Flahertie Wills Wilde</nome>
           <datanascimento>16 de outubro de 1854</datanascimento>
           <datafalecimento>30 de novembro de 1900</datafalecimento>

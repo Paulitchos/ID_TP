@@ -50,6 +50,21 @@ public class XPathFunctions {
 
     }
     
+    static int getLastIdFromXML(String fileName) throws SaxonApiException {
+        String xp = "(//escritor/@id)[last()]";
+        XdmValue res = XPathFunctions.executaXpath(xp, fileName);
+        if (res == null) {
+            System.out.println("Ficheiro XML não existe");
+            return -1; // Return -1 or any other appropriate value to indicate an error
+        } else if (res.size() == 0) {
+            System.out.println("Sem Resultados");
+            return -1; // Return -1 or any other appropriate value to indicate no results
+        } else {
+            String strID = res.itemAt(0).getStringValue();
+            return Integer.parseInt(strID);
+        }
+    }
+    
     //Pesquisa pelo nome do autor e mostra a informacao relevante
     static List<String> pesquisa_nome_autor(String nomeAutor) throws SaxonApiException {
         String xp = "//escritor[contains(@nomePesquisado, '" + nomeAutor + "')]/@id "
@@ -98,7 +113,7 @@ public class XPathFunctions {
         String nomeAutor = ler.nextLine();
         String xp = "//Obra[contains(Autor, '" + nomeAutor + "')]";
         XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
-        String s = XPathFunctions.listaResultado(res);
+        List<String> s = XPathFunctions.listaResultado(res);
         if (res == null) {
             System.out.println("Ficheiro XML nao existe");
         } else if (res.size() == 0) {
@@ -113,7 +128,7 @@ public class XPathFunctions {
     static void escritor_mais_premiado() throws SaxonApiException {
         String xp = "//Escritor[Premios = max(//Escritor/Premios)]";
         XdmValue res = XPathFunctions.executaXpath(xp, "escritores.xml");
-        String s = XPathFunctions.listaResultado(res);
+        List<String> s = XPathFunctions.listaResultado(res);
         if (res == null) {
             System.out.println("Ficheiro XML nao existe");
         } else if (res.size() == 0) {
@@ -133,7 +148,7 @@ public class XPathFunctions {
         int precoMin = ler.nextInt();
         String xp = "//Obra[contains(Editora, '" + editora + "') and Preco > " + precoMin + "]";
         XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
-        String s = XPathFunctions.listaResultado(res);
+        List<String> s = XPathFunctions.listaResultado(res);
         if (res == null) {
             System.out.println("Ficheiro XML nao existe");
         } else if (res.size() == 0) {
@@ -153,7 +168,7 @@ public class XPathFunctions {
         String genero = ler.nextLine();
         String xp = "//Obra[contains(Genero, '" + genero + "')]";
         XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
-        String s = XPathFunctions.listaResultado(res);
+        List<String> s = XPathFunctions.listaResultado(res);
         if(res == null){
             System.out.println("Ficheiro XML nao existe");
         } else if(res.size() == 0) {
@@ -173,7 +188,7 @@ public class XPathFunctions {
         int anoFinal = ler.nextInt();
         String xp = "//Obra[AnoPublicacao >= " + anoInicial + " and AnoPublicacao <= " + anoFinal + "]";
         XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
-        String s = XPathFunctions.listaResultado(res);
+        List<String> s = XPathFunctions.listaResultado(res);
         if(res == null){
             System.out.println("Ficheiro XML nao existe");
         } else if(res.size() == 0) {
@@ -191,7 +206,7 @@ public class XPathFunctions {
         String premio = ler.nextLine();
         String xp = "//Obra[contains(Premios, '" + premio + "')]";
         XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
-        String s = XPathFunctions.listaResultado(res);
+        List<String> s = XPathFunctions.listaResultado(res);
         if(res == null){
             System.out.println("Ficheiro XML nao existe");
         } else if(res.size() == 0) {

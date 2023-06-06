@@ -4,7 +4,9 @@
  */
 package id.escritores;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.jdom2.Document;
 import org.jdom2.Element;
 
@@ -118,7 +120,7 @@ public class EscritoresXML {
         List<Element> todosEscritores = raiz.getChildren("escritor");
         boolean found = false;
         for (int i = 0; i < todosEscritores .size(); i++) {
-            Element escritor = todosEscritores .get(i);
+            Element escritor = todosEscritores.get(i);
             if (escritor.getAttributeValue("nomePesquisado").equals(autor)) {
                 escritor.getParent().removeContent(escritor);
                 System.out.println("Escritor removido com sucesso!");
@@ -140,4 +142,100 @@ public class EscritoresXML {
 
         return doc;
     }
+    
+    public static Map<String, String> verificaEscritor(String autor, Document doc) {
+        Element raiz;
+        Map<String, String> data = new HashMap<>();
+        if (doc == null) {
+            System.out.println("O ficheiro XML não existe.");
+            return data;
+        } else {
+            raiz = doc.getRootElement();
+        }
+
+        List<Element> todosEscritores = raiz.getChildren("escritor");
+        boolean found = false;
+
+        for (int i = 0; i < todosEscritores.size(); i++) {
+            Element escritor = todosEscritores.get(i);
+            if (escritor.getAttributeValue("nomePesquisado").equals(autor)) {
+                String nome = escritor.getChildText("nome");
+                if (nome != null) {
+                    data.put("nome", nome);
+                }
+
+                String datanascimento = escritor.getChildText("datanascimento");
+                if (datanascimento != null) {
+                    data.put("datanascimento", datanascimento);
+                }
+
+                String datafalecimento = escritor.getChildText("datafalecimento");
+                if (datafalecimento != null) {
+                    data.put("datafalecimento", datafalecimento);
+                }
+
+                String nacionalidade = escritor.getChildText("nacionalidade");
+                if (nacionalidade != null) {
+                    data.put("nacionalidade", nacionalidade);
+                }
+
+                Element generoliterario = escritor.getChild("generoliterario");
+                if (generoliterario != null) {
+                    List<Element> genElements = generoliterario.getChildren("gen");
+                    StringBuilder generoliterarioValue = new StringBuilder();
+                    for (Element genElement : genElements) {
+                        String genValue = genElement.getText();
+                        if (genValue != null) {
+                            generoliterarioValue.append(genValue).append(", ");
+                        }
+                    }
+                    if (generoliterarioValue.length() > 2) {
+                        generoliterarioValue.delete(generoliterarioValue.length() - 2, generoliterarioValue.length());
+                        data.put("generoliterario", generoliterarioValue.toString());
+                    }
+                }
+
+                Element ocupacoes = escritor.getChild("ocupacoes");
+                if (ocupacoes != null) {
+                    List<Element> ocElements = ocupacoes.getChildren("oc");
+                    StringBuilder ocupacoesValue = new StringBuilder();
+                    for (Element ocElement : ocElements) {
+                        String ocValue = ocElement.getText();
+                        if (ocValue != null) {
+                            ocupacoesValue.append(ocValue).append(", ");
+                        }
+                    }
+                    if (ocupacoesValue.length() > 2) {
+                        ocupacoesValue.delete(ocupacoesValue.length() - 2, ocupacoesValue.length());
+                        data.put("ocupacoes", ocupacoesValue.toString());
+                    }
+                }
+
+                Element premios = escritor.getChild("premios");
+                if (premios != null) {
+                    List<Element> preElements = premios.getChildren("pre");
+                    StringBuilder premiosValue = new StringBuilder();
+                    for (Element preElement : preElements) {
+                        String preValue = preElement.getText();
+                        if (preValue != null) {
+                            premiosValue.append(preValue).append(", ");
+                        }
+                    }
+                    if (premiosValue.length() > 2) {
+                        premiosValue.delete(premiosValue.length() - 2, premiosValue.length());
+                        data.put("premios", premiosValue.toString());
+                    }
+                }
+
+                found = true;
+                for (Map.Entry<String, String> entry : data.entrySet()) {
+                    System.out.println(entry.getKey() + ": " + entry.getValue());
+                }
+                break;
+            }
+        }
+
+        return data;
+    }
+
 }
