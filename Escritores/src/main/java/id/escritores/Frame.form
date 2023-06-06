@@ -329,7 +329,7 @@
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   <Component id="enviarEscritorButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="removerEscritorButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="alterarEscritorButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -366,7 +366,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="enviarEscritorButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="removerEscritorButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="alterarEscritorButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
@@ -379,13 +379,13 @@
             <Property name="text" type="java.lang.String" value="Nome do Autor:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="removerEscritorButton1">
+        <Component class="javax.swing.JButton" name="alterarEscritorButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Alterar Informa&#xe7;&#xe3;o"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removerEscritorButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="alterarEscritorButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="nomeEscritorTextField3">

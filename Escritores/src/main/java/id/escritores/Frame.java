@@ -62,7 +62,7 @@ public class Frame extends javax.swing.JFrame {
         pesquisarObrasEscritorDialog = new javax.swing.JDialog();
         editarEscritorDialog = new javax.swing.JDialog();
         jLabel6 = new javax.swing.JLabel();
-        removerEscritorButton1 = new javax.swing.JButton();
+        alterarEscritorButton = new javax.swing.JButton();
         nomeEscritorTextField3 = new javax.swing.JTextField();
         nomeRadioButton = new javax.swing.JRadioButton();
         dNascimentoRadioButton = new javax.swing.JRadioButton();
@@ -298,11 +298,11 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel6.setText("Nome do Autor:");
 
-        removerEscritorButton1.setText("Alterar Informação");
-        removerEscritorButton1.setEnabled(false);
-        removerEscritorButton1.addActionListener(new java.awt.event.ActionListener() {
+        alterarEscritorButton.setText("Alterar Informação");
+        alterarEscritorButton.setEnabled(false);
+        alterarEscritorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                removerEscritorButton1ActionPerformed(evt);
+                alterarEscritorButtonActionPerformed(evt);
             }
         });
 
@@ -374,7 +374,7 @@ public class Frame extends javax.swing.JFrame {
                 .addGap(45, 45, 45)
                 .addComponent(enviarEscritorButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(removerEscritorButton1)
+                .addComponent(alterarEscritorButton)
                 .addGap(38, 38, 38))
         );
         editarEscritorDialogLayout.setVerticalGroup(
@@ -405,7 +405,7 @@ public class Frame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(enviarEscritorButton)
-                    .addComponent(removerEscritorButton1))
+                    .addComponent(alterarEscritorButton))
                 .addGap(24, 24, 24))
         );
 
@@ -720,9 +720,9 @@ public class Frame extends javax.swing.JFrame {
         pesquisarNacionalidadeDialog.setVisible(true);
     }//GEN-LAST:event_pesquisarNacionalidadeMenuItemActionPerformed
 
-    private void removerEscritorButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerEscritorButton1ActionPerformed
+    private void alterarEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarEscritorButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_removerEscritorButton1ActionPerformed
+    }//GEN-LAST:event_alterarEscritorButtonActionPerformed
 
     private void nomeEscritorTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscritorTextField3ActionPerformed
         // TODO add your handling code here:
@@ -763,19 +763,23 @@ public class Frame extends javax.swing.JFrame {
         }
 
         nomeRadioButton.addActionListener((ActionEvent e) -> {
-            alterarTextField.setToolTipText(data.get("nome"));
+            alterarTextField.setText(data.get("nome"));
+            alterarEscritorButton.setEnabled(true);
         });
 
         nacionalidadeRadioButton.addActionListener((ActionEvent e) -> {
             alterarTextField.setText(data.get("nacionalidade"));
+            alterarEscritorButton.setEnabled(true);
         });
 
         dNascimentoRadioButton.addActionListener((ActionEvent e) -> {
             alterarTextField.setText(data.get("datanascimento"));
+            alterarEscritorButton.setEnabled(true);
         });
 
         dFalecimentoRadioButton.addActionListener((ActionEvent e) -> {
             alterarTextField.setText(data.get("datafalecimento"));
+            alterarEscritorButton.setEnabled(true);
         });
         
         
@@ -829,6 +833,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton adicionarEscritorButton;
     private javax.swing.JDialog adicionarEscritorDialog;
     private javax.swing.JMenuItem adicionarEscritorMenuItem;
+    private javax.swing.JButton alterarEscritorButton;
     private javax.swing.JTextField alterarTextField;
     private javax.swing.JTextArea autoresTextArea;
     private javax.swing.ButtonGroup buttonGroup;
@@ -871,7 +876,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JRadioButton premiosRadioButton;
     private javax.swing.JMenu principalMenu;
     private javax.swing.JButton removerEscritorButton;
-    private javax.swing.JButton removerEscritorButton1;
     private javax.swing.JDialog removerEscritorDialog;
     private javax.swing.JMenuItem removerEscritorMenuItem;
     private javax.swing.JMenuItem sairMenuItem;
