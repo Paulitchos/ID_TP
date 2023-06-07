@@ -95,6 +95,7 @@ public class Frame extends javax.swing.JFrame {
         pesquisarEscritorMenuItem = new javax.swing.JMenuItem();
         pesquisarNacionalidadeMenuItem = new javax.swing.JMenuItem();
         pesquisarObrasEscritorMenuItem = new javax.swing.JMenuItem();
+        escritorPremiadoMenuItem = new javax.swing.JMenuItem();
         validarMenu = new javax.swing.JMenu();
         DTDMenuItem = new javax.swing.JMenuItem();
         XSDMenuItem = new javax.swing.JMenuItem();
@@ -543,6 +544,14 @@ public class Frame extends javax.swing.JFrame {
         });
         xPathMenu.add(pesquisarObrasEscritorMenuItem);
 
+        escritorPremiadoMenuItem.setText("Pesquisar escritor mais premiado");
+        escritorPremiadoMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                escritorPremiadoMenuItemActionPerformed(evt);
+            }
+        });
+        xPathMenu.add(escritorPremiadoMenuItem);
+
         jMenuBar1.add(xPathMenu);
 
         validarMenu.setText("Validar");
@@ -987,6 +996,19 @@ public class Frame extends javax.swing.JFrame {
         pesquisarObrasEscritorDialog.setVisible(true);
     }//GEN-LAST:event_pesquisarObrasEscritorMenuItemActionPerformed
 
+    private void escritorPremiadoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escritorPremiadoMenuItemActionPerformed
+        
+        try {
+            String resultado = XPathFunctions.escritor_mais_premiado();
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        JOptionPane.showMessageDialog(this,
+                    "Ainda não existe ecritores adicionados",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_escritorPremiadoMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1038,6 +1060,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JDialog editarEscritorDialog;
     private javax.swing.JMenuItem editarEscritorMenuItem;
     private javax.swing.JButton enviarEscritorButton;
+    private javax.swing.JMenuItem escritorPremiadoMenuItem;
     private javax.swing.JRadioButton gLiterarioRadioButton;
     private javax.swing.JTextArea informacaoTextArea;
     private javax.swing.JFileChooser jFileChooser1;

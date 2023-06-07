@@ -123,18 +123,21 @@ public class XPathFunctions {
     }
     
     
-    //Qual o escritor mais premiado?
-    static void escritor_mais_premiado() throws SaxonApiException {
-        String xp = "//Escritor[Premios = max(//Escritor/Premios)]";
+    //Qual o escritor mais premiado
+    static String escritor_mais_premiado() throws SaxonApiException {
+        String xp = "//escritor[premios/@npremios = max(//escritor/premios/@npremios)]/nome";
         XdmValue res = XPathFunctions.executaXpath(xp, "escritores.xml");
-        List<String> s = XPathFunctions.listaResultado(res);
         if (res == null) {
             System.out.println("Ficheiro XML nao existe");
         } else if (res.size() == 0) {
             System.out.println("Sem Resultados");
         } else {
-            System.out.println(s);
-            }
+            String nomeEscritor = res.itemAt(0).getStringValue();
+            System.out.println("Escritor mais premiado: " + nomeEscritor);
+            return nomeEscritor;
+        }
+        
+        return null;
     }
     
     
