@@ -21,7 +21,7 @@ import org.jdom2.Document;
  * @author paulo
  */
 public class Frame extends javax.swing.JFrame {
-
+    private Map<String, String> data;
     /**
      * Creates new form Frame
      */
@@ -721,7 +721,79 @@ public class Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_pesquisarNacionalidadeMenuItemActionPerformed
 
     private void alterarEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarEscritorButtonActionPerformed
-        // TODO add your handling code here:
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        
+        if (nomeRadioButton.isSelected()) {
+            
+            doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(),"nome",alterarTextField.getText(),doc);
+        } else if (nacionalidadeRadioButton.isSelected()) {
+
+            doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(),"nacionalidade",alterarTextField.getText(),doc);
+        } else if (dNascimentoRadioButton.isSelected()) {
+
+            doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(), "datanascimento", alterarTextField.getText(), doc);
+        } else if (dFalecimentoRadioButton.isSelected()) {
+
+            doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(), "datafalecimento", alterarTextField.getText(), doc);
+        } else if (gLiterarioRadioButton.isSelected()) {
+            // Perform actions for gLiterarioRadioButton
+            String generoliterario = data.get("generoliterario");
+            
+        } else if (ocupacaoRadioButton.isSelected()) {
+            // Perform actions for ocupacaoRadioButton
+            String ocupacoes = data.get("ocupacoes");
+            
+        } else if (premiosRadioButton.isSelected()) {
+            // Perform actions for premiosRadioButton
+            String premios = data.get("premios");
+            
+        }
+        
+        if(doc != null){
+            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "escritores.xml");
+            JOptionPane.showMessageDialog(this,
+                    "Informação atualizada",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            
+            JOptionPane.showMessageDialog(this,
+                    "Escritor não encontrado",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+        nomeEscritorTextField3.setText("");
+        alterarTextField.setText("");
+
+        // Reset radio buttons
+        nomeRadioButton.setSelected(false);
+        nacionalidadeRadioButton.setSelected(false);
+        dNascimentoRadioButton.setSelected(false);
+        dFalecimentoRadioButton.setSelected(false);
+        gLiterarioRadioButton.setSelected(false);
+        ocupacaoRadioButton.setSelected(false);
+        premiosRadioButton.setSelected(false);
+
+        // Reset other dialog components as needed
+
+        // Enable or disable components
+        nomeEscritorTextField3.setEditable(true);
+        alterarTextField.setEnabled(false);
+        alterarEscritorButton.setEnabled(false);
+
+        // Clear button group selection
+        buttonGroup.clearSelection();
+        
+        nomeRadioButton.setEnabled(false);
+        nacionalidadeRadioButton.setEnabled(false);
+        dNascimentoRadioButton.setEnabled(false);
+        dFalecimentoRadioButton.setEnabled(false);
+        gLiterarioRadioButton.setEnabled(false);
+        ocupacaoRadioButton.setEnabled(false);
+        premiosRadioButton.setEnabled(false);
+        
+        enviarEscritorButton.setEnabled(true);
     }//GEN-LAST:event_alterarEscritorButtonActionPerformed
 
     private void nomeEscritorTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscritorTextField3ActionPerformed
@@ -730,9 +802,10 @@ public class Frame extends javax.swing.JFrame {
 
     private void enviarEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarEscritorButtonActionPerformed
         Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
-        Map<String, String> data = EscritoresXML.verificaEscritor(nomeEscritorTextField3.getText(), doc);
+        data = EscritoresXML.verificaEscritor(nomeEscritorTextField3.getText(), doc);
         nomeEscritorTextField3.setEditable(false);
         alterarTextField.setEnabled(true);
+        enviarEscritorButton.setEnabled(false);
         if (data.containsKey("nome")) {
             nomeRadioButton.setEnabled(true);
             buttonGroup.add(nomeRadioButton);
