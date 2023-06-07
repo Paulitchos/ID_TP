@@ -266,5 +266,37 @@ public class EscritoresXML {
 
         return doc;
     }
+    
+    public static String getIdEscritor(String escritor, Document doc) {
+        Element raiz;
+        String id = null;
+        if (doc == null) {
+            System.out.println("O ficheiro XML não existe.");
+            return null;
+        } else {
+            raiz = doc.getRootElement();
+        }
+
+        List<Element> todosEscritores = raiz.getChildren("escritor");
+        boolean found = false;
+
+        for (int i = 0; i < todosEscritores.size(); i++) {
+            Element escritorElement = todosEscritores.get(i);
+            if (escritorElement.getAttributeValue("nomePesquisado").equals(escritor)) {
+                id = escritorElement.getAttributeValue("id");
+                System.out.println(id);
+                        
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Escritor não encontrado.");
+            return null;
+        }
+
+        return id;
+    }
 
 }

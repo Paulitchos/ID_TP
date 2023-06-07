@@ -60,6 +60,11 @@ public class Frame extends javax.swing.JFrame {
         autoresTextArea = new javax.swing.JTextArea();
         nomeNacionalidadeTextField = new javax.swing.JTextField();
         pesquisarObrasEscritorDialog = new javax.swing.JDialog();
+        nomeEscritorTextField4 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        pesquisarObrasButton = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        obrasEscritorTextArea = new javax.swing.JTextArea();
         editarEscritorDialog = new javax.swing.JDialog();
         jLabel6 = new javax.swing.JLabel();
         alterarEscritorButton = new javax.swing.JButton();
@@ -100,7 +105,7 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Nome do Autor:");
+        jLabel2.setText("Nome do Escritor:");
 
         adicionarEscritorButton.setText("Adicionar Autor");
         adicionarEscritorButton.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +147,7 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Nome do Autor:");
+        jLabel3.setText("Nome do Escritor:");
 
         removerEscritorButton.setText("Remover Autor");
         removerEscritorButton.addActionListener(new java.awt.event.ActionListener() {
@@ -184,7 +189,7 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Nome do Autor:");
+        jLabel4.setText("Nome do Escritor:");
 
         pesquisarEscritorButton.setText("Pesquisar Autor");
         pesquisarEscritorButton.addActionListener(new java.awt.event.ActionListener() {
@@ -285,18 +290,60 @@ public class Frame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        nomeEscritorTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeEscritorTextField4ActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("Nome do Escritor:");
+
+        pesquisarObrasButton.setText("Pesquisar Obras");
+        pesquisarObrasButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pesquisarObrasButtonActionPerformed(evt);
+            }
+        });
+
+        obrasEscritorTextArea.setColumns(20);
+        obrasEscritorTextArea.setRows(5);
+        jScrollPane4.setViewportView(obrasEscritorTextArea);
+
         javax.swing.GroupLayout pesquisarObrasEscritorDialogLayout = new javax.swing.GroupLayout(pesquisarObrasEscritorDialog.getContentPane());
         pesquisarObrasEscritorDialog.getContentPane().setLayout(pesquisarObrasEscritorDialogLayout);
         pesquisarObrasEscritorDialogLayout.setHorizontalGroup(
             pesquisarObrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(pesquisarObrasEscritorDialogLayout.createSequentialGroup()
+                .addGroup(pesquisarObrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarObrasEscritorDialogLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nomeEscritorTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pesquisarObrasEscritorDialogLayout.createSequentialGroup()
+                        .addGap(147, 147, 147)
+                        .addComponent(pesquisarObrasButton)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(pesquisarObrasEscritorDialogLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane4)))
+                .addContainerGap())
         );
         pesquisarObrasEscritorDialogLayout.setVerticalGroup(
             pesquisarObrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarObrasEscritorDialogLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(pesquisarObrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeEscritorTextField4)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pesquisarObrasButton)
+                .addContainerGap())
         );
 
-        jLabel6.setText("Nome do Autor:");
+        jLabel6.setText("Nome do Escritor:");
 
         alterarEscritorButton.setText("Alterar Informação");
         alterarEscritorButton.setEnabled(false);
@@ -349,7 +396,7 @@ public class Frame extends javax.swing.JFrame {
         editarEscritorDialogLayout.setHorizontalGroup(
             editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editarEscritorDialogLayout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -489,6 +536,11 @@ public class Frame extends javax.swing.JFrame {
         xPathMenu.add(pesquisarNacionalidadeMenuItem);
 
         pesquisarObrasEscritorMenuItem.setText("Pesquisar obras por escritor");
+        pesquisarObrasEscritorMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pesquisarObrasEscritorMenuItemActionPerformed(evt);
+            }
+        });
         xPathMenu.add(pesquisarObrasEscritorMenuItem);
 
         jMenuBar1.add(xPathMenu);
@@ -626,25 +678,32 @@ public class Frame extends javax.swing.JFrame {
 
     private void removerEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerEscritorButtonActionPerformed
         Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
-        
-        //Chama a função para remover  livros ao XML
-        doc = EscritoresXML.removeEscritor(nomeEscritorTextField1.getText(), doc);
-        //grava o ficheiro XML em disco
-        if (doc != null) {
-            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "escritores.xml");
-            removerEscritorDialog.setVisible(false);
+        if(doc == null) {
             JOptionPane.showMessageDialog(this,
-                    "Escritor e Obras removidos com sucesso",
+                    "Ainda não existe ecritores adicionados",
                     "Informação",
                     JOptionPane.INFORMATION_MESSAGE);
-            nomeEscritorTextField1.setText("");
         } else {
-            removerEscritorDialog.setVisible(false);
-            JOptionPane.showMessageDialog(this,
-                    "Escritor não encontrado",
-                    "Informação",
-                    JOptionPane.INFORMATION_MESSAGE);
-            nomeEscritorTextField1.setText("");
+
+            //Chama a função para remover  livros ao XML
+            doc = EscritoresXML.removeEscritor(nomeEscritorTextField1.getText(), doc);
+            //grava o ficheiro XML em disco
+            if (doc != null) {
+                XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "escritores.xml");
+                removerEscritorDialog.setVisible(false);
+                JOptionPane.showMessageDialog(this,
+                        "Escritor e Obras removidos com sucesso",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+                nomeEscritorTextField1.setText("");
+            } else {
+                removerEscritorDialog.setVisible(false);
+                JOptionPane.showMessageDialog(this,
+                        "Escritor não encontrado",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+                nomeEscritorTextField1.setText("");
+            }
         }
     }//GEN-LAST:event_removerEscritorButtonActionPerformed
 
@@ -723,77 +782,85 @@ public class Frame extends javax.swing.JFrame {
     private void alterarEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarEscritorButtonActionPerformed
         Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
         
-        if (nomeRadioButton.isSelected()) {
-            
-            doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(),"nome",alterarTextField.getText(),doc);
-        } else if (nacionalidadeRadioButton.isSelected()) {
-
-            doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(),"nacionalidade",alterarTextField.getText(),doc);
-        } else if (dNascimentoRadioButton.isSelected()) {
-
-            doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(), "datanascimento", alterarTextField.getText(), doc);
-        } else if (dFalecimentoRadioButton.isSelected()) {
-
-            doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(), "datafalecimento", alterarTextField.getText(), doc);
-        } else if (gLiterarioRadioButton.isSelected()) {
-            // Perform actions for gLiterarioRadioButton
-            String generoliterario = data.get("generoliterario");
-            
-        } else if (ocupacaoRadioButton.isSelected()) {
-            // Perform actions for ocupacaoRadioButton
-            String ocupacoes = data.get("ocupacoes");
-            
-        } else if (premiosRadioButton.isSelected()) {
-            // Perform actions for premiosRadioButton
-            String premios = data.get("premios");
-            
-        }
-        
-        if(doc != null){
-            XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "escritores.xml");
+        if(doc == null) {
             JOptionPane.showMessageDialog(this,
-                    "Informação atualizada",
+                    "Ainda não existe ecritores adicionados",
                     "Informação",
                     JOptionPane.INFORMATION_MESSAGE);
         } else {
             
-            JOptionPane.showMessageDialog(this,
-                    "Escritor não encontrado",
-                    "Informação",
-                    JOptionPane.INFORMATION_MESSAGE);
+            if (nomeRadioButton.isSelected()) {
+
+                doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(),"nome",alterarTextField.getText(),doc);
+            } else if (nacionalidadeRadioButton.isSelected()) {
+
+                doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(),"nacionalidade",alterarTextField.getText(),doc);
+            } else if (dNascimentoRadioButton.isSelected()) {
+
+                doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(), "datanascimento", alterarTextField.getText(), doc);
+            } else if (dFalecimentoRadioButton.isSelected()) {
+
+                doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(), "datafalecimento", alterarTextField.getText(), doc);
+            } else if (gLiterarioRadioButton.isSelected()) {
+                // Perform actions for gLiterarioRadioButton
+                String generoliterario = data.get("generoliterario");
+
+            } else if (ocupacaoRadioButton.isSelected()) {
+                // Perform actions for ocupacaoRadioButton
+                String ocupacoes = data.get("ocupacoes");
+
+            } else if (premiosRadioButton.isSelected()) {
+                // Perform actions for premiosRadioButton
+                String premios = data.get("premios");
+
+            }
+
+            if(doc != null){
+                XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "escritores.xml");
+                JOptionPane.showMessageDialog(this,
+                        "Informação atualizada",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            } else {
+
+                JOptionPane.showMessageDialog(this,
+                        "Escritor não encontrado",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+
+            nomeEscritorTextField3.setText("");
+            alterarTextField.setText("");
+
+            // Reset radio buttons
+            nomeRadioButton.setSelected(false);
+            nacionalidadeRadioButton.setSelected(false);
+            dNascimentoRadioButton.setSelected(false);
+            dFalecimentoRadioButton.setSelected(false);
+            gLiterarioRadioButton.setSelected(false);
+            ocupacaoRadioButton.setSelected(false);
+            premiosRadioButton.setSelected(false);
+
+            // Reset other dialog components as needed
+
+            // Enable or disable components
+            nomeEscritorTextField3.setEditable(true);
+            alterarTextField.setEnabled(false);
+            alterarEscritorButton.setEnabled(false);
+
+            // Clear button group selection
+            buttonGroup.clearSelection();
+
+            nomeRadioButton.setEnabled(false);
+            nacionalidadeRadioButton.setEnabled(false);
+            dNascimentoRadioButton.setEnabled(false);
+            dFalecimentoRadioButton.setEnabled(false);
+            gLiterarioRadioButton.setEnabled(false);
+            ocupacaoRadioButton.setEnabled(false);
+            premiosRadioButton.setEnabled(false);
+
+            enviarEscritorButton.setEnabled(true);
         }
-        
-        nomeEscritorTextField3.setText("");
-        alterarTextField.setText("");
-
-        // Reset radio buttons
-        nomeRadioButton.setSelected(false);
-        nacionalidadeRadioButton.setSelected(false);
-        dNascimentoRadioButton.setSelected(false);
-        dFalecimentoRadioButton.setSelected(false);
-        gLiterarioRadioButton.setSelected(false);
-        ocupacaoRadioButton.setSelected(false);
-        premiosRadioButton.setSelected(false);
-
-        // Reset other dialog components as needed
-
-        // Enable or disable components
-        nomeEscritorTextField3.setEditable(true);
-        alterarTextField.setEnabled(false);
-        alterarEscritorButton.setEnabled(false);
-
-        // Clear button group selection
-        buttonGroup.clearSelection();
-        
-        nomeRadioButton.setEnabled(false);
-        nacionalidadeRadioButton.setEnabled(false);
-        dNascimentoRadioButton.setEnabled(false);
-        dFalecimentoRadioButton.setEnabled(false);
-        gLiterarioRadioButton.setEnabled(false);
-        ocupacaoRadioButton.setEnabled(false);
-        premiosRadioButton.setEnabled(false);
-        
-        enviarEscritorButton.setEnabled(true);
     }//GEN-LAST:event_alterarEscritorButtonActionPerformed
 
     private void nomeEscritorTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscritorTextField3ActionPerformed
@@ -802,60 +869,65 @@ public class Frame extends javax.swing.JFrame {
 
     private void enviarEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarEscritorButtonActionPerformed
         Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
-        data = EscritoresXML.verificaEscritor(nomeEscritorTextField3.getText(), doc);
-        nomeEscritorTextField3.setEditable(false);
-        alterarTextField.setEnabled(true);
-        enviarEscritorButton.setEnabled(false);
-        if (data.containsKey("nome")) {
-            nomeRadioButton.setEnabled(true);
-            buttonGroup.add(nomeRadioButton);
-        }
-        if (data.containsKey("nacionalidade")) {
-            nacionalidadeRadioButton.setEnabled(true);
-            buttonGroup.add(nacionalidadeRadioButton);
-        }
-        if (data.containsKey("datanascimento")) {
-            dNascimentoRadioButton.setEnabled(true);
-            buttonGroup.add(dNascimentoRadioButton);
-        }
-        if (data.containsKey("datafalecimento")) {
-            dFalecimentoRadioButton.setEnabled(true);
-            buttonGroup.add(dFalecimentoRadioButton);
-        }
-        if (data.containsKey("generoliterario")) {
-            gLiterarioRadioButton.setEnabled(true);
-            buttonGroup.add(gLiterarioRadioButton);
-        }
-        if (data.containsKey("ocupacoes")) {
-            ocupacaoRadioButton.setEnabled(true);
-            buttonGroup.add(ocupacaoRadioButton);
-        }
-        if (data.containsKey("premios")) {
-            premiosRadioButton.setEnabled(true);
-            buttonGroup.add(premiosRadioButton);
-        }
+        if(doc == null) {
+            JOptionPane.showMessageDialog(this,
+                    "Ainda não existe ecritores adicionados",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            data = EscritoresXML.verificaEscritor(nomeEscritorTextField3.getText(), doc);
+            nomeEscritorTextField3.setEditable(false);
+            alterarTextField.setEnabled(true);
+            enviarEscritorButton.setEnabled(false);
+            if (data.containsKey("nome")) {
+                nomeRadioButton.setEnabled(true);
+                buttonGroup.add(nomeRadioButton);
+            }
+            if (data.containsKey("nacionalidade")) {
+                nacionalidadeRadioButton.setEnabled(true);
+                buttonGroup.add(nacionalidadeRadioButton);
+            }
+            if (data.containsKey("datanascimento")) {
+                dNascimentoRadioButton.setEnabled(true);
+                buttonGroup.add(dNascimentoRadioButton);
+            }
+            if (data.containsKey("datafalecimento")) {
+                dFalecimentoRadioButton.setEnabled(true);
+                buttonGroup.add(dFalecimentoRadioButton);
+            }
+            if (data.containsKey("generoliterario")) {
+                gLiterarioRadioButton.setEnabled(true);
+                buttonGroup.add(gLiterarioRadioButton);
+            }
+            if (data.containsKey("ocupacoes")) {
+                ocupacaoRadioButton.setEnabled(true);
+                buttonGroup.add(ocupacaoRadioButton);
+            }
+            if (data.containsKey("premios")) {
+                premiosRadioButton.setEnabled(true);
+                buttonGroup.add(premiosRadioButton);
+            }
 
-        nomeRadioButton.addActionListener((ActionEvent e) -> {
-            alterarTextField.setText(data.get("nome"));
-            alterarEscritorButton.setEnabled(true);
-        });
+            nomeRadioButton.addActionListener((ActionEvent e) -> {
+                alterarTextField.setText(data.get("nome"));
+                alterarEscritorButton.setEnabled(true);
+            });
 
-        nacionalidadeRadioButton.addActionListener((ActionEvent e) -> {
-            alterarTextField.setText(data.get("nacionalidade"));
-            alterarEscritorButton.setEnabled(true);
-        });
+            nacionalidadeRadioButton.addActionListener((ActionEvent e) -> {
+                alterarTextField.setText(data.get("nacionalidade"));
+                alterarEscritorButton.setEnabled(true);
+            });
 
-        dNascimentoRadioButton.addActionListener((ActionEvent e) -> {
-            alterarTextField.setText(data.get("datanascimento"));
-            alterarEscritorButton.setEnabled(true);
-        });
+            dNascimentoRadioButton.addActionListener((ActionEvent e) -> {
+                alterarTextField.setText(data.get("datanascimento"));
+                alterarEscritorButton.setEnabled(true);
+            });
 
-        dFalecimentoRadioButton.addActionListener((ActionEvent e) -> {
-            alterarTextField.setText(data.get("datafalecimento"));
-            alterarEscritorButton.setEnabled(true);
-        });
-        
-        
+            dFalecimentoRadioButton.addActionListener((ActionEvent e) -> {
+                alterarTextField.setText(data.get("datafalecimento"));
+                alterarEscritorButton.setEnabled(true);
+            });
+        }
     }//GEN-LAST:event_enviarEscritorButtonActionPerformed
 
     private void editarEscritorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarEscritorMenuItemActionPerformed
@@ -863,6 +935,57 @@ public class Frame extends javax.swing.JFrame {
         editarEscritorDialog.setLocation(200, 200);
         editarEscritorDialog.setVisible(true);
     }//GEN-LAST:event_editarEscritorMenuItemActionPerformed
+
+    private void nomeEscritorTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscritorTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeEscritorTextField4ActionPerformed
+
+    private void pesquisarObrasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarObrasButtonActionPerformed
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        String id = null;
+        if(doc != null){
+            id = EscritoresXML.getIdEscritor(nomeEscritorTextField4.getText(), doc);
+            
+            if(id != null){
+                try {
+                    List<String> result = XPathFunctions.pesquisa_obras_autor(id);
+                    if(result != null){
+                        obrasEscritorTextArea.setText("Obras do escritor " + nomeEscritorTextField4.getText() + ":\n\n");
+                        for (String results : result) {
+                            obrasEscritorTextArea.append(results);
+                        }
+
+                        nomeEscritorTextField4.setText("");
+                    } else {
+                        JOptionPane.showMessageDialog(this,
+                            "Obras não encontradas",
+                            "Informação",
+                            JOptionPane.INFORMATION_MESSAGE);
+                        nomeEscritorTextField4.setText("");
+                    }
+                } catch (SaxonApiException ex) {
+                    Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } else {
+                JOptionPane.showMessageDialog(this,
+                    "Escritor não encontrado",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Ainda não existe ecritores adicionados",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_pesquisarObrasButtonActionPerformed
+
+    private void pesquisarObrasEscritorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarObrasEscritorMenuItemActionPerformed
+        pesquisarObrasEscritorDialog.setSize(500, 500);
+        pesquisarObrasEscritorDialog.setLocation(200, 200);
+        pesquisarObrasEscritorDialog.setVisible(true);
+    }//GEN-LAST:event_pesquisarObrasEscritorMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -925,17 +1048,21 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JRadioButton nacionalidadeRadioButton;
     private javax.swing.JTextField nomeEscritorTextField;
     private javax.swing.JTextField nomeEscritorTextField1;
     private javax.swing.JTextField nomeEscritorTextField2;
     private javax.swing.JTextField nomeEscritorTextField3;
+    private javax.swing.JTextField nomeEscritorTextField4;
     private javax.swing.JTextField nomeNacionalidadeTextField;
     private javax.swing.JRadioButton nomeRadioButton;
+    private javax.swing.JTextArea obrasEscritorTextArea;
     private javax.swing.JRadioButton ocupacaoRadioButton;
     private javax.swing.JTextArea outputTextArea;
     private javax.swing.JButton pesquisarEscritorButton;
@@ -944,6 +1071,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton pesquisarNacionalidadeButton;
     private javax.swing.JDialog pesquisarNacionalidadeDialog;
     private javax.swing.JMenuItem pesquisarNacionalidadeMenuItem;
+    private javax.swing.JButton pesquisarObrasButton;
     private javax.swing.JDialog pesquisarObrasEscritorDialog;
     private javax.swing.JMenuItem pesquisarObrasEscritorMenuItem;
     private javax.swing.JRadioButton premiosRadioButton;

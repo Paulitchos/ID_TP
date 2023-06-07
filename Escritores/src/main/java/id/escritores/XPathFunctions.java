@@ -104,14 +104,10 @@ public class XPathFunctions {
         }
         return null;
     }
-    
-    
+        
     //Pesquisar as obras de um determinado autor
-    static void pesquisa_obras_autor() throws SaxonApiException {
-        Scanner ler = new Scanner(System.in);
-        System.out.println("Introduza o nome de um autor");
-        String nomeAutor = ler.nextLine();
-        String xp = "//Obra[contains(Autor, '" + nomeAutor + "')]";
+    static List<String> pesquisa_obras_autor(String id) throws SaxonApiException {
+        String xp = "//obra[contains(@codigoautor, '" + id + "')]";
         XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
         List<String> s = XPathFunctions.listaResultado(res);
         if (res == null) {
@@ -120,7 +116,10 @@ public class XPathFunctions {
             System.out.println("Sem Resultados");
         } else {
             System.out.println(s);
-            }
+            return s;
+        }
+        
+        return null;
     }
     
     
