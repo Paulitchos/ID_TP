@@ -142,13 +142,9 @@ public class XPathFunctions {
     
     
     //Quais os livros publicados por uma determinada editora, com preço acima de um dado valor
-    static void livros_editora_preco() throws SaxonApiException {
-        Scanner ler = new Scanner(System.in);
-        System.out.println("Introduza o nome de uma editora");
-        String editora = ler.nextLine();
-        System.out.println("Introduza o valor minimo do preco");
-        int precoMin = ler.nextInt();
-        String xp = "//Obra[contains(Editora, '" + editora + "') and Preco > " + precoMin + "]";
+    static List<String> livros_editora_preco(String editora, String precoMin) throws SaxonApiException {
+        
+        String xp = "//obra[contains(editora, '" + editora + "') and preco > " + precoMin + "]/concat(titulo/text(), ' ', autor/text())";
         XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
         List<String> s = XPathFunctions.listaResultado(res);
         if (res == null) {
@@ -157,65 +153,54 @@ public class XPathFunctions {
             System.out.println("Sem Resultados");
         } else {
             System.out.println(s);
-            }
+            return s;
+        }
+        
+        return null;
     }
     
     
     //EXTRA (PESQUISAS XPATH)
     
-    //Pesquisa por livros de um determinado genero
-    static void livros_genero() throws SaxonApiException {
-        Scanner ler = new Scanner(System.in);
-        System.out.println("Introduza o genero do livro");
-        String genero = ler.nextLine();
-        String xp = "//Obra[contains(Genero, '" + genero + "')]";
-        XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
-        List<String> s = XPathFunctions.listaResultado(res);
-        if(res == null){
-            System.out.println("Ficheiro XML nao existe");
-        } else if(res.size() == 0) {
-            System.out.println("Sem Resultados");
-        } else{
-            System.out.println(s);
-            }
-    }
-    
-    
-    //Pesquisa por obras publicadas num determinado período de tempo
-    static void obras_periodo() throws SaxonApiException {
-        Scanner ler = new Scanner(System.in);
-        System.out.println("Introduza o ano inicial");
-        int anoInicial = ler.nextInt();
-        System.out.println("Introduza o ano final");
-        int anoFinal = ler.nextInt();
-        String xp = "//Obra[AnoPublicacao >= " + anoInicial + " and AnoPublicacao <= " + anoFinal + "]";
-        XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
-        List<String> s = XPathFunctions.listaResultado(res);
-        if(res == null){
-            System.out.println("Ficheiro XML nao existe");
-        } else if(res.size() == 0) {
-            System.out.println("Sem Resultados");
-        } else{
-            System.out.println(s);
-            }
-    }
-    
-    
-    //Pesquisa por obras que tenham recebido um premio especifico
-    static void obras_premio() throws SaxonApiException {
-        Scanner ler = new Scanner(System.in);
-        System.out.println("Introduza o nome do premio");
-        String premio = ler.nextLine();
-        String xp = "//Obra[contains(Premios, '" + premio + "')]";
-        XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
-        List<String> s = XPathFunctions.listaResultado(res);
-        if(res == null){
-            System.out.println("Ficheiro XML nao existe");
-        } else if(res.size() == 0) {
-            System.out.println("Sem Resultados");
-        } else{
-            System.out.println(s);
-            }
-    }
+    static double averagePriceOfAwardWinningAuthors() throws SaxonApiException {
+        String xp = "//escritor[premios/@npremios >= 1]/@id";
+        XdmValue authorIds = executaXpath(xp, "escritores.xml");
 
+        if (authorIds == null) {
+            System.out.println("Ficheiro XML nao existe");
+            return -1.0;
+        } else if (authorIds.size() == 0) {
+            System.out.println("Sem Resultados");
+            return -1.0;
+        } else {
+            double total = 0;
+            int count = 0;
+
+            for (XdmItem itemId : authorIds) {
+                String id = itemId.getStringValue();
+
+                // Find the average price of books by each award-winning author
+                String xpPrice = "//obra[@codigoautor='" + id + "']/preco";
+                XdmValue prices = executaXpath(xpPrice, "obras.xml"); // Use "obras.xml" for the obras data
+
+                if (prices != null) {
+                    for (XdmItem itemPrice : prices) {
+                        double price = Double.parseDouble(itemPrice.getStringValue());
+                        total += price;
+                        count++;
+                    }
+                }
+            }
+
+            if (count > 0) {
+                double averagePrice = total / count;
+                System.out.println("Average price of books by award-winning authors: " + averagePrice);
+                return averagePrice;
+            } else {
+                System.out.println("No books found for award-winning authors");
+                return -1.0;
+            }
+        }
+    }
+   
 }

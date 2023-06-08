@@ -80,6 +80,14 @@ public class Frame extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         enviarEscritorButton = new javax.swing.JButton();
         buttonGroup = new javax.swing.ButtonGroup();
+        editoraPrecoDialog = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        editoraTextField = new javax.swing.JTextField();
+        precoTextField = new javax.swing.JTextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        obrasTextArea = new javax.swing.JTextArea();
+        pesquisarObraButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         outputTextArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
@@ -96,6 +104,8 @@ public class Frame extends javax.swing.JFrame {
         pesquisarNacionalidadeMenuItem = new javax.swing.JMenuItem();
         pesquisarObrasEscritorMenuItem = new javax.swing.JMenuItem();
         escritorPremiadoMenuItem = new javax.swing.JMenuItem();
+        editoraPrecoMenuItem = new javax.swing.JMenuItem();
+        avgPrecoMenuItem = new javax.swing.JMenuItem();
         validarMenu = new javax.swing.JMenu();
         DTDMenuItem = new javax.swing.JMenuItem();
         XSDMenuItem = new javax.swing.JMenuItem();
@@ -457,6 +467,63 @@ public class Frame extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
+        jLabel9.setText("Nome da editora:");
+
+        jLabel10.setText("Preço mínimo:");
+
+        obrasTextArea.setColumns(20);
+        obrasTextArea.setRows(5);
+        jScrollPane5.setViewportView(obrasTextArea);
+
+        pesquisarObraButton.setText("Pesquisar Obra");
+        pesquisarObraButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pesquisarObraButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout editoraPrecoDialogLayout = new javax.swing.GroupLayout(editoraPrecoDialog.getContentPane());
+        editoraPrecoDialog.getContentPane().setLayout(editoraPrecoDialogLayout);
+        editoraPrecoDialogLayout.setHorizontalGroup(
+            editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(editoraPrecoDialogLayout.createSequentialGroup()
+                .addGroup(editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(editoraPrecoDialogLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(editoraTextField)
+                            .addComponent(precoTextField)))
+                    .addGroup(editoraPrecoDialogLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane5)))
+                .addContainerGap())
+            .addGroup(editoraPrecoDialogLayout.createSequentialGroup()
+                .addGap(152, 152, 152)
+                .addComponent(pesquisarObraButton)
+                .addContainerGap(169, Short.MAX_VALUE))
+        );
+        editoraPrecoDialogLayout.setVerticalGroup(
+            editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(editoraPrecoDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(editoraTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(precoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addComponent(pesquisarObraButton)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         outputTextArea.setColumns(20);
@@ -551,6 +618,22 @@ public class Frame extends javax.swing.JFrame {
             }
         });
         xPathMenu.add(escritorPremiadoMenuItem);
+
+        editoraPrecoMenuItem.setText("Pesquisar obras por editora e preço");
+        editoraPrecoMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editoraPrecoMenuItemActionPerformed(evt);
+            }
+        });
+        xPathMenu.add(editoraPrecoMenuItem);
+
+        avgPrecoMenuItem.setText("Pesquisar média de preço das obras de escritores com prémios");
+        avgPrecoMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                avgPrecoMenuItemActionPerformed(evt);
+            }
+        });
+        xPathMenu.add(avgPrecoMenuItem);
 
         jMenuBar1.add(xPathMenu);
 
@@ -735,12 +818,12 @@ public class Frame extends javax.swing.JFrame {
     private void pesquisarEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarEscritorButtonActionPerformed
 
         try {
-           List<String> result = XPathFunctions.pesquisa_nome_autor(nomeEscritorTextField2.getText());
+           List<String> results = XPathFunctions.pesquisa_nome_autor(nomeEscritorTextField2.getText());
            
-           if(result != null){
+           if(results != null){
                 informacaoTextArea.setText("Informação do autor " + nomeEscritorTextField2.getText() + ":\n\n");
-                for (String results : result) {
-                    informacaoTextArea.append(results + "\n");
+                for (String result : results) {
+                    informacaoTextArea.append(result + "\n");
                 }
                 
                 nomeEscritorTextField2.setText("");
@@ -758,11 +841,11 @@ public class Frame extends javax.swing.JFrame {
 
     private void pesquisarNacionalidadeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarNacionalidadeButtonActionPerformed
         try {
-            List<String> result = XPathFunctions.pesquisa_nacionalidade_autor(nomeNacionalidadeTextField.getText());
-            if(result != null){
+            List<String> results = XPathFunctions.pesquisa_nacionalidade_autor(nomeNacionalidadeTextField.getText());
+            if(results != null){
                 autoresTextArea.setText("Autores " + nomeNacionalidadeTextField.getText() + ":\n\n");
-                for (String results : result) {
-                    autoresTextArea.append(results);
+                for (String result : results) {
+                    autoresTextArea.append(result);
                 }
                 
                 nomeNacionalidadeTextField.setText("");
@@ -957,11 +1040,11 @@ public class Frame extends javax.swing.JFrame {
             
             if(id != null){
                 try {
-                    List<String> result = XPathFunctions.pesquisa_obras_autor(id);
-                    if(result != null){
+                    List<String> results = XPathFunctions.pesquisa_obras_autor(id);
+                    if(results != null){
                         obrasEscritorTextArea.setText("Obras do escritor " + nomeEscritorTextField4.getText() + ":\n\n");
-                        for (String results : result) {
-                            obrasEscritorTextArea.append(results);
+                        for (String result : results) {
+                            obrasEscritorTextArea.append(result);
                         }
 
                         nomeEscritorTextField4.setText("");
@@ -1018,6 +1101,76 @@ public class Frame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_escritorPremiadoMenuItemActionPerformed
 
+    private void editoraPrecoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editoraPrecoMenuItemActionPerformed
+        editoraPrecoDialog.setSize(500, 500);
+        editoraPrecoDialog.setLocation(200, 200);
+        editoraPrecoDialog.setVisible(true);
+    }//GEN-LAST:event_editoraPrecoMenuItemActionPerformed
+
+    private void pesquisarObraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarObraButtonActionPerformed
+
+            
+        if(editoraTextField.getText().equals("")){
+            JOptionPane.showMessageDialog(this,
+                "Preencher editora",
+                "Informação",
+                JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            if(precoTextField.getText().equals("")){
+                JOptionPane.showMessageDialog(this,
+                "Preencher preco mínimo",
+                "Informação",
+                JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                try {
+                    List<String> results = XPathFunctions.livros_editora_preco(editoraTextField.getText(),precoTextField.getText());
+                    
+                    if(results != null){
+                        obrasTextArea.setText("Obras de editora " + editoraTextField.getText() + " e preço mínomo de " + precoTextField.getText() + ":\n\n");
+                        for (String result : results) {
+                            obrasTextArea.append(result + "\n");
+                        }
+                
+                        editoraTextField.setText("");
+                        precoTextField.setText("");
+                    } else {
+                        JOptionPane.showMessageDialog(this,
+                            "Obras não encontradas",
+                            "Informação",
+                            JOptionPane.INFORMATION_MESSAGE);
+                        editoraTextField.setText("");
+                        precoTextField.setText("");
+                    }
+                } catch (SaxonApiException ex) {
+                    Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+
+        }
+                
+        
+    }//GEN-LAST:event_pesquisarObraButtonActionPerformed
+
+    private void avgPrecoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_avgPrecoMenuItemActionPerformed
+        try {
+            double avgPreco = XPathFunctions.averagePriceOfAwardWinningAuthors();
+            if(avgPreco != -1){
+              JOptionPane.showMessageDialog(this,
+                    "Média de preço é: " + avgPreco,
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);  
+            } else {
+                JOptionPane.showMessageDialog(this,
+                    "Não existe média",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+            }
+            
+        } catch (SaxonApiException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_avgPrecoMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1063,17 +1216,22 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton alterarEscritorButton;
     private javax.swing.JTextField alterarTextField;
     private javax.swing.JTextArea autoresTextArea;
+    private javax.swing.JMenuItem avgPrecoMenuItem;
     private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.JRadioButton dFalecimentoRadioButton;
     private javax.swing.JRadioButton dNascimentoRadioButton;
     private javax.swing.JDialog editarEscritorDialog;
     private javax.swing.JMenuItem editarEscritorMenuItem;
+    private javax.swing.JDialog editoraPrecoDialog;
+    private javax.swing.JMenuItem editoraPrecoMenuItem;
+    private javax.swing.JTextField editoraTextField;
     private javax.swing.JButton enviarEscritorButton;
     private javax.swing.JMenuItem escritorPremiadoMenuItem;
     private javax.swing.JRadioButton gLiterarioRadioButton;
     private javax.swing.JTextArea informacaoTextArea;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1081,11 +1239,13 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JRadioButton nacionalidadeRadioButton;
     private javax.swing.JTextField nomeEscritorTextField;
     private javax.swing.JTextField nomeEscritorTextField1;
@@ -1095,6 +1255,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField nomeNacionalidadeTextField;
     private javax.swing.JRadioButton nomeRadioButton;
     private javax.swing.JTextArea obrasEscritorTextArea;
+    private javax.swing.JTextArea obrasTextArea;
     private javax.swing.JRadioButton ocupacaoRadioButton;
     private javax.swing.JTextArea outputTextArea;
     private javax.swing.JButton pesquisarEscritorButton;
@@ -1103,9 +1264,11 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton pesquisarNacionalidadeButton;
     private javax.swing.JDialog pesquisarNacionalidadeDialog;
     private javax.swing.JMenuItem pesquisarNacionalidadeMenuItem;
+    private javax.swing.JButton pesquisarObraButton;
     private javax.swing.JButton pesquisarObrasButton;
     private javax.swing.JDialog pesquisarObrasEscritorDialog;
     private javax.swing.JMenuItem pesquisarObrasEscritorMenuItem;
+    private javax.swing.JTextField precoTextField;
     private javax.swing.JRadioButton premiosRadioButton;
     private javax.swing.JMenu principalMenu;
     private javax.swing.JButton removerEscritorButton;
