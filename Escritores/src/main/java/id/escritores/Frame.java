@@ -1000,13 +1000,22 @@ public class Frame extends javax.swing.JFrame {
         
         try {
             String resultado = XPathFunctions.escritor_mais_premiado();
+            if(resultado != null){
+               JOptionPane.showMessageDialog(this,
+                    "O escritor com mais prémios é: " + resultado,
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE); 
+            } else {
+                JOptionPane.showMessageDialog(this,
+                    "Ainda não existe ecritores com prémios",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+            }
+            
         } catch (SaxonApiException ex) {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
-        JOptionPane.showMessageDialog(this,
-                    "Ainda não existe ecritores adicionados",
-                    "Informação",
-                    JOptionPane.INFORMATION_MESSAGE);
+        
     }//GEN-LAST:event_escritorPremiadoMenuItemActionPerformed
 
     /**
