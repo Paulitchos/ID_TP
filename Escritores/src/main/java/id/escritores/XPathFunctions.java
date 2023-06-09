@@ -164,7 +164,7 @@ public class XPathFunctions {
     //EXTRA (PESQUISAS XPATH)
     
     static double averagePriceOfAwardWinningAuthors() throws SaxonApiException {
-        String xp = "//escritor[premios/@npremios >= 1]/@id";
+        String xp = "//escritor[count(premios/pre) >= 1]/@id";
         XdmValue authorIds = executaXpath(xp, "escritores.xml");
 
         if (authorIds == null) {

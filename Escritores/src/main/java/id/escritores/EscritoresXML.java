@@ -62,7 +62,6 @@ public class EscritoresXML {
         if (str != null) {
             generos = str.split(", ");
             Element gliterario = new Element("generoliterario");
-            gliterario.setAttribute("ngeneros", String.valueOf(generos.length));
 
             for (String genero : generos) {
                 Element gen = new Element("gen");
@@ -77,7 +76,6 @@ public class EscritoresXML {
 
         if (ocupacoesList != null && !ocupacoesList.isEmpty()) {
             Element ocupacoes = new Element("ocupacoes");
-            ocupacoes.setAttribute("nocupacaos", String.valueOf(ocupacoesList.size()));
 
             for (String ocupacao : ocupacoesList) {
                 Element oc = new Element("oc");
@@ -92,7 +90,6 @@ public class EscritoresXML {
 
         if (premiosList != null && !premiosList.isEmpty()) {
             Element premios = new Element("premios");
-            premios.setAttribute("npremios", String.valueOf(premiosList.size()));
 
             for (String premio : premiosList) {
                 Element pre = new Element("pre");
@@ -148,7 +145,7 @@ public class EscritoresXML {
         Map<String, String> data = new HashMap<>();
         if (doc == null) {
             System.out.println("O ficheiro XML não existe.");
-            return data;
+            return null;
         } else {
             raiz = doc.getRootElement();
         }
@@ -231,8 +228,13 @@ public class EscritoresXML {
                 for (Map.Entry<String, String> entry : data.entrySet()) {
                     System.out.println(entry.getKey() + ": " + entry.getValue());
                 }
+                found = true;
                 break;
             }
+        }
+        
+        if(!found){
+            return null;
         }
 
         return data;
@@ -298,5 +300,54 @@ public class EscritoresXML {
 
         return id;
     }
+    
+    public static Document removeInformacao(String autor, String key, String atributo, Document doc){
+        Element raiz;
+        String idAutor = "";
+        if (doc == null) {
+            System.out.println("O ficheiro XML não existe.");
+            return null;
+        } else {
+            raiz = doc.getRootElement();
+        }
 
+        List<Element> todosEscritores = raiz.getChildren("escritor");
+        boolean found = false;
+        for (int i = 0; i < todosEscritores.size(); i++) {
+            Element escritor = todosEscritores.get(i);
+            if (escritor.getAttributeValue("nomePesquisado").equals(autor)) {
+                //System.out.println("Entrou!");
+                Element escritorElement = escritor.getChild(key);
+                //System.out.println(escritorElement);
+                if (escritorElement != null) {
+                    List<Element> todosAtributos = escritorElement.getChildren();
+                    //System.out.println(todosAtributos);
+                    for (int j = 0; j < todosAtributos.size(); j++) {
+                        Element atributoElement = todosAtributos.get(j);
+                        //System.out.println(atributoElement.getText());
+                        if (atributoElement.getText().equals(atributo)) {
+                            Element parentElement = atributoElement.getParentElement();
+                            if (parentElement != null) {
+                                parentElement.removeContent(atributoElement);
+                                if (parentElement.getChildren().isEmpty()) {
+                                    parentElement.detach();
+                                }
+                            }
+                            found = true;
+                            break;
+                        }
+                    }    
+                } else {
+                    found = false;
+                }
+            }
+        }
+
+        if (!found) {
+            System.out.println("Escritor " + autor + " não foi encontrado.");
+            return null;
+        }
+
+        return doc;
+    }
 }

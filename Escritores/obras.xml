@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <obras>
-     <obra codigoautor="1">
+     <obra codigoautor="2">
           <isbn>9789899126053</isbn>
           <titulo>O Fantasma de Canterville</titulo>
           <autor>Oscar Wilde</autor>
@@ -8,7 +8,7 @@
           <capa>https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8Mjc3OTcyODF8MjQxNzQxNTd8MTY2NjI4MTU0MTAwMA==/500x</capa>
           <preco>4.46</preco>
      </obra>
-     <obra codigoautor="1">
+     <obra codigoautor="2">
           <isbn>9789897028380</isbn>
           <titulo>De Profundis</titulo>
           <autor>Oscar Wilde</autor>
@@ -16,7 +16,7 @@
           <capa>https://img.bertrand.pt/images/de-profundis-oscar-wilde/NDV8MjcyMTY1OTR8MjM1NDUzNTZ8MTY1NzczMDMwNTAwMA==/500x</capa>
           <preco>12.6</preco>
      </obra>
-     <obra codigoautor="1">
+     <obra codigoautor="2">
           <isbn>9789895423057</isbn>
           <titulo>O Príncipe Feliz e Outros Contos | The Happy Prince and Other Tales</titulo>
           <autor>Oscar Wilde</autor>
@@ -24,7 +24,7 @@
           <capa>https://img.bertrand.pt/images/o-principe-feliz-e-outros-contos-the-happy-prince-and-other-tales-oscar-wilde/NDV8MjcyMjIwOTh8MjM1NTI2ODB8MTY1ODIzNDEwMjAwMA==/500x</capa>
           <preco>15.08</preco>
      </obra>
-     <obra codigoautor="1">
+     <obra codigoautor="2">
           <isbn>9789897028045</isbn>
           <titulo>A Decadência da Arte de Mentir | A Decadência da Mentira: Uma Reflexão</titulo>
           <autor>Mark Twain e Oscar Wilde</autor>
@@ -32,7 +32,7 @@
           <capa>https://img.bertrand.pt/images/a-decadencia-da-arte-de-mentir-a-decadencia-da-mentira-uma-reflexao-mark-twain/NDV8MjY4NzU1NjN8MjMxNjg3NTh8MTY1MDUzMTc0MzAwMA==/500x</capa>
           <preco>12.6</preco>
      </obra>
-     <obra codigoautor="1">
+     <obra codigoautor="2">
           <isbn>9789897845116</isbn>
           <titulo>O Retrato de Dorian Gray</titulo>
           <autor>Oscar Wilde</autor>
@@ -40,367 +40,7 @@
           <capa>https://img.bertrand.pt/images/o-retrato-de-dorian-gray-oscar-wilde/NDV8MjY3MzIwMDl8MjMwMTM5MTF8MTY0NzUyNTQxMDAwMA==/500x</capa>
           <preco>10.76</preco>
      </obra>
-     <obra codigoautor="2">
-          <isbn>9789892355214</isbn>
-          <titulo>Um Sonho Só Nosso</titulo>
-          <autor>Nicholas Sparks</autor>
-          <editora>Edições Asa</editora>
-          <capa>https://img.bertrand.pt/images/um-sonho-so-nosso-nicholas-sparks/NDV8MjczNDgzODN8MjM3MDA1NjV8MTY2MTQ0MjI0MDAwMA==/500x</capa>
-          <preco>17.01</preco>
-     </obra>
-     <obra codigoautor="2">
-          <isbn>9789892352008</isbn>
-          <titulo>O Sonho</titulo>
-          <autor>Nicholas Sparks</autor>
-          <editora>Edições Asa</editora>
-          <capa>https://img.bertrand.pt/images/o-sonho-nicholas-sparks/NDV8MjUzODE4OTB8MjE2MTExNDB8MTYzMDQyMjA1MTAwMA==/500x</capa>
-          <preco>16.65</preco>
-     </obra>
-     <obra codigoautor="2">
-          <isbn>9789892350790</isbn>
-          <titulo>Dei-te o Melhor de Mim</titulo>
-          <autor>Nicholas Sparks</autor>
-          <editora>Edições Asa</editora>
-          <capa>https://img.bertrand.pt/images/dei-te-o-melhor-de-mim-nicholas-sparks/NDV8MjQ3MTAwNzN8MjA4NjM5MTJ8MTYxNzcyMjg2NDAwMA==/500x</capa>
-          <preco>18.5</preco>
-     </obra>
-     <obra codigoautor="2">
-          <isbn>9789892349206</isbn>
-          <titulo>O Regresso</titulo>
-          <autor>Nicholas Sparks</autor>
-          <editora>Edições Asa</editora>
-          <capa>https://img.bertrand.pt/images/o-regresso-nicholas-sparks/NDV8MjQzMDI4NDF8MjAzODcwOTR8MTU5ODQzNjM1MzAwMA==/500x</capa>
-          <preco>18.9</preco>
-     </obra>
-     <obra codigoautor="2">
-          <isbn>9789892347707</isbn>
-          <titulo>A Melodia do Adeus</titulo>
-          <autor>Nicholas Sparks</autor>
-          <editora>Edições Asa</editora>
-          <capa>https://img.bertrand.pt/images/a-melodia-do-adeus-nicholas-sparks/NDV8MjM4MzE3NTR8MTk4NDk4MjV8MTU4MDM3OTA0NjAwMA==/500x</capa>
-          <preco>18.5</preco>
-     </obra>
      <obra codigoautor="3">
-          <isbn>9789896152413</isbn>
-          <titulo>Palavras do Livro do Desassossego | Words from The Book of Disquiet</titulo>
-          <autor>Fernando Pessoa e Lib\u00f3rio Manuel Silva</autor>
-          <editora>Edições Centro Atlântico</editora>
-          <capa>https://img.bertrand.pt/images/palavras-do-livro-do-desassossego-words-from-the-book-of-disquiet-fernando-pessoa/NDV8Mjg1OTcwNTl8MjQ5Nzc5NzR8MTY4NTM3ODQ5MzAwMA==/500x</capa>
-          <preco>14.99</preco>
-     </obra>
-     <obra codigoautor="3">
-          <isbn>978-972-37-2318-2</isbn>
-          <titulo>Poesia, Ricardo Reis</titulo>
-          <autor>Fernando Pessoa</autor>
-          <editora>Assírio &amp; Alvim</editora>
-          <capa>https://img.bertrand.pt/images/poesia-ricardo-reis-fernando-pessoa/NDV8MTEyMzcwNTJ8MjQ3NjYxODJ8MTY4MzcyOTUzMDAwMA==/500x</capa>
-          <preco>16.97</preco>
-     </obra>
-     <obra codigoautor="3">
-          <isbn>9789895362813</isbn>
-          <titulo>Message</titulo>
-          <autor>Fernando Pessoa</autor>
-          <editora>Shantarin</editora>
-          <capa>https://img.bertrand.pt/images/message-fernando-pessoa/NDV8Mjg0MjUzODd8MjQ3OTM5Nzl8MTY4MDA4MDE2NTAwMA==/500x</capa>
-          <preco>16.2</preco>
-     </obra>
-     <obra codigoautor="3">
-          <isbn>9789895365753</isbn>
-          <titulo>Autopsicografía y Outros Treinta Poemas</titulo>
-          <autor>Fernando Pessoa e George Monteiro</autor>
-          <editora>Dilúvio</editora>
-          <capa>https://img.bertrand.pt/images/autopsicografia-y-outros-treinta-poemas-fernando-pessoa/NDV8Mjg0MjcwNDh8MjQ3OTU3OTl8MTY4MDE4MDcyMzAwMA==/500x</capa>
-          <preco>13.41</preco>
-     </obra>
-     <obra codigoautor="3">
-          <isbn>9788412617634</isbn>
-          <titulo>Rubaiyat</titulo>
-          <autor>Fernando Pessoa</autor>
-          <editora>EL GALLO DE ORO EDICIONES</editora>
-          <capa>https://img.bertrand.pt/images/rubaiyat-fernando-pessoa/NDV8Mjg0MDA0MjR8MjQ3NjcwMzR8MTY3OTMwNDE0MzAwMA==/500x</capa>
-          <preco>14.4</preco>
-     </obra>
-     <obra codigoautor="4">
-          <isbn>9789722131155</isbn>
-          <titulo>Museu da Revolução</titulo>
-          <autor>Jo\u00e3o Paulo Borges Coelho</autor>
-          <editora>Editorial Caminho</editora>
-          <capa>https://img.bertrand.pt/images/museu-da-revolucao-joao-paulo-borges-coelho/NDV8MjUzODE5MDh8MjE2MTExNTh8MTYzMDQ5NTQ3OTAwMA==/500x</capa>
-          <preco>19.71</preco>
-     </obra>
-     <obra codigoautor="4">
-          <isbn>9789722128667</isbn>
-          <titulo>Ponta Gea</titulo>
-          <autor>Jo\u00e3o Paulo Borges Coelho</autor>
-          <editora>Editorial Caminho</editora>
-          <capa>https://img.bertrand.pt/images/ponta-gea-joao-paulo-borges-coelho/NDV8MTk1NTg3MTZ8MTUzNzkzMDR8MTYyOTM2MDk2NzAwMA==/500x</capa>
-          <preco>19.9</preco>
-     </obra>
-     <obra codigoautor="4">
-          <isbn>9789722128094</isbn>
-          <titulo>Água - Uma novela rural</titulo>
-          <autor>Jo\u00e3o Paulo Borges Coelho</autor>
-          <editora>Editorial Caminho</editora>
-          <capa>https://img.bertrand.pt/images/agua-uma-novela-rural-joao-paulo-borges-coelho/NDV8MTgxMzgxNTl8MTM4MjA1NzV8MTQ2NzA0MTU3NTAwMA==/500x</capa>
-          <preco>19.9</preco>
-     </obra>
-     <obra codigoautor="4">
-          <isbn>9789722126526</isbn>
-          <titulo>Rainhas da Noite</titulo>
-          <autor>Jo\u00e3o Paulo Borges Coelho</autor>
-          <editora>Editorial Caminho</editora>
-          <capa>https://img.bertrand.pt/images/rainhas-da-noite-joao-paulo-borges-coelho/NDV8MTUyNDkyMjJ8MTA3MzgxNzl8MTM4MzU5MDQ0MDAwMA==/500x</capa>
-          <preco>18.9</preco>
-     </obra>
-     <obra codigoautor="4">
-          <isbn>9789722123983</isbn>
-          <titulo>Cidade dos Espelhos</titulo>
-          <autor>Jo\u00e3o Paulo Borges Coelho</autor>
-          <editora>Editorial Caminho</editora>
-          <capa>https://img.bertrand.pt/images/cidade-dos-espelhos-joao-paulo-borges-coelho/NDV8MTA0MDI1MDN8NTk4MjE2NHwxMzgzNTgxMDc4MDAw/500x</capa>
-          <preco>11.9</preco>
-     </obra>
-     <obra codigoautor="5">
-          <isbn>9789897228414</isbn>
-          <titulo>Dentro do Segredo - Edição Especial</titulo>
-          <autor>Jos\u00e9 Lu\u00eds Peixoto</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/dentro-do-segredo-edicao-especial-jose-luis-peixoto/NDV8MjcyNzQ3MjJ8MjM2MTIwNTd8MTY2NjEwNTEzMDAwMA==/500x</capa>
-          <preco>17.91</preco>
-     </obra>
-     <obra codigoautor="5">
-          <isbn>9789897228506</isbn>
-          <titulo>Onde</titulo>
-          <autor>Jos\u00e9 Lu\u00eds Peixoto</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/onde-jose-luis-peixoto/NDV8MjcwMTQ3MDN8MjMzMTQ5MDB8MTY1NjUxOTYyMzAwMA==/500x</capa>
-          <preco>14.94</preco>
-     </obra>
-     <obra codigoautor="5">
-          <isbn>9789897226809</isbn>
-          <titulo>Morreste-me</titulo>
-          <autor>Jos\u00e9 Lu\u00eds Peixoto</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/morreste-me-jose-luis-peixoto/NDV8MjUxNzY0Nzd8MjEzNzc4Mzh8MTYyODE4MzcxMDAwMA==/500x</capa>
-          <preco>12.95</preco>
-     </obra>
-     <obra codigoautor="5">
-          <isbn>9789897224607</isbn>
-          <titulo>Almoço de Domingo</titulo>
-          <autor>Jos\u00e9 Lu\u00eds Peixoto</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/almoco-de-domingo-jose-luis-peixoto/NDV8MjEzMzIxOTh8MTcyMTgzNDJ8MTYxNDg4MzAwNzAwMA==/500x</capa>
-          <preco>17.7</preco>
-     </obra>
-     <obra codigoautor="5">
-          <isbn>9789897227059</isbn>
-          <titulo>Regresso a Casa</titulo>
-          <autor>Jos\u00e9 Lu\u00eds Peixoto</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/regresso-a-casa-jose-luis-peixoto/NDV8MjQwNzQ1OTd8MjAxMzM5NTB8MTU5NjQ0NDc3OTAwMA==/500x</capa>
-          <preco>14.39</preco>
-     </obra>
-     <obra codigoautor="6">
-          <isbn>978-972-0-03693-3</isbn>
-          <titulo>O vento conhece o meu nome</titulo>
-          <autor>Isabel Allende</autor>
-          <editora>Porto Editora</editora>
-          <capa>https://img.bertrand.pt/images/o-vento-conhece-o-meu-nome-isabel-allende/NDV8Mjg1MDQ1OTJ8MjQ4NzUyNDh8MTY4MzAxNDkwNjAwMA==/500x</capa>
-          <preco>16.97</preco>
-     </obra>
-     <obra codigoautor="6">
-          <isbn>978-972-0-03529-5</isbn>
-          <titulo>Violeta</titulo>
-          <autor>Isabel Allende</autor>
-          <editora>Porto Editora</editora>
-          <capa>https://img.bertrand.pt/images/violeta-isabel-allende/NDV8MjU1OTMzMDN8MjQ1Njg2MzJ8MTY3ODI5NjYzNDAwMA==/500x</capa>
-          <preco>16.97</preco>
-     </obra>
-     <obra codigoautor="6">
-          <isbn>978-972-0-03380-2</isbn>
-          <titulo>Mulheres da minha alma</titulo>
-          <autor>Isabel Allende</autor>
-          <editora>Porto Editora</editora>
-          <capa>https://img.bertrand.pt/images/mulheres-da-minha-alma-isabel-allende/NDV8MjQyNTM2NTd8MjE4ODExNDN8MTYzODIwNTIzNTAwMA==/500x</capa>
-          <preco>16.65</preco>
-     </obra>
-     <obra codigoautor="6">
-          <isbn>978-972-0-03233-1</isbn>
-          <titulo>Longa pétala de mar</titulo>
-          <autor>Isabel Allende</autor>
-          <editora>Porto Editora</editora>
-          <capa>https://img.bertrand.pt/images/longa-petala-de-mar-isabel-allende/NDV8MjMyNDU3MTN8MjQzMzQ0Njh8MTYzNzkyNjE2MTAwMA==/500x</capa>
-          <preco>18.85</preco>
-     </obra>
-     <obra codigoautor="6">
-          <isbn>978-972-0-03022-1</isbn>
-          <titulo>Para lá do inverno</titulo>
-          <autor>Isabel Allende</autor>
-          <editora>Porto Editora</editora>
-          <capa>https://img.bertrand.pt/images/para-la-do-inverno-isabel-allende/NDV8MTk4NDk0NDh8MjM4MDk2MzV8MTY2NjE3MDkwNjAwMA==/500x</capa>
-          <preco>18.85</preco>
-     </obra>
-     <obra codigoautor="7">
-          <isbn>9789897228001</isbn>
-          <titulo>Amor &amp; C.ª</titulo>
-          <autor>Julian Barnes</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/amor-e-c-julian-barnes/NDV8MjU2Mzc3NDd8MjE4ODc3MTh8MTY3NjA0MTAxMTAwMA==/500x</capa>
-          <preco>15.93</preco>
-     </obra>
-     <obra codigoautor="7">
-          <isbn>9789897228292</isbn>
-          <titulo>Elizabeth Finch</titulo>
-          <autor>Julian Barnes</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/elizabeth-finch-julian-barnes/NDV8MjY4OTc4NzJ8MjMxOTMxOTZ8MTY1NTExODMzNTAwMA==/500x</capa>
-          <preco>15.93</preco>
-     </obra>
-     <obra codigoautor="7">
-          <isbn>9789897226618</isbn>
-          <titulo>O Homem do Casaco Vermelho</titulo>
-          <autor>Julian Barnes</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/o-homem-do-casaco-vermelho-julian-barnes/NDV8MjQxMTc3Mzd8MjAxODcyNzB8MTYxODUwMDM5ODAwMA==/500x</capa>
-          <preco>16.92</preco>
-     </obra>
-     <obra codigoautor="7">
-          <isbn>9789897226724</isbn>
-          <titulo>Nada a Temer</titulo>
-          <autor>Julian Barnes</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/nada-a-temer-julian-barnes/NDV8MjM3OTcyODl8MTk4MTA3MjN8MTU4NDQ3MDgzMDAwMA==/500x</capa>
-          <preco>16.6</preco>
-     </obra>
-     <obra codigoautor="7">
-          <isbn>9789897226298</isbn>
-          <titulo>O Papagaio de Flaubert</titulo>
-          <autor>Julian Barnes</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/o-papagaio-de-flaubert-julian-barnes/NDV8MjMzMTY3NzJ8MTkyNjA5NDJ8MTU3MjI2MDQyODAwMA==/500x</capa>
-          <preco>16.6</preco>
-     </obra>
-     <obra codigoautor="8">
-          <isbn>9910000082412</isbn>
-          <titulo>Uma Valsa com a Morte - autografado</titulo>
-          <autor>Jo\u00e3o Tordo</autor>
-          <editora>Companhia das Letras</editora>
-          <capa>https://img.bertrand.pt/images/uma-valsa-com-a-morte-autografado-joao-tordo/NDV8Mjg1OTYxMzl8MjQ5NzY4NzF8MTY4NDMzNjU1MTAwMA==/500x</capa>
-          <preco>14.99</preco>
-     </obra>
-     <obra codigoautor="8">
-          <isbn>9789897849206</isbn>
-          <titulo>Uma Valsa com a Morte</titulo>
-          <autor>Jo\u00e3o Tordo</autor>
-          <editora>Companhia das Letras</editora>
-          <capa>https://img.bertrand.pt/images/uma-valsa-com-a-morte-joao-tordo/NDV8Mjg1NTI4NTB8MjQ5MzI2MTd8MTY4MzkwMjY2MDAwMA==/500x</capa>
-          <preco>14.99</preco>
-     </obra>
-     <obra codigoautor="8">
-          <isbn>9789897849510</isbn>
-          <titulo>Águas Passadas</titulo>
-          <autor>Jo\u00e3o Tordo</autor>
-          <editora>Companhia das Letras</editora>
-          <capa>https://img.bertrand.pt/images/aguas-passadas-joao-tordo/NDV8MjgzODE5MzR8MjQ3NDUzMjF8MTY3ODI3NzQ2NzAwMA==/500x</capa>
-          <preco>12.56</preco>
-     </obra>
-     <obra codigoautor="8">
-          <isbn>9789897844379</isbn>
-          <titulo>As Três Vidas</titulo>
-          <autor>Jo\u00e3o Tordo</autor>
-          <editora>Companhia das Letras</editora>
-          <capa>https://img.bertrand.pt/images/as-tres-vidas-joao-tordo/NDV8MjgwNjQyODZ8MjQ0NjU4NzB8MTY3MzQzMzU4MTAwMA==/500x</capa>
-          <preco>12.56</preco>
-     </obra>
-     <obra codigoautor="8">
-          <isbn>9789897847196</isbn>
-          <titulo>Cem Anos de Perdão</titulo>
-          <autor>Jo\u00e3o Tordo</autor>
-          <editora>Companhia das Letras</editora>
-          <capa>https://img.bertrand.pt/images/cem-anos-de-perdao-joao-tordo/NDV8Mjc3NjI1NDV8MjQxMzc2MTV8MTY2NTU4MzYxNzAwMA==/500x</capa>
-          <preco>19.76</preco>
-     </obra>
-     <obra codigoautor="9">
-          <isbn>9781912430789</isbn>
-          <titulo>Virginia'S Sisters</titulo>
-          <autor>Gertrude Stein, Edith Wharton, Anna Akhmatova, Virginia Woolf, Katherine Mansfield , Charlotte Perkins Gilman, Zelda Fitzgerald, Marina Tsvet\u00e1eva e Gabriela Mistral</autor>
-          <editora>AURORA METRO PUBLICATIONS</editora>
-          <capa>https://img.bertrand.pt/images/virginias-sisters-gertrude-stein/NDV8MjgxNTAyMjd8MjQ1NDI4MjR8MTY3ODIzNzQxODAwMA==/500x</capa>
-          <preco>19.69</preco>
-     </obra>
-     <obra codigoautor="9">
-          <isbn>9780826328199</isbn>
-          <titulo>Selected Poems Of Gabriela Mistral</titulo>
-          <autor>Gabriela Mistral</autor>
-          <editora>UNIVERSITY OF NEW MEXICO PRESS</editora>
-          <capa>https://img.bertrand.pt/images/selected-poems-of-gabriela-mistral-gabriela-mistral/NDV8MTUzMDU1NDR8MTA3OTYyNzV8MTQ2ODM1ODY0ODAwMA==/500x</capa>
-          <preco>41.14</preco>
-     </obra>
-     <obra codigoautor="9">
-          <isbn>9780226531915</isbn>
-          <titulo>Madwomen</titulo>
-          <autor>Gabriela Mistral</autor>
-          <editora>THE UNIVERSITY OF CHICAGO PRESS</editora>
-          <capa>https://img.bertrand.pt/images/madwomen-gabriela-mistral/NDV8MTUxMDc5NDJ8MTA1OTQ4MDV8MTQ2MDEyODgxMzAwMA==/500x</capa>
-          <preco>30.9</preco>
-     </obra>
-     <obra codigoautor="9">
-          <isbn>9780226531908</isbn>
-          <titulo>Madwomen</titulo>
-          <autor>Gabriela Mistral</autor>
-          <editora>THE UNIVERSITY OF CHICAGO PRESS</editora>
-          <capa>https://img.bertrand.pt/images/madwomen-gabriela-mistral/NDV8MTQ0ODU4MTN8OTk3NDc4MHwxNDYwMTI4ODEzMDAw/500x</capa>
-          <preco>103.0</preco>
-     </obra>
-     <obra codigoautor="9">
-          <isbn>9780292752665</isbn>
-          <titulo>Selected Prose And Prose Poems</titulo>
-          <autor>Gabriela Mistral</autor>
-          <editora>UNIVERSITY OF TEXAS PRESS</editora>
-          <capa>https://img.bertrand.pt/images/selected-prose-and-prose-poems-gabriela-mistral/NDV8ODA1NDk2N3w0NTI1ODgyfDE1NjUzNjM2NDUwMDA=/500x</capa>
-          <preco>28.31</preco>
-     </obra>
-     <obra codigoautor="10">
-          <isbn>9789722368551</isbn>
-          <titulo>Harry Potter e a Ordem da Fénix</titulo>
-          <autor>J. K. Rowling</autor>
-          <editora>Editorial Presença</editora>
-          <capa>https://img.bertrand.pt/images/harry-potter-e-a-ordem-da-fenix-j-k-rowling/NDV8Mjc0Mzg0OTd8MjM4MDk0OTV8MTY2NDI4MzU0NDAwMA==/500x</capa>
-          <preco>34.11</preco>
-     </obra>
-     <obra codigoautor="10">
-          <isbn>9789722370004</isbn>
-          <titulo>Monstros Fantásticos - Os Segredos de Dumbledore</titulo>
-          <autor>J. K. Rowling e Steve Kloves</autor>
-          <editora>Editorial Presença</editora>
-          <capa>https://img.bertrand.pt/images/monstros-fantasticos-os-segredos-de-dumbledore-j-k-rowling/NDV8Mjc0Mzg1MDN8MjM4MDk2MjF8MTY2NDI4MzU0NzAwMA==/500x</capa>
-          <preco>17.91</preco>
-     </obra>
-     <obra codigoautor="10">
-          <isbn>9789722367721</isbn>
-          <titulo>Harry Potter - Um Ano Mágico</titulo>
-          <autor>J. K. Rowling</autor>
-          <editora>Editorial Presença</editora>
-          <capa>https://img.bertrand.pt/images/harry-potter-um-ano-magico-j-k-rowling/NDV8MjUwMzU2ODl8MjEyMjM4MDV8MTYzNjUzNTkwMTAwMA==/500x</capa>
-          <preco>25.11</preco>
-     </obra>
-     <obra codigoautor="10">
-          <isbn>9789722367028</isbn>
-          <titulo>Harry Potter e a Câmara dos Segredos</titulo>
-          <autor>J. K. Rowling</autor>
-          <editora>Editorial Presença</editora>
-          <capa>https://img.bertrand.pt/images/harry-potter-e-a-camara-dos-segredos-j-k-rowling/NDV8MjU1OTQzOTd8MjE4NDM5MTB8MTYzNjUzNTA0MjAwMA==/500x</capa>
-          <preco>33.21</preco>
-     </obra>
-     <obra codigoautor="10">
-          <isbn>9789722367967</isbn>
-          <titulo>O Porquinho de Natal</titulo>
-          <autor>J. K. Rowling</autor>
-          <editora>Editorial Presença</editora>
-          <capa>https://img.bertrand.pt/images/o-porquinho-de-natal-j-k-rowling/NDV8MjU0NTkyMDR8MjE3MDAyNDF8MTYzMjgxNzY4MzAwMA==/500x</capa>
-          <preco>16.11</preco>
-     </obra>
-     <obra codigoautor="11">
           <isbn>9788491398028</isbn>
           <titulo>Retrato de uma Desconhecida</titulo>
           <autor>Daniel Silva</autor>
@@ -408,7 +48,7 @@
           <capa>https://img.bertrand.pt/images/retrato-de-uma-desconhecida-daniel-silva/NDV8MjgxMzE2Nzd8MjQ1MjY1Nzl8MTY3NTE2MjYzMDAwMA==/500x</capa>
           <preco>18.81</preco>
      </obra>
-     <obra codigoautor="11">
+     <obra codigoautor="3">
           <isbn>9788417216306</isbn>
           <titulo>A Ordem</titulo>
           <autor>Daniel Silva</autor>
@@ -416,7 +56,7 @@
           <capa>https://img.bertrand.pt/images/a-ordem-daniel-silva/NDV8MjgwNzc0ODF8MjQ0NzY1NDd8MTY3NDExOTM5MTAwMA==/500x</capa>
           <preco>10.71</preco>
      </obra>
-     <obra codigoautor="11">
+     <obra codigoautor="3">
           <isbn>9788491396789</isbn>
           <titulo>A Violoncelista</titulo>
           <autor>Daniel Silva</autor>
@@ -424,7 +64,7 @@
           <capa>https://img.bertrand.pt/images/a-violoncelista-daniel-silva/NDV8MjU4ODAwMzF8MjIxNTIyNzl8MTY0MzI4NTAxMzAwMA==/500x</capa>
           <preco>17.91</preco>
      </obra>
-     <obra codigoautor="11">
+     <obra codigoautor="3">
           <isbn>9788417216290</isbn>
           <titulo>A Rapariga Nova</titulo>
           <autor>Daniel Silva</autor>
@@ -432,7 +72,7 @@
           <capa>https://img.bertrand.pt/images/a-rapariga-nova-daniel-silva/NDV8MjU4NzY4MTR8MjIxNDc4MzF8MTY0MzAzNzgyODAwMA==/500x</capa>
           <preco>9.99</preco>
      </obra>
-     <obra codigoautor="11">
+     <obra codigoautor="3">
           <isbn>9788417216283</isbn>
           <titulo>A Outra Mulher</titulo>
           <autor>Daniel Silva</autor>
@@ -440,204 +80,84 @@
           <capa>https://img.bertrand.pt/images/a-outra-mulher-daniel-silva/NDV8MjQ3MjkyNTB8MjA4ODgwOTF8MTYxODkzMDUzNjAwMA==/500x</capa>
           <preco>11.1</preco>
      </obra>
-     <obra codigoautor="12">
-          <isbn>9789896415174</isbn>
-          <titulo>De Que Falamos Quando Falamos de Amor</titulo>
-          <autor>Raymond Carver</autor>
-          <editora>Relógio D'Água</editora>
-          <capa>https://img.bertrand.pt/images/de-que-falamos-quando-falamos-de-amor-raymond-carver/NDV8MTYzNDY2MDZ8MTE5MzAxOTN8MTQyNzgyMDk2MzAwMA==/500x</capa>
-          <preco>14.0</preco>
+     <obra codigoautor="4">
+          <isbn>9789892355214</isbn>
+          <titulo>Um Sonho Só Nosso</titulo>
+          <autor>Nicholas Sparks</autor>
+          <editora>Edições Asa</editora>
+          <capa>https://img.bertrand.pt/images/um-sonho-so-nosso-nicholas-sparks/NDV8MjczNDgzODN8MjM3MDA1NjV8MTY2MTQ0MjI0MDAwMA==/500x</capa>
+          <preco>17.01</preco>
      </obra>
-     <obra codigoautor="12">
-          <isbn>9789897220272</isbn>
-          <titulo>Fogos</titulo>
-          <autor>Raymond Carver</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/fogos-raymond-carver/NDV8MTMxNTIxNjF8ODcyNTcwMXwxMzgzNTg1NTQzMDAw/500x</capa>
-          <preco>5.0</preco>
+     <obra codigoautor="4">
+          <isbn>9789892352008</isbn>
+          <titulo>O Sonho</titulo>
+          <autor>Nicholas Sparks</autor>
+          <editora>Edições Asa</editora>
+          <capa>https://img.bertrand.pt/images/o-sonho-nicholas-sparks/NDV8MjUzODE4OTB8MjE2MTExNDB8MTYzMDQyMjA1MTAwMA==/500x</capa>
+          <preco>16.65</preco>
      </obra>
-     <obra codigoautor="12">
-          <isbn>9789725649145</isbn>
-          <titulo>Catedral</titulo>
-          <autor>Raymond Carver</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/catedral-raymond-carver/NDV8MTAzOTAwMjh8NTk3NjI5N3wxMzgzNTgwNjM1MDAw/500x</capa>
-          <preco>5.0</preco>
+     <obra codigoautor="4">
+          <isbn>9789892350790</isbn>
+          <titulo>Dei-te o Melhor de Mim</titulo>
+          <autor>Nicholas Sparks</autor>
+          <editora>Edições Asa</editora>
+          <capa>https://img.bertrand.pt/images/dei-te-o-melhor-de-mim-nicholas-sparks/NDV8MjQ3MTAwNzN8MjA4NjM5MTJ8MTYxNzcyMjg2NDAwMA==/500x</capa>
+          <preco>18.5</preco>
      </obra>
-     <obra codigoautor="12">
-          <isbn>9789725648452</isbn>
-          <titulo>O Que Sabemos do Amor</titulo>
-          <autor>Raymond Carver</autor>
-          <editora>Quetzal Editores</editora>
-          <capa>https://img.bertrand.pt/images/o-que-sabemos-do-amor-raymond-carver/NDV8MzU0OTYzOHwyNjU5NDk4fDEzODM1ODAwNDcwMDA=/500x</capa>
-          <preco>10.0</preco>
+     <obra codigoautor="4">
+          <isbn>9789892349206</isbn>
+          <titulo>O Regresso</titulo>
+          <autor>Nicholas Sparks</autor>
+          <editora>Edições Asa</editora>
+          <capa>https://img.bertrand.pt/images/o-regresso-nicholas-sparks/NDV8MjQzMDI4NDF8MjAzODcwOTR8MTU5ODQzNjM1MzAwMA==/500x</capa>
+          <preco>18.9</preco>
      </obra>
-     <obra codigoautor="12">
-          <isbn>9789726957959</isbn>
-          <titulo>Pack Raymond Craver</titulo>
-          <autor>Raymond Carver</autor>
-          <editora>Editorial Teorema</editora>
-          <capa>https://img.bertrand.pt/images/pack-raymond-craver-raymond-carver/NDV8MTQ5OTE2NnwxNDIzMjkzfDEzODM1ODEwODQwMDA=/500x</capa>
-          <preco>10.0</preco>
+     <obra codigoautor="4">
+          <isbn>9789892347707</isbn>
+          <titulo>A Melodia do Adeus</titulo>
+          <autor>Nicholas Sparks</autor>
+          <editora>Edições Asa</editora>
+          <capa>https://img.bertrand.pt/images/a-melodia-do-adeus-nicholas-sparks/NDV8MjM4MzE3NTR8MTk4NDk4MjV8MTU4MDM3OTA0NjAwMA==/500x</capa>
+          <preco>18.5</preco>
      </obra>
-     <obra codigoautor="13">
-          <isbn>9789724619606</isbn>
-          <titulo>Washington D. C.</titulo>
-          <autor>Gore Vidal</autor>
-          <editora>Casa das Letras</editora>
-          <capa>https://img.bertrand.pt/images/washington-d-c-gore-vidal/NDV8ODAxNzE5MHw0NTI0MjcxfDEzODM1ODA0NTIwMDA=/500x</capa>
-          <preco>19.9</preco>
-     </obra>
-     <obra codigoautor="13">
-          <isbn>9789724619804</isbn>
-          <titulo>Navegação Ponto por Ponto</titulo>
-          <autor>Gore Vidal</autor>
-          <editora>Casa das Letras</editora>
-          <capa>https://img.bertrand.pt/images/navegacao-ponto-por-ponto-gore-vidal/NDV8ODAxNzE5MXw0NTI0MjcyfDEzODM1ODA0NTIwMDA=/500x</capa>
-          <preco>9.9</preco>
-     </obra>
-     <obra codigoautor="13">
-          <isbn>9789724617565</isbn>
-          <titulo>Navegação Ponto Por Ponto</titulo>
-          <autor>Gore Vidal</autor>
-          <editora>Casa das Letras</editora>
-          <capa>https://img.bertrand.pt/images/navegacao-ponto-por-ponto-gore-vidal/NDV8MTk4NzMyfDI1MzUyMXwxMzgzNTc3MDQ1MDAw/500x</capa>
-          <preco>16.15</preco>
-     </obra>
-     <obra codigoautor="13">
-          <isbn>9789724613703</isbn>
-          <titulo>A Idade do Ouro</titulo>
-          <autor>Gore Vidal</autor>
-          <editora>Editorial Notícias</editora>
-          <capa>https://img.bertrand.pt/images/a-idade-do-ouro-gore-vidal/NDV8NzgwMDd8MTA4MDc0fDEzODM1NzY1OTUwMDA=/500x</capa>
-          <preco>22.21</preco>
-     </obra>
-     <obra codigoautor="13">
-          <isbn>9789724611129</isbn>
-          <titulo>O Instituto Smithsonian</titulo>
-          <autor>Gore Vidal</autor>
-          <editora>Editorial Notícias</editora>
-          <capa>https://img.bertrand.pt/images/o-instituto-smithsonian-gore-vidal/NDV8NzgzMjh8MTA4Mzk1fDE0NjA1MzcxNjQwMDA=/500x</capa>
-          <preco>12.9</preco>
-     </obra>
-     <obra codigoautor="14">
-          <isbn>9789897029233</isbn>
-          <titulo>Retrato do Artista Quando Jovem</titulo>
-          <autor>James Joyce</autor>
-          <editora>Editora Guerra &amp; Paz</editora>
-          <capa>https://img.bertrand.pt/images/retrato-do-artista-quando-jovem-james-joyce/NDV8MjgxNTQxMDR8MjQ1NDU4ODl8MTY3NTc4NjMwNzAwMA==/500x</capa>
-          <preco>16.2</preco>
-     </obra>
-     <obra codigoautor="14">
-          <isbn>978-989-711-179-2</isbn>
-          <titulo>Retrato do Artista quando Jovem</titulo>
-          <autor>James Joyce</autor>
-          <editora>Livros do Brasil</editora>
-          <capa>https://img.bertrand.pt/images/retrato-do-artista-quando-jovem-james-joyce/NDV8MjY2NzcxMTl8MjI5NTY1Nzd8MTY3MjIzNjY5NTAwMA==/500x</capa>
+     <obra codigoautor="5">
+          <isbn>9789896152413</isbn>
+          <titulo>Palavras do Livro do Desassossego | Words from The Book of Disquiet</titulo>
+          <autor>Fernando Pessoa e Lib\u00f3rio Manuel Silva</autor>
+          <editora>Edições Centro Atlântico</editora>
+          <capa>https://img.bertrand.pt/images/palavras-do-livro-do-desassossego-words-from-the-book-of-disquiet-fernando-pessoa/NDV8Mjg1OTcwNTl8MjQ5Nzc5NzR8MTY4NTM3ODQ5MzAwMA==/500x</capa>
           <preco>14.99</preco>
      </obra>
-     <obra codigoautor="14">
-          <isbn>9789897832628</isbn>
-          <titulo>Ulisses</titulo>
-          <autor>James Joyce</autor>
-          <editora>Relógio D'Água</editora>
-          <capa>https://img.bertrand.pt/images/ulisses-james-joyce/NDV8MjcxODE4Mjh8MjM1MDY1MjJ8MTY1NjU4NjE4OTAwMA==/500x</capa>
-          <preco>23.85</preco>
+     <obra codigoautor="5">
+          <isbn>978-972-37-2318-2</isbn>
+          <titulo>Poesia, Ricardo Reis</titulo>
+          <autor>Fernando Pessoa</autor>
+          <editora>Assírio &amp; Alvim</editora>
+          <capa>https://img.bertrand.pt/images/poesia-ricardo-reis-fernando-pessoa/NDV8MTEyMzcwNTJ8MjQ3NjYxODJ8MTY4MzcyOTUzMDAwMA==/500x</capa>
+          <preco>16.97</preco>
      </obra>
-     <obra codigoautor="14">
-          <isbn>9789897832604</isbn>
-          <titulo>Os Mortos</titulo>
-          <autor>James Joyce</autor>
-          <editora>Relógio D'Água</editora>
-          <capa>https://img.bertrand.pt/images/os-mortos-james-joyce/NDV8MjcxNjIwNzJ8MjM0ODQ2NTR8MTY1NTgxODg0MDAwMA==/500x</capa>
-          <preco>7.65</preco>
+     <obra codigoautor="5">
+          <isbn>9789895362813</isbn>
+          <titulo>Message</titulo>
+          <autor>Fernando Pessoa</autor>
+          <editora>Shantarin</editora>
+          <capa>https://img.bertrand.pt/images/message-fernando-pessoa/NDV8Mjg0MjUzODd8MjQ3OTM5Nzl8MTY4MDA4MDE2NTAwMA==/500x</capa>
+          <preco>16.2</preco>
      </obra>
-     <obra codigoautor="14">
-          <isbn>9789897832321</isbn>
-          <titulo>Ulisses</titulo>
-          <autor>James Joyce</autor>
-          <editora>Relógio D'Água</editora>
-          <capa>https://img.bertrand.pt/images/ulisses-james-joyce/NDV8MjcxMjA5NDh8MjM0MzYyMzB8MTY1NTExOTczMjAwMA==/500x</capa>
-          <preco>22.05</preco>
+     <obra codigoautor="5">
+          <isbn>9789895365753</isbn>
+          <titulo>Autopsicografía y Outros Treinta Poemas</titulo>
+          <autor>Fernando Pessoa e George Monteiro</autor>
+          <editora>Dilúvio</editora>
+          <capa>https://img.bertrand.pt/images/autopsicografia-y-outros-treinta-poemas-fernando-pessoa/NDV8Mjg0MjcwNDh8MjQ3OTU3OTl8MTY4MDE4MDcyMzAwMA==/500x</capa>
+          <preco>13.41</preco>
      </obra>
-     <obra codigoautor="15">
-          <isbn>978-972-0-03408-3</isbn>
-          <titulo>A dança das estrelas</titulo>
-          <autor>Emma Donoghue</autor>
-          <editora>Porto Editora</editora>
-          <capa>https://img.bertrand.pt/images/a-danca-das-estrelas-emma-donoghue/NDV8MjQ0NTY5MjB8MjA1NDY1NTZ8MTYxMTU2Njg0MzAwMA==/500x</capa>
-          <preco>17.75</preco>
-     </obra>
-     <obra codigoautor="15">
-          <isbn>978-972-0-04039-8</isbn>
-          <titulo>O Prodígio</titulo>
-          <autor>Emma Donoghue</autor>
-          <editora>Porto Editora</editora>
-          <capa>https://img.bertrand.pt/images/o-prodigio-emma-donoghue/NDV8MTkyNDk5NTd8MjQxNzM0MjJ8MTY2ODc2NzMwMDAwMA==/500x</capa>
-          <preco>17.75</preco>
-     </obra>
-     <obra codigoautor="15">
-          <isbn>978-972-0-77513-9</isbn>
-          <titulo>O Quarto de Jack</titulo>
-          <autor>Emma Donoghue</autor>
-          <editora>11X17</editora>
-          <capa>https://img.bertrand.pt/images/o-quarto-de-jack-emma-donoghue/NDV8MTU5NTExMDR8MTE0ODE2Nzh8MTQxMjA4NzQ0NjAwMA==/500x</capa>
-          <preco>8.0</preco>
-     </obra>
-     <obra codigoautor="15">
-          <isbn>978-972-0-04343-6</isbn>
-          <titulo>O Quarto de Jack</titulo>
-          <autor>Emma Donoghue</autor>
-          <editora>Porto Editora</editora>
-          <capa>https://img.bertrand.pt/images/o-quarto-de-jack-emma-donoghue/NDV8MTA3MDkyNTZ8MTg0OTc1MDV8MTY2ODc2Nzk4NTAwMA==/500x</capa>
-          <preco>17.75</preco>
-     </obra>
-     <obra codigoautor="15">
-          <isbn>978-972-0-04898-1</isbn>
-          <titulo>A Educação de Eleanor</titulo>
-          <autor>Gail Honeyman</autor>
-          <editora>Porto Editora</editora>
-          <capa>https://img.bertrand.pt/images/a-educacao-de-eleanor-gail-honeyman/NDV8MTg2ODczNDF8MjM2MTY5MjB8MTY2MjA0MDY1NTAwMA==/500x</capa>
-          <preco>17.75</preco>
-     </obra>
-     <obra codigoautor="16">
-          <isbn>9789899067837</isbn>
-          <titulo>O Bispo Negro</titulo>
-          <autor>Alexandre Herculano</autor>
-          <editora>Book Cover Editora</editora>
-          <capa>https://img.bertrand.pt/images/o-bispo-negro-alexandre-herculano/NDV8MjgxNzY5NTZ8MjQ1NjQ3NTR8MTY3NjQ3OTYyNjAwMA==/500x</capa>
-          <preco>4.46</preco>
-     </obra>
-     <obra codigoautor="16">
-          <isbn>9789725614600</isbn>
-          <titulo>Eurico, o Presbítero</titulo>
-          <autor>Alexandre Herculano</autor>
-          <editora>Clássica Editora</editora>
-          <capa>https://img.bertrand.pt/images/eurico-o-presbitero-alexandre-herculano/NDV8MjcxNjIwNjh8MjM0ODQ2NTB8MTY1NTk3OTYyNzAwMA==/500x</capa>
-          <preco>8.55</preco>
-     </obra>
-     <obra codigoautor="16">
-          <isbn>9789898898784</isbn>
-          <titulo>O Bobo</titulo>
-          <autor>Alexandre Herculano</autor>
-          <editora>Book Cover Editora</editora>
-          <capa>https://img.bertrand.pt/images/o-bobo-alexandre-herculano/NDV8MjQ3Mjc1MjV8MjA4ODU2NDh8MTYyNDAyMjY2NzAwMA==/500x</capa>
-          <preco>4.95</preco>
-     </obra>
-     <obra codigoautor="16">
-          <isbn>9789898898586</isbn>
-          <titulo>Eurico, o Presbítero</titulo>
-          <autor>Alexandre Herculano</autor>
-          <editora>Book Cover Editora</editora>
-          <capa>https://img.bertrand.pt/images/eurico-o-presbitero-alexandre-herculano/NDV8MjQ2NjI4ODV8MjA4MDMzODZ8MTYxNDg1MzE4NTAwMA==/500x</capa>
-          <preco>4.95</preco>
-     </obra>
-     <obra codigoautor="16">
-          <isbn>9789898898432</isbn>
-          <titulo>A Abóbada</titulo>
-          <autor>Alexandre Herculano</autor>
-          <editora>Book Cover Editora</editora>
-          <capa>https://img.bertrand.pt/images/a-abobada-alexandre-herculano/NDV8MjQ0NTY0ODF8MjA1NDYzMzR8MTYwNDMxNjIwNTAwMA==/500x</capa>
-          <preco>4.95</preco>
+     <obra codigoautor="5">
+          <isbn>9788412617634</isbn>
+          <titulo>Rubaiyat</titulo>
+          <autor>Fernando Pessoa</autor>
+          <editora>EL GALLO DE ORO EDICIONES</editora>
+          <capa>https://img.bertrand.pt/images/rubaiyat-fernando-pessoa/NDV8Mjg0MDA0MjR8MjQ3NjcwMzR8MTY3OTMwNDE0MzAwMA==/500x</capa>
+          <preco>14.4</preco>
      </obra>
 </obras>

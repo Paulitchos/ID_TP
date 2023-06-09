@@ -73,6 +73,9 @@ public class Frame extends javax.swing.JFrame {
         alterarTextField = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         enviarEscritorButton = new javax.swing.JButton();
+        adicionarAtributoButton = new javax.swing.JButton();
+        removerAtributoButton = new javax.swing.JButton();
+        atributoTextField = new javax.swing.JTextField();
         buttonGroup = new javax.swing.ButtonGroup();
         editoraPrecoDialog = new javax.swing.JDialog();
         jLabel9 = new javax.swing.JLabel();
@@ -366,6 +369,19 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
+        adicionarAtributoButton.setText("Adicionar");
+        adicionarAtributoButton.setEnabled(false);
+
+        removerAtributoButton.setText("Remover ");
+        removerAtributoButton.setEnabled(false);
+        removerAtributoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removerAtributoButtonActionPerformed(evt);
+            }
+        });
+
+        atributoTextField.setEnabled(false);
+
         javax.swing.GroupLayout editarEscritorDialogLayout = new javax.swing.GroupLayout(editarEscritorDialog.getContentPane());
         editarEscritorDialog.getContentPane().setLayout(editarEscritorDialogLayout);
         editarEscritorDialogLayout.setHorizontalGroup(
@@ -392,12 +408,21 @@ public class Frame extends javax.swing.JFrame {
                                 .addComponent(gLiterarioRadioButton)))
                         .addComponent(alterarTextField)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editarEscritorDialogLayout.createSequentialGroup()
+            .addGroup(editarEscritorDialogLayout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addComponent(enviarEscritorButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(alterarEscritorButton)
-                .addGap(38, 38, 38))
+                .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(editarEscritorDialogLayout.createSequentialGroup()
+                        .addComponent(enviarEscritorButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(alterarEscritorButton)
+                        .addGap(38, 38, 38))
+                    .addGroup(editarEscritorDialogLayout.createSequentialGroup()
+                        .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(adicionarAtributoButton)
+                            .addComponent(removerAtributoButton))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(atributoTextField)
+                        .addContainerGap())))
         );
         editarEscritorDialogLayout.setVerticalGroup(
             editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -428,7 +453,16 @@ public class Frame extends javax.swing.JFrame {
                 .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(enviarEscritorButton)
                     .addComponent(alterarEscritorButton))
-                .addGap(24, 24, 24))
+                .addGroup(editarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(editarEscritorDialogLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(adicionarAtributoButton)
+                        .addGap(12, 12, 12)
+                        .addComponent(removerAtributoButton))
+                    .addGroup(editarEscritorDialogLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(atributoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18))
         );
 
         jLabel9.setText("Nome da editora:");
@@ -697,6 +731,20 @@ public class Frame extends javax.swing.JFrame {
                         "Informação",
                         JOptionPane.INFORMATION_MESSAGE);
                     
+                    String texto;
+                    try {
+                        texto = Functions.ler_ficheiro("escritores.xml");
+                        if (texto != null){
+                            outputTextArea.setText(texto);
+                        }
+                        
+                        texto = Functions.ler_ficheiro("obras.xml");
+                        if (texto != null){
+                            outputTextArea.append("\n\n" + texto);
+                        }
+                    } catch (FileNotFoundException ex) {
+                        Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 } else {
                     JOptionPane.showMessageDialog(this,
                         "Obras não encontradas",
@@ -849,18 +897,6 @@ public class Frame extends javax.swing.JFrame {
             } else if (dFalecimentoRadioButton.isSelected()) {
 
                 doc = EscritoresXML.editaInformacaoEscritor(nomeEscritorTextField3.getText(), "datafalecimento", alterarTextField.getText(), doc);
-            } else if (gLiterarioRadioButton.isSelected()) {
-                // Perform actions for gLiterarioRadioButton
-                String generoliterario = data.get("generoliterario");
-
-            } else if (ocupacaoRadioButton.isSelected()) {
-                // Perform actions for ocupacaoRadioButton
-                String ocupacoes = data.get("ocupacoes");
-
-            } else if (premiosRadioButton.isSelected()) {
-                // Perform actions for premiosRadioButton
-                String premios = data.get("premios");
-
             }
 
             if(doc != null){
@@ -869,6 +905,16 @@ public class Frame extends javax.swing.JFrame {
                         "Informação atualizada",
                         "Informação",
                         JOptionPane.INFORMATION_MESSAGE);
+                String texto;
+                try {
+                    texto = Functions.ler_ficheiro("escritores.xml");
+                    if (texto != null){
+                        outputTextArea.setText(texto);
+                    }  
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
             } else {
 
                 JOptionPane.showMessageDialog(this,
@@ -880,7 +926,7 @@ public class Frame extends javax.swing.JFrame {
             nomeEscritorTextField3.setText("");
             alterarTextField.setText("");
 
-            // Reset radio buttons
+
             nomeRadioButton.setSelected(false);
             nacionalidadeRadioButton.setSelected(false);
             dNascimentoRadioButton.setSelected(false);
@@ -889,14 +935,10 @@ public class Frame extends javax.swing.JFrame {
             ocupacaoRadioButton.setSelected(false);
             premiosRadioButton.setSelected(false);
 
-            // Reset other dialog components as needed
-
-            // Enable or disable components
             nomeEscritorTextField3.setEditable(true);
             alterarTextField.setEnabled(false);
             alterarEscritorButton.setEnabled(false);
 
-            // Clear button group selection
             buttonGroup.clearSelection();
 
             nomeRadioButton.setEnabled(false);
@@ -924,57 +966,110 @@ public class Frame extends javax.swing.JFrame {
                     JOptionPane.INFORMATION_MESSAGE);
         } else {
             data = EscritoresXML.verificaEscritor(nomeEscritorTextField3.getText(), doc);
-            nomeEscritorTextField3.setEditable(false);
-            alterarTextField.setEnabled(true);
-            enviarEscritorButton.setEnabled(false);
-            if (data.containsKey("nome")) {
-                nomeRadioButton.setEnabled(true);
-                buttonGroup.add(nomeRadioButton);
-            }
-            if (data.containsKey("nacionalidade")) {
-                nacionalidadeRadioButton.setEnabled(true);
-                buttonGroup.add(nacionalidadeRadioButton);
-            }
-            if (data.containsKey("datanascimento")) {
-                dNascimentoRadioButton.setEnabled(true);
-                buttonGroup.add(dNascimentoRadioButton);
-            }
-            if (data.containsKey("datafalecimento")) {
-                dFalecimentoRadioButton.setEnabled(true);
-                buttonGroup.add(dFalecimentoRadioButton);
-            }
-            if (data.containsKey("generoliterario")) {
-                gLiterarioRadioButton.setEnabled(true);
-                buttonGroup.add(gLiterarioRadioButton);
-            }
-            if (data.containsKey("ocupacoes")) {
-                ocupacaoRadioButton.setEnabled(true);
-                buttonGroup.add(ocupacaoRadioButton);
-            }
-            if (data.containsKey("premios")) {
-                premiosRadioButton.setEnabled(true);
-                buttonGroup.add(premiosRadioButton);
-            }
+            if(data != null){
+                nomeEscritorTextField3.setEditable(false);
+                alterarTextField.setEnabled(true);
+                enviarEscritorButton.setEnabled(false);
+                if (data.containsKey("nome")) {
+                    nomeRadioButton.setEnabled(true);
+                    buttonGroup.add(nomeRadioButton);
+                }
+                if (data.containsKey("nacionalidade")) {
+                    nacionalidadeRadioButton.setEnabled(true);
+                    buttonGroup.add(nacionalidadeRadioButton);
+                }
+                if (data.containsKey("datanascimento")) {
+                    dNascimentoRadioButton.setEnabled(true);
+                    buttonGroup.add(dNascimentoRadioButton);
+                }
+                if (data.containsKey("datafalecimento")) {
+                    dFalecimentoRadioButton.setEnabled(true);
+                    buttonGroup.add(dFalecimentoRadioButton);
+                }
+                if (data.containsKey("generoliterario")) {
+                    gLiterarioRadioButton.setEnabled(true);
+                    buttonGroup.add(gLiterarioRadioButton);
+                }
+                if (data.containsKey("ocupacoes")) {
+                    ocupacaoRadioButton.setEnabled(true);
+                    buttonGroup.add(ocupacaoRadioButton);
+                }
+                if (data.containsKey("premios")) {
+                    premiosRadioButton.setEnabled(true);
+                    buttonGroup.add(premiosRadioButton);
+                }
 
-            nomeRadioButton.addActionListener((ActionEvent e) -> {
-                alterarTextField.setText(data.get("nome"));
-                alterarEscritorButton.setEnabled(true);
-            });
+                nomeRadioButton.addActionListener((ActionEvent e) -> {
+                    alterarTextField.setText(data.get("nome"));
+                    alterarEscritorButton.setEnabled(true);
+                    adicionarAtributoButton.setEnabled(false);
+                    removerAtributoButton.setEnabled(false);
+                    atributoTextField.setEnabled(false);
+                    atributoTextField.setText("");
+                });
 
-            nacionalidadeRadioButton.addActionListener((ActionEvent e) -> {
-                alterarTextField.setText(data.get("nacionalidade"));
-                alterarEscritorButton.setEnabled(true);
-            });
+                nacionalidadeRadioButton.addActionListener((ActionEvent e) -> {
+                    alterarTextField.setText(data.get("nacionalidade"));
+                    alterarEscritorButton.setEnabled(true);
+                    adicionarAtributoButton.setEnabled(false);
+                    removerAtributoButton.setEnabled(false);
+                    atributoTextField.setEnabled(false);
+                    atributoTextField.setText("");
+                });
 
-            dNascimentoRadioButton.addActionListener((ActionEvent e) -> {
-                alterarTextField.setText(data.get("datanascimento"));
-                alterarEscritorButton.setEnabled(true);
-            });
+                dNascimentoRadioButton.addActionListener((ActionEvent e) -> {
+                    alterarTextField.setText(data.get("datanascimento"));
+                    alterarEscritorButton.setEnabled(true);
+                    adicionarAtributoButton.setEnabled(false);
+                    removerAtributoButton.setEnabled(false);
+                    atributoTextField.setEnabled(false);
+                    atributoTextField.setText("");
+                });
 
-            dFalecimentoRadioButton.addActionListener((ActionEvent e) -> {
-                alterarTextField.setText(data.get("datafalecimento"));
-                alterarEscritorButton.setEnabled(true);
-            });
+                dFalecimentoRadioButton.addActionListener((ActionEvent e) -> {
+                    alterarTextField.setText(data.get("datafalecimento"));
+                    alterarEscritorButton.setEnabled(true);
+                    adicionarAtributoButton.setEnabled(false);
+                    removerAtributoButton.setEnabled(false);
+                    atributoTextField.setEnabled(false);
+                    atributoTextField.setText("");
+                });
+
+                ocupacaoRadioButton.addActionListener((ActionEvent e) -> {
+                    alterarTextField.setText(data.get("ocupacoes"));
+                    alterarEscritorButton.setEnabled(false);
+                    adicionarAtributoButton.setEnabled(true);
+                    removerAtributoButton.setEnabled(true);
+                    atributoTextField.setEnabled(true);
+                    alterarTextField.setEnabled(false);
+                });
+
+                premiosRadioButton.addActionListener((ActionEvent e) -> {
+                    alterarTextField.setText(data.get("premios"));
+                    alterarEscritorButton.setEnabled(false);
+                    adicionarAtributoButton.setEnabled(true);
+                    removerAtributoButton.setEnabled(true);
+                    atributoTextField.setEnabled(true);
+                    alterarTextField.setEnabled(false);
+                });
+            
+                gLiterarioRadioButton.addActionListener((ActionEvent e) -> {
+                    alterarTextField.setText(data.get("generoliterario"));
+                    alterarEscritorButton.setEnabled(false);
+                    adicionarAtributoButton.setEnabled(true);
+                    removerAtributoButton.setEnabled(true);
+                    atributoTextField.setEnabled(true);
+                    alterarTextField.setEnabled(false);
+                });
+            } else {
+                JOptionPane.showMessageDialog(this,
+                            "Esritor não encontrada",
+                            "Informação",
+                            JOptionPane.INFORMATION_MESSAGE);
+                
+                nomeEscritorTextField3.setText("");
+                nomeEscritorTextField3.setEnabled(true);
+            }  
         }
     }//GEN-LAST:event_enviarEscritorButtonActionPerformed
 
@@ -1133,6 +1228,74 @@ public class Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_adicionarEscritorDialogComponentHidden
 
+    private void removerAtributoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerAtributoButtonActionPerformed
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        
+        if(doc != null){
+            
+            if (ocupacaoRadioButton.isSelected()) {
+                doc = EscritoresXML.removeInformacao(nomeEscritorTextField3.getText(), "ocupacoes", atributoTextField.getText(), doc);
+                
+            } else if (gLiterarioRadioButton.isSelected()) {
+                doc = EscritoresXML.removeInformacao(nomeEscritorTextField3.getText(), "generoliterario", atributoTextField.getText(), doc);
+                
+            } else if (premiosRadioButton.isSelected()) {
+                doc = EscritoresXML.removeInformacao(nomeEscritorTextField3.getText(), "premios", atributoTextField.getText(), doc);
+                
+            }
+            
+            if(doc != null){
+                XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "escritores.xml");
+                JOptionPane.showMessageDialog(this,
+                        "Informação atualizada",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            } else {
+
+                JOptionPane.showMessageDialog(this,
+                        "Atributo não encontrado",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+            
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Ainda não existe ecritores adicionados",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        nomeEscritorTextField3.setText("");
+        alterarTextField.setText("");
+            
+        nomeRadioButton.setSelected(false);
+        nacionalidadeRadioButton.setSelected(false);
+        dNascimentoRadioButton.setSelected(false);
+        dFalecimentoRadioButton.setSelected(false);
+        gLiterarioRadioButton.setSelected(false);
+        ocupacaoRadioButton.setSelected(false);
+        premiosRadioButton.setSelected(false);
+
+        nomeEscritorTextField3.setEditable(true);
+        alterarTextField.setEnabled(false);
+        alterarEscritorButton.setEnabled(false);
+
+        buttonGroup.clearSelection();
+
+        nomeRadioButton.setEnabled(false);
+        nacionalidadeRadioButton.setEnabled(false);
+        dNascimentoRadioButton.setEnabled(false);
+        dFalecimentoRadioButton.setEnabled(false);
+        gLiterarioRadioButton.setEnabled(false);
+        ocupacaoRadioButton.setEnabled(false);
+        premiosRadioButton.setEnabled(false);
+
+        enviarEscritorButton.setEnabled(true);
+        
+        adicionarAtributoButton.setEnabled(false);
+        removerAtributoButton.setEnabled(false);
+        atributoTextField.setText("");
+    }//GEN-LAST:event_removerAtributoButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1172,11 +1335,13 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JMenuItem DTDMenuItem;
     private javax.swing.JMenuItem XSDMenuItem;
     private javax.swing.JMenuItem abrirMenuItem;
+    private javax.swing.JButton adicionarAtributoButton;
     private javax.swing.JButton adicionarEscritorButton;
     private javax.swing.JDialog adicionarEscritorDialog;
     private javax.swing.JMenuItem adicionarEscritorMenuItem;
     private javax.swing.JButton alterarEscritorButton;
     private javax.swing.JTextField alterarTextField;
+    private javax.swing.JTextField atributoTextField;
     private javax.swing.JMenuItem avgPrecoMenuItem;
     private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.JRadioButton dFalecimentoRadioButton;
@@ -1225,6 +1390,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField precoTextField;
     private javax.swing.JRadioButton premiosRadioButton;
     private javax.swing.JMenu principalMenu;
+    private javax.swing.JButton removerAtributoButton;
     private javax.swing.JButton removerEscritorButton;
     private javax.swing.JDialog removerEscritorDialog;
     private javax.swing.JMenuItem removerEscritorMenuItem;
