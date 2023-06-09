@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <escritores>
-     <escritor id="1" nomePesquisado="Nicholas Sparks">
+     <escritor id="1" nomePesquisado="Oscar Wilde">
+          <nome>Oscar Fingal O'Flahertie Wills Wilde</nome>
+          <datanascimento>16 de outubro de 1854</datanascimento>
+          <datafalecimento>30 de novembro de 1900</datafalecimento>
+          <nacionalidade>Irlandeses</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg/250px-Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg</foto>
+          <generoliterario ngeneros="3">
+               <gen>Drama</gen>
+               <gen>Conto</gen>
+               <gen>Diálogo</gen>
+          </generoliterario>
+          <ocupacoes nocupacaos="6">
+               <oc>Poeta</oc>
+               <oc>Jornalista</oc>
+               <oc>Romancista</oc>
+               <oc>Escritor</oc>
+               <oc>Autor</oc>
+               <oc>Ensaísta</oc>
+          </ocupacoes>
+          <premios npremios="3">
+               <pre>Ravenna</pre>
+               <pre>Poesia</pre>
+               <pre>Universidade de Oxford</pre>
+          </premios>
+     </escritor>
+     <escritor id="2" nomePesquisado="Nicholas Sparks">
           <nome>Nicholas Charles Sparks</nome>
           <datanascimento>31 de dezembro de 1965</datanascimento>
           <nacionalidade>Povo dos Estados Unidos</nacionalidade>
@@ -8,31 +33,176 @@
           <ocupacoes nocupacaos="3">
                <oc>Escritor</oc>
                <oc>Roteirista</oc>
-               <oc>Produtor cinematográfico</oc>
+               <oc>Produtor</oc>
           </ocupacoes>
      </escritor>
-     <escritor id="2" nomePesquisado="Oscar Wilde">
-          <nome>Oscar Fingal O'Flahertie Wills Wilde</nome>
-          <datanascimento>17 de outubro de 1854</datanascimento>
-          <datafalecimento>30 de novembro de 1900</datafalecimento>
-          <nacionalidade>Irlandês</nacionalidade>
-          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg/250px-Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg</foto>
-          <generoliterario ngeneros="3">
-               <gen>Drama</gen>
-               <gen>Conto</gen>
-               <gen>Diálogo</gen>
-          </generoliterario>
-          <ocupacoes nocupacaos="5">
+     <escritor id="3" nomePesquisado="Fernando Pessoa">
+          <nome>Fernando António Nogueira Pessoa</nome>
+          <datanascimento>13 de junho de 1888</datanascimento>
+          <datafalecimento>30 de novembro de 1935</datafalecimento>
+          <nacionalidade>Portugal</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pessoa_chapeu.jpg/200px-Pessoa_chapeu.jpg</foto>
+          <ocupacoes nocupacaos="3">
                <oc>Poeta</oc>
+               <oc>Escritor</oc>
+               <oc>Tradutor</oc>
+          </ocupacoes>
+          <premios npremios="2">
+               <pre>Prémio Antero de Quental</pre>
+               <pre>Queen Victoria Prize (1903)</pre>
+          </premios>
+     </escritor>
+     <escritor id="4" nomePesquisado="Paulo Coelho">
+          <nome>Paulo Coelho de Souza</nome>
+          <datanascimento>24 de agosto de 1947</datanascimento>
+          <nacionalidade>Brasileiros</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Paulo_Coelho_30102007.jpg/220px-Paulo_Coelho_30102007.jpg</foto>
+          <generoliterario ngeneros="2">
+               <gen>Drama</gen>
+               <gen>Romance</gen>
+          </generoliterario>
+          <ocupacoes nocupacaos="4">
+               <oc>Escritor</oc>
+               <oc>Letrista</oc>
+               <oc>Jornalista</oc>
+               <oc>Compositor</oc>
+          </ocupacoes>
+     </escritor>
+     <escritor id="5" nomePesquisado="José Luís Peixoto">
+          <nome>José Luís Marques Peixoto</nome>
+          <datanascimento>4 de setembro de 1974</datanascimento>
+          <nacionalidade>Portugal</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/JoseLuisPeixoto.JPG/223px-JoseLuisPeixoto.JPG</foto>
+          <ocupacoes nocupacaos="3">
+               <oc>Escritor</oc>
+               <oc>Dramaturgo</oc>
+               <oc>Poeta</oc>
+          </ocupacoes>
+          <premios npremios="7">
+               <pre>Prémio José Saramago</pre>
+               <pre>Prémio Cálamo Outra Mirada (página não existe)</pre>
+               <pre>Prémio Libro d&amp;#39; Europa (página não existe)</pre>
+               <pre>Prémios Sociedade Portuguesa de Autores (página não existe)</pre>
+               <pre>Oceanos-Prêmio de Literatura em Língua Portuguesa</pre>
+               <pre>The Best Translation Award-Japan (página não existe)</pre>
+               <pre>Prémio de Poesia Daniel Faria</pre>
+          </premios>
+     </escritor>
+     <escritor id="6" nomePesquisado="Isabel Allende">
+          <nome>Isabel Allende Llona</nome>
+          <datanascimento>2 de agosto de 1942</datanascimento>
+          <nacionalidade>Chilenos</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Isabel_allende.jpg/200px-Isabel_allende.jpg</foto>
+          <premios npremios="2">
+               <pre>Prêmio Nacional de Literatura do Chile</pre>
+               <pre>Medalha Presidencial da Liberdade</pre>
+          </premios>
+     </escritor>
+     <escritor id="7" nomePesquisado="Julian Barnes">
+          <nome>Julian Patrick Barnes</nome>
+          <datanascimento>19 de janeiro de 1946</datanascimento>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Julian_Barnes_in_2019_02.jpg/200px-Julian_Barnes_in_2019_02.jpg</foto>
+          <generoliterario ngeneros="2">
+               <gen>Romance</gen>
+               <gen>Conto</gen>
+          </generoliterario>
+          <premios npremios="3">
+               <pre>Prémio Man Booker</pre>
+               <pre>Prémio Médicis ensaio</pre>
+               <pre>Prémio Femina estrangeiro</pre>
+          </premios>
+     </escritor>
+     <escritor id="8" nomePesquisado="João Tordo">
+          <nome>João Tordo</nome>
+          <datanascimento>28 de agosto de 1975</datanascimento>
+          <nacionalidade>Portugal</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Jo%C3%A3o_Tordo.jpg/200px-Jo%C3%A3o_Tordo.jpg</foto>
+          <ocupacoes nocupacaos="3">
+               <oc>Jornalista</oc>
+               <oc>Escritor</oc>
+               <oc>Argumentista</oc>
+          </ocupacoes>
+          <premios npremios="1">
+               <pre>Prémio Literário José Saramago</pre>
+          </premios>
+     </escritor>
+     <escritor id="9" nomePesquisado="Gabriela Mistral">
+          <nome>Lucila de María Godoy Alcayaga</nome>
+          <datanascimento>7 de abril de 1889</datanascimento>
+          <datafalecimento>10 de janeiro de 1957</datafalecimento>
+          <nacionalidade>Chilenos</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Gabriela_Mistral-01.jpg/200px-Gabriela_Mistral-01.jpg</foto>
+          <premios npremios="2">
+               <pre>Nobel de Literatura</pre>
+               <pre>Prêmio Nacional de Literatura do Chile</pre>
+          </premios>
+     </escritor>
+     <escritor id="10" nomePesquisado="J. K. Rowling">
+          <nome>Joanne Rowling</nome>
+          <datanascimento>31 de julho de 1965</datanascimento>
+          <nacionalidade>Britânicos</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/225px-J._K._Rowling_2010.jpg</foto>
+          <generoliterario ngeneros="4">
+               <gen>Fantasia (gênero)</gen>
+               <gen>Drama</gen>
+               <gen>Tragicomédia</gen>
+               <gen>Romance policial</gen>
+          </generoliterario>
+          <ocupacoes nocupacaos="1">
+               <oc>Escritora</oc>
+          </ocupacoes>
+     </escritor>
+     <escritor id="11" nomePesquisado="Daniel Silva">
+          <nome>Daniel Silva</nome>
+          <nacionalidade>Estados Unidos</nacionalidade>
+          <ocupacoes nocupacaos="3">
+               <oc>Escritor</oc>
                <oc>Jornalista</oc>
                <oc>Romancista</oc>
-               <oc>Escritor</oc>
-               <oc>Autor</oc>
           </ocupacoes>
-          <premios npremios="3">
-               <pre>Ravenna</pre>
-               <pre>Poesia</pre>
-               <pre>Universidade de Oxford</pre>
+     </escritor>
+     <escritor id="12" nomePesquisado="Raymond Carver">
+          <nome>Raymond Clevie Carver Jr.</nome>
+          <datanascimento>25 de maio de 1938</datanascimento>
+          <nacionalidade>Povo dos Estados Unidos</nacionalidade>
+          <ocupacoes nocupacaos="1">
+               <oc>Escritor</oc>
+          </ocupacoes>
+     </escritor>
+     <escritor id="13" nomePesquisado="Gore Vidal">
+          <nome>Eugene Luther Gore Vidal</nome>
+          <datanascimento>3 de outubro de 1925</datanascimento>
+          <datafalecimento>31 de julho de 2012</datafalecimento>
+          <nacionalidade>Povo dos Estados Unidos</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Gore_Vidal_2_Shankbone_2009_NYC.jpg/200px-Gore_Vidal_2_Shankbone_2009_NYC.jpg</foto>
+          <premios npremios="2">
+               <pre>National Book Critics Circle Award</pre>
+               <pre>National Book Award</pre>
           </premios>
+     </escritor>
+     <escritor id="14" nomePesquisado="James Joyce">
+          <nome>James Augustine Aloysius Joyce</nome>
+          <datanascimento>2 de fevereiro de 1882</datanascimento>
+          <datafalecimento>13 de janeiro de 1941</datafalecimento>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Revolutionary_Joyce_Better_Contrast.jpg/200px-Revolutionary_Joyce_Better_Contrast.jpg</foto>
+     </escritor>
+     <escritor id="15" nomePesquisado="Emma Donoghue">
+          <nome>Emma Donoghue</nome>
+          <datanascimento>24 de outubro de 1969</datanascimento>
+          <nacionalidade>Irlandeses</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Irish-Canadian_author_Emma_Donoghue.JPG/200px-Irish-Canadian_author_Emma_Donoghue.JPG</foto>
+          <generoliterario ngeneros="1">
+               <gen>Romance</gen>
+          </generoliterario>
+     </escritor>
+     <escritor id="16" nomePesquisado="Alexandre Herculano">
+          <nome>Alexandre Herculano de Carvalho e Araújo</nome>
+          <datanascimento>28 de março de 1810</datanascimento>
+          <datafalecimento>13 de setembro de 1877</datafalecimento>
+          <nacionalidade>Portugal</nacionalidade>
+          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/7/72/AlexandreHerculano.png/240px-AlexandreHerculano.png</foto>
+          <generoliterario ngeneros="1">
+               <gen>Romance histórico</gen>
+          </generoliterario>
      </escritor>
 </escritores>

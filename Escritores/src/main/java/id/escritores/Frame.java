@@ -51,20 +51,14 @@ public class Frame extends javax.swing.JFrame {
         nomeEscritorTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         pesquisarEscritorButton = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        informacaoTextArea = new javax.swing.JTextArea();
         pesquisarNacionalidadeDialog = new javax.swing.JDialog();
         jLabel5 = new javax.swing.JLabel();
         pesquisarNacionalidadeButton = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        autoresTextArea = new javax.swing.JTextArea();
         nomeNacionalidadeTextField = new javax.swing.JTextField();
         pesquisarObrasEscritorDialog = new javax.swing.JDialog();
         nomeEscritorTextField4 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         pesquisarObrasButton = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        obrasEscritorTextArea = new javax.swing.JTextArea();
         editarEscritorDialog = new javax.swing.JDialog();
         jLabel6 = new javax.swing.JLabel();
         alterarEscritorButton = new javax.swing.JButton();
@@ -85,8 +79,6 @@ public class Frame extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         editoraTextField = new javax.swing.JTextField();
         precoTextField = new javax.swing.JTextField();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        obrasTextArea = new javax.swing.JTextArea();
         pesquisarObraButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         outputTextArea = new javax.swing.JTextArea();
@@ -109,6 +101,12 @@ public class Frame extends javax.swing.JFrame {
         validarMenu = new javax.swing.JMenu();
         DTDMenuItem = new javax.swing.JMenuItem();
         XSDMenuItem = new javax.swing.JMenuItem();
+
+        adicionarEscritorDialog.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                adicionarEscritorDialogComponentHidden(evt);
+            }
+        });
 
         nomeEscritorTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,31 +207,20 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
-        informacaoTextArea.setColumns(20);
-        informacaoTextArea.setRows(5);
-        jScrollPane2.setViewportView(informacaoTextArea);
-
         javax.swing.GroupLayout pesquisarEscritorDialogLayout = new javax.swing.GroupLayout(pesquisarEscritorDialog.getContentPane());
         pesquisarEscritorDialog.getContentPane().setLayout(pesquisarEscritorDialogLayout);
         pesquisarEscritorDialogLayout.setHorizontalGroup(
             pesquisarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pesquisarEscritorDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pesquisarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pesquisarEscritorDialogLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(pesquisarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarEscritorDialogLayout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(nomeEscritorTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarEscritorDialogLayout.createSequentialGroup()
-                                .addComponent(pesquisarEscritorButton)
-                                .addGap(153, 153, 153))))
-                    .addGroup(pesquisarEscritorDialogLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2)
-                        .addContainerGap())))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nomeEscritorTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(pesquisarEscritorDialogLayout.createSequentialGroup()
+                .addGap(149, 149, 149)
+                .addComponent(pesquisarEscritorButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pesquisarEscritorDialogLayout.setVerticalGroup(
             pesquisarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,9 +229,7 @@ public class Frame extends javax.swing.JFrame {
                 .addGroup(pesquisarEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nomeEscritorTextField2)
                     .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(30, 30, 30)
                 .addComponent(pesquisarEscritorButton)
                 .addContainerGap())
         );
@@ -258,10 +243,6 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
-        autoresTextArea.setColumns(20);
-        autoresTextArea.setRows(5);
-        jScrollPane3.setViewportView(autoresTextArea);
-
         nomeNacionalidadeTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeNacionalidadeTextFieldActionPerformed(evt);
@@ -273,17 +254,13 @@ public class Frame extends javax.swing.JFrame {
         pesquisarNacionalidadeDialogLayout.setHorizontalGroup(
             pesquisarNacionalidadeDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pesquisarNacionalidadeDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pesquisarNacionalidadeDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pesquisarNacionalidadeDialogLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(nomeNacionalidadeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nomeNacionalidadeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(pesquisarNacionalidadeDialogLayout.createSequentialGroup()
-                .addGap(123, 123, 123)
+                .addGap(115, 115, 115)
                 .addComponent(pesquisarNacionalidadeButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -294,9 +271,7 @@ public class Frame extends javax.swing.JFrame {
                 .addGroup(pesquisarNacionalidadeDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nomeNacionalidadeTextField)
                     .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(29, 29, 29)
                 .addComponent(pesquisarNacionalidadeButton)
                 .addContainerGap())
         );
@@ -316,29 +291,20 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
-        obrasEscritorTextArea.setColumns(20);
-        obrasEscritorTextArea.setRows(5);
-        jScrollPane4.setViewportView(obrasEscritorTextArea);
-
         javax.swing.GroupLayout pesquisarObrasEscritorDialogLayout = new javax.swing.GroupLayout(pesquisarObrasEscritorDialog.getContentPane());
         pesquisarObrasEscritorDialog.getContentPane().setLayout(pesquisarObrasEscritorDialogLayout);
         pesquisarObrasEscritorDialogLayout.setHorizontalGroup(
             pesquisarObrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pesquisarObrasEscritorDialogLayout.createSequentialGroup()
-                .addGroup(pesquisarObrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarObrasEscritorDialogLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(nomeEscritorTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pesquisarObrasEscritorDialogLayout.createSequentialGroup()
-                        .addGap(147, 147, 147)
-                        .addComponent(pesquisarObrasButton)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(pesquisarObrasEscritorDialogLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane4)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nomeEscritorTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(pesquisarObrasEscritorDialogLayout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(pesquisarObrasButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pesquisarObrasEscritorDialogLayout.setVerticalGroup(
             pesquisarObrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -347,9 +313,7 @@ public class Frame extends javax.swing.JFrame {
                 .addGroup(pesquisarObrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nomeEscritorTextField4)
                     .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(pesquisarObrasButton)
                 .addContainerGap())
         );
@@ -471,10 +435,6 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel10.setText("Preço mínimo:");
 
-        obrasTextArea.setColumns(20);
-        obrasTextArea.setRows(5);
-        jScrollPane5.setViewportView(obrasTextArea);
-
         pesquisarObraButton.setText("Pesquisar Obra");
         pesquisarObraButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -487,24 +447,19 @@ public class Frame extends javax.swing.JFrame {
         editoraPrecoDialogLayout.setHorizontalGroup(
             editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editoraPrecoDialogLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(editoraPrecoDialogLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addGroup(editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(editoraTextField)
-                            .addComponent(precoTextField)))
-                    .addGroup(editoraPrecoDialogLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane5)))
+                    .addComponent(editoraTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                    .addComponent(precoTextField))
                 .addContainerGap())
             .addGroup(editoraPrecoDialogLayout.createSequentialGroup()
-                .addGap(152, 152, 152)
+                .addGap(146, 146, 146)
                 .addComponent(pesquisarObraButton)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         editoraPrecoDialogLayout.setVerticalGroup(
             editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -517,15 +472,14 @@ public class Frame extends javax.swing.JFrame {
                 .addGroup(editoraPrecoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(precoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(pesquisarObraButton)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        outputTextArea.setEditable(false);
         outputTextArea.setColumns(20);
         outputTextArea.setRows(5);
         jScrollPane1.setViewportView(outputTextArea);
@@ -806,7 +760,7 @@ public class Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_removerEscritorMenuItemActionPerformed
 
     private void pesquisarEscritorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarEscritorMenuItemActionPerformed
-        pesquisarEscritorDialog.setSize(500, 500);
+        pesquisarEscritorDialog.setSize(500, 200);
         pesquisarEscritorDialog.setLocation(200, 200);
         pesquisarEscritorDialog.setVisible(true);
     }//GEN-LAST:event_pesquisarEscritorMenuItemActionPerformed
@@ -821,12 +775,13 @@ public class Frame extends javax.swing.JFrame {
            List<String> results = XPathFunctions.pesquisa_nome_autor(nomeEscritorTextField2.getText());
            
            if(results != null){
-                informacaoTextArea.setText("Informação do autor " + nomeEscritorTextField2.getText() + ":\n\n");
+                outputTextArea.setText("Informação do autor " + nomeEscritorTextField2.getText() + ":\n\n");
                 for (String result : results) {
-                    informacaoTextArea.append(result + "\n");
+                    outputTextArea.append(result + "\n");
                 }
                 
                 nomeEscritorTextField2.setText("");
+                pesquisarEscritorDialog.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(this,
                     "Escritor não encontrado",
@@ -843,12 +798,13 @@ public class Frame extends javax.swing.JFrame {
         try {
             List<String> results = XPathFunctions.pesquisa_nacionalidade_autor(nomeNacionalidadeTextField.getText());
             if(results != null){
-                autoresTextArea.setText("Autores " + nomeNacionalidadeTextField.getText() + ":\n\n");
+                outputTextArea.setText("Autores " + nomeNacionalidadeTextField.getText() + ":\n\n");
                 for (String result : results) {
-                    autoresTextArea.append(result);
+                    outputTextArea.append(result + "\n");
                 }
                 
                 nomeNacionalidadeTextField.setText("");
+                pesquisarNacionalidadeDialog.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(this,
                     "Nacionalidade não encontrada",
@@ -866,7 +822,7 @@ public class Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_nomeNacionalidadeTextFieldActionPerformed
 
     private void pesquisarNacionalidadeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarNacionalidadeMenuItemActionPerformed
-        pesquisarNacionalidadeDialog.setSize(500, 500);
+        pesquisarNacionalidadeDialog.setSize(500, 200);
         pesquisarNacionalidadeDialog.setLocation(200, 200);
         pesquisarNacionalidadeDialog.setVisible(true);
     }//GEN-LAST:event_pesquisarNacionalidadeMenuItemActionPerformed
@@ -1042,12 +998,13 @@ public class Frame extends javax.swing.JFrame {
                 try {
                     List<String> results = XPathFunctions.pesquisa_obras_autor(id);
                     if(results != null){
-                        obrasEscritorTextArea.setText("Obras do escritor " + nomeEscritorTextField4.getText() + ":\n\n");
+                        outputTextArea.setText("Obras do escritor " + nomeEscritorTextField4.getText() + ":\n\n");
                         for (String result : results) {
-                            obrasEscritorTextArea.append(result);
+                            outputTextArea.append(result);
                         }
 
                         nomeEscritorTextField4.setText("");
+                        pesquisarObrasEscritorDialog.setVisible(false);
                     } else {
                         JOptionPane.showMessageDialog(this,
                             "Obras não encontradas",
@@ -1074,7 +1031,7 @@ public class Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_pesquisarObrasButtonActionPerformed
 
     private void pesquisarObrasEscritorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarObrasEscritorMenuItemActionPerformed
-        pesquisarObrasEscritorDialog.setSize(500, 500);
+        pesquisarObrasEscritorDialog.setSize(500, 200);
         pesquisarObrasEscritorDialog.setLocation(200, 200);
         pesquisarObrasEscritorDialog.setVisible(true);
     }//GEN-LAST:event_pesquisarObrasEscritorMenuItemActionPerformed
@@ -1102,7 +1059,7 @@ public class Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_escritorPremiadoMenuItemActionPerformed
 
     private void editoraPrecoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editoraPrecoMenuItemActionPerformed
-        editoraPrecoDialog.setSize(500, 500);
+        editoraPrecoDialog.setSize(500, 200);
         editoraPrecoDialog.setLocation(200, 200);
         editoraPrecoDialog.setVisible(true);
     }//GEN-LAST:event_editoraPrecoMenuItemActionPerformed
@@ -1126,13 +1083,14 @@ public class Frame extends javax.swing.JFrame {
                     List<String> results = XPathFunctions.livros_editora_preco(editoraTextField.getText(),precoTextField.getText());
                     
                     if(results != null){
-                        obrasTextArea.setText("Obras de editora " + editoraTextField.getText() + " e preço mínomo de " + precoTextField.getText() + ":\n\n");
+                        outputTextArea.setText("Obras de editora " + editoraTextField.getText() + " e preço mínomo de " + precoTextField.getText() + ":\n\n");
                         for (String result : results) {
-                            obrasTextArea.append(result + "\n");
+                            outputTextArea.append(result + "\n");
                         }
                 
                         editoraTextField.setText("");
                         precoTextField.setText("");
+                        editoraPrecoDialog.setVisible(false);
                     } else {
                         JOptionPane.showMessageDialog(this,
                             "Obras não encontradas",
@@ -1170,6 +1128,10 @@ public class Frame extends javax.swing.JFrame {
             Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_avgPrecoMenuItemActionPerformed
+
+    private void adicionarEscritorDialogComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_adicionarEscritorDialogComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_adicionarEscritorDialogComponentHidden
 
     /**
      * @param args the command line arguments
@@ -1215,7 +1177,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JMenuItem adicionarEscritorMenuItem;
     private javax.swing.JButton alterarEscritorButton;
     private javax.swing.JTextField alterarTextField;
-    private javax.swing.JTextArea autoresTextArea;
     private javax.swing.JMenuItem avgPrecoMenuItem;
     private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.JRadioButton dFalecimentoRadioButton;
@@ -1228,7 +1189,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton enviarEscritorButton;
     private javax.swing.JMenuItem escritorPremiadoMenuItem;
     private javax.swing.JRadioButton gLiterarioRadioButton;
-    private javax.swing.JTextArea informacaoTextArea;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1242,10 +1202,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JRadioButton nacionalidadeRadioButton;
     private javax.swing.JTextField nomeEscritorTextField;
     private javax.swing.JTextField nomeEscritorTextField1;
@@ -1254,8 +1210,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField nomeEscritorTextField4;
     private javax.swing.JTextField nomeNacionalidadeTextField;
     private javax.swing.JRadioButton nomeRadioButton;
-    private javax.swing.JTextArea obrasEscritorTextArea;
-    private javax.swing.JTextArea obrasTextArea;
     private javax.swing.JRadioButton ocupacaoRadioButton;
     private javax.swing.JTextArea outputTextArea;
     private javax.swing.JButton pesquisarEscritorButton;

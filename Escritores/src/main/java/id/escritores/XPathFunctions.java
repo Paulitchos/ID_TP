@@ -6,6 +6,7 @@
 package id.escritores;
 
 import java.io.File;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -144,7 +145,7 @@ public class XPathFunctions {
     //Quais os livros publicados por uma determinada editora, com preço acima de um dado valor
     static List<String> livros_editora_preco(String editora, String precoMin) throws SaxonApiException {
         
-        String xp = "//obra[contains(editora, '" + editora + "') and preco > " + precoMin + "]/concat(titulo/text(), ' ', autor/text())";
+        String xp = "//obra[contains(editora, '" + editora + "') and preco > " + precoMin + "]/concat(titulo/text(), ' - ', autor/text())";
         XdmValue res = XPathFunctions.executaXpath(xp, "obras.xml");
         List<String> s = XPathFunctions.listaResultado(res);
         if (res == null) {
@@ -178,10 +179,8 @@ public class XPathFunctions {
 
             for (XdmItem itemId : authorIds) {
                 String id = itemId.getStringValue();
-
-                // Find the average price of books by each award-winning author
                 String xpPrice = "//obra[@codigoautor='" + id + "']/preco";
-                XdmValue prices = executaXpath(xpPrice, "obras.xml"); // Use "obras.xml" for the obras data
+                XdmValue prices = executaXpath(xpPrice, "obras.xml");
 
                 if (prices != null) {
                     for (XdmItem itemPrice : prices) {
@@ -194,10 +193,13 @@ public class XPathFunctions {
 
             if (count > 0) {
                 double averagePrice = total / count;
-                System.out.println("Average price of books by award-winning authors: " + averagePrice);
-                return averagePrice;
+                
+                
+                DecimalFormat decimalFormat = new DecimalFormat("#.00");
+                String formattedAveragePrice = decimalFormat.format(averagePrice);
+
+                return Double.parseDouble(formattedAveragePrice);
             } else {
-                System.out.println("No books found for award-winning authors");
                 return -1.0;
             }
         }

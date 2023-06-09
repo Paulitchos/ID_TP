@@ -6,6 +6,7 @@ package id.escritores;
 
 import id.escritores.XPathFunctions;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -41,27 +42,35 @@ public class Wrappers {
         return obras;
     }
     
-    public static Escritores criaEscritor(String autor) throws IOException, SaxonApiException {
+    public static Escritores criaEscritor(String autor) throws IOException, SaxonApiException {       
         
-        String link = obtem_link_escritor(autor);
-        String nome = obtem_nome(link);
-        String xp = "//escritor[@nomePesquisado='" + autor + "']/@nomePesquisado";
-        XdmValue res = null;
-        res = XPathFunctions.executaXpath(xp, "escritores.xml");
-        if (res == null || res.size() == 0) {
-            String nacionalidade = obtem_nacionalidade(link);
-            String foto = obtem_foto(link);
-            String genero = obtem_genero(link);
-            String nascimento = obtem_data_nascimento(link);
-            String falecimento = obtem_data_falecimento(link);
-            List<String> premios = obtem_premios(link);
-            List<String> ocupacoes = obtem_ocupacoes(link);
-            String outra_info = obter_outra_info(link);
-            Escritores x = new Escritores(nome,nacionalidade,foto,genero,ocupacoes,premios,outra_info,nascimento,falecimento,link,autor);
-            return x;
-        }
-        
-        return null;
+        try {
+            String link = obtem_link_escritor(autor);
+            String nome = obtem_nome(link);
+            if(nome == null){
+                String autorAlterado = autor.replace(" ", "_") + "_(escritor)";;
+                link = obtem_link_escritor(autorAlterado);
+                nome = obtem_nome(link);
+            }
+            String xp = "//escritor[@nomePesquisado='" + autor + "']/@nomePesquisado";
+            XdmValue res = null;
+            res = XPathFunctions.executaXpath(xp, "escritores.xml");
+            if (res == null || res.size() == 0) {
+                String nacionalidade = obtem_nacionalidade(link);
+                String foto = obtem_foto(link);
+                String genero = obtem_genero(link);
+                String nascimento = obtem_data_nascimento(link);
+                String falecimento = obtem_data_falecimento(link);
+                List<String> premios = obtem_premios(link);
+                List<String> ocupacoes = obtem_ocupacoes(link);
+                String outra_info = obter_outra_info(link);
+                Escritores x = new Escritores(nome,nacionalidade,foto,genero,ocupacoes,premios,outra_info,nascimento,falecimento,link,autor);
+                return x;
+            }
+            return null;
+        } catch (FileNotFoundException e) {
+           return null;
+        }  
     }
  
     public static String obtem_link(String isbn) throws IOException{
@@ -116,13 +125,16 @@ public class Wrappers {
             p = Pattern.compile(er);
             fileContent = new String(Files.readAllBytes(Paths.get("bertrand.txt")));
             matcher = p.matcher(fileContent);
-            while (linksCount < 5) {
-                if (matcher.find()) {
+            while (linksCount < 5 && matcher.find()) {
                     linksCount++;
-                    links.add(matcher.group(1));
-                }
+                    links.add(matcher.group(1));               
             }
         }
+        
+        if (linksCount < 3) {
+            return null;
+        }
+        
         int index = 0;
         
         for (String i : links){
@@ -300,7 +312,8 @@ public class Wrappers {
             Matcher matcher = p.matcher(fileContent);
 
             if (matcher.find()) {
-                return matcher.group(1).replaceAll("\\s+$", "");
+                String name = matcher.group(1).replaceAll("\\s+$", "");
+                return name.replaceAll(",", "");
             }
         }
         
@@ -407,7 +420,9 @@ public class Wrappers {
                         "<td\\s*style=\"[^\"]+\">\\s*((?:<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">\\s*([^<]+)\\s*</a>\\s*,?\\s*)+)",
                 "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\"><a\\s*href=\"/[^\"]+\"\\s*title=\"Gênero literário\">Gênero literário</a>\\s*</td>\\s*" +
                         "<td\\s*style=\"[^\"]+\"><div class=\"hlist\">\\s*<ul>" +
-                        "((?:<li><a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">[^<]+</a></li>\\s*?\\s*)+)"
+                        "((?:<li><a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">[^<]+</a></li>\\s*?\\s*)+)",
+                "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\"><a\\s*href=\"[^\"]+\"\\s*title=\"Gênero literário\">Gênero literário</a>\\s*"
+                        + "</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)\\s*</td>"
         );
 
         String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
@@ -444,39 +459,45 @@ public class Wrappers {
     
     public static List<String> obtem_premios(String link) throws IOException {
         HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
-        
-        List<String> patterns = Arrays.asList(
-            "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Prêmios\\s*</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)</td>"
-        );
-        String er = "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Prêmios\\s*</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)</td>";
-        Pattern p = Pattern.compile(er, Pattern.DOTALL);
 
+        List<String> patterns = Arrays.asList(
+            "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Prêmios\\s*</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)</td>",
+            "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Prémios\\s*</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)\\s*</td>"
+        );
         String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
 
-        Matcher matcher = p.matcher(fileContent);
         List<String> premios = new ArrayList<>();
 
-        if (matcher.find()) {
-            String premiosTexto = matcher.group(1);
-            List<String> premiosPatterns = Arrays.asList(
-                "<a\\s*href=\"[^\"]+\"\\s*class=\"[^\"]+\"\\s*title=\"([^\"]+)\">",
-                "<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">"
-            );
-            for (String premioPattern : premiosPatterns) {
+        for (String pattern : patterns) {
+            Pattern p = Pattern.compile(pattern, Pattern.DOTALL);
+            Matcher matcher = p.matcher(fileContent);
+
+            if (matcher.find()) {
+                String premiosTexto = matcher.group(1);
+                //System.out.println(premiosTexto);
+                List<String> premiosPatterns = Arrays.asList(
+                    "<a\\s*href=\"[^\"]+\"\\s*class=\"[^\"]+\"\\s*title=\"([^\"]+)\">",
+                    "<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">",
+                    "([^,]+),<sup id=\"cite_ref-S._1-0\""
+                );
+
+                for (String premioPattern : premiosPatterns) {
                     Pattern genreP = Pattern.compile(premioPattern);
                     Matcher premioMatcher = genreP.matcher(premiosTexto);
+
                     while (premioMatcher.find()) {
                         String premio = premioMatcher.group(1);
                         premios.add(premio);
                     }
-            }
-            
-            }else {
-                return null;
-            }
+                }
 
-        return premios;
+                return premios; // Return the extracted premios immediately after finding the first match
+            }
+        }
+
+        return null; // Return null if no match is found
     }
+
     
     public static List<String> obtem_ocupacoes(String link) throws IOException {
         HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
@@ -490,13 +511,21 @@ public class Wrappers {
 
         if (matcher.find()) {
             String ocupacoesTexto = matcher.group(1);
-            Pattern ocupationPattern = Pattern.compile("<a\\s*href=\"[^\"]+\"\\s*title=\"([^\"]+)\">");
-            Matcher ocupationMatcher = ocupationPattern.matcher(ocupacoesTexto);
-            while (ocupationMatcher.find()) {
-                String ocupacao = ocupationMatcher.group(1);
-                ocupacoes.add(ocupacao);
-            }
-            
+            System.out.println(ocupacoesTexto);
+            List<String> ocupationPatterns = Arrays.asList(
+                "<a\\s*href=\"/wiki/[^>]+\"\\s*title=\"[^>]+\">([^<]+)</a>"
+            );
+            for (String ocupationPattern : ocupationPatterns) {
+                Pattern ocupationP = Pattern.compile(ocupationPattern);
+                Matcher ocupationMatcher = ocupationP.matcher(ocupacoesTexto);
+                
+                while (ocupationMatcher.find()) {
+                        String ocupacao = ocupationMatcher.group(1);
+                        ocupacao = ocupacao.replace(",", "");
+                        ocupacao = Character.toUpperCase(ocupacao.charAt(0)) + ocupacao.substring(1);
+                        ocupacoes.add(ocupacao);
+                }
+            }       
         } else {
             return null;
         }

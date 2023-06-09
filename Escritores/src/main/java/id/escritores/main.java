@@ -15,8 +15,8 @@ import org.jdom2.Document;
 public class main {
     
     public static void main(String[] args) throws IOException, SaxonApiException {
-    /*    
-        Escritores escritor = Wrappers.criaEscritor("Oscar Wilde");
+    /*  
+        Escritores escritor = Wrappers.criaEscritor("Gore Vidal");
         System.out.println("Autor:");
         System.out.println("\nLink: " + escritor.getLink());
         System.out.println("Nome: " + escritor.getNome());
@@ -35,7 +35,7 @@ public class main {
         
         XMLJDomFunctions.escreverDocumentoParaFicheiro(docEscritor, "escritores.xml");
         
-        List<Obra> obras = Wrappers.criaObra("Oscar Wilde", escritor.getId());
+        List<Obra> obras = Wrappers.criaObra("Gore Vidal", escritor.getId());
         
         Document docObras = XMLJDomFunctions.lerDocumentoXML("obras.xml");
         if (obras != null && !obras.isEmpty()) {
