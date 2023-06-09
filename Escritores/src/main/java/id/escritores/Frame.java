@@ -371,6 +371,11 @@ public class Frame extends javax.swing.JFrame {
 
         adicionarAtributoButton.setText("Adicionar");
         adicionarAtributoButton.setEnabled(false);
+        adicionarAtributoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adicionarAtributoButtonActionPerformed(evt);
+            }
+        });
 
         removerAtributoButton.setText("Remover ");
         removerAtributoButton.setEnabled(false);
@@ -790,6 +795,20 @@ public class Frame extends javax.swing.JFrame {
                         "Informação",
                         JOptionPane.INFORMATION_MESSAGE);
                 nomeEscritorTextField1.setText("");
+                String texto;
+                try {
+                    texto = Functions.ler_ficheiro("escritores.xml");
+                    if (texto != null){
+                        outputTextArea.setText(texto);
+                    }
+
+                    texto = Functions.ler_ficheiro("obras.xml");
+                    if (texto != null){
+                        outputTextArea.append("\n\n" + texto);
+                    }
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                }
             } else {
                 removerEscritorDialog.setVisible(false);
                 JOptionPane.showMessageDialog(this,
@@ -1295,6 +1314,74 @@ public class Frame extends javax.swing.JFrame {
         removerAtributoButton.setEnabled(false);
         atributoTextField.setText("");
     }//GEN-LAST:event_removerAtributoButtonActionPerformed
+
+    private void adicionarAtributoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarAtributoButtonActionPerformed
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        
+        if(doc != null){
+            
+            if (ocupacaoRadioButton.isSelected()) {
+                doc = EscritoresXML.adicionaInformacao(nomeEscritorTextField3.getText(), "ocupacoes", atributoTextField.getText(), doc);
+                
+            } else if (gLiterarioRadioButton.isSelected()) {
+                doc = EscritoresXML.adicionaInformacao(nomeEscritorTextField3.getText(), "generoliterario", atributoTextField.getText(), doc);
+                
+            } else if (premiosRadioButton.isSelected()) {
+                doc = EscritoresXML.adicionaInformacao(nomeEscritorTextField3.getText(), "premios", atributoTextField.getText(), doc);
+                
+            }
+            
+            if(doc != null){
+                XMLJDomFunctions.escreverDocumentoParaFicheiro(doc, "escritores.xml");
+                JOptionPane.showMessageDialog(this,
+                        "Informação atualizada",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            } else {
+
+                JOptionPane.showMessageDialog(this,
+                        "Atributo não encontrado",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+            
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Ainda não existe ecritores adicionados",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        nomeEscritorTextField3.setText("");
+        alterarTextField.setText("");
+            
+        nomeRadioButton.setSelected(false);
+        nacionalidadeRadioButton.setSelected(false);
+        dNascimentoRadioButton.setSelected(false);
+        dFalecimentoRadioButton.setSelected(false);
+        gLiterarioRadioButton.setSelected(false);
+        ocupacaoRadioButton.setSelected(false);
+        premiosRadioButton.setSelected(false);
+
+        nomeEscritorTextField3.setEditable(true);
+        alterarTextField.setEnabled(false);
+        alterarEscritorButton.setEnabled(false);
+
+        buttonGroup.clearSelection();
+
+        nomeRadioButton.setEnabled(false);
+        nacionalidadeRadioButton.setEnabled(false);
+        dNascimentoRadioButton.setEnabled(false);
+        dFalecimentoRadioButton.setEnabled(false);
+        gLiterarioRadioButton.setEnabled(false);
+        ocupacaoRadioButton.setEnabled(false);
+        premiosRadioButton.setEnabled(false);
+
+        enviarEscritorButton.setEnabled(true);
+        
+        adicionarAtributoButton.setEnabled(false);
+        removerAtributoButton.setEnabled(false);
+        atributoTextField.setText("");
+    }//GEN-LAST:event_adicionarAtributoButtonActionPerformed
 
     /**
      * @param args the command line arguments

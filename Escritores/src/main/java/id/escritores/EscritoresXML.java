@@ -240,6 +240,7 @@ public class EscritoresXML {
         return data;
     }
     
+    
     public static Document editaInformacaoEscritor(String escritor, String key, String novaInfo, Document doc) {
         Element raiz;
         if (doc == null) {
@@ -341,6 +342,49 @@ public class EscritoresXML {
                     found = false;
                 }
             }
+        }
+
+        if (!found) {
+            System.out.println("Escritor " + autor + " não foi encontrado.");
+            return null;
+        }
+
+        return doc;
+    }
+    
+    public static Document adicionaInformacao(String autor, String key, String atributo, Document doc){
+        Element raiz;
+        String idAutor = "";
+        if (doc == null) {
+            System.out.println("O ficheiro XML não existe.");
+            return null;
+        } else {
+            raiz = doc.getRootElement();
+        }
+
+        List<Element> todosEscritores = raiz.getChildren("escritor");
+        boolean found = false;
+        for (int i = 0; i < todosEscritores.size(); i++) {
+            Element escritor = todosEscritores.get(i);
+            if (escritor.getAttributeValue("nomePesquisado").equals(autor)) {
+                Element escritorElement = escritor.getChild(key);
+                if (escritorElement != null) {
+                    List<Element> todosAtributos = escritorElement.getChildren();
+                    for (int j = 0; j < 1; j++) {
+                        Element atributoElement = todosAtributos.get(j);
+                        //System.out.println(atributoElement.getText());
+                        String tagName = atributoElement.getName();
+                        Element newElement = new Element(tagName);
+                        newElement.setText(atributo);
+                        escritorElement.addContent(newElement);
+                        found = true;
+                        break;   
+                    }
+                } else {
+                    found = false;
+                }
+                
+            } 
         }
 
         if (!found) {
