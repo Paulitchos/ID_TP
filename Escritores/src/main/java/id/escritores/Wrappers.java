@@ -388,6 +388,8 @@ public class Wrappers {
         HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
         String autor = link.substring(link.lastIndexOf("/") + 1);
         autor = autor.replaceAll("_", " ");
+        autor = autor.replace("(", "\\(").replace(")", "\\)");
+        System.out.println(autor);
         String er = "<a\\s*href=\"[^\"]+\"\\s*class=\"image\"\\s*title=\""+ autor +"\"><img\\s*alt=\"\"\\s*src=\"([^\"]+)\"";
         Pattern p = Pattern.compile(er);
         
@@ -403,7 +405,8 @@ public class Wrappers {
             
             if (m.find()){
                 input.close();
-                return(m.group(1));
+                
+                return("https:" + m.group(1));
             }        
         }
         input.close();

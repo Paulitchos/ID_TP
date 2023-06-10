@@ -6,14 +6,17 @@ package id.escritores;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import net.sf.saxon.s9api.SaxonApiException;
+import net.sf.saxon.trans.XPathException;
 import org.jdom2.Document;
 
 /**
@@ -104,6 +107,11 @@ public class Frame extends javax.swing.JFrame {
         validarMenu = new javax.swing.JMenu();
         DTDMenuItem = new javax.swing.JMenuItem();
         XSDMenuItem = new javax.swing.JMenuItem();
+        XLSTMenu = new javax.swing.JMenu();
+        htmlEscritoresFotosMenuItem = new javax.swing.JMenuItem();
+        listagemEscritoresMenuItem = new javax.swing.JMenuItem();
+        XQueryMenu = new javax.swing.JMenu();
+        topObrasMenuItem = new javax.swing.JMenuItem();
 
         adicionarEscritorDialog.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
@@ -639,6 +647,43 @@ public class Frame extends javax.swing.JFrame {
         validarMenu.add(XSDMenuItem);
 
         jMenuBar1.add(validarMenu);
+
+        XLSTMenu.setText("XLST");
+        XLSTMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                XLSTMenuActionPerformed(evt);
+            }
+        });
+
+        htmlEscritoresFotosMenuItem.setText("HTML Escritores e Fotos");
+        htmlEscritoresFotosMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                htmlEscritoresFotosMenuItemActionPerformed(evt);
+            }
+        });
+        XLSTMenu.add(htmlEscritoresFotosMenuItem);
+
+        listagemEscritoresMenuItem.setText("Listagem de Escritores");
+        listagemEscritoresMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listagemEscritoresMenuItemActionPerformed(evt);
+            }
+        });
+        XLSTMenu.add(listagemEscritoresMenuItem);
+
+        jMenuBar1.add(XLSTMenu);
+
+        XQueryMenu.setText("XQuery");
+
+        topObrasMenuItem.setText("Top 5 Obras mais caras");
+        topObrasMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                topObrasMenuItemActionPerformed(evt);
+            }
+        });
+        XQueryMenu.add(topObrasMenuItem);
+
+        jMenuBar1.add(XQueryMenu);
 
         setJMenuBar(jMenuBar1);
 
@@ -1383,6 +1428,83 @@ public class Frame extends javax.swing.JFrame {
         atributoTextField.setText("");
     }//GEN-LAST:event_adicionarAtributoButtonActionPerformed
 
+    private void XLSTMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XLSTMenuActionPerformed
+       
+        
+    }//GEN-LAST:event_XLSTMenuActionPerformed
+
+    private void htmlEscritoresFotosMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_htmlEscritoresFotosMenuItemActionPerformed
+        boolean flag;
+        try {
+            flag = JDOMFunctions_XSLT.escritoresFotosTabela();
+            if(!flag){
+                JOptionPane.showMessageDialog(this,
+                        "Ainda não existe ecritores adicionados",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_htmlEscritoresFotosMenuItemActionPerformed
+
+    private void listagemEscritoresMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listagemEscritoresMenuItemActionPerformed
+        
+        try {
+            boolean flag = JDOMFunctions_XSLT.listarEscritores();
+            if(!flag)
+                JOptionPane.showMessageDialog(this,
+                        "Ainda não existe listagem de escritores",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try (Scanner ler = new Scanner (new FileInputStream("escritoresListagem.txt"))) {
+                StringBuilder texto = new StringBuilder();
+                String linha;
+                while(ler.hasNextLine()){
+                    linha = ler.nextLine();
+                    texto = texto.append(linha).append("\n");
+                }
+                outputTextArea.setText("Listagem dos escritores no ficheiro xml:\n\n" + texto.toString());
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this,
+                        "Ainda não existe listagem de escritores",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_listagemEscritoresMenuItemActionPerformed
+
+    private void topObrasMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topObrasMenuItemActionPerformed
+        try {
+            Document doc = SaxonFunctions_XQuery.top5ObrasCaras();
+            
+            if(doc != null){
+                String texto;
+                texto = Functions.ler_ficheiro("top5ObrasCaras.xml");
+                if (texto != null){
+                    outputTextArea.setText(texto);
+                } else {
+                    JOptionPane.showMessageDialog(this,
+                        "Ainda não existe top 5 obras",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(this,
+                        "Ainda não existe top 5 obras",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (XPathException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_topObrasMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1420,6 +1542,8 @@ public class Frame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem DTDMenuItem;
+    private javax.swing.JMenu XLSTMenu;
+    private javax.swing.JMenu XQueryMenu;
     private javax.swing.JMenuItem XSDMenuItem;
     private javax.swing.JMenuItem abrirMenuItem;
     private javax.swing.JButton adicionarAtributoButton;
@@ -1441,6 +1565,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton enviarEscritorButton;
     private javax.swing.JMenuItem escritorPremiadoMenuItem;
     private javax.swing.JRadioButton gLiterarioRadioButton;
+    private javax.swing.JMenuItem htmlEscritoresFotosMenuItem;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1454,6 +1579,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenuItem listagemEscritoresMenuItem;
     private javax.swing.JRadioButton nacionalidadeRadioButton;
     private javax.swing.JTextField nomeEscritorTextField;
     private javax.swing.JTextField nomeEscritorTextField1;
@@ -1482,6 +1608,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JDialog removerEscritorDialog;
     private javax.swing.JMenuItem removerEscritorMenuItem;
     private javax.swing.JMenuItem sairMenuItem;
+    private javax.swing.JMenuItem topObrasMenuItem;
     private javax.swing.JMenu validarMenu;
     private javax.swing.JMenu xPathMenu;
     private javax.swing.JMenu xmlMenu;

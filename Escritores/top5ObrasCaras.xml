@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topObras>
+   <obra>
+      <titulo>O Regresso</titulo>
+      <preco>18.9</preco>
+   </obra>
+   <obra>
+      <titulo>Retrato de uma Desconhecida</titulo>
+      <preco>18.81</preco>
+   </obra>
+   <obra>
+      <titulo>Dei-te o Melhor de Mim</titulo>
+      <preco>18.5</preco>
+   </obra>
+   <obra>
+      <titulo>A Melodia do Adeus</titulo>
+      <preco>18.5</preco>
+   </obra>
+   <obra>
+      <titulo>A Violoncelista</titulo>
+      <preco>17.91</preco>
+   </obra>
+</topObras>

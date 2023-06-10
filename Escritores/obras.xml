@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <obras>
-     <obra codigoautor="2">
+     <obra codigoautor="1">
           <isbn>9789899126053</isbn>
           <titulo>O Fantasma de Canterville</titulo>
           <autor>Oscar Wilde</autor>
@@ -8,7 +8,7 @@
           <capa>https://img.bertrand.pt/images/o-fantasma-de-canterville-oscar-wilde/NDV8Mjc3OTcyODF8MjQxNzQxNTd8MTY2NjI4MTU0MTAwMA==/500x</capa>
           <preco>4.46</preco>
      </obra>
-     <obra codigoautor="2">
+     <obra codigoautor="1">
           <isbn>9789897028380</isbn>
           <titulo>De Profundis</titulo>
           <autor>Oscar Wilde</autor>
@@ -16,7 +16,7 @@
           <capa>https://img.bertrand.pt/images/de-profundis-oscar-wilde/NDV8MjcyMTY1OTR8MjM1NDUzNTZ8MTY1NzczMDMwNTAwMA==/500x</capa>
           <preco>12.6</preco>
      </obra>
-     <obra codigoautor="2">
+     <obra codigoautor="1">
           <isbn>9789895423057</isbn>
           <titulo>O Príncipe Feliz e Outros Contos | The Happy Prince and Other Tales</titulo>
           <autor>Oscar Wilde</autor>
@@ -24,7 +24,7 @@
           <capa>https://img.bertrand.pt/images/o-principe-feliz-e-outros-contos-the-happy-prince-and-other-tales-oscar-wilde/NDV8MjcyMjIwOTh8MjM1NTI2ODB8MTY1ODIzNDEwMjAwMA==/500x</capa>
           <preco>15.08</preco>
      </obra>
-     <obra codigoautor="2">
+     <obra codigoautor="1">
           <isbn>9789897028045</isbn>
           <titulo>A Decadência da Arte de Mentir | A Decadência da Mentira: Uma Reflexão</titulo>
           <autor>Mark Twain e Oscar Wilde</autor>
@@ -32,7 +32,7 @@
           <capa>https://img.bertrand.pt/images/a-decadencia-da-arte-de-mentir-a-decadencia-da-mentira-uma-reflexao-mark-twain/NDV8MjY4NzU1NjN8MjMxNjg3NTh8MTY1MDUzMTc0MzAwMA==/500x</capa>
           <preco>12.6</preco>
      </obra>
-     <obra codigoautor="2">
+     <obra codigoautor="1">
           <isbn>9789897845116</isbn>
           <titulo>O Retrato de Dorian Gray</titulo>
           <autor>Oscar Wilde</autor>
@@ -40,7 +40,7 @@
           <capa>https://img.bertrand.pt/images/o-retrato-de-dorian-gray-oscar-wilde/NDV8MjY3MzIwMDl8MjMwMTM5MTF8MTY0NzUyNTQxMDAwMA==/500x</capa>
           <preco>10.76</preco>
      </obra>
-     <obra codigoautor="3">
+     <obra codigoautor="2">
           <isbn>9788491398028</isbn>
           <titulo>Retrato de uma Desconhecida</titulo>
           <autor>Daniel Silva</autor>
@@ -48,7 +48,7 @@
           <capa>https://img.bertrand.pt/images/retrato-de-uma-desconhecida-daniel-silva/NDV8MjgxMzE2Nzd8MjQ1MjY1Nzl8MTY3NTE2MjYzMDAwMA==/500x</capa>
           <preco>18.81</preco>
      </obra>
-     <obra codigoautor="3">
+     <obra codigoautor="2">
           <isbn>9788417216306</isbn>
           <titulo>A Ordem</titulo>
           <autor>Daniel Silva</autor>
@@ -56,7 +56,7 @@
           <capa>https://img.bertrand.pt/images/a-ordem-daniel-silva/NDV8MjgwNzc0ODF8MjQ0NzY1NDd8MTY3NDExOTM5MTAwMA==/500x</capa>
           <preco>10.71</preco>
      </obra>
-     <obra codigoautor="3">
+     <obra codigoautor="2">
           <isbn>9788491396789</isbn>
           <titulo>A Violoncelista</titulo>
           <autor>Daniel Silva</autor>
@@ -64,7 +64,7 @@
           <capa>https://img.bertrand.pt/images/a-violoncelista-daniel-silva/NDV8MjU4ODAwMzF8MjIxNTIyNzl8MTY0MzI4NTAxMzAwMA==/500x</capa>
           <preco>17.91</preco>
      </obra>
-     <obra codigoautor="3">
+     <obra codigoautor="2">
           <isbn>9788417216290</isbn>
           <titulo>A Rapariga Nova</titulo>
           <autor>Daniel Silva</autor>
@@ -72,7 +72,7 @@
           <capa>https://img.bertrand.pt/images/a-rapariga-nova-daniel-silva/NDV8MjU4NzY4MTR8MjIxNDc4MzF8MTY0MzAzNzgyODAwMA==/500x</capa>
           <preco>9.99</preco>
      </obra>
-     <obra codigoautor="3">
+     <obra codigoautor="2">
           <isbn>9788417216283</isbn>
           <titulo>A Outra Mulher</titulo>
           <autor>Daniel Silva</autor>
@@ -80,7 +80,7 @@
           <capa>https://img.bertrand.pt/images/a-outra-mulher-daniel-silva/NDV8MjQ3MjkyNTB8MjA4ODgwOTF8MTYxODkzMDUzNjAwMA==/500x</capa>
           <preco>11.1</preco>
      </obra>
-     <obra codigoautor="4">
+     <obra codigoautor="3">
           <isbn>9789892355214</isbn>
           <titulo>Um Sonho Só Nosso</titulo>
           <autor>Nicholas Sparks</autor>
@@ -88,7 +88,7 @@
           <capa>https://img.bertrand.pt/images/um-sonho-so-nosso-nicholas-sparks/NDV8MjczNDgzODN8MjM3MDA1NjV8MTY2MTQ0MjI0MDAwMA==/500x</capa>
           <preco>17.01</preco>
      </obra>
-     <obra codigoautor="4">
+     <obra codigoautor="3">
           <isbn>9789892352008</isbn>
           <titulo>O Sonho</titulo>
           <autor>Nicholas Sparks</autor>
@@ -96,7 +96,7 @@
           <capa>https://img.bertrand.pt/images/o-sonho-nicholas-sparks/NDV8MjUzODE4OTB8MjE2MTExNDB8MTYzMDQyMjA1MTAwMA==/500x</capa>
           <preco>16.65</preco>
      </obra>
-     <obra codigoautor="4">
+     <obra codigoautor="3">
           <isbn>9789892350790</isbn>
           <titulo>Dei-te o Melhor de Mim</titulo>
           <autor>Nicholas Sparks</autor>
@@ -104,7 +104,7 @@
           <capa>https://img.bertrand.pt/images/dei-te-o-melhor-de-mim-nicholas-sparks/NDV8MjQ3MTAwNzN8MjA4NjM5MTJ8MTYxNzcyMjg2NDAwMA==/500x</capa>
           <preco>18.5</preco>
      </obra>
-     <obra codigoautor="4">
+     <obra codigoautor="3">
           <isbn>9789892349206</isbn>
           <titulo>O Regresso</titulo>
           <autor>Nicholas Sparks</autor>
@@ -112,52 +112,12 @@
           <capa>https://img.bertrand.pt/images/o-regresso-nicholas-sparks/NDV8MjQzMDI4NDF8MjAzODcwOTR8MTU5ODQzNjM1MzAwMA==/500x</capa>
           <preco>18.9</preco>
      </obra>
-     <obra codigoautor="4">
+     <obra codigoautor="3">
           <isbn>9789892347707</isbn>
           <titulo>A Melodia do Adeus</titulo>
           <autor>Nicholas Sparks</autor>
           <editora>Edições Asa</editora>
           <capa>https://img.bertrand.pt/images/a-melodia-do-adeus-nicholas-sparks/NDV8MjM4MzE3NTR8MTk4NDk4MjV8MTU4MDM3OTA0NjAwMA==/500x</capa>
           <preco>18.5</preco>
-     </obra>
-     <obra codigoautor="5">
-          <isbn>9789896152413</isbn>
-          <titulo>Palavras do Livro do Desassossego | Words from The Book of Disquiet</titulo>
-          <autor>Fernando Pessoa e Lib\u00f3rio Manuel Silva</autor>
-          <editora>Edições Centro Atlântico</editora>
-          <capa>https://img.bertrand.pt/images/palavras-do-livro-do-desassossego-words-from-the-book-of-disquiet-fernando-pessoa/NDV8Mjg1OTcwNTl8MjQ5Nzc5NzR8MTY4NTM3ODQ5MzAwMA==/500x</capa>
-          <preco>14.99</preco>
-     </obra>
-     <obra codigoautor="5">
-          <isbn>978-972-37-2318-2</isbn>
-          <titulo>Poesia, Ricardo Reis</titulo>
-          <autor>Fernando Pessoa</autor>
-          <editora>Assírio &amp; Alvim</editora>
-          <capa>https://img.bertrand.pt/images/poesia-ricardo-reis-fernando-pessoa/NDV8MTEyMzcwNTJ8MjQ3NjYxODJ8MTY4MzcyOTUzMDAwMA==/500x</capa>
-          <preco>16.97</preco>
-     </obra>
-     <obra codigoautor="5">
-          <isbn>9789895362813</isbn>
-          <titulo>Message</titulo>
-          <autor>Fernando Pessoa</autor>
-          <editora>Shantarin</editora>
-          <capa>https://img.bertrand.pt/images/message-fernando-pessoa/NDV8Mjg0MjUzODd8MjQ3OTM5Nzl8MTY4MDA4MDE2NTAwMA==/500x</capa>
-          <preco>16.2</preco>
-     </obra>
-     <obra codigoautor="5">
-          <isbn>9789895365753</isbn>
-          <titulo>Autopsicografía y Outros Treinta Poemas</titulo>
-          <autor>Fernando Pessoa e George Monteiro</autor>
-          <editora>Dilúvio</editora>
-          <capa>https://img.bertrand.pt/images/autopsicografia-y-outros-treinta-poemas-fernando-pessoa/NDV8Mjg0MjcwNDh8MjQ3OTU3OTl8MTY4MDE4MDcyMzAwMA==/500x</capa>
-          <preco>13.41</preco>
-     </obra>
-     <obra codigoautor="5">
-          <isbn>9788412617634</isbn>
-          <titulo>Rubaiyat</titulo>
-          <autor>Fernando Pessoa</autor>
-          <editora>EL GALLO DE ORO EDICIONES</editora>
-          <capa>https://img.bertrand.pt/images/rubaiyat-fernando-pessoa/NDV8Mjg0MDA0MjR8MjQ3NjcwMzR8MTY3OTMwNDE0MzAwMA==/500x</capa>
-          <preco>14.4</preco>
      </obra>
 </obras>

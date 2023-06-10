@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <escritores>
-     <escritor id="2" nomePesquisado="Oscar Wilde">
+     <escritor id="1" nomePesquisado="Oscar Wilde">
           <nome>Oscar Fingal O'Flahertie Wills Wilde</nome>
           <datanascimento>16 de outubro de 1854</datanascimento>
           <datafalecimento>30 de novembro de 1900</datafalecimento>
           <nacionalidade>Irlandeses</nacionalidade>
-          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg/250px-Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg</foto>
+          <foto>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg/250px-Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg</foto>
           <generoliterario>
                <gen>Drama</gen>
                <gen>Conto</gen>
@@ -16,6 +16,7 @@
                <oc>Jornalista</oc>
                <oc>Romancista</oc>
                <oc>Escritor</oc>
+               <oc>Autor</oc>
                <oc>Ensaísta</oc>
           </ocupacoes>
           <premios>
@@ -24,38 +25,25 @@
                <pre>Universidade de Oxford</pre>
           </premios>
      </escritor>
-     <escritor id="3" nomePesquisado="Daniel Silva">
+     <escritor id="2" nomePesquisado="Daniel Silva">
           <nome>Daniel Silva</nome>
           <nacionalidade>Estados Unidos</nacionalidade>
+          <foto>https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/DanielSilva01.JPG/200px-DanielSilva01.JPG</foto>
           <ocupacoes>
                <oc>Escritor</oc>
+               <oc>Jornalista</oc>
+               <oc>Romancista</oc>
           </ocupacoes>
      </escritor>
-     <escritor id="4" nomePesquisado="Nicholas Sparks">
+     <escritor id="3" nomePesquisado="Nicholas Sparks">
           <nome>Nicholas Charles Sparks</nome>
           <datanascimento>31 de dezembro de 1965</datanascimento>
           <nacionalidade>Povo dos Estados Unidos</nacionalidade>
-          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nicholas-Sparks-Autograph-1-4-06.jpg/250px-Nicholas-Sparks-Autograph-1-4-06.jpg</foto>
+          <foto>https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Nicholas-Sparks-Autograph-1-4-06.jpg/250px-Nicholas-Sparks-Autograph-1-4-06.jpg</foto>
           <ocupacoes>
                <oc>Escritor</oc>
                <oc>Roteirista</oc>
                <oc>Produtor</oc>
           </ocupacoes>
-     </escritor>
-     <escritor id="5" nomePesquisado="Fernando Pessoa">
-          <nome>Fernando António Nogueira Pessoa</nome>
-          <datanascimento>13 de junho de 1888</datanascimento>
-          <datafalecimento>30 de novembro de 1935</datafalecimento>
-          <nacionalidade>Portugal</nacionalidade>
-          <foto>//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pessoa_chapeu.jpg/200px-Pessoa_chapeu.jpg</foto>
-          <ocupacoes>
-               <oc>Poeta</oc>
-               <oc>Escritor</oc>
-               <oc>Tradutor</oc>
-          </ocupacoes>
-          <premios>
-               <pre>Prémio Antero de Quental</pre>
-               <pre>Queen Victoria Prize (1903)</pre>
-          </premios>
      </escritor>
 </escritores>

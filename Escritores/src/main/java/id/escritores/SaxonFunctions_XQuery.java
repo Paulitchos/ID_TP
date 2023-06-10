@@ -17,10 +17,7 @@ import net.sf.saxon.query.StaticQueryContext;
 import net.sf.saxon.query.XQueryExpression;
 import net.sf.saxon.trans.XPathException;
 
-/**
- *
- * @author abs
- */
+
 public class SaxonFunctions_XQuery {
 
     public static void xQueryToText(String outputFile, String queryFile) throws XPathException, IOException{
@@ -58,10 +55,13 @@ public class SaxonFunctions_XQuery {
     
     
     //XML 5 Livros Caros 
-    public static void top5LivrosCaros() throws XPathException, IOException {
-        SaxonFunctions_XQuery.xQueryToXml("top5LivrosCaros.xml", "top5LivrosCaros.xql");
-        Document doc = XMLJDomFunctions.lerDocumentoXML("top5LivrosCaros.xml");
-        String t = XMLJDomFunctions.escreverDocumentoString(doc);
+    public static Document top5ObrasCaras() throws XPathException, IOException {
+        SaxonFunctions_XQuery.xQueryToXml("top5ObrasCaras.xml", "top5ObrasCaras.xql");
+        Document doc = XMLJDomFunctions.lerDocumentoXML("top5ObrasCaras.xml");
+        if(doc != null){
+            return doc;
+        }
+        return null;
     }
     
     

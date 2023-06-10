@@ -10,6 +10,7 @@ import java.io.FileReader;
 import java.io.StringReader;
 import java.awt.Desktop;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -25,10 +26,7 @@ import org.jdom2.Document;
 import org.jdom2.transform.XSLTransformException;
 import org.jdom2.transform.XSLTransformer;
 
-/**
- *
- * @author abs
- */
+
 public class JDOMFunctions_XSLT {
     
       /* Não permitte Transformações para TXT method="text"*/
@@ -77,21 +75,34 @@ public class JDOMFunctions_XSLT {
   }
     
     //HTML Autores
-    public static void autores_tabela() throws IOException {
-        Document doc = XMLJDomFunctions.lerDocumentoXML("autores.xml");
+    public static boolean escritoresFotosTabela() throws IOException {
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
             if (doc != null) {
-                Document novo = JDOMFunctions_XSLT.transformaDocumento(doc, "autores.xml", "autores_tabela.xsl");
-                XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "autores_tabela.html");
-                String url = "autores_tabela.html";
+                Document novo = JDOMFunctions_XSLT.transformaDocumento(doc, "escritores.xml", "HtmlEscritoresFotos.xsl");
+                XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "EscritoresFotos.html");
+                String url = "EscritoresFotos.html";
                 File htmlFile = new File(url);
-                Desktop.getDesktop().browse(htmlFile.toURI());
-            } 
+                try {
+                    Desktop.getDesktop().browse(htmlFile.toURI());
+                } catch (IOException ex) {
+                    Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                return true;
+            }
+            
+            return false;
     }
     
     
     //TXT Autores
-    public static void listar_autores() throws FileNotFoundException {
-        JDOMFunctions_XSLT.transformaDocumento2("autores.xml", "autores.xsl", "autores.txt");
+    public static boolean listarEscritores() throws FileNotFoundException {
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        if (doc != null) {
+            JDOMFunctions_XSLT.transformaDocumento2("escritores.xml", "escritores.xsl", "escritoresListagem.txt");
+            return true;
+        }
+        
+        return false;
     }
     
     
