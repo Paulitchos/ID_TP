@@ -10,10 +10,6 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 
 
-/**
- *
- * @author abs
- */
 public class HttpRequestFunctions {
 
     public static void httpRequest1(String link, String pesquisa, String outFile) throws IOException {

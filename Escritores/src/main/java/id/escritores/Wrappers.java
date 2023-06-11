@@ -17,7 +17,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-import java.util.Date;
 import java.util.List;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmValue;
@@ -63,8 +62,7 @@ public class Wrappers {
                 String falecimento = obtem_data_falecimento(link);
                 List<String> premios = obtem_premios(link);
                 List<String> ocupacoes = obtem_ocupacoes(link);
-                String outra_info = obter_outra_info(link);
-                Escritores x = new Escritores(nome,nacionalidade,foto,genero,ocupacoes,premios,outra_info,nascimento,falecimento,link,autor);
+                Escritores x = new Escritores(nome,nacionalidade,foto,genero,ocupacoes,premios,nascimento,falecimento,link,autor);
                 return x;
             }
             return null;
@@ -536,21 +534,6 @@ public class Wrappers {
         return ocupacoes;
     }
     
-    public static String obter_outra_info(String link) throws IOException {
-        HttpRequestFunctions.httpRequest1(link, "", "wikipedia.txt");
-        String er = "<td\\s*scope=\"row\"\\s*style=\"[^\"]+\">Outra\\s*informação\\s*</td>\\s*<td\\s*style=\"[^\"]+\">(.*?)</td>";
-        Pattern p = Pattern.compile(er, Pattern.DOTALL);
-
-        String fileContent = new String(Files.readAllBytes(Paths.get("wikipedia.txt")));
-
-        Matcher matcher = p.matcher(fileContent);
-
-        if (matcher.find()) {
-            return matcher.group(1).trim();
-        }
-
-        return "";
-    }
     
     public static String unescapeUnicode(String input) {
         StringBuilder builder = new StringBuilder();

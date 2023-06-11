@@ -5,10 +5,10 @@ import java.util.List;
 public class Escritores {
     private static int idCounter = 0;
     int id;
-    String nome, nacionalidade, fotografia, genero, outraInfo, link, nascimento, morte, nomePesquisa;
+    String nome, nacionalidade, fotografia, genero, link, nascimento, morte, nomePesquisa;
     List<String> ocupacoes, premios;
 
-    public Escritores(String nome, String nacionalidade, String fotografia, String genero, List<String> ocupacoes, List<String> premios, String outraInfo, String nascimento, String morte, String link, String nomePesquisa) {
+    public Escritores(String nome, String nacionalidade, String fotografia, String genero, List<String> ocupacoes, List<String> premios, String nascimento, String morte, String link, String nomePesquisa) {
         this.id = ++idCounter;
         this.nome = nome;
         this.nacionalidade = nacionalidade;
@@ -16,7 +16,6 @@ public class Escritores {
         this.genero = genero;
         this.ocupacoes = ocupacoes;
         this.premios = premios;
-        this.outraInfo = outraInfo;
         this.nascimento = nascimento;
         this.morte = morte;
         this.link = link;
@@ -99,15 +98,7 @@ public class Escritores {
         this.morte = morte;
     }
     
-    public String getOutraInfo() {
-        return outraInfo;
-    }
-    
-    public void setOutraInfo(String outraInfo) {
-        this.outraInfo = outraInfo;
-    }
-    
-        public String getLink() {
+    public String getLink() {
         return link;
     }
 

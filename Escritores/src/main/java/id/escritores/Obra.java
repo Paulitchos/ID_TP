@@ -4,10 +4,6 @@
  */
 package id.escritores;
 
-/**
- *
- * @author paulo
- */
 public class Obra {
     String isbn, autor,titulo, editora,capa, link;
     double preco;

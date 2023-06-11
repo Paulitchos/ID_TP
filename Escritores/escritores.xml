@@ -62,4 +62,24 @@
                <pre>Queen Victoria Prize (1903)</pre>
           </premios>
      </escritor>
+     <escritor id="5" nomePesquisado="José Luís Peixoto">
+          <nome>José Luís Marques Peixoto</nome>
+          <datanascimento>4 de setembro de 1974</datanascimento>
+          <nacionalidade>Portugal</nacionalidade>
+          <foto>https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/JoseLuisPeixoto.JPG/223px-JoseLuisPeixoto.JPG</foto>
+          <ocupacoes>
+               <oc>Escritor</oc>
+               <oc>Dramaturgo</oc>
+               <oc>Poeta</oc>
+          </ocupacoes>
+          <premios>
+               <pre>Prémio José Saramago</pre>
+               <pre>Prémio Cálamo Outra Mirada (página não existe)</pre>
+               <pre>Prémio Libro d&amp;#39; Europa (página não existe)</pre>
+               <pre>Prémios Sociedade Portuguesa de Autores (página não existe)</pre>
+               <pre>Oceanos-Prêmio de Literatura em Língua Portuguesa</pre>
+               <pre>The Best Translation Award-Japan (página não existe)</pre>
+               <pre>Prémio de Poesia Daniel Faria</pre>
+          </premios>
+     </escritor>
 </escritores>

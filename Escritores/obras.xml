@@ -160,4 +160,44 @@
           <capa>https://img.bertrand.pt/images/rubaiyat-fernando-pessoa/NDV8Mjg0MDA0MjR8MjQ3NjcwMzR8MTY3OTMwNDE0MzAwMA==/500x</capa>
           <preco>14.4</preco>
      </obra>
+     <obra codigoautor="5">
+          <isbn>9789897228414</isbn>
+          <titulo>Dentro do Segredo - Edição Especial</titulo>
+          <autor>Jos\u00e9 Lu\u00eds Peixoto</autor>
+          <editora>Quetzal Editores</editora>
+          <capa>https://img.bertrand.pt/images/dentro-do-segredo-edicao-especial-jose-luis-peixoto/NDV8MjcyNzQ3MjJ8MjM2MTIwNTd8MTY2NjEwNTEzMDAwMA==/500x</capa>
+          <preco>17.91</preco>
+     </obra>
+     <obra codigoautor="5">
+          <isbn>9789897228506</isbn>
+          <titulo>Onde</titulo>
+          <autor>Jos\u00e9 Lu\u00eds Peixoto</autor>
+          <editora>Quetzal Editores</editora>
+          <capa>https://img.bertrand.pt/images/onde-jose-luis-peixoto/NDV8MjcwMTQ3MDN8MjMzMTQ5MDB8MTY1NjUxOTYyMzAwMA==/500x</capa>
+          <preco>14.94</preco>
+     </obra>
+     <obra codigoautor="5">
+          <isbn>9789897226809</isbn>
+          <titulo>Morreste-me</titulo>
+          <autor>Jos\u00e9 Lu\u00eds Peixoto</autor>
+          <editora>Quetzal Editores</editora>
+          <capa>https://img.bertrand.pt/images/morreste-me-jose-luis-peixoto/NDV8MjUxNzY0Nzd8MjEzNzc4Mzh8MTYyODE4MzcxMDAwMA==/500x</capa>
+          <preco>12.95</preco>
+     </obra>
+     <obra codigoautor="5">
+          <isbn>9789897224607</isbn>
+          <titulo>Almoço de Domingo</titulo>
+          <autor>Jos\u00e9 Lu\u00eds Peixoto</autor>
+          <editora>Quetzal Editores</editora>
+          <capa>https://img.bertrand.pt/images/almoco-de-domingo-jose-luis-peixoto/NDV8MjEzMzIxOTh8MTcyMTgzNDJ8MTYxNDg4MzAwNzAwMA==/500x</capa>
+          <preco>17.7</preco>
+     </obra>
+     <obra codigoautor="5">
+          <isbn>9789897227059</isbn>
+          <titulo>Regresso a Casa</titulo>
+          <autor>Jos\u00e9 Lu\u00eds Peixoto</autor>
+          <editora>Quetzal Editores</editora>
+          <capa>https://img.bertrand.pt/images/regresso-a-casa-jose-luis-peixoto/NDV8MjQwNzQ1OTd8MjAxMzM5NTB8MTU5NjQ0NDc3OTAwMA==/500x</capa>
+          <preco>14.39</preco>
+     </obra>
 </obras>

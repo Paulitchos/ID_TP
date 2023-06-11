@@ -21,11 +21,6 @@ import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 
 
-/**
- *
- * @author abs
- */
-
 public class XMLJDomFunctions{
     /*Le um ficheiro XML do disco*/
     public static Document lerDocumentoXML(String caminhoFicheiro) {

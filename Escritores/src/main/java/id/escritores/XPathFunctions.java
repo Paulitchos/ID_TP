@@ -9,16 +9,9 @@ import java.io.File;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-import net.sf.saxon.om.NodeInfo;
 import net.sf.saxon.s9api.*;
-import org.w3c.dom.Node;
 
 
-/**
- *
- * @author abs
- */
 public class XPathFunctions {
 
     static XdmValue executaXpath(String xp, String xmlFile) throws SaxonApiException {
