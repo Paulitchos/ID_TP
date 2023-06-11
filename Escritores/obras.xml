@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<obras xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="obras.xsd">
+<obras>
      <obra codigoautor="1">
           <isbn>9789899126053</isbn>
           <titulo>O Fantasma de Canterville</titulo>
@@ -199,5 +199,85 @@
           <editora>Quetzal Editores</editora>
           <capa>https://img.bertrand.pt/images/regresso-a-casa-jose-luis-peixoto/NDV8MjQwNzQ1OTd8MjAxMzM5NTB8MTU5NjQ0NDc3OTAwMA==/500x</capa>
           <preco>14.39</preco>
+     </obra>
+     <obra codigoautor="7">
+          <isbn>9789897228001</isbn>
+          <titulo>Amor &amp; C.ª</titulo>
+          <autor>Julian Barnes</autor>
+          <editora>Quetzal Editores</editora>
+          <capa>https://img.bertrand.pt/images/amor-e-c-julian-barnes/NDV8MjU2Mzc3NDd8MjE4ODc3MTh8MTY3NjA0MTAxMTAwMA==/500x</capa>
+          <preco>15.93</preco>
+     </obra>
+     <obra codigoautor="7">
+          <isbn>9789897228292</isbn>
+          <titulo>Elizabeth Finch</titulo>
+          <autor>Julian Barnes</autor>
+          <editora>Quetzal Editores</editora>
+          <capa>https://img.bertrand.pt/images/elizabeth-finch-julian-barnes/NDV8MjY4OTc4NzJ8MjMxOTMxOTZ8MTY1NTExODMzNTAwMA==/500x</capa>
+          <preco>15.93</preco>
+     </obra>
+     <obra codigoautor="7">
+          <isbn>9789897226618</isbn>
+          <titulo>O Homem do Casaco Vermelho</titulo>
+          <autor>Julian Barnes</autor>
+          <editora>Quetzal Editores</editora>
+          <capa>https://img.bertrand.pt/images/o-homem-do-casaco-vermelho-julian-barnes/NDV8MjQxMTc3Mzd8MjAxODcyNzB8MTYxODUwMDM5ODAwMA==/500x</capa>
+          <preco>16.92</preco>
+     </obra>
+     <obra codigoautor="7">
+          <isbn>9789897226724</isbn>
+          <titulo>Nada a Temer</titulo>
+          <autor>Julian Barnes</autor>
+          <editora>Quetzal Editores</editora>
+          <capa>https://img.bertrand.pt/images/nada-a-temer-julian-barnes/NDV8MjM3OTcyODl8MTk4MTA3MjN8MTU4NDQ3MDgzMDAwMA==/500x</capa>
+          <preco>16.6</preco>
+     </obra>
+     <obra codigoautor="7">
+          <isbn>9789897226298</isbn>
+          <titulo>O Papagaio de Flaubert</titulo>
+          <autor>Julian Barnes</autor>
+          <editora>Quetzal Editores</editora>
+          <capa>https://img.bertrand.pt/images/o-papagaio-de-flaubert-julian-barnes/NDV8MjMzMTY3NzJ8MTkyNjA5NDJ8MTU3MjI2MDQyODAwMA==/500x</capa>
+          <preco>16.6</preco>
+     </obra>
+     <obra codigoautor="9">
+          <isbn>978-972-0-03693-3</isbn>
+          <titulo>O vento conhece o meu nome</titulo>
+          <autor>Isabel Allende</autor>
+          <editora>Porto Editora</editora>
+          <capa>https://img.bertrand.pt/images/o-vento-conhece-o-meu-nome-isabel-allende/NDV8Mjg1MDQ1OTJ8MjQ4NzUyNDh8MTY4MzAxNDkwNjAwMA==/500x</capa>
+          <preco>16.97</preco>
+     </obra>
+     <obra codigoautor="9">
+          <isbn>978-972-0-03529-5</isbn>
+          <titulo>Violeta</titulo>
+          <autor>Isabel Allende</autor>
+          <editora>Porto Editora</editora>
+          <capa>https://img.bertrand.pt/images/violeta-isabel-allende/NDV8MjU1OTMzMDN8MjQ1Njg2MzJ8MTY3ODI5NjYzNDAwMA==/500x</capa>
+          <preco>16.97</preco>
+     </obra>
+     <obra codigoautor="9">
+          <isbn>978-972-0-03380-2</isbn>
+          <titulo>Mulheres da minha alma</titulo>
+          <autor>Isabel Allende</autor>
+          <editora>Porto Editora</editora>
+          <capa>https://img.bertrand.pt/images/mulheres-da-minha-alma-isabel-allende/NDV8MjQyNTM2NTd8MjE4ODExNDN8MTYzODIwNTIzNTAwMA==/500x</capa>
+          <preco>16.65</preco>
+     </obra>
+     <obra codigoautor="9">
+          <isbn>978-972-0-03233-1</isbn>
+          <titulo>Longa pétala de mar</titulo>
+          <autor>Isabel Allende</autor>
+          <editora>Porto Editora</editora>
+          <capa>https://img.bertrand.pt/images/longa-petala-de-mar-isabel-allende/NDV8MjMyNDU3MTN8MjQzMzQ0Njh8MTYzNzkyNjE2MTAwMA==/500x</capa>
+          <preco>18.85</preco>
+     </obra>
+     <obra codigoautor="9">
+          <isbn>978-972-0-03022-1</isbn>
+          <titulo>Para lá do inverno</titulo>
+          <autor>Isabel Allende</autor>
+          <editora>Porto Editora</editora>
+          <capa>https://img.bertrand.pt/images/para-la-do-inverno-isabel-allende/NDV8MTk4NDk0NDh8MjM4MDk2MzV8MTY2NjE3MDkwNjAwMA==/500x</capa>
+          <preco>18.85</preco>
      </obra>
 </obras>

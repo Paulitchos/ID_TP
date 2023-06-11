@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<escritores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="escritores.xsd">
+<escritores>
      <escritor id="1" nomePesquisado="Oscar Wilde">
           <nome>Oscar Fingal O'Flahertie Wills Wilde</nome>
           <datanascimento>16 de outubro de 1854</datanascimento>
@@ -80,6 +80,30 @@
                <pre>Oceanos-Prêmio de Literatura em Língua Portuguesa</pre>
                <pre>The Best Translation Award-Japan (página não existe)</pre>
                <pre>Prémio de Poesia Daniel Faria</pre>
+          </premios>
+     </escritor>
+     <escritor id="7" nomePesquisado="Julian Barnes">
+          <nome>Julian Patrick Barnes</nome>
+          <datanascimento>19 de janeiro de 1946</datanascimento>
+          <foto>https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Julian_Barnes_in_2019_02.jpg/200px-Julian_Barnes_in_2019_02.jpg</foto>
+          <generoliterario>
+               <gen>Romance</gen>
+               <gen>Conto</gen>
+          </generoliterario>
+          <premios>
+               <pre>Prémio Man Booker</pre>
+               <pre>Prémio Médicis ensaio</pre>
+               <pre>Prémio Femina estrangeiro</pre>
+          </premios>
+     </escritor>
+     <escritor id="9" nomePesquisado="Isabel Allende">
+          <nome>Isabel Allende Llona</nome>
+          <datanascimento>2 de agosto de 1942</datanascimento>
+          <nacionalidade>Chilenos</nacionalidade>
+          <foto>https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Isabel_allende.jpg/200px-Isabel_allende.jpg</foto>
+          <premios>
+               <pre>Prêmio Nacional de Literatura do Chile</pre>
+               <pre>Medalha Presidencial da Liberdade</pre>
           </premios>
      </escritor>
 </escritores>
