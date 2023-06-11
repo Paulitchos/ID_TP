@@ -68,7 +68,7 @@ public class SaxonFunctions_XQuery {
         return null;
     }
         
-    //Combinar info dos escritores e suas obras
+    //HTML Ecritor e suas obras
     public static boolean escritoresObras(String id) throws Exception {
         
         Configuration config = new Configuration();
@@ -94,26 +94,17 @@ public class SaxonFunctions_XQuery {
         }
     }
     
-    
-    //EXTRA - Transformação de todas as obras de um autor específico em HTML
-    public static void htmlTodasObrasAutor(String nomeAutor) throws XPathException, IOException {
-        StaticQueryContext sqc = new StaticQueryContext(new Configuration());
-        XQueryExpression exp = sqc.compileQuery(new FileReader("todasObrasAutor.xql"));
-        DynamicQueryContext dynamicContext = new DynamicQueryContext(sqc.getConfiguration());
-        dynamicContext.setParameter("nomeAutor", nomeAutor);
-
-        Properties props = new Properties();
-        props.setProperty(OutputKeys.METHOD, "xml");
-        exp.run(dynamicContext, new StreamResult(new File("todasObrasAutor.xml")), props);
-
-        Document doc = XMLJDomFunctions.lerDocumentoXML("todasObrasAutor.xml");
-        if (doc != null) {
-            Document novo = JDOMFunctions_XSLT.transformaDocumento(doc, "todasObrasAutor.xml", "todasObrasAutor.xsl");
-            XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "todasObrasAutor.html");
+    // Juntar ambos xml
+    public static Document juntarEscritoresObras() throws XPathException, IOException{
+        SaxonFunctions_XQuery.xQueryToXml("xmlJuntos.xml", "juntarXML.xql");
+        
+        Document doc = XMLJDomFunctions.lerDocumentoXML("xmlJuntos.xml");
+        if(doc != null){
+            return doc;
         }
+        return null;
     }
-    
-    
+        
     //EXTRA - Gerar um ficheiro XML com os escritores agrupados por nacionalidade
     public static void escritoresPorNacionalidade() throws XPathException, IOException {
         StaticQueryContext sqc = new StaticQueryContext(new Configuration());

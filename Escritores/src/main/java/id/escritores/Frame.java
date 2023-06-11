@@ -117,6 +117,7 @@ public class Frame extends javax.swing.JFrame {
         XQueryMenu = new javax.swing.JMenu();
         topObrasMenuItem = new javax.swing.JMenuItem();
         obrasEscritorMenuItem = new javax.swing.JMenuItem();
+        juntarEscritoesObrasMenuItem = new javax.swing.JMenuItem();
 
         adicionarEscritorDialog.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
@@ -721,6 +722,11 @@ public class Frame extends javax.swing.JFrame {
         jMenuBar1.add(XLSTMenu);
 
         XQueryMenu.setText("XQuery");
+        XQueryMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                XQueryMenuActionPerformed(evt);
+            }
+        });
 
         topObrasMenuItem.setText("Top 5 Obras mais caras");
         topObrasMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -737,6 +743,14 @@ public class Frame extends javax.swing.JFrame {
             }
         });
         XQueryMenu.add(obrasEscritorMenuItem);
+
+        juntarEscritoesObrasMenuItem.setText("Juntar escritores com as suas obras");
+        juntarEscritoesObrasMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                juntarEscritoesObrasMenuItemActionPerformed(evt);
+            }
+        });
+        XQueryMenu.add(juntarEscritoesObrasMenuItem);
 
         jMenuBar1.add(XQueryMenu);
 
@@ -1597,6 +1611,38 @@ public class Frame extends javax.swing.JFrame {
         obrasEscritorDialog.setVisible(true);
     }//GEN-LAST:event_obrasEscritorMenuItemActionPerformed
 
+    private void XQueryMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XQueryMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_XQueryMenuActionPerformed
+
+    private void juntarEscritoesObrasMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_juntarEscritoesObrasMenuItemActionPerformed
+        try {
+            Document doc = SaxonFunctions_XQuery.juntarEscritoresObras();
+            
+            if(doc != null){
+                String texto;
+                texto = Functions.ler_ficheiro("xmlJuntos.xml");
+                if (texto != null){
+                    outputTextArea.setText(texto);
+                } else {
+                    JOptionPane.showMessageDialog(this,
+                        "Ainda não existe ficheiros xml",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(this,
+                        "Ainda não existe ficheiros xml",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (XPathException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_juntarEscritoesObrasMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1672,6 +1718,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenuItem juntarEscritoesObrasMenuItem;
     private javax.swing.JMenuItem listagemEscritoresMenuItem;
     private javax.swing.JRadioButton nacionalidadeRadioButton;
     private javax.swing.JTextField nomeEscritorTextField;
