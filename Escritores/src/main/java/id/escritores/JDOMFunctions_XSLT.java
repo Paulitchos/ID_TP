@@ -104,6 +104,24 @@ public class JDOMFunctions_XSLT {
         
         return false;
     }
+    
+    public static boolean mostarObras() throws FileNotFoundException {
+        Document doc = XMLJDomFunctions.lerDocumentoXML("obras.xml");
+        if (doc != null) {
+            Document novo = JDOMFunctions_XSLT.transformaDocumento(doc, "obras.xml", "mostrarObras.xsl");
+            XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "mostrarObras.html");
+            String url = "mostrarObras.html";
+            File htmlFile = new File(url);
+            try {
+                Desktop.getDesktop().browse(htmlFile.toURI());
+            } catch (IOException ex) {
+                Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            return true;
+        }
+        
+        return false;
+    }
        
     //EXTRA - Transformação XSLT para criar um ficheiro HTML a partir do ficheiro combinado de escritores e suas obras
     public static void htmlEscritoresObras() throws IOException {

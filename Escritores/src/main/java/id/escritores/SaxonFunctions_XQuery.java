@@ -104,6 +104,16 @@ public class SaxonFunctions_XQuery {
         }
         return null;
     }
+    
+    public static Document avgPrecoEscritores() throws XPathException, IOException{
+        SaxonFunctions_XQuery.xQueryToXml("avgPrecoEscritores.xml", "avgPrecoEscritores.xql");
+        
+        Document doc = XMLJDomFunctions.lerDocumentoXML("avgPrecoEscritores.xml");
+        if(doc != null){
+            return doc;
+        }
+        return null;
+    }
         
     //EXTRA - Gerar um ficheiro XML com os escritores agrupados por nacionalidade
     public static void escritoresPorNacionalidade() throws XPathException, IOException {

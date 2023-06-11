@@ -776,6 +776,14 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listagemEscritoresMenuItemActionPerformed"/>
               </Events>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mostarObrasMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mostar Obras por Escritor"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mostarObrasMenuItemActionPerformed"/>
+              </Events>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="XQueryMenu">
@@ -808,6 +816,14 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="juntarEscritoesObrasMenuItemActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="avgPrecoEscritorMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Escritores por pre&#xe7;o m&#xe9;dio das suas obras"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="avgPrecoEscritorMenuItemActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

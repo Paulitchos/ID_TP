@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<escritores-with-avg-preco>
+   <escritor id="1">
+      <nome>Oscar Fingal O'Flahertie Wills Wilde</nome>
+      <avg-preco>11.1</avg-preco>
+   </escritor>
+   <escritor id="2">
+      <nome>Daniel Silva</nome>
+      <avg-preco>13.703999999999999</avg-preco>
+   </escritor>
+   <escritor id="3">
+      <nome>Nicholas Charles Sparks</nome>
+      <avg-preco>17.912</avg-preco>
+   </escritor>
+</escritores-with-avg-preco>

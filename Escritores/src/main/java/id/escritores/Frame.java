@@ -114,10 +114,12 @@ public class Frame extends javax.swing.JFrame {
         XLSTMenu = new javax.swing.JMenu();
         htmlEscritoresFotosMenuItem = new javax.swing.JMenuItem();
         listagemEscritoresMenuItem = new javax.swing.JMenuItem();
+        mostarObrasMenuItem = new javax.swing.JMenuItem();
         XQueryMenu = new javax.swing.JMenu();
         topObrasMenuItem = new javax.swing.JMenuItem();
         obrasEscritorMenuItem = new javax.swing.JMenuItem();
         juntarEscritoesObrasMenuItem = new javax.swing.JMenuItem();
+        avgPrecoEscritorMenuItem = new javax.swing.JMenuItem();
 
         adicionarEscritorDialog.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
@@ -719,6 +721,14 @@ public class Frame extends javax.swing.JFrame {
         });
         XLSTMenu.add(listagemEscritoresMenuItem);
 
+        mostarObrasMenuItem.setText("Mostar Obras por Escritor");
+        mostarObrasMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostarObrasMenuItemActionPerformed(evt);
+            }
+        });
+        XLSTMenu.add(mostarObrasMenuItem);
+
         jMenuBar1.add(XLSTMenu);
 
         XQueryMenu.setText("XQuery");
@@ -751,6 +761,14 @@ public class Frame extends javax.swing.JFrame {
             }
         });
         XQueryMenu.add(juntarEscritoesObrasMenuItem);
+
+        avgPrecoEscritorMenuItem.setText("Escritores por preço médio das suas obras");
+        avgPrecoEscritorMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                avgPrecoEscritorMenuItemActionPerformed(evt);
+            }
+        });
+        XQueryMenu.add(avgPrecoEscritorMenuItem);
 
         jMenuBar1.add(XQueryMenu);
 
@@ -1643,6 +1661,51 @@ public class Frame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_juntarEscritoesObrasMenuItemActionPerformed
 
+    private void avgPrecoEscritorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_avgPrecoEscritorMenuItemActionPerformed
+
+
+        try {
+            Document doc = SaxonFunctions_XQuery.avgPrecoEscritores();
+            if(doc != null){
+                String texto;
+                texto = Functions.ler_ficheiro("avgPrecoEscritores.xml");
+                if (texto != null){
+                    outputTextArea.setText(texto);
+                } else {
+                    JOptionPane.showMessageDialog(this,
+                        "Ainda não existe ficheiros xml",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(this,
+                        "Ainda não existe ficheiro xml",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (XPathException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                       
+    }//GEN-LAST:event_avgPrecoEscritorMenuItemActionPerformed
+
+    private void mostarObrasMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostarObrasMenuItemActionPerformed
+        boolean flag;
+        try {
+            flag = JDOMFunctions_XSLT.mostarObras();
+            if(!flag){
+                JOptionPane.showMessageDialog(this,
+                        "Ainda não existe obras adicionados",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_mostarObrasMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1691,6 +1754,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JButton alterarEscritorButton;
     private javax.swing.JTextField alterarTextField;
     private javax.swing.JTextField atributoTextField;
+    private javax.swing.JMenuItem avgPrecoEscritorMenuItem;
     private javax.swing.JMenuItem avgPrecoMenuItem;
     private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.JRadioButton dFalecimentoRadioButton;
@@ -1720,6 +1784,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuItem juntarEscritoesObrasMenuItem;
     private javax.swing.JMenuItem listagemEscritoresMenuItem;
+    private javax.swing.JMenuItem mostarObrasMenuItem;
     private javax.swing.JRadioButton nacionalidadeRadioButton;
     private javax.swing.JTextField nomeEscritorTextField;
     private javax.swing.JTextField nomeEscritorTextField1;
