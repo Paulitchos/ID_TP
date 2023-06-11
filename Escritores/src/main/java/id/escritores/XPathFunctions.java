@@ -119,7 +119,7 @@ public class XPathFunctions {
     
     //Qual o escritor mais premiado
     static String escritor_mais_premiado() throws SaxonApiException {
-        String xp = "//escritor[premios/@npremios = max(//escritor/premios/@npremios)]/nome";
+        String xp = "//escritor[count(premios/pre) = max(//escritor/count(premios/pre))]/nome";
         XdmValue res = XPathFunctions.executaXpath(xp, "escritores.xml");
         if (res == null) {
             System.out.println("Ficheiro XML nao existe");
@@ -196,6 +196,23 @@ public class XPathFunctions {
                 return -1.0;
             }
         }
+    }
+    
+    //EXTRA - Pesquisar por todos os escritores que possuem um determinado genero literário
+    static List<String> pesquisa_escritores_por_genero(String genero) throws SaxonApiException {
+        String xp = "//escritor[generoliterario/gen = '" + genero + "']/nome/text()";
+        XdmValue res = XPathFunctions.executaXpath(xp, "escritores.xml");
+        List<String> s = XPathFunctions.listaResultado(res);
+        if (res == null) {
+            System.out.println("Ficheiro XML nao existe");
+        } else if (res.size() == 0) {
+            System.out.println("Sem Resultados");
+        } else {
+            System.out.println(s);
+            return s;
+        }
+
+        return null;
     }
    
 }

@@ -1,5 +1,5 @@
 <!ELEMENT escritores (escritor+)>
-<!ELEMENT escritor (nome, datanascimento?, datafalecimento?, nacionalidade, foto?, generoliterario?, ocupacoes?, premios?)>
+<!ELEMENT escritor (nome, datanascimento?, datafalecimento?, nacionalidade?, foto?, generoliterario?, ocupacoes?, premios?)>
 <!ATTLIST escritor
           id CDATA #REQUIRED
           nomePesquisado CDATA #IMPLIED>

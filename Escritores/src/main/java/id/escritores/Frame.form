@@ -54,7 +54,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="adicionarEscritorButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Adicionar Autor"/>
+            <Property name="text" type="java.lang.String" value="Adicionar Escritor"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adicionarEscritorButtonActionPerformed"/>
@@ -109,7 +109,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="removerEscritorButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Remover Autor"/>
+            <Property name="text" type="java.lang.String" value="Remover Escritor"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removerEscritorButtonActionPerformed"/>
@@ -164,7 +164,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="pesquisarEscritorButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Pesquisar Autor"/>
+            <Property name="text" type="java.lang.String" value="Pesquisar Escritor"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesquisarEscritorButtonActionPerformed"/>
@@ -621,6 +621,61 @@
         </Component>
       </SubComponents>
     </Container>
+    <Container class="javax.swing.JDialog" name="pesquisarEscritorGeneroDialog">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="nomeGeneroTextField" min="-2" pref="311" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+                  <Component id="pesquisarEscritorGeneroButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="nomeGeneroTextField" alignment="3" max="32767" attributes="0"/>
+                      <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="pesquisarEscritorGeneroButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTextField" name="nomeGeneroTextField">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeGeneroTextFieldActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel12">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nome do G&#xe9;nero Liter&#xe1;rio:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="pesquisarEscritorGeneroButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pesquisar Escritor"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesquisarEscritorGeneroButtonActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="principalMenu">
@@ -656,7 +711,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="adicionarEscritorMenuItem">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Adicionar Autor"/>
+                <Property name="text" type="java.lang.String" value="Adicionar Escritor"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adicionarEscritorMenuItemActionPerformed"/>
@@ -664,7 +719,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="removerEscritorMenuItem">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Remover Autor"/>
+                <Property name="text" type="java.lang.String" value="Remover Escritor"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removerEscritorMenuItemActionPerformed"/>
@@ -731,6 +786,14 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="avgPrecoMenuItemActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="pesquisarEscritorGeneroMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pesquisar escritores com um g&#xe9;nero liter&#xe1;rio"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesquisarEscritorGeneroMenuItemActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

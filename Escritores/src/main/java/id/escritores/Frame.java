@@ -90,6 +90,10 @@ public class Frame extends javax.swing.JFrame {
         nomeEscritorTextField5 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         obrasEscritorButton = new javax.swing.JButton();
+        pesquisarEscritorGeneroDialog = new javax.swing.JDialog();
+        nomeGeneroTextField = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        pesquisarEscritorGeneroButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         outputTextArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
@@ -108,6 +112,7 @@ public class Frame extends javax.swing.JFrame {
         escritorPremiadoMenuItem = new javax.swing.JMenuItem();
         editoraPrecoMenuItem = new javax.swing.JMenuItem();
         avgPrecoMenuItem = new javax.swing.JMenuItem();
+        pesquisarEscritorGeneroMenuItem = new javax.swing.JMenuItem();
         validarMenu = new javax.swing.JMenu();
         escritoresDTDMenuItem = new javax.swing.JMenuItem();
         escritoresXSDMenuItem = new javax.swing.JMenuItem();
@@ -137,7 +142,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel2.setText("Nome do Escritor:");
 
-        adicionarEscritorButton.setText("Adicionar Autor");
+        adicionarEscritorButton.setText("Adicionar Escritor");
         adicionarEscritorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adicionarEscritorButtonActionPerformed(evt);
@@ -179,7 +184,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel3.setText("Nome do Escritor:");
 
-        removerEscritorButton.setText("Remover Autor");
+        removerEscritorButton.setText("Remover Escritor");
         removerEscritorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 removerEscritorButtonActionPerformed(evt);
@@ -221,7 +226,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel4.setText("Nome do Escritor:");
 
-        pesquisarEscritorButton.setText("Pesquisar Autor");
+        pesquisarEscritorButton.setText("Pesquisar Escritor");
         pesquisarEscritorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pesquisarEscritorButtonActionPerformed(evt);
@@ -576,6 +581,48 @@ public class Frame extends javax.swing.JFrame {
                 .addGap(16, 16, 16))
         );
 
+        nomeGeneroTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeGeneroTextFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Nome do Género Literário:");
+
+        pesquisarEscritorGeneroButton.setText("Pesquisar Escritor");
+        pesquisarEscritorGeneroButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pesquisarEscritorGeneroButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pesquisarEscritorGeneroDialogLayout = new javax.swing.GroupLayout(pesquisarEscritorGeneroDialog.getContentPane());
+        pesquisarEscritorGeneroDialog.getContentPane().setLayout(pesquisarEscritorGeneroDialogLayout);
+        pesquisarEscritorGeneroDialogLayout.setHorizontalGroup(
+            pesquisarEscritorGeneroDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarEscritorGeneroDialogLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nomeGeneroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(pesquisarEscritorGeneroDialogLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(pesquisarEscritorGeneroButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pesquisarEscritorGeneroDialogLayout.setVerticalGroup(
+            pesquisarEscritorGeneroDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pesquisarEscritorGeneroDialogLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(pesquisarEscritorGeneroDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeGeneroTextField)
+                    .addComponent(jLabel12))
+                .addGap(18, 18, 18)
+                .addComponent(pesquisarEscritorGeneroButton)
+                .addGap(16, 16, 16))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         outputTextArea.setEditable(false);
@@ -612,7 +659,7 @@ public class Frame extends javax.swing.JFrame {
 
         xmlMenu.setText("XML");
 
-        adicionarEscritorMenuItem.setText("Adicionar Autor");
+        adicionarEscritorMenuItem.setText("Adicionar Escritor");
         adicionarEscritorMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adicionarEscritorMenuItemActionPerformed(evt);
@@ -620,7 +667,7 @@ public class Frame extends javax.swing.JFrame {
         });
         xmlMenu.add(adicionarEscritorMenuItem);
 
-        removerEscritorMenuItem.setText("Remover Autor");
+        removerEscritorMenuItem.setText("Remover Escritor");
         removerEscritorMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 removerEscritorMenuItemActionPerformed(evt);
@@ -687,6 +734,14 @@ public class Frame extends javax.swing.JFrame {
             }
         });
         xPathMenu.add(avgPrecoMenuItem);
+
+        pesquisarEscritorGeneroMenuItem.setText("Pesquisar escritores com um género literário");
+        pesquisarEscritorGeneroMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pesquisarEscritorGeneroMenuItemActionPerformed(evt);
+            }
+        });
+        xPathMenu.add(pesquisarEscritorGeneroMenuItem);
 
         jMenuBar1.add(xPathMenu);
 
@@ -1814,6 +1869,49 @@ public class Frame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_obrasXSDMenuItemActionPerformed
 
+    private void pesquisarEscritorGeneroMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarEscritorGeneroMenuItemActionPerformed
+        pesquisarEscritorGeneroDialog.setSize(500, 200);
+        pesquisarEscritorGeneroDialog.setLocation(200, 200);
+        pesquisarEscritorGeneroDialog.setVisible(true);
+    }//GEN-LAST:event_pesquisarEscritorGeneroMenuItemActionPerformed
+
+    private void nomeGeneroTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeGeneroTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeGeneroTextFieldActionPerformed
+
+    private void pesquisarEscritorGeneroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarEscritorGeneroButtonActionPerformed
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        
+        if(doc != null){
+            try {
+                List<String> results = XPathFunctions.pesquisa_escritores_por_genero(nomeGeneroTextField.getText());
+                if(results != null){
+                        outputTextArea.setText("Escritores com género literário " + nomeGeneroTextField.getText() + ":\n\n");
+                        for (String result : results) {
+                            outputTextArea.append(result + "\n");
+                        }
+
+                        nomeGeneroTextField.setText("");
+                        pesquisarEscritorGeneroDialog.setVisible(false);
+                } else {
+                    JOptionPane.showMessageDialog(this,
+                        "Escritores não encontradas",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+                    nomeEscritorTextField4.setText("");
+                }
+                
+            } catch (SaxonApiException ex) {
+                Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Ainda não existe ecritores adicionados",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_pesquisarEscritorGeneroButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1880,6 +1978,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1900,6 +1999,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField nomeEscritorTextField3;
     private javax.swing.JTextField nomeEscritorTextField4;
     private javax.swing.JTextField nomeEscritorTextField5;
+    private javax.swing.JTextField nomeGeneroTextField;
     private javax.swing.JTextField nomeNacionalidadeTextField;
     private javax.swing.JRadioButton nomeRadioButton;
     private javax.swing.JMenuItem obrasDTDMenuItem;
@@ -1911,6 +2011,9 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextArea outputTextArea;
     private javax.swing.JButton pesquisarEscritorButton;
     private javax.swing.JDialog pesquisarEscritorDialog;
+    private javax.swing.JButton pesquisarEscritorGeneroButton;
+    private javax.swing.JDialog pesquisarEscritorGeneroDialog;
+    private javax.swing.JMenuItem pesquisarEscritorGeneroMenuItem;
     private javax.swing.JMenuItem pesquisarEscritorMenuItem;
     private javax.swing.JButton pesquisarNacionalidadeButton;
     private javax.swing.JDialog pesquisarNacionalidadeDialog;

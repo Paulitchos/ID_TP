@@ -1,63 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:attribute name="id" type="xs:string"/>
-    <xs:attribute name="nomePesquisado" type="xs:string"/>
-
-    <xs:element name="nome" type="xs:string"/>
-    <xs:element name="datanascimento" type="xs:string"/>
-    <xs:element name="datafalecimento" type="xs:string"/>
-    <xs:element name="nacionalidade" type="xs:string"/>
-    <xs:element name="foto" type="xs:string"/>
-    <xs:element name="gen" type="xs:string"/>
-    <xs:element name="oc" type="xs:string"/>
-    <xs:element name="pre" type="xs:string"/>
-
-    <xs:element name="generoliterario">
-        <xs:complexType>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="escritores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="escritor" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
             <xs:sequence>
-                <xs:element ref="gen" minOccurs="0" maxOccurs="unbounded"/>
+              <xs:element type="xs:string" name="nome"/>
+              <xs:element type="xs:string" name="datanascimento" minOccurs="0"/>
+              <xs:element type="xs:string" name="datafalecimento" minOccurs="0"/>
+              <xs:element type="xs:string" name="nacionalidade" minOccurs="0"/>
+              <xs:element type="xs:string" name="foto"/>
+              <xs:element name="generoliterario" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="gen" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ocupacoes" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="oc" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="premios" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="pre" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
             </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="ocupacoes">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="oc" minOccurs="0" maxOccurs="unbounded"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="premios">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="pre" minOccurs="0" maxOccurs="unbounded"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="escritor">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="nome"/>
-                <xs:element ref="datanascimento" minOccurs="0"/>
-                <xs:element ref="datafalecimento" minOccurs="0"/>
-                <xs:element ref="nacionalidade"/>
-                <xs:element ref="foto"/>
-                <xs:element ref="generoliterario" minOccurs="0"/>
-                <xs:element ref="ocupacoes" minOccurs="0"/>
-                <xs:element ref="premios" minOccurs="0"/>
-            </xs:sequence>
-            <xs:attribute ref="id" use="required"/>
-            <xs:attribute ref="nomePesquisado" use="required"/>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="escritores">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="escritor" maxOccurs="unbounded"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+            <xs:attribute type="xs:byte" name="id" use="optional"/>
+            <xs:attribute type="xs:string" name="nomePesquisado" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
