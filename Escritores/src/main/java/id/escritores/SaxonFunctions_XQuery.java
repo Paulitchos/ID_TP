@@ -4,10 +4,13 @@
  */
 package id.escritores;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.jdom2.Document;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.stream.StreamResult;
@@ -15,6 +18,7 @@ import net.sf.saxon.Configuration;
 import net.sf.saxon.query.DynamicQueryContext;
 import net.sf.saxon.query.StaticQueryContext;
 import net.sf.saxon.query.XQueryExpression;
+import net.sf.saxon.s9api.XdmAtomicValue;
 import net.sf.saxon.trans.XPathException;
 
 
@@ -63,34 +67,31 @@ public class SaxonFunctions_XQuery {
         }
         return null;
     }
-    
-    
-    //HTML FOTOS LIVROS AUTOR - XQUERY/XSLT
-    public static void executaConsultaXQuery(String nomeAutor) throws Exception {
-        Configuration config = new Configuration();
-        StaticQueryContext sqc = new StaticQueryContext(config);
-        XQueryExpression exp = sqc.compileQuery(new FileReader("livrosAutor.xql"));
-
-        DynamicQueryContext dynamicContext = new DynamicQueryContext(config);
-        dynamicContext.setParameter("nomeAutor", nomeAutor);
-
-        Properties props = new Properties();
-        props.setProperty(OutputKeys.METHOD, "xml");
-        exp.run(dynamicContext, new StreamResult(new File("livrosAutor.xml")), props);
-    }
-    
-    
+        
     //Combinar info dos escritores e suas obras
-    public static void combinarEscritoresEObras() throws Exception {
+    public static boolean escritoresObras(String id) throws Exception {
+        
         Configuration config = new Configuration();
         StaticQueryContext sqc = new StaticQueryContext(config);
-        XQueryExpression exp = sqc.compileQuery(new FileReader("combinar.xql"));
-
+        XQueryExpression exp = sqc.compileQuery(new FileReader("obrasEscritor.xql"));
         DynamicQueryContext dynamicContext = new DynamicQueryContext(config);
 
+        // Set the external variable value
+        dynamicContext.setParameter("author-id", new XdmAtomicValue(id).getStringValue());
+        
         Properties props = new Properties();
-        props.setProperty(OutputKeys.METHOD, "xml");
-        exp.run(dynamicContext, new StreamResult(new File("combinado.xml")), props);
+        props.setProperty(OutputKeys.METHOD, "html");   
+        exp.run(dynamicContext, new StreamResult(new File("obrasEscritor.html")), props);
+        
+        String url = "obrasEscritor.html";
+        File htmlFile = new File(url);
+        try {
+            Desktop.getDesktop().browse(htmlFile.toURI());
+            return true;
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
     }
     
     

@@ -58,17 +58,5 @@ public class JDOMFunctions_Validar {
         }
         return null;
     }
-    
-    public static void main(String[] args) {
-        try {
-            // Validar os ficheiros XML usando DTD e XSD
-            validarDTD(CAMINHO_ESCRITORES);
-            validarXSD(CAMINHO_ESCRITORES);
-            validarDTD(CAMINHO_OBRA);
-            validarXSD(CAMINHO_OBRA);
-        } catch (IOException ex) {
-            Logger.getLogger(JDOMFunctions_Validar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
+       
 }

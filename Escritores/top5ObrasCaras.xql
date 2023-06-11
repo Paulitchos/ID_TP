@@ -1,5 +1,5 @@
 xquery version "1.0";
-let $obras := doc("E:/obras.xml")//obra
+let $obras := doc("obras.xml")//obra
 let $sorted-obras := (
   for $x in $obras
   order by xs:decimal($x/preco) descending

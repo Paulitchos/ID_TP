@@ -104,24 +104,7 @@ public class JDOMFunctions_XSLT {
         
         return false;
     }
-    
-    
-    //HTML FOTOS LIVROS AUTOR - XQUERY/XSLT
-    static void htmlFotosLivrosAutor() throws IOException, Exception {
-        Scanner ler = new Scanner(System.in);
-        System.out.println("Introduza o nome de um autor: ");
-        String nomeAutor = ler.nextLine();
-
-        SaxonFunctions_XQuery.executaConsultaXQuery(nomeAutor);
-
-        Document doc = XMLJDomFunctions.lerDocumentoXML("livrosAutor.xml");
-        if (doc != null) {
-            Document novo = transformaDocumento(doc, "livrosAutor.xml", "htmlLivrosAutor.xsl");
-            XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "livrosAutor.html");
-        }
-    }
-    
-   
+       
     //EXTRA - Transformação XSLT para criar um ficheiro HTML a partir do ficheiro combinado de escritores e suas obras
     public static void htmlEscritoresObras() throws IOException {
         Document doc = XMLJDomFunctions.lerDocumentoXML("escritoresObras.xml");

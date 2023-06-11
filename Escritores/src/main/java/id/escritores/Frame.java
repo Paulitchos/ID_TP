@@ -86,6 +86,10 @@ public class Frame extends javax.swing.JFrame {
         editoraTextField = new javax.swing.JTextField();
         precoTextField = new javax.swing.JTextField();
         pesquisarObraButton = new javax.swing.JButton();
+        obrasEscritorDialog = new javax.swing.JDialog();
+        nomeEscritorTextField5 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        obrasEscritorButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         outputTextArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
@@ -112,6 +116,7 @@ public class Frame extends javax.swing.JFrame {
         listagemEscritoresMenuItem = new javax.swing.JMenuItem();
         XQueryMenu = new javax.swing.JMenu();
         topObrasMenuItem = new javax.swing.JMenuItem();
+        obrasEscritorMenuItem = new javax.swing.JMenuItem();
 
         adicionarEscritorDialog.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
@@ -524,6 +529,48 @@ public class Frame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        nomeEscritorTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeEscritorTextField5ActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setText("Nome do Escritor:");
+
+        obrasEscritorButton.setText("Obras do Escritor");
+        obrasEscritorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                obrasEscritorButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout obrasEscritorDialogLayout = new javax.swing.GroupLayout(obrasEscritorDialog.getContentPane());
+        obrasEscritorDialog.getContentPane().setLayout(obrasEscritorDialogLayout);
+        obrasEscritorDialogLayout.setHorizontalGroup(
+            obrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, obrasEscritorDialogLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nomeEscritorTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(obrasEscritorDialogLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(obrasEscritorButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        obrasEscritorDialogLayout.setVerticalGroup(
+            obrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, obrasEscritorDialogLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(obrasEscritorDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeEscritorTextField5)
+                    .addComponent(jLabel11))
+                .addGap(18, 18, 18)
+                .addComponent(obrasEscritorButton)
+                .addGap(16, 16, 16))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         outputTextArea.setEditable(false);
@@ -682,6 +729,14 @@ public class Frame extends javax.swing.JFrame {
             }
         });
         XQueryMenu.add(topObrasMenuItem);
+
+        obrasEscritorMenuItem.setText("Obras de um escritor");
+        obrasEscritorMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                obrasEscritorMenuItemActionPerformed(evt);
+            }
+        });
+        XQueryMenu.add(obrasEscritorMenuItem);
 
         jMenuBar1.add(XQueryMenu);
 
@@ -1505,6 +1560,43 @@ public class Frame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_topObrasMenuItemActionPerformed
 
+    private void nomeEscritorTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeEscritorTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeEscritorTextField5ActionPerformed
+
+    private void obrasEscritorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_obrasEscritorButtonActionPerformed
+        Document doc = XMLJDomFunctions.lerDocumentoXML("escritores.xml");
+        if(doc != null){
+            String id = EscritoresXML.getIdEscritor(nomeEscritorTextField5.getText(),doc);
+            try {
+                boolean flag = SaxonFunctions_XQuery.escritoresObras(id);
+                if(flag){
+                    nomeEscritorTextField5.setText("");
+                    obrasEscritorDialog.setVisible(false);
+                } else {
+                    JOptionPane.showMessageDialog(this,
+                    "Ainda não existe ecritores adicionados",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+                }
+            } catch (Exception ex) {
+                Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Ainda não existe ecritores adicionados",
+                    "Informação",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+               
+    }//GEN-LAST:event_obrasEscritorButtonActionPerformed
+
+    private void obrasEscritorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_obrasEscritorMenuItemActionPerformed
+        obrasEscritorDialog.setSize(500, 200);
+        obrasEscritorDialog.setLocation(200, 200);
+        obrasEscritorDialog.setVisible(true);
+    }//GEN-LAST:event_obrasEscritorMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1569,6 +1661,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1586,8 +1679,12 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField nomeEscritorTextField2;
     private javax.swing.JTextField nomeEscritorTextField3;
     private javax.swing.JTextField nomeEscritorTextField4;
+    private javax.swing.JTextField nomeEscritorTextField5;
     private javax.swing.JTextField nomeNacionalidadeTextField;
     private javax.swing.JRadioButton nomeRadioButton;
+    private javax.swing.JButton obrasEscritorButton;
+    private javax.swing.JDialog obrasEscritorDialog;
+    private javax.swing.JMenuItem obrasEscritorMenuItem;
     private javax.swing.JRadioButton ocupacaoRadioButton;
     private javax.swing.JTextArea outputTextArea;
     private javax.swing.JButton pesquisarEscritorButton;
