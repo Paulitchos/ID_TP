@@ -127,6 +127,7 @@ public class Frame extends javax.swing.JFrame {
         obrasEscritorMenuItem = new javax.swing.JMenuItem();
         juntarEscritoesObrasMenuItem = new javax.swing.JMenuItem();
         avgPrecoEscritorMenuItem = new javax.swing.JMenuItem();
+        nPreOcGenEscritoresMenuItem = new javax.swing.JMenuItem();
 
         adicionarEscritorDialog.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
@@ -804,7 +805,7 @@ public class Frame extends javax.swing.JFrame {
         });
         XLSTMenu.add(listagemEscritoresMenuItem);
 
-        mostarObrasMenuItem.setText("Mostar Obras por Escritor");
+        mostarObrasMenuItem.setText("Mostrar Obras por Escritor");
         mostarObrasMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mostarObrasMenuItemActionPerformed(evt);
@@ -852,6 +853,14 @@ public class Frame extends javax.swing.JFrame {
             }
         });
         XQueryMenu.add(avgPrecoEscritorMenuItem);
+
+        nPreOcGenEscritoresMenuItem.setText("Nº Prémios, Ocupações e Géneros Literário por escritor");
+        nPreOcGenEscritoresMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nPreOcGenEscritoresMenuItemActionPerformed(evt);
+            }
+        });
+        XQueryMenu.add(nPreOcGenEscritoresMenuItem);
 
         jMenuBar1.add(XQueryMenu);
 
@@ -1713,7 +1722,7 @@ public class Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_obrasEscritorMenuItemActionPerformed
 
     private void XQueryMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_XQueryMenuActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_XQueryMenuActionPerformed
 
     private void juntarEscritoesObrasMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_juntarEscritoesObrasMenuItemActionPerformed
@@ -1912,6 +1921,33 @@ public class Frame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_pesquisarEscritorGeneroButtonActionPerformed
 
+    private void nPreOcGenEscritoresMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nPreOcGenEscritoresMenuItemActionPerformed
+        try {
+            Document doc = SaxonFunctions_XQuery.relatorioEscritores();
+            if(doc != null){
+                String texto;
+                texto = Functions.ler_ficheiro("relatorioEscritores.xml");
+                if (texto != null){
+                    outputTextArea.setText(texto);
+                } else {
+                    JOptionPane.showMessageDialog(this,
+                        "Ainda não existe ficheiros xml",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(this,
+                        "Ainda não existe ficheiro xml",
+                        "Informação",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (XPathException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_nPreOcGenEscritoresMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1992,6 +2028,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JMenuItem juntarEscritoesObrasMenuItem;
     private javax.swing.JMenuItem listagemEscritoresMenuItem;
     private javax.swing.JMenuItem mostarObrasMenuItem;
+    private javax.swing.JMenuItem nPreOcGenEscritoresMenuItem;
     private javax.swing.JRadioButton nacionalidadeRadioButton;
     private javax.swing.JTextField nomeEscritorTextField;
     private javax.swing.JTextField nomeEscritorTextField1;

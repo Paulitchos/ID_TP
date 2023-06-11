@@ -121,12 +121,4 @@ public class JDOMFunctions_XSLT {
         return false;
     }
        
-    //EXTRA - Transformação XSLT para criar um ficheiro HTML a partir do ficheiro combinado de escritores e suas obras
-    public static void htmlEscritoresObras() throws IOException {
-        Document doc = XMLJDomFunctions.lerDocumentoXML("escritoresObras.xml");
-        if (doc != null) {
-            Document novo = JDOMFunctions_XSLT.transformaDocumento(doc, "escritoresObras.xml", "escritoresObras.xsl");
-            XMLJDomFunctions.escreverDocumentoParaFicheiro(novo, "escritoresObras.html");
-        }
-    }
 }

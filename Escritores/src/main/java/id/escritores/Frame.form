@@ -863,7 +863,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mostarObrasMenuItem">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Mostar Obras por Escritor"/>
+                <Property name="text" type="java.lang.String" value="Mostrar Obras por Escritor"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mostarObrasMenuItemActionPerformed"/>
@@ -909,6 +909,14 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="avgPrecoEscritorMenuItemActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="nPreOcGenEscritoresMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="N&#xba; Pr&#xe9;mios, Ocupa&#xe7;&#xf5;es e G&#xe9;neros Liter&#xe1;rio por escritor"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nPreOcGenEscritoresMenuItemActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

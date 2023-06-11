@@ -115,13 +115,13 @@ public class SaxonFunctions_XQuery {
         return null;
     }
         
-    //EXTRA - Gerar um ficheiro XML com os escritores agrupados por nacionalidade
-    public static void escritoresPorNacionalidade() throws XPathException, IOException {
-        StaticQueryContext sqc = new StaticQueryContext(new Configuration());
-        XQueryExpression exp = sqc.compileQuery(new FileReader("escritoresPorNacionalidade.xql"));
+    public static Document relatorioEscritores() throws XPathException, IOException {
+        SaxonFunctions_XQuery.xQueryToXml("relatorioEscritores.xml", "relatorioEscritores.xql");
 
-        Properties props = new Properties();
-        props.setProperty(OutputKeys.METHOD, "xml");
-        exp.run(new DynamicQueryContext(sqc.getConfiguration()), new StreamResult(new File("escritoresPorNacionalidade.xml")), props);
+        Document doc = XMLJDomFunctions.lerDocumentoXML("relatorioEscritores.xml");
+        if(doc != null){
+            return doc;
+        }
+        return null;
     }
 }

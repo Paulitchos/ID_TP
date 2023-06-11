@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relatorio>
+   <escritor nome="Oscar Wilde">
+      <numeroOcupacoes>6</numeroOcupacoes>
+      <numeroPremios>3</numeroPremios>
+      <numeroGenerosLiterarios>3</numeroGenerosLiterarios>
+   </escritor>
+   <escritor nome="Daniel Silva">
+      <numeroOcupacoes>3</numeroOcupacoes>
+      <numeroPremios>0</numeroPremios>
+      <numeroGenerosLiterarios>0</numeroGenerosLiterarios>
+   </escritor>
+   <escritor nome="Nicholas Sparks">
+      <numeroOcupacoes>3</numeroOcupacoes>
+      <numeroPremios>0</numeroPremios>
+      <numeroGenerosLiterarios>0</numeroGenerosLiterarios>
+   </escritor>
+   <escritor nome="Fernando Pessoa">
+      <numeroOcupacoes>3</numeroOcupacoes>
+      <numeroPremios>2</numeroPremios>
+      <numeroGenerosLiterarios>0</numeroGenerosLiterarios>
+   </escritor>
+   <escritor nome="José Luís Peixoto">
+      <numeroOcupacoes>3</numeroOcupacoes>
+      <numeroPremios>7</numeroPremios>
+      <numeroGenerosLiterarios>0</numeroGenerosLiterarios>
+   </escritor>
+   <escritor nome="Julian Barnes">
+      <numeroOcupacoes>0</numeroOcupacoes>
+      <numeroPremios>3</numeroPremios>
+      <numeroGenerosLiterarios>2</numeroGenerosLiterarios>
+   </escritor>
+   <escritor nome="Isabel Allende">
+      <numeroOcupacoes>0</numeroOcupacoes>
+      <numeroPremios>2</numeroPremios>
+      <numeroGenerosLiterarios>0</numeroGenerosLiterarios>
+   </escritor>
+</relatorio>
