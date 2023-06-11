@@ -740,15 +740,37 @@
             <Property name="text" type="java.lang.String" value="Validar"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="DTDMenuItem">
+            <MenuItem class="javax.swing.JMenuItem" name="escritoresDTDMenuItem">
               <Properties>
-                <Property name="text" type="java.lang.String" value="DTD"/>
+                <Property name="text" type="java.lang.String" value="Escritores DTD"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="escritoresDTDMenuItemActionPerformed"/>
+              </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="XSDMenuItem">
+            <MenuItem class="javax.swing.JMenuItem" name="escritoresXSDMenuItem">
               <Properties>
-                <Property name="text" type="java.lang.String" value="XSD"/>
+                <Property name="text" type="java.lang.String" value="Escritores XSD"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="escritoresXSDMenuItemActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="obrasDTDMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Obras DTD"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="obrasDTDMenuItemActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="obrasXSDMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Obras XSD"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="obrasXSDMenuItemActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

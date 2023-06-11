@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<escritores>
+<escritores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="escritores.xsd">
      <escritor id="1" nomePesquisado="Oscar Wilde">
           <nome>Oscar Fingal O'Flahertie Wills Wilde</nome>
           <datanascimento>16 de outubro de 1854</datanascimento>
@@ -45,5 +45,21 @@
                <oc>Roteirista</oc>
                <oc>Produtor</oc>
           </ocupacoes>
+     </escritor>
+     <escritor id="4" nomePesquisado="Fernando Pessoa">
+          <nome>Fernando António Nogueira Pessoa</nome>
+          <datanascimento>13 de junho de 1888</datanascimento>
+          <datafalecimento>30 de novembro de 1935</datafalecimento>
+          <nacionalidade>Portugal</nacionalidade>
+          <foto>https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pessoa_chapeu.jpg/200px-Pessoa_chapeu.jpg</foto>
+          <ocupacoes>
+               <oc>Poeta</oc>
+               <oc>Escritor</oc>
+               <oc>Tradutor</oc>
+          </ocupacoes>
+          <premios>
+               <pre>Prémio Antero de Quental</pre>
+               <pre>Queen Victoria Prize (1903)</pre>
+          </premios>
      </escritor>
 </escritores>

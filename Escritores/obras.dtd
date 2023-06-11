@@ -1,0 +1,9 @@
+<!ELEMENT obras (obra+)>
+<!ELEMENT obra (isbn, titulo, autor, editora, capa, preco)>
+<!ATTLIST obra codigoautor CDATA #REQUIRED>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editora (#PCDATA)>
+<!ELEMENT capa (#PCDATA)>
+<!ELEMENT preco (#PCDATA)>

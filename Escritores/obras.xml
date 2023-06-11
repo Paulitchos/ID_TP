@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<obras>
+<obras xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="obras.xsd">
      <obra codigoautor="1">
           <isbn>9789899126053</isbn>
           <titulo>O Fantasma de Canterville</titulo>
@@ -119,5 +119,45 @@
           <editora>Edições Asa</editora>
           <capa>https://img.bertrand.pt/images/a-melodia-do-adeus-nicholas-sparks/NDV8MjM4MzE3NTR8MTk4NDk4MjV8MTU4MDM3OTA0NjAwMA==/500x</capa>
           <preco>18.5</preco>
+     </obra>
+     <obra codigoautor="4">
+          <isbn>9789896152413</isbn>
+          <titulo>Palavras do Livro do Desassossego | Words from The Book of Disquiet</titulo>
+          <autor>Fernando Pessoa e Lib\u00f3rio Manuel Silva</autor>
+          <editora>Edições Centro Atlântico</editora>
+          <capa>https://img.bertrand.pt/images/palavras-do-livro-do-desassossego-words-from-the-book-of-disquiet-fernando-pessoa/NDV8Mjg1OTcwNTl8MjQ5Nzc5NzR8MTY4NTM3ODQ5MzAwMA==/500x</capa>
+          <preco>14.99</preco>
+     </obra>
+     <obra codigoautor="4">
+          <isbn>978-972-37-2318-2</isbn>
+          <titulo>Poesia, Ricardo Reis</titulo>
+          <autor>Fernando Pessoa</autor>
+          <editora>Assírio &amp; Alvim</editora>
+          <capa>https://img.bertrand.pt/images/poesia-ricardo-reis-fernando-pessoa/NDV8MTEyMzcwNTJ8MjQ3NjYxODJ8MTY4MzcyOTUzMDAwMA==/500x</capa>
+          <preco>16.97</preco>
+     </obra>
+     <obra codigoautor="4">
+          <isbn>9789895362813</isbn>
+          <titulo>Message</titulo>
+          <autor>Fernando Pessoa</autor>
+          <editora>Shantarin</editora>
+          <capa>https://img.bertrand.pt/images/message-fernando-pessoa/NDV8Mjg0MjUzODd8MjQ3OTM5Nzl8MTY4MDA4MDE2NTAwMA==/500x</capa>
+          <preco>16.2</preco>
+     </obra>
+     <obra codigoautor="4">
+          <isbn>9789895365753</isbn>
+          <titulo>Autopsicografía y Outros Treinta Poemas</titulo>
+          <autor>Fernando Pessoa e George Monteiro</autor>
+          <editora>Dilúvio</editora>
+          <capa>https://img.bertrand.pt/images/autopsicografia-y-outros-treinta-poemas-fernando-pessoa/NDV8Mjg0MjcwNDh8MjQ3OTU3OTl8MTY4MDE4MDcyMzAwMA==/500x</capa>
+          <preco>13.41</preco>
+     </obra>
+     <obra codigoautor="4">
+          <isbn>9788412617634</isbn>
+          <titulo>Rubaiyat</titulo>
+          <autor>Fernando Pessoa</autor>
+          <editora>EL GALLO DE ORO EDICIONES</editora>
+          <capa>https://img.bertrand.pt/images/rubaiyat-fernando-pessoa/NDV8Mjg0MDA0MjR8MjQ3NjcwMzR8MTY3OTMwNDE0MzAwMA==/500x</capa>
+          <preco>14.4</preco>
      </obra>
 </obras>

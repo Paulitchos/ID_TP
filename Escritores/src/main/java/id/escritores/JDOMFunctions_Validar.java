@@ -15,10 +15,6 @@ import org.jdom2.input.SAXBuilder;
 
 public class JDOMFunctions_Validar {
     
-    // Caminho para os arquivos XML
-    private static final String CAMINHO_ESCRITORES = "escritores.xml";
-    private static final String CAMINHO_OBRA = ".xml";
-
     //Executa validação do documento XML usando DTD 
     public static Document validarDTD(String caminhoFicheiro) throws IOException{
         try {
@@ -28,10 +24,10 @@ public class JDOMFunctions_Validar {
             return doc;
         } catch (JDOMException ex) {
             System.out.println("Documento XML " + caminhoFicheiro + " apresenta erros e não é válido (DTD)");
-            Logger.getLogger(JDOMFunctions_Validar.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(JDOMFunctions_Validar.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            System.out.println("Documento XML " + caminhoFicheiro + " não foi encontrado");
-            Logger.getLogger(JDOMFunctions_Validar.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Documento XML " + caminhoFicheiro + " nao foi encontrado");
+            //Logger.getLogger(JDOMFunctions_Validar.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
@@ -51,10 +47,10 @@ public class JDOMFunctions_Validar {
             return doc;
         } catch (JDOMException ex) {
             System.out.println("Documento XML " + caminhoFicheiro + " apresenta erros e não é válido (XSD)");
-            Logger.getLogger(JDOMFunctions_Validar.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(JDOMFunctions_Validar.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            System.out.println("Documento XML " + caminhoFicheiro + " não foi encontrado");
-            Logger.getLogger(JDOMFunctions_Validar.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Documento XML " + caminhoFicheiro + " nao foi encontrado");
+            //Logger.getLogger(JDOMFunctions_Validar.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }

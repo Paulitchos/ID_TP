@@ -109,8 +109,10 @@ public class Frame extends javax.swing.JFrame {
         editoraPrecoMenuItem = new javax.swing.JMenuItem();
         avgPrecoMenuItem = new javax.swing.JMenuItem();
         validarMenu = new javax.swing.JMenu();
-        DTDMenuItem = new javax.swing.JMenuItem();
-        XSDMenuItem = new javax.swing.JMenuItem();
+        escritoresDTDMenuItem = new javax.swing.JMenuItem();
+        escritoresXSDMenuItem = new javax.swing.JMenuItem();
+        obrasDTDMenuItem = new javax.swing.JMenuItem();
+        obrasXSDMenuItem = new javax.swing.JMenuItem();
         XLSTMenu = new javax.swing.JMenu();
         htmlEscritoresFotosMenuItem = new javax.swing.JMenuItem();
         listagemEscritoresMenuItem = new javax.swing.JMenuItem();
@@ -690,11 +692,37 @@ public class Frame extends javax.swing.JFrame {
 
         validarMenu.setText("Validar");
 
-        DTDMenuItem.setText("DTD");
-        validarMenu.add(DTDMenuItem);
+        escritoresDTDMenuItem.setText("Escritores DTD");
+        escritoresDTDMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                escritoresDTDMenuItemActionPerformed(evt);
+            }
+        });
+        validarMenu.add(escritoresDTDMenuItem);
 
-        XSDMenuItem.setText("XSD");
-        validarMenu.add(XSDMenuItem);
+        escritoresXSDMenuItem.setText("Escritores XSD");
+        escritoresXSDMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                escritoresXSDMenuItemActionPerformed(evt);
+            }
+        });
+        validarMenu.add(escritoresXSDMenuItem);
+
+        obrasDTDMenuItem.setText("Obras DTD");
+        obrasDTDMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                obrasDTDMenuItemActionPerformed(evt);
+            }
+        });
+        validarMenu.add(obrasDTDMenuItem);
+
+        obrasXSDMenuItem.setText("Obras XSD");
+        obrasXSDMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                obrasXSDMenuItemActionPerformed(evt);
+            }
+        });
+        validarMenu.add(obrasXSDMenuItem);
 
         jMenuBar1.add(validarMenu);
 
@@ -890,7 +918,7 @@ public class Frame extends javax.swing.JFrame {
                 }
             } else {
                 JOptionPane.showMessageDialog(this,
-                        "Escritor já existe no ficheiro",
+                        "Escritor já existe no ficheiro ou não foi encontrado",
                         "Informação",
                         JOptionPane.INFORMATION_MESSAGE);
             }
@@ -1706,6 +1734,86 @@ public class Frame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_mostarObrasMenuItemActionPerformed
 
+    private void escritoresDTDMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escritoresDTDMenuItemActionPerformed
+        try {
+            int res = ValidarXML.validarDocumentoDTD("escritores.xml", "escritores.dtd");
+            if (res == 1) {
+                JOptionPane.showMessageDialog(this,
+                        "Ficheiro válido por DTD",
+                        "Validação DTD",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+            if (res == -1) {
+                JOptionPane.showMessageDialog(this,
+                        "Ficheiro inválido por DTD",
+                        "Validação DTD",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this,
+                    "Verifique se os ficheiros XML e DTD existem",
+                    "Validação DTD",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_escritoresDTDMenuItemActionPerformed
+
+    private void escritoresXSDMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escritoresXSDMenuItemActionPerformed
+        int res = ValidarXML.validarDocumentoXSD("escritores.xml", "escritores.xsd");
+        if (res == 1) {
+            JOptionPane.showMessageDialog(this,
+                    "Ficheiro válido por XSD",
+                    "Validação XSD",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        if (res == -1) {
+            JOptionPane.showMessageDialog(this,
+                    "Ficheiro inválido por XSD",
+                    "Validação XSD",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_escritoresXSDMenuItemActionPerformed
+
+    private void obrasDTDMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_obrasDTDMenuItemActionPerformed
+        try {
+            int res = ValidarXML.validarDocumentoDTD("obras.xml", "obras.dtd");
+            if (res == 1) {
+                JOptionPane.showMessageDialog(this,
+                        "Ficheiro válido por DTD",
+                        "Validação DTD",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+            if (res == -1) {
+                JOptionPane.showMessageDialog(this,
+                        "Ficheiro inválido por DTD",
+                        "Validação DTD",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this,
+                    "Verifique se os ficheiros XML e DTD existem",
+                    "Validação DTD",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_obrasDTDMenuItemActionPerformed
+
+    private void obrasXSDMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_obrasXSDMenuItemActionPerformed
+        int res = ValidarXML.validarDocumentoXSD("obras.xml", "obras.xsd");
+        if (res == 1) {
+            JOptionPane.showMessageDialog(this,
+                    "Ficheiro válido por XSD",
+                    "Validação XSD",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        if (res == -1) {
+            JOptionPane.showMessageDialog(this,
+                    "Ficheiro inválido por XSD",
+                    "Validação XSD",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_obrasXSDMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1742,10 +1850,8 @@ public class Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem DTDMenuItem;
     private javax.swing.JMenu XLSTMenu;
     private javax.swing.JMenu XQueryMenu;
-    private javax.swing.JMenuItem XSDMenuItem;
     private javax.swing.JMenuItem abrirMenuItem;
     private javax.swing.JButton adicionarAtributoButton;
     private javax.swing.JButton adicionarEscritorButton;
@@ -1766,6 +1872,8 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField editoraTextField;
     private javax.swing.JButton enviarEscritorButton;
     private javax.swing.JMenuItem escritorPremiadoMenuItem;
+    private javax.swing.JMenuItem escritoresDTDMenuItem;
+    private javax.swing.JMenuItem escritoresXSDMenuItem;
     private javax.swing.JRadioButton gLiterarioRadioButton;
     private javax.swing.JMenuItem htmlEscritoresFotosMenuItem;
     private javax.swing.JFileChooser jFileChooser1;
@@ -1794,9 +1902,11 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField nomeEscritorTextField5;
     private javax.swing.JTextField nomeNacionalidadeTextField;
     private javax.swing.JRadioButton nomeRadioButton;
+    private javax.swing.JMenuItem obrasDTDMenuItem;
     private javax.swing.JButton obrasEscritorButton;
     private javax.swing.JDialog obrasEscritorDialog;
     private javax.swing.JMenuItem obrasEscritorMenuItem;
+    private javax.swing.JMenuItem obrasXSDMenuItem;
     private javax.swing.JRadioButton ocupacaoRadioButton;
     private javax.swing.JTextArea outputTextArea;
     private javax.swing.JButton pesquisarEscritorButton;

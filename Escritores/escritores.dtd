@@ -1,0 +1,16 @@
+<!ELEMENT escritores (escritor+)>
+<!ELEMENT escritor (nome, datanascimento?, datafalecimento?, nacionalidade, foto?, generoliterario?, ocupacoes?, premios?)>
+<!ATTLIST escritor
+          id CDATA #REQUIRED
+          nomePesquisado CDATA #IMPLIED>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT datanascimento (#PCDATA)>
+<!ELEMENT datafalecimento (#PCDATA)>
+<!ELEMENT nacionalidade (#PCDATA)>
+<!ELEMENT foto (#PCDATA)>
+<!ELEMENT generoliterario (gen+)>
+<!ELEMENT gen (#PCDATA)>
+<!ELEMENT ocupacoes (oc+)>
+<!ELEMENT oc (#PCDATA)>
+<!ELEMENT premios (pre+)>
+<!ELEMENT pre (#PCDATA)>
